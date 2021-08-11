@@ -1,0 +1,21 @@
+.successColor{
+    color: #74C687 !important;
+}
+
+.neutralColor{
+    color: #FFD75F !important;
+}
+
+.dangerColor{
+    color: #E87C87 !important;
+}
+
+.linkanimation{
+    color: darkgrey;
+    transition: 0.2s;
+}
+
+.linkanimation:hover{
+    color: gray;
+    transition: 0.2s;
+}

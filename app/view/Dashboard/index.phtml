@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="hr">
+<head>
+    <title>Gymzone</title>
+    <meta charset="utf-8">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="tinako.hr">
+    <?php include "head_css.phtml"?>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+    <?php include "navbar.phtml"?>
+    <?php include "sidebar.phtml";?>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Nadzor</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="<?= App::config("url") ?>Dashboard/Dashboard" class="linkanimation">Kontrolna ploča</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>150</h3>
+                                <p>Aktivnih korisnika</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                                <p>Više korisnika</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fad fa-chart-bar"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-warning">
+                            <div class="inner">
+                                <h3 style="color: #FFF">44</h3>
+
+                                <p style="color: #FFF">Novih korisnika ovaj mjesec</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fad fa-user-plus"></i>
+                            </div>
+                            <a href="#" class="small-box-footer"><span style="color: #FFF;">More info</span> <i class="fas fa-arrow-circle-right" style="color: #FFF;"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-danger">
+                            <div class="inner">
+                                <h3>65.000,00kn</h3>
+                                <p>Mjesečni prihodi</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <section class="col-lg-8 connectedSortable">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Pregled korisnika</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Šifra korisnika</th>
+                                        <th>Ime i prezime</th>
+                                        <th>Vrsta članarine</th>
+                                        <th>Aktivan</th>
+                                        <th>Datum početka</th>
+                                        <th>Datum isteka</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tfoot>
+                                    <tr>
+                                        <th>Šifra korisnika</th>
+                                        <th>Ime i prezime</th>
+                                        <th>Vrsta članarine</th>
+                                        <th>Aktivan</th>
+                                        <th>Datum početka</th>
+                                        <th>Datum isteka</th>
+                                        <th></th>
+                                    </tr>
+                                    </tfoot>
+
+                                    <tbody>
+
+                                    <tr>
+
+                                        <td class="text-center">12</td>
+                                        <td class="text-center">34</td>
+                                        <td class="text-center">56</td>
+                                        <td class="text-center">78</td>
+                                        <td class="text-center">90</td>
+                                        <td class="text-center">25</td>
+                                        <td class="text-center">36</td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </section>
+                    <section class="col-lg-4 connectedSortable">
+                        <div class="card ">
+                            <div class="card-header">
+                                <h3 class="card-title">Statistika</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="calendar"></div>
+                        <div class="card bg-gradient-success">
+                            <div class="card-body pt-0 text-center">
+                                <h1 style="padding-top: 20px"><?=date('d.m.Y')?></h1>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <?php include "footer.phtml";?>
+</div>
+
+
+</body>
+</html>
