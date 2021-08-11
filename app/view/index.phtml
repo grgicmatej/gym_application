@@ -32,11 +32,12 @@
                         Prijava u sustav
                     </a>
                     <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown" style="margin-top: -20px; background-color: white">
-                        <form action="">
-                            ime <br>
-                            <input type="text" name="name"><br><br>
-                            sifra <br>
-                            <input type="password" name="password"><br><br>
+                        <form action="<?php echo App::config("url") ?>login/Login" method="post">
+                            <label class="" for="">Korisničko ime</label><br>
+                            <input class="" name="Staff_Username" type="text" placeholder="Upiši korisničko ime" oninvalid="this.setCustomValidity('Korisničko ime je obavezno')" oninput="setCustomValidity('')" required><br><br>
+                            <label class="" for="">Lozinka</label><br>
+                            <input class="" name="Staff_Password" type="password" placeholder="Upiši lozinku" oninvalid="this.setCustomValidity('Lozinka je obavezna')" oninput="setCustomValidity('')" required><br><br>
+
                             <input type="submit" value="Prijava">
 
                         </form>
@@ -50,6 +51,9 @@
 
 
 <!--================Slider Area =================-->
+<?php if (isset($message)):?>
+    <?=$message?>
+<?php endif;?>
 <section class="main_slider_area" style="background: url('<?= App::config("url") ?>vendor/images/Frontend/slider-bg-1.png') no-repeat scroll center center; padding-top: 3cm">
     <div class="container">
         <div class="row" style="min-height: 500px">

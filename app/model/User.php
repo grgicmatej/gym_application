@@ -71,4 +71,38 @@ class User
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public static function allUsersCount()
+    {
+        $tempData=self::allUsers();
+        $array=[];
+        foreach ($tempData as $data){
+            if (!in_array($usersMembershipsUsersId = $data->Users_Memberships_Users_Id, $array)){
+                array_push($array, $usersMembershipsUsersId = $data->Users_Memberships_Users_Id);
+            }else{
+                continue;
+            }
+        }
+
+        return count($array);
+    }
+
+    public static function allActiveUsersCount()
+    {
+        $tempdata=self::allActiveUsers();
+        $array=[];
+        foreach ($tempdata as $data){
+            if (!in_array($Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id, $array)){
+                array_push($array, $Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id);
+            }else{
+                continue;
+            }
+        }
+        return count($array);
+    }
+
+    public static function allInactiveUsersCount()
+    {
+        return self::allUsersCount()-self::allActiveUsersCount();
+    }
 }

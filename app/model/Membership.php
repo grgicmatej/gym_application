@@ -3,13 +3,13 @@
 
 class Membership
 {
-    public static function Time_Update()
+    public static function timeUpdate()
     {
         $date=date_create();
-        $Users_Memberships_Curent_Date=date_format($date, 'Y.m.d');
+        $usersMembershipsCurentDate=date_format($date, 'Y.m.d');
         $db=Db::getInstance();
         $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_Curent_Date=:Users_Memberships_Curent_Date');
-        $stmt->bindValue('Users_Memberships_Curent_Date', $Users_Memberships_Curent_Date);
+        $stmt->bindValue('Users_Memberships_Curent_Date', $usersMembershipsCurentDate);
         $stmt->execute();
 
         $db=Db::getInstance();
