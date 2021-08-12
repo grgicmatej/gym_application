@@ -5,11 +5,6 @@ class User
 {
     public static function allUsers()
     {
-        if (isset($_COOKIE['Gym_Id'])){
-            $Users_Gym=$_COOKIE['Gym_Id'];
-        }else{
-            $Users_Gym=0;
-        }
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT
                                     Users.Users_Id,
@@ -27,22 +22,16 @@ class User
                                     LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
                                     LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
 
-                                    WHERE Users_Gym.Gym_Id=:Users_Gym
+                                    WHERE Users_Gym.Gym_Id=:usersGym
                                     ORDER BY Users_Memberships.Users_Memberships_Id DESC
                                     ');
-        $stmt->bindValue('Users_Gym', $Users_Gym);
+        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
         $stmt->execute();
         return $stmt->fetchAll();
     }
 
     public static function allActiveUsers()
     {
-        if (isset($_COOKIE['Gym_Id'])){
-            $Users_Gym=$_COOKIE['Gym_Id'];
-        }else{
-            $Users_Gym=0;
-        }
-
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT
                                     Users.Users_Id,
@@ -64,10 +53,10 @@ class User
                                     WHERE 
                                     Users_Memberships.Users_Memberships_End_Date > Users_Memberships.Users_Memberships_Curent_Date 
                                     AND 
-                                    Users_Gym.Gym_Id=:Users_Gym
+                                    Users_Gym.Gym_Id=:usersGym
                                     ORDER BY Users_Memberships.Users_Memberships_Id DESC
                                     ');
-        $stmt->bindValue('Users_Gym', $Users_Gym);
+        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
         $stmt->execute();
         return $stmt->fetchAll();
     }
@@ -76,10 +65,10 @@ class User
     {
         $tempData=self::allUsers();
         $array=[];
-        foreach ($tempData as $data){
-            if (!in_array($usersMembershipsUsersId = $data->Users_Memberships_Users_Id, $array)){
-                array_push($array, $usersMembershipsUsersId = $data->Users_Memberships_Users_Id);
-            }else{
+        foreach ($tempData as $data) {
+            if (!in_array($usersMembershipsUsersId=$data->Users_Memberships_Users_Id, $array)) {
+                array_push($array, $usersMembershipsUsersId=$data->Users_Memberships_Users_Id);
+            } else {
                 continue;
             }
         }
@@ -91,10 +80,10 @@ class User
     {
         $tempdata=self::allActiveUsers();
         $array=[];
-        foreach ($tempdata as $data){
-            if (!in_array($Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id, $array)){
-                array_push($array, $Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id);
-            }else{
+        foreach ($tempdata as $data) {
+            if (!in_array($usersMembershipsUsersId=$data->Users_Memberships_Users_Id, $array)) {
+                array_push($array, $usersMembershipsUsersId=$data->Users_Memberships_Users_Id);
+            } else {
                 continue;
             }
         }
@@ -103,6 +92,44 @@ class User
 
     public static function allInactiveUsersCount()
     {
-        return self::allUsersCount()-self::allActiveUsersCount();
+        return self::allUsersCount() - self::allActiveUsersCount();
+    }
+
+    public static function currentMonthlyUsers()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT COUNT(Users_Id) AS newMonthlyUsers FROM Users WHERE 
+                                        MONTH(Users_Registration)=:currentMonth 
+                                        AND 
+                                        YEAR(Users_Registration)=:currentYear');
+        $stmt->bindValue('currentMonth', date('m'));
+        $stmt->bindValue('currentYear', date('Y'));
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function previousMonthUsers()
+    {
+        $datestring=date('Y-m-d').' first day of last month';
+        $dt=date_create($datestring);
+
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT COUNT(Users_Id) AS previousMonthlyUsers FROM Users WHERE 
+                                        DAY(Users_Registration)<=:currentDay
+                                        AND
+                                        MONTH(Users_Registration)=:previousMonth 
+                                        AND 
+                                        YEAR(Users_Registration)=:yearOfPreviousMonth        
+                                        ');
+        $stmt->bindValue('currentDay', date('d'));
+        $stmt->bindValue('previousMonth', $dt->format('m'));
+        $stmt->bindValue('yearOfPreviousMonth', $dt->format('Y'));
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function monthlyUserProportion()
+    {
+        return round((self::currentMonthlyUsers()->newMonthlyUsers/self::previousMonthUsers()->previousMonthlyUsers)*100, 2);
     }
 }

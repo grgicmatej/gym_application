@@ -5,21 +5,9 @@ class Admin
 {
     public static function logedUserStart()
     {
-        $staffId=Session::getInstance()->getUser()->Staff_Id;
-        $staffLoggedIn=1;
-        $staffAdminStatus=Session::getInstance()->getUser()->Staff_Adminstatus;
-
-        $cookieName="Staff_Id";
-        $cookieValue=$staffId;
-        setcookie($cookieName, $cookieValue, time() + (43200), "/");
-
-        $cookieName="Staff_Logged_In";
-        $cookieValue=$staffLoggedIn;
-        setcookie($cookieName, $cookieValue, time() + (43200), "/");
-
-        $cookieName="Staff_Admin_Status";
-        $cookieValue=$staffAdminStatus;
-        setcookie($cookieName, $cookieValue, time() + (43200), "/");
+        $_SESSION["Staff_Id"] = Session::getInstance()->getUser()->Staff_Id;
+        $_SESSION["Staff_Logged_In"] = 1;
+        $_SESSION["Staff_Admin_Status"] = Session::getInstance()->getUser()->Staff_Adminstatus;
 
         $time=time()+7200;
         $db=Db::getInstance();

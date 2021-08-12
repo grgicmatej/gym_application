@@ -15,10 +15,12 @@ class DashboardController extends SecurityController
                 'gymData'               => Dashboard::gymData(),
                 'gymDataCount'          => Dashboard::gymDataCount(),
                 'gymName'               => Dashboard::gymName(),
-                'userData'              => User::allUsers(),
+                #'userData'             => User::allUsers(),
                 'allUsersCount'         => User::allUsersCount(),
                 'activeUsersCount'      => User::allActiveUsersCount(),
                 'inactiveUsersCount'    => User::allInactiveUsersCount(),
+                'newMonthlyUsers'       => User::currentMonthlyUsers(),
+                'monthlyUserProportion' => User::monthlyUserProportion(),
                 'monthlyIncome'         => Statistics::monthlyIncome()
             ]);
 
@@ -30,7 +32,7 @@ class DashboardController extends SecurityController
         } elseif(Session::getInstance()->getUser()->Staff_Adminstatus==3){
             header( 'Location:'.App::config('url').'Dashboard/Staff_Dashboard');
         }else{
-            header( 'Location:'.App::config('url').'Index/Denied');
+            header( 'Location:'.App::config('url'));
         }
     }
 }

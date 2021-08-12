@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controller/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Statistics.php" afterDir="false" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="login part done &amp; started doing dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Membership.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Membership.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Statistics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,8 @@
       <updated>1628609647346</updated>
       <workItem from="1628609649168" duration="1637000" />
       <workItem from="1628675174349" duration="4247000" />
-      <workItem from="1628687781572" duration="8915000" />
+      <workItem from="1628687781572" duration="9516000" />
+      <workItem from="1628760810850" duration="5230000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -83,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628692209106</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="login part done &amp; started doing dashboard">
+      <created>1628696976119</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628696976119</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,13 +99,14 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Landing page" />
+    <MESSAGE value="login part done &amp; started doing dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="login part done &amp; started doing dashboard" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1628692120632">
+    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1628772289212">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
-    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628692120632" />
+    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628772289212" />
     <state x="527" y="250" key="NewPhpClassDialog" timestamp="1628696368448">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
@@ -112,10 +119,10 @@
       <screen x="0" y="25" width="1920" height="991" />
     </state>
     <state x="559" y="257" key="Vcs.Push.Dialog.v2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628692329929" />
-    <state x="659" y="275" width="602" height="490" key="find.popup" timestamp="1628687839184">
+    <state x="659" y="275" width="602" height="490" key="find.popup" timestamp="1628769742933">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
-    <state x="659" y="275" width="602" height="490" key="find.popup/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628687839184" />
+    <state x="659" y="275" width="602" height="490" key="find.popup/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628769742933" />
     <state x="781" y="418" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1628691948364">
       <screen x="0" y="25" width="1920" height="991" />
     </state>

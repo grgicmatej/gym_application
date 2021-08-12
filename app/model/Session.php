@@ -34,4 +34,19 @@ class Session
     public  function getUser(){
         return isset($_SESSION['is_logged_in']) ? $_SESSION['is_logged_in'] : false;
     }
+
+    public static function startSession($k, $v)
+    {
+        if(isset($_SESSION[$k])){
+            unset($_SESSION[$k]);
+        }
+        $_SESSION[$k]=$v;
+    }
+
+    public static function stopSession($k)
+    {
+        if(isset($_SESSION[$k])){
+            unset($_SESSION[$k]);
+        }
+    }
 }
