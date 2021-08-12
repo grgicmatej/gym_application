@@ -22,10 +22,39 @@ class User
                                     LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
                                     LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
 
-                                    WHERE Users_Gym.Gym_Id=:usersGym
+                                    WHERE Users_Gym.Gym_Id=:usersGym 
                                     ORDER BY Users_Memberships.Users_Memberships_Id DESC
                                     ');
         $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function allUsersThreeMonths()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT
+                                    Users.Users_Id,
+                                    Users.Users_Name,
+                                    Users.Users_Surname,
+                                    Users_Memberships.Users_Memberships_Membership_Name,
+                                    Users_Memberships.Users_Memberships_Membership_Active,
+                                    Users_Memberships.Users_Memberships_Users_Id,
+                                    Users_Memberships.Users_Memberships_Start_Date,
+                                    Users_Memberships.Users_Memberships_End_Date,
+                                    Users_Gym.Gym_Id,
+                                    Users_Gym.Users_Id
+                                    FROM
+                                    Users
+                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
+                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
+
+                                    WHERE Users_Gym.Gym_Id=:usersGym 
+                                    AND Users_Memberships.Users_Memberships_End_Date>:twoMonthPeriod
+                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
+                                    ');
+        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('twoMonthPeriod', date('Y-m-d', strtotime("-60 days")));
         $stmt->execute();
         return $stmt->fetchAll();
     }

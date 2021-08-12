@@ -15,7 +15,7 @@ class DashboardController extends SecurityController
                 'gymData'               => Dashboard::gymData(),
                 'gymDataCount'          => Dashboard::gymDataCount(),
                 'gymName'               => Dashboard::gymName(),
-                #'userData'             => User::allUsers(),
+                'userData'              => User::allUsersThreeMonths(),
                 'allUsersCount'         => User::allUsersCount(),
                 'activeUsersCount'      => User::allActiveUsersCount(),
                 'inactiveUsersCount'    => User::allInactiveUsersCount(),
