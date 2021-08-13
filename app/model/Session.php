@@ -16,6 +16,8 @@ class Session
     public function logout()
     {
         unset($_SESSION['is_logged_in']);
+        unset($_SESSION['Staff_Id']);
+        unset($_SESSION['Staff_Admin_Status']);
     }
 
     public function isLoggedIn()

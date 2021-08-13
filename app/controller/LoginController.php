@@ -19,4 +19,13 @@ class LoginController
             $view->render('index',['message'=>'E-mail ili lozinka ne odgovaraju nijednom korisniku']);
         }
     }
+
+    public function logout()
+    {
+
+        Admin::endStaffActivity();
+        Session::getInstance()->logout();
+        $view=New View();
+        $view->render('index');
+    }
 }
