@@ -24,14 +24,14 @@ class Statistics
         do{
             $months[]=$i;
             $i++;
-        } while ($i <= date('m'));
+        } while ($i<=date('m'));
         return $months;
     }
 
     public static function yearlyStats()
     {
         $userData=[];
-        $months = [1,2,3,4,5,6,7,8,9,10,11,12];
+        $months=[1,2,3,4,5,6,7,8,9,10,11,12];
         foreach ($months as $m){
             $db=Db::getInstance();
             $stmt=$db->prepare('SELECT COUNT(Users_Id) AS userData FROM Users WHERE 
