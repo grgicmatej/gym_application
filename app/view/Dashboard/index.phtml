@@ -185,7 +185,7 @@
                     <section class="col-lg-4 connectedSortable">
                         <div class="card ">
                             <div class="card-header">
-                                <h3 class="card-title">Statistika</h3>
+                                <h3 class="card-title">Statistika novih korisnika</h3>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                         <i class="fas fa-minus"></i>
@@ -216,7 +216,7 @@
     var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
 
     var areaChartData = {
-        labels  : ['Siječanj', 'Veljača', 'Ožujak', 'Travanj', 'Svibanj', 'Lipanj', 'Srpanj', 'Kolovoz', 'Rujan', 'Listopad', 'Studeni', 'Prosinac'],
+        labels  : [<?php foreach ($monthsInYear as $my){echo $my." ,";}?>],
         datasets: [
             {
                 label               : 'Novi korisnici',
@@ -227,13 +227,13 @@
                 pointStrokeColor    : '#c1c7d1',
                 pointHighlightFill  : '#fff',
                 pointHighlightStroke: 'rgba(220,220,220,1)',
-                data                : [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40]
+                data                : [<?php foreach ($yearlyStats as $ys){echo  $ys->userData.", ";}?>]
             },
         ]
     }
 
     var areaChartOptions = {
-        maintainAspectRatio : false,
+        maintainAspectRatio : true,
         responsive : true,
         legend: {
             display: true
@@ -242,6 +242,10 @@
             xAxes: [{
                 gridLines : {
                     display : false,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Mjeseci'
                 }
             }],
             yAxes: [{

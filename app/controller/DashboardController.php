@@ -21,6 +21,8 @@ class DashboardController extends SecurityController
                 'inactiveUsersCount'    => User::allInactiveUsersCount(),
                 'newMonthlyUsers'       => User::currentMonthlyUsers(),
                 'monthlyUserProportion' => User::monthlyUserProportion(),
+                'yearlyStats'           => Statistics::yearlyStats(),
+                'monthsInYear'          => Statistics::monthsInYear(),
                 'monthlyIncome'         => Statistics::monthlyIncome()
             ]);
 

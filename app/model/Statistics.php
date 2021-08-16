@@ -17,4 +17,32 @@ class Statistics
         $stmt->execute();
         return $stmt->fetch();
     }
+
+    public static function monthsInYear()
+    {
+        $i=1;
+        do{
+            $months[]=$i;
+            $i++;
+        } while ($i <= date('m'));
+        return $months;
+    }
+
+    public static function yearlyStats()
+    {
+        $userData=[];
+        $months = [1,2,3,4,5,6,7,8,9,10,11,12];
+        foreach ($months as $m){
+            $db=Db::getInstance();
+            $stmt=$db->prepare('SELECT COUNT(Users_Id) AS userData FROM Users WHERE 
+                                            MONTH(Users_Registration)=:monthData 
+                                            AND 
+                                            YEAR(Users_Registration)=:currentYear');
+            $stmt->bindValue('monthData', $m);
+            $stmt->bindValue('currentYear', date('Y'));
+            $stmt->execute();
+            $userData[]=$stmt->fetch();
+        }
+        return $userData;
+    }
 }
