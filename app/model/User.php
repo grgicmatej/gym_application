@@ -161,4 +161,111 @@ class User
     {
         return round((self::currentMonthlyUsers()->newMonthlyUsers/self::previousMonthUsers()->previousMonthlyUsers)*100, 2);
     }
+
+    public static function viewUserData($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT
+                                    Users.Users_Id,
+                                    Users.Users_Name,
+                                    Users.Users_Surname,
+                                    Users.Users_City,
+                                    Users.Users_Address,
+                                    Users.Users_Phone,
+                                    Users.Users_Email,
+                                    Users.Users_Birthday,
+                                    Users.Users_Oib,
+                                    Users.Users_Gender,
+                                    Users.Users_Reference,
+                                    Users.Users_Company,
+                                    Users.Users_Status,
+                                    Users.Users_Registration,
+                                    Users.Users_Photo,
+                                    Users_Memberships.Users_Memberships_Membership_Name,
+                                    Users_Memberships.Users_Memberships_Membership_Active,
+                                    Users_Memberships.Users_Memberships_Users_Id,
+                                    Users_Memberships.Users_Memberships_Start_Date,
+                                    Users_Memberships.Users_Memberships_End_Date,
+                                    Users_Memberships.Users_Memberships_Admin_Id,
+                                    Staff.Staff_Id,
+                                    Staff.Staff_Name,
+                                    Staff.Staff_Surname,
+                                    Users_Gym.Gym_Id,
+                                    Users_Gym.Users_Id
+                                    FROM
+                                    Users
+                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
+                                    LEFT JOIN Staff             ON Staff.Staff_Id=Users_Memberships.Users_Memberships_Admin_Id
+                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
+
+                                    WHERE Users.Users_Id=:usersId
+                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
+                                    ');
+        $stmt->bindValue('usersId', $id);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function viewUserEssentialData($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT
+                                    Users.Users_Id,
+                                    Users.Users_Name,
+                                    Users.Users_Surname,
+                                    Users.Users_City,
+                                    Users.Users_Address,
+                                    Users.Users_Phone,
+                                    Users.Users_Email,
+                                    Users.Users_Birthday,
+                                    Users.Users_Photo,
+                                    Users.Users_Status,
+                                    Users_Memberships.Users_Memberships_Membership_Name,
+                                    Users_Memberships.Users_Memberships_Membership_Active,
+                                    Users_Memberships.Users_Memberships_Users_Id,
+                                    Users_Memberships.Users_Memberships_Start_Date,
+                                    Users_Memberships.Users_Memberships_End_Date,
+                                    Staff.Staff_Id,
+                                    Staff.Staff_Name,
+                                    Staff.Staff_Surname,
+                                    Users_Gym.Gym_Id,
+                                    Users_Gym.Users_Id
+                                    FROM
+                                    Users
+                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
+                                    LEFT JOIN Staff             ON Staff.Staff_Id=Users_Memberships.Users_Memberships_Admin_Id
+                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
+
+                                    WHERE Users.Users_Id=:usersId
+                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
+                                    ');
+        $stmt->bindValue('usersId', $id);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function userArrivalCount($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT COUNT(Users_Arrivals_Id) AS countrow FROM Users_Arrivals WHERE 
+                                        Users_Arrivals_User_Id=:usersArrivalsUserId 
+                                        AND
+                                        (Users_Arrivals_Week)=:usersArrivalsWeek
+                                        ');
+        $stmt->bindValue('usersArrivalsUserId', $id);
+        $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function essentialUserData($id)
+    {
+        $data=self::viewUserEssentialData($id);
+        $data1=self::userArrivalCount($id);
+
+        $obj_merged = (object) array_merge(
+            (array) $data, (array) $data1);
+
+        return $obj_merged;
+    }
 }

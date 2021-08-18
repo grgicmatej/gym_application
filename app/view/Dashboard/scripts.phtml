@@ -33,3 +33,87 @@
 
 <!-- Bootstrap -->
 <script src="<?= App::config("url") ?>vendor/Bootstrap/bootstrap.js"></script>
+
+<script>
+
+    /* working version, ovo otvori modal
+    $('.test12').on('click', function () {
+        var id = $(this).attr('id');
+
+        if (id) {
+            id = id.split('_')[1];
+            console.log(id);
+            $.ajax({
+                method: 'POST',
+                data: {"data": id},
+                url: 'http://localhost:8080/gym.com.hr_v2/User/viewUser/' + id,
+
+
+                success: function (response) {
+
+                    //console.log(response);
+                    $('#exampleModal').modal('show');
+                }
+            })
+        }
+    });
+
+     */
+
+
+
+
+
+
+
+
+    $('.test12').on('click', function () {
+        var id = $(this).attr('id');
+
+        if (id) {
+            id = id.split('_')[1];
+            $.ajax({
+
+                method: "POST",
+                data: {data: id},
+                url: 'http://localhost:8080/gym.com.hr_v2/User/viewUser/' + id,
+                success: function (response) {
+                    response = JSON.parse(response);
+
+                    $("#exampleModal").modal('show');
+                    $("#email").text(response["Users_Email"]);
+                    $("#id").text(response["Users_Id"]);
+                    $("#ime").text(response["Users_Name"]+" "+response["Users_Surname"]);
+                    $("#telefon").text(response["Users_Phone"]);
+                    $("#imeclanarine").text(response["Users_Memberships_Membership_Name"]);
+                    $("#status").text(response["Users_Status"]);
+                    $("#datumrodenja").text(formatDate (response["Users_Birthday"]));
+
+                    $("#trajanjeclanarine").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
+                    //$("#dolasci").text(response["countrow"]);
+                    //$("#dolasci").text(response["countrow"]);
+                    //$("#dolasci").text(response["countrow"]);
+
+                }
+            });
+        }
+    });
+
+
+
+    function formatDate (input) {
+        var datePart = input.match(/\d+/g),
+            year = datePart[0],
+            month = datePart[1], day = datePart[2];
+        return day+'.'+month+'.'+year+'.';
+    }
+
+
+
+
+
+
+
+
+
+</script>

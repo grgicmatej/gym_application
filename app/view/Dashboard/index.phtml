@@ -13,6 +13,7 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+    <?php include "widgets.php";?>
     <?php include "navbar.phtml"?>
     <?php include "sidebar.phtml";?>
     <div class="content-wrapper">
@@ -87,23 +88,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <section class="col-lg-8 connectedSortable">
+                    <section class="col-xl-8 col-lg-12 d-none d-lg-block d-xl-block connectedSortable">
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Pregled najnovijih korisnika</h3>
+                                <h3 class="card-title">Pregled korisnika</h3>
                             </div>
                             <!-- /.card-header -->
-                            <div class="card-body">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <div class="card-body" style="max-width: available">
+                                <table class="table" id="dataTable" width=100%" cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th>Šifra korisnika</th>
-                                        <th>Ime i prezime</th>
-                                        <th>Vrsta članarine</th>
-                                        <th>Aktivan</th>
-                                        <th>Datum početka</th>
-                                        <th>Datum isteka</th>
+                                        <th style="width: auto">Šifra korisnika</th>
+                                        <th style="width: auto">Ime i prezime</th>
+                                        <th style="width: auto">Vrsta članarine</th>
+                                        <th style="width: auto">Aktivan</th>
+                                        <th style="width: auto">Datum početka</th>
+                                        <th style="width: auto">Datum isteka</th>
                                         <th></th>
                                     </tr>
                                     </thead>
@@ -127,6 +128,8 @@
                                     ?>
 
                                     <?php foreach ($userData as $data):?>
+
+
                                         <?php
 
 
@@ -148,24 +151,29 @@
                                                 ?>
                                                 <td class="text-center"><?=$data->Users_Id?></td>
                                                 <td class="text-center"><?=$data->Users_Name." ".$data->Users_Surname?>
+                                                    <!--
                                                     <p>
                                                         <a href="<?= App::config("url") ?>User/Add_User_Arrival/<?=$data->Users_Id?>" class="btn linkanimation1"><span class="linkanimation1"><i
                                                                         class="fas fa-plus"></i> Potvrdi dolazak</span></a>
-                                                    </p>
+                                                    </p> -->
                                                 </td>
                                                 <td class="text-center"><?=$data->Users_Memberships_Membership_Name?></td>
-                                                <td style="background-color: <?= $data->Users_Memberships_Membership_Active? "#29A745":"#DD3645" ?>; color: white; font-weight: bolder" class="text-center">
+                                                <td style="background-color: <?= $data->Users_Memberships_Membership_Active? "#74C687":"#E87C87" ?>; color: white; font-weight: bolder" class="text-center">
                                                     <?= $data->Users_Memberships_Membership_Active? "Da" : "Ne"?>
                                                 </td>
                                                 <td class="text-center"><?=$realdate_Start?></td>
                                                 <td class="text-center"><?=$realdate_End?></td>
-                                                <td class="text-center">
+                                                <td class="text-center test12" id="i_<?= $data->Users_Id?>">
                                                     <p>
-                                                        <a class="submitlink" href="<?=App::config("url")?>User/View_User/<?=$data->Users_Id?>"><i class="fad fa-user"></i></a>
-                                                        <a class="submitlink" href="<?=App::config("url")?>User/Membership_Purchase/<?=$data->Users_Id?>"><i class="fas fa-plus"></i> </a>
-
+                                                        <a class="submitlink linkanimation" href="<?=App::config("url")?>User/View_User/<?=$data->Users_Id?>"><i class="fad fa-user"></i></a>
+                                                        <a class="test123" id="i_<?= $data->Users_Id ?>">test link</a>
                                                     </p>
+                                                    <!--
 
+                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        Launch demo modal
+                                                    </button>
+                                                    -->
                                                 </td>
                                             </tr>
                                         <?
@@ -182,7 +190,7 @@
                             <!-- /.card-body -->
                         </div>
                     </section>
-                    <section class="col-lg-4 connectedSortable">
+                    <section class="col-xl-4 d-lg-none d-xl-block connectedSortable">
                         <div class="card ">
                             <div class="card-header">
                                 <h3 class="card-title">Statistika novih korisnika</h3>
@@ -212,6 +220,27 @@
     </div>
     <?php include "footer.phtml";?>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
     var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
 
