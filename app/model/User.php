@@ -260,12 +260,9 @@ class User
 
     public static function essentialUserData($id)
     {
-        $data=self::viewUserEssentialData($id);
-        $data1=self::userArrivalCount($id);
+        $objMerged = (object) array_merge(
+            (array) self::viewUserEssentialData($id), (array) self::userArrivalCount($id));
 
-        $obj_merged = (object) array_merge(
-            (array) $data, (array) $data1);
-
-        return $obj_merged;
+        return $objMerged;
     }
 }

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,7 @@
       <workItem from="1629184268932" duration="4917000" />
       <workItem from="1629203822992" duration="1229000" />
       <workItem from="1629222418739" duration="1783000" />
-      <workItem from="1629279577050" duration="5405000" />
+      <workItem from="1629279577050" duration="5457000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -136,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629110361473</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="user widget with essential data">
+      <created>1629295742795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629295742795</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,13 +153,14 @@
     <MESSAGE value="Logout part done" />
     <MESSAGE value="stats chart is ready" />
     <MESSAGE value="formating" />
-    <option name="LAST_COMMIT_MESSAGE" value="formating" />
+    <MESSAGE value="user widget with essential data" />
+    <option name="LAST_COMMIT_MESSAGE" value="user widget with essential data" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1629110356442">
+    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1629295737520">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
-    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629110356442" />
+    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629295737520" />
     <state x="527" y="250" key="NewPhpClassDialog" timestamp="1629123787468">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
