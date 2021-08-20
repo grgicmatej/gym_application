@@ -26,6 +26,7 @@
 
 <script src="<?= App::config("url") ?>vendor/js/design23.js"></script>
 <script src="<?= App::config("url") ?>vendor/js/design24.js"></script>
+<script src="<?= App::config("url") ?>vendor/js/design25.js"></script>
 
 
 <!-- Additional JS -->
@@ -112,7 +113,7 @@
                     $("#trajanjeclanarine").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
                     $("#brojdolazaka").text("Broj dolazaka ovaj tjedan: "+response["countrow"]);
 
-                    $("#potvrdidolazak").html("<a><span class='linkanimation_black potvrdidolazak' >Potvrdi dolazak</span></a>");
+                    $("#potvrdidolazak").html("<a><span class='btn btn-block btn-outline-info' >Potvrdi dolazak</span></a>");
                     //$("#potvrdidolazak").html("<a href='<?= App::config("url") ?>User/addUserArrival/"+response["Users_Id"]+"'   ><span class='linkanimation_black' >Potvrdi dolazak</span></a>");
                     globalVariable = response["Users_Id"];
                 }
@@ -134,7 +135,6 @@
     // arrivalCounter
     $('.potvrdidolazak').on('click', function() {
         var id = globalVariable;
-        alert(id)
         $.ajax({
 
             method: "POST",
@@ -144,10 +144,32 @@
                     $("#profileData").fadeOut(400, function (){
                         $(this).modal('hide');
                     });
-                }
+                    $(this).fadeIn(400, function notification(){
+                        toastr.success('Uspješno potvrđen dolazak.');
+                    });
+
+
+            }
+
         });
 
     });
     // arrivalCounter end
+
+    // widgets
+
+
+    $('.toastrDefaultSuccess').click(function() {
+        toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+    });
+    $('.toastrDefaultInfo').click(function() {
+        toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+    });
+    $('.toastrDefaultError').click(function() {
+        toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+    });
+    $('.toastrDefaultWarning').click(function() {
+        toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+    });
 
 </script>

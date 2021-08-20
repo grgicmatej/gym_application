@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vendor/css/design10.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/js/design25.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/head_css.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/head_css.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
     </list>
@@ -39,22 +41,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/js/Frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/view/Dashboard" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/css" />
+      <recent name="$PROJECT_DIR$/vendor/js" />
       <recent name="$PROJECT_DIR$/vendor/js/Frontend" />
       <recent name="$PROJECT_DIR$/vendor/images" />
       <recent name="$PROJECT_DIR$/vendor/css/Frontend" />
-      <recent name="$PROJECT_DIR$/app/view/Landing" />
-      <recent name="$PROJECT_DIR$/app/view/Landingfooter.phtml head_css.phtml index.phtml layout.phtml navbar.phtml scripts.phtml sidebar.phtml" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/view/Dashboard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,7 +78,7 @@
       <workItem from="1629203822992" duration="1229000" />
       <workItem from="1629222418739" duration="1783000" />
       <workItem from="1629279577050" duration="5505000" />
-      <workItem from="1629447445243" duration="8637000" />
+      <workItem from="1629447445243" duration="11367000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -162,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629456793326</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="counter working, modal hiding after finishing counting.">
+      <created>1629459164020</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629459164020</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,13 +190,14 @@
     <MESSAGE value="formating" />
     <MESSAGE value="formating, fixing some things from widget modal. Working on userArrivalCounter" />
     <MESSAGE value="userArrivalCounter working, session fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="userArrivalCounter working, session fix" />
+    <MESSAGE value="counter working, modal hiding after finishing counting." />
+    <option name="LAST_COMMIT_MESSAGE" value="counter working, modal hiding after finishing counting." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1629456788120">
+    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1629459159054">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
-    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629456788120" />
+    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629459159054" />
     <state x="527" y="250" key="NewPhpClassDialog" timestamp="1629123787468">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
