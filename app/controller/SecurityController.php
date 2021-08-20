@@ -1,8 +1,9 @@
 <?php
-
+session_start();
 
 class SecurityController
 {
+
     public function employeeCheck()
     {
         if (!Session::getInstance()->getUser()->Staff_Adminstatus) {

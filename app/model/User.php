@@ -164,7 +164,6 @@ class User
 
     public static function newArrival($id)
     {
-        $gymId=$_SESSION["Gym_Id"];
         $db=Db::getInstance();
         $stmt=$db->prepare('INSERT INTO Users_Arrivals
                             (
@@ -181,7 +180,7 @@ class User
                         ');
         $stmt->bindValue('usersArrivalsUserId', $id);
         $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
-        $stmt->bindValue('usersArrivalsGymId', $gymId);
+        $stmt->bindValue('usersArrivalsGymId', $_SESSION["Gym_Id"]);
         $stmt->execute();
     }
 

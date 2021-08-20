@@ -1,7 +1,7 @@
 <?php
 
 
-class LoginController
+class LoginController extends SecurityController
 {
     public function login()
     {
@@ -9,6 +9,10 @@ class LoginController
         if (Staff::loginCheck()){
             if (Staff::passwordCheck()){
                 Admin::logedUserStart();
+                Session::startSession('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+                Session::startSession('Staff_Logged_In', 1);
+                Session::startSession('Staff_Admin_Status', Session::getInstance()->getUser()->Staff_Adminstatus);
+
                 Dashboard::changeGym();
                 header( 'Location:'.App::config('url').'Dashboard/dashboardCheck');
             }else{

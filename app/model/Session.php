@@ -3,11 +3,6 @@ class Session
 {
     private static $instance;
 
-    private function __construct()
-    {
-        session_start();
-    }
-
     public function login($user)
     {
         $_SESSION['is_logged_in'] = $user;
@@ -40,6 +35,7 @@ class Session
 
     public static function startSession($k, $v)
     {
+        session_start();
         if(isset($_SESSION[$k])){
             unset($_SESSION[$k]);
         }
