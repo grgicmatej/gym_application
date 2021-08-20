@@ -47,13 +47,13 @@
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div class="row">
                                 <div class="col-12">
-                                    <p class="m-b-10 f-w-600" id="brojdolazaka"></p>
+                                    <p class="m-b-10 f-w-600 " id="brojdolazaka"></p>
                                 </div>
                             </div>
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <p class="m-b-10 f-w-600" id="potvrdidolazak"></p>
+                                    <p class="m-b-10 f-w-600 potvrdidolazak" id="potvrdidolazak"></p>
                                     <h6 class="text-muted f-w-400" id="imeclanarine"></h6>
                                 </div>
                                 <div class="col-sm-6">

@@ -112,8 +112,9 @@
                     $("#trajanjeclanarine").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
                     $("#brojdolazaka").text("Broj dolazaka ovaj tjedan: "+response["countrow"]);
 
-                    $("#potvrdidolazak").html("<a href='<?= App::config("url") ?>User/addUserArrival/"+response["Users_Id"]+"'   ><span class='linkanimation_black' >Potvrdi dolazak</span></a>");
-
+                    $("#potvrdidolazak").html("<a><span class='linkanimation_black potvrdidolazak' >Potvrdi dolazak</span></a>");
+                    //$("#potvrdidolazak").html("<a href='<?= App::config("url") ?>User/addUserArrival/"+response["Users_Id"]+"'   ><span class='linkanimation_black' >Potvrdi dolazak</span></a>");
+                    globalVariable = response["Users_Id"];
                 }
             });
         }
@@ -128,5 +129,25 @@
         return day+'.'+month+'.'+year+'.';
     }
     // profileData modal end
+
+
+    // arrivalCounter
+    $('.potvrdidolazak').on('click', function() {
+        var id = globalVariable;
+        alert(id)
+        $.ajax({
+
+            method: "POST",
+            data: {data: id},
+            url: 'http://localhost:8080/gym.com.hr_v2/User/addUserArrival/' + id,
+            success: function () { // do tu valja
+                    $("#profileData").fadeOut(400, function (){
+                        $(this).modal('hide');
+                    });
+                }
+        });
+
+    });
+    // arrivalCounter end
 
 </script>
