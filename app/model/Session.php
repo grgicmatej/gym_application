@@ -15,9 +15,10 @@ class Session
 
     public function logout()
     {
-        unset($_SESSION['is_logged_in']);
-        unset($_SESSION['Staff_Id']);
-        unset($_SESSION['Staff_Admin_Status']);
+        self::stopSession('is_logged_in');
+        self::stopSession('Staff_Id');
+        self::stopSession('Staff_Admin_Status');
+        self::stopSession('Gym_Id');
     }
 
     public function isLoggedIn()

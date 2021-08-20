@@ -7,7 +7,6 @@ class DashboardController extends SecurityController
     {
         $this->employeeCheck();
         Membership::timeUpdate();
-
         $view=New View();
         $view->render('Dashboard/index',
             [

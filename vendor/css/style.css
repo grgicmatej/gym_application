@@ -11,14 +11,27 @@
 }
 
 .linkanimation{
-    color: darkgrey;
+    color: darkgrey !important;
     transition: 0.2s;
 }
 
 .linkanimation:hover{
-    color: gray;
+    color: gray !important;
     transition: 0.2s;
 }
+
+.linkanimation_black{
+    color: black !important;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.linkanimation_black:hover{
+    color: gray !important;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
 
 .nav-link{
     color: #ffffff !important;

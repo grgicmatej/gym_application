@@ -1,5 +1,5 @@
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- profileData Modal -->
+<div class="modal fade" id="profileData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -46,12 +46,18 @@
                             </div>
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div class="row">
+                                <div class="col-12">
+                                    <p class="m-b-10 f-w-600" id="brojdolazaka"></p>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
                                 <div class="col-sm-6">
-                                    <p class="m-b-10 f-w-600">Potvrdi dolazak</p>
+                                    <p class="m-b-10 f-w-600" id="potvrdidolazak"></p>
                                     <h6 class="text-muted f-w-400" id="imeclanarine"></h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <p class="m-b-10 f-w-600">Produži članarinu</p>
+                                    <p class="m-b-10 f-w-600" id="produziclanarinu">Produži članarinu</p>
                                     <h6 class="text-muted f-w-400" id="trajanjeclanarine"></h6>
                                 </div>
                             </div>
@@ -59,26 +65,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
 </div>
-
-<!--
-<div class="container-fluid d-flex justify-content-center">
-    <div class="col-xl-6 col-md-12">
-        <div class="card user-card-full">
-            <div class="row m-l-0 m-r-0">
-                <div class="col-sm-4 bg-c-lite-green user-profile">
-
-                </div>
-                <div class="col-sm-8">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->

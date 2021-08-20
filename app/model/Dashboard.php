@@ -25,11 +25,8 @@ class Dashboard
         foreach ($data as $d) {
             $gymId=$d->Gym_Id;
         }
-
-        if (isset($_SESSION['Gym_Id'])){
-            unset($_SESSION['Gym_Id']);
-        }
         $_SESSION['Gym_Id']=$gymId;
+
     }
 
     Public static function gymData() //Provjerava sve teretane koje su u vlasništvu Staff_Id

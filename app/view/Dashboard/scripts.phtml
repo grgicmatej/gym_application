@@ -35,39 +35,60 @@
 <script src="<?= App::config("url") ?>vendor/Bootstrap/bootstrap.js"></script>
 
 <script>
+    // Chart script
+    var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
 
-    /* working version, ovo otvori modal
-    $('.test12').on('click', function () {
-        var id = $(this).attr('id');
+    var areaChartData = {
+        labels  : [<?php foreach ($monthsInYear as $my){echo $my." ,";}?>],
+        datasets: [
+            {
+                label               : 'Novi korisnici',
+                backgroundColor     : 'rgba(116, 198, 135, 0.5)',
+                borderColor         : 'rgba(116, 198, 135, 1)',
+                pointRadius         : true,
+                pointColor          : 'rgba(210, 214, 222, 1)',
+                pointStrokeColor    : '#c1c7d1',
+                pointHighlightFill  : '#fff',
+                pointHighlightStroke: 'rgba(220,220,220,1)',
+                data                : [<?php foreach ($yearlyStats as $ys){echo  $ys->userData.", ";}?>]
+            },
+        ]
+    }
 
-        if (id) {
-            id = id.split('_')[1];
-            console.log(id);
-            $.ajax({
-                method: 'POST',
-                data: {"data": id},
-                url: 'http://localhost:8080/gym.com.hr_v2/User/viewUser/' + id,
-
-
-                success: function (response) {
-
-                    //console.log(response);
-                    $('#exampleModal').modal('show');
+    var areaChartOptions = {
+        maintainAspectRatio : true,
+        responsive : true,
+        legend: {
+            display: true
+        },
+        scales: {
+            xAxes: [{
+                gridLines : {
+                    display : false,
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Mjeseci'
                 }
-            })
+            }],
+            yAxes: [{
+                gridLines : {
+                    display : true,
+                }
+            }]
         }
-    });
+    }
 
-     */
+    new Chart(areaChartCanvas, {
+        type: 'line',
+        data: areaChartData,
+        options: areaChartOptions
+    })
 
+    // chart script end
 
-
-
-
-
-
-
-    $('.test12').on('click', function () {
+    // profileData modal
+    $('.profileData').on('click', function () {
         var id = $(this).attr('id');
 
         if (id) {
@@ -80,7 +101,7 @@
                 success: function (response) {
                     response = JSON.parse(response);
 
-                    $("#exampleModal").modal('show');
+                    $("#profileData").modal('show');
                     $("#email").text(response["Users_Email"]);
                     $("#id").text(response["Users_Id"]);
                     $("#ime").text(response["Users_Name"]+" "+response["Users_Surname"]);
@@ -88,14 +109,17 @@
                     $("#imeclanarine").text(response["Users_Memberships_Membership_Name"]);
                     $("#status").text(response["Users_Status"]);
                     $("#datumrodenja").text(formatDate (response["Users_Birthday"]));
-
                     $("#trajanjeclanarine").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
+                    $("#brojdolazaka").text("Broj dolazaka ovaj tjedan: "+response["countrow"]);
+
+                    $("#potvrdidolazak").html("<a href='<?= App::config("url") ?>User/addUserArrival/"+response["Users_Id"]+"'   ><span class='linkanimation_black' >Potvrdi dolazak</span></a>");
+
                 }
             });
         }
     });
 
-
+    //
 
     function formatDate (input) {
         var datePart = input.match(/\d+/g),
@@ -103,13 +127,6 @@
             month = datePart[1], day = datePart[2];
         return day+'.'+month+'.'+year+'.';
     }
-
-
-
-
-
-
-
-
+    // profileData modal end
 
 </script>

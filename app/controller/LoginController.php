@@ -5,6 +5,7 @@ class LoginController
 {
     public function login()
     {
+
         if (Staff::loginCheck()){
             if (Staff::passwordCheck()){
                 Admin::logedUserStart();

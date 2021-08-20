@@ -162,6 +162,29 @@ class User
         return round((self::currentMonthlyUsers()->newMonthlyUsers/self::previousMonthUsers()->previousMonthlyUsers)*100, 2);
     }
 
+    public static function newArrival($id)
+    {
+        $gymId=$_SESSION["Gym_Id"];
+        $db=Db::getInstance();
+        $stmt=$db->prepare('INSERT INTO Users_Arrivals
+                            (
+                            Users_Arrivals_User_Id,
+                            Users_Arrivals_Week,
+                            Users_Arrivals_Gym_Id
+                            )
+                            VALUES 
+                            (
+                            :usersArrivalsUserId,
+                            :usersArrivalsWeek,
+                            :usersArrivalsGymId
+                            )
+                        ');
+        $stmt->bindValue('usersArrivalsUserId', $id);
+        $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
+        $stmt->bindValue('usersArrivalsGymId', $gymId);
+        $stmt->execute();
+    }
+
     public static function viewUserData($id)
     {
         $db=Db::getInstance();
