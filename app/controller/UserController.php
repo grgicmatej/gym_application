@@ -6,7 +6,6 @@ class UserController extends SecurityController
     public function addUserArrival($id)
     {
         User::newArrival($id);
-
     }
 
     public function membershipPurchase($id)

@@ -68,6 +68,7 @@
         </div>
     </div>
 </div>
+<!-- profileData Modal end -->
 
 
 <!-- membershipData -->
@@ -97,8 +98,6 @@
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
                                     <input type="submit" class="m-b-10 btn btn-block btn-outline-info" value="Produži članarinu">
-                                    <p class="m-b-10 f-w-600 membershipData" id="">Produži članarinu</p>
-                                    <h6 class="text-muted f-w-400" id="trajanjeclanarine"></h6>
                                 </div>
                             </div>
                         </div>
