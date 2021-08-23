@@ -54,11 +54,50 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <p class="m-b-10 f-w-600 potvrdidolazak" id="potvrdidolazak"></p>
-                                    <h6 class="text-muted f-w-400" id="imeclanarine"></h6>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 membershipData btn btn-block btn-outline-secondary" id="" >Nova članarina</p>
+                                    <h6 class="text-muted f-w-400" id="trajanjeclanarine"></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- membershipData -->
+<div class="modal fade" id="membershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
+                            <div class="row forma">
+                                <!-- Tu sam stao, treba preko JS poslati <form> -->
+
+                                    <select id="memberships" style="width: 100%; padding: 10px"></select>
+
+
+
+                                </form>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <p class="m-b-10 f-w-600 potvrdidolazak" id="potvrdidolazak"></p>
                                 </div>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
-                                    <p class="m-b-10 f-w-600" id="produziclanarinu">Produži članarinu</p>
+                                    <input type="submit" class="m-b-10 btn btn-block btn-outline-info" value="Produži članarinu">
+                                    <p class="m-b-10 f-w-600 membershipData" id="">Produži članarinu</p>
                                     <h6 class="text-muted f-w-400" id="trajanjeclanarine"></h6>
                                 </div>
                             </div>

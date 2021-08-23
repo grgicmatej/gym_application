@@ -113,16 +113,13 @@
                     $("#trajanjeclanarine").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
                     $("#brojdolazaka").text("Broj dolazaka ovaj tjedan: "+response["countrow"]);
 
-                    $("#potvrdidolazak").html("<a><span class='btn btn-block btn-outline-info' >Potvrdi dolazak</span></a>");
+                    $("#potvrdidolazak").html("<a><span class='btn btn-block btn-outline-info' >Potvrda dolaska</span></a>");
                     //$("#potvrdidolazak").html("<a href='<?= App::config("url") ?>User/addUserArrival/"+response["Users_Id"]+"'   ><span class='linkanimation_black' >Potvrdi dolazak</span></a>");
                     globalVariable = response["Users_Id"];
                 }
             });
         }
     });
-
-    //
-
     function formatDate (input) {
         var datePart = input.match(/\d+/g),
             year = datePart[0],
@@ -157,8 +154,6 @@
     // arrivalCounter end
 
     // widgets
-
-
     $('.toastrDefaultSuccess').click(function() {
         toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
     });
@@ -171,5 +166,60 @@
     $('.toastrDefaultWarning').click(function() {
         toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
     });
+    // widgets end
+
+    // membershipData modal
+    $('.membershipData').on('click', function () {
+
+        var id = globalVariable;
+        $("#profileData").fadeOut(400, function (){
+            $(this).modal('hide');
+        });
+
+        if (id) {
+
+            $.ajax({
+
+                method: "POST",
+                data: {data: id},
+                url: 'http://localhost:8080/gym.com.hr_v2/User/membershipPurchase/' + id,
+                success: function (response) {
+                    //alert(response); // ispiše dobre podatke
+
+
+                    $("#forma").text("<form action='' method='post' id='membershipDataForm'>");
+                    $("#forma").text("<p>1234</p>");
+                    response = JSON.parse(response);
+
+                    Array.from(response).forEach(function(item, index){
+                        console.log(response[index].Memberships_Id);
+                    });
+
+
+
+
+
+                    const membershipsData = document.getElementById('memberships');
+                    const srcArray = response;
+
+                    membershipsData.innerHTML = srcArray.reduce((options, {Memberships_Id,Memberships_Name}) =>
+                            options+=`<option value="${Memberships_Id}">${Memberships_Name}</option>`,
+                        '<option value="" selected>Odabir članarine</option>');
+
+
+
+
+
+
+
+                    $("#membershipData").modal('show');
+                    $("#id").html(id);
+                }
+            });
+        }
+    });
+
+    //
+
 
 </script>

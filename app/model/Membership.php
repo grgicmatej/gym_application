@@ -3,6 +3,18 @@
 
 class Membership
 {
+    public static function allActiveMemberships()
+    {
+
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Gym_Id=:membershipsGymId AND Memberships_Active=:membershipsActive AND Memberships_Visible=:membershipsVisible');
+        $stmt->bindValue('membershipsGymId', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('membershipsActive', 1);
+        $stmt->bindValue('membershipsVisible', 1);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public static function timeUpdate()
     {
         $date=date_create();
