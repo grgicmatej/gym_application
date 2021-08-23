@@ -150,13 +150,7 @@
                                                 endif;
                                                 ?>
                                                 <td class="text-center"><?=$data->Users_Id?></td>
-                                                <td class="text-center"><?=$data->Users_Name." ".$data->Users_Surname?>
-                                                    <!--
-                                                    <p>
-                                                        <a href="<?= App::config("url") ?>User/Add_User_Arrival/<?=$data->Users_Id?>" class="btn linkanimation1"><span class="linkanimation1"><i
-                                                                        class="fas fa-plus"></i> Potvrdi dolazak</span></a>
-                                                    </p> -->
-                                                </td>
+                                                <td class="text-center"><?=$data->Users_Name." ".$data->Users_Surname?></td>
                                                 <td class="text-center"><?=$data->Users_Memberships_Membership_Name?></td>
                                                 <td style="background-color: <?= $data->Users_Memberships_Membership_Active? "#74C687":"#E87C87" ?>; color: white; font-weight: bolder" class="text-center">
                                                     <?= $data->Users_Memberships_Membership_Active? "Da" : "Ne"?>
@@ -165,7 +159,7 @@
                                                 <td class="text-center"><?=$realdate_End?></td>
                                                 <td class="text-center profileData" id="i_<?= $data->Users_Id?>">
                                                     <p>
-                                                        <a class="submitlink linkanimation" id="i_<?= $data->Users_Id ?>"><i class="fad fa-user"></i> Pregled</a>
+                                                        <a class="submitlink linkanimation" id="i_<?= $data->Users_Id ?>">Pregled <i class="fad fa-user"></i></a>
                                                     </p>
                                                 </td>
                                             </tr>

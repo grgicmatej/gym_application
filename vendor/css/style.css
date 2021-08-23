@@ -37,6 +37,16 @@
     color: #ffffff !important;
 }
 
+.nav-link-dark{
+    color: black !important;
+    transition: 0.2s;
+}
+
+.nav-link-dark:hover{
+    color: gray !important;
+    transition: 0.2s;
+}
+
 .sidebar_background{
     background-color: #7699F5 !important;
 }
@@ -172,4 +182,8 @@ h6 {
     margin: 0 10px 0 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out
+}
+
+.ml-10{
+    margin-left: 10px !important;
 }
