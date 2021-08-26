@@ -8,7 +8,7 @@ class UserController extends SecurityController
         User::newArrival($id);
     }
 
-    public function membershipPurchase($id)
+    public function allMemberships()
     {
         echo json_encode(Membership::allActiveMemberships());
     }

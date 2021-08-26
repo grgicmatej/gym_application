@@ -182,13 +182,37 @@
 
                 method: "POST",
                 data: {data: id},
-                url: 'http://localhost:8080/gym.com.hr_v2/User/membershipPurchase/' + id,
+                url: 'http://localhost:8080/gym.com.hr_v2/User/allMemberships/',
                 success: function (response) {
                     //alert(response); // ispiše dobre podatke
 
 
-                    $("#forma").text("<form action='' method='post' id='membershipDataForm'>");
-                    $("#forma").text("<p>1234</p>");
+
+                    $("#membershipData").modal('show');
+
+
+                    const div = document.createElement('div');
+
+                    div.className = 'row';
+
+                    div.innerHTML = `
+                    <form action="http://localhost:8080/gym.com.hr_v2/User/allMemberships/'+id'" method="post" id="newmembershipform">
+                    <select id="memberships" style="width: 100%; padding: 10px"></select>
+                    </form>
+                    <p>http://localhost:8080/gym.com.hr_v2/User/allMemberships/</p>`; // tu sam stao, treba zamjeniti ove ` da se može ubaciti ID
+
+
+                    document.getElementById('forma').appendChild(div);
+
+
+
+
+
+
+
+
+
+
                     response = JSON.parse(response);
 
 
@@ -196,8 +220,7 @@
                     const srcArray = response;
 
                     membershipsData.innerHTML = srcArray.reduce((options, {Memberships_Id,Memberships_Name}) =>
-                            options+=`<option value="${Memberships_Id}">${Memberships_Name}</option>`,
-                        '<option value="" selected>Odabir članarine</option>');
+                            options+=`<option value="${Memberships_Name}" selected>${Memberships_Name}</option>`);
 
 
 
@@ -205,8 +228,7 @@
 
 
 
-                    $("#membershipData").modal('show');
-                    $("#id").html(id);
+
                 }
             });
         }

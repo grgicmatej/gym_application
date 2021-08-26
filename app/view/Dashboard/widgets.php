@@ -81,14 +81,14 @@
                     <div class="col-lg-12">
                         <div class="card-block">
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
-                            <div class="row forma">
+                            <div class="row forma" id="forma">
                                 <!-- Tu sam stao, treba preko JS poslati <form> -->
 
-                                    <select id="memberships" style="width: 100%; padding: 10px"></select>
 
 
 
-                                </form>
+
+
                             </div>
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div class="row">
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
-                                    <input type="submit" class="m-b-10 btn btn-block btn-outline-info" value="Produži članarinu">
+                                    <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="newmembershipform" value="Produži članarinu">
                                 </div>
                             </div>
                         </div>
