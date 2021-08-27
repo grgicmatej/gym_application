@@ -196,39 +196,20 @@
                     div.className = 'row';
 
                     div.innerHTML = `
-                    <form action="http://localhost:8080/gym.com.hr_v2/User/allMemberships/'+id'" method="post" id="newmembershipform">
-                    <select id="memberships" style="width: 100%; padding: 10px"></select>
-                    </form>
-                    <p>http://localhost:8080/gym.com.hr_v2/User/allMemberships/</p>`; // tu sam stao, treba zamjeniti ove ` da se može ubaciti ID
-
+                    <form action="http://localhost:8080/gym.com.hr_v2/User/addNewUserMembership/`+id+`" method="post" id="newmembershipform">
+                    <select id="memberships" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
+                    </form>`;
 
                     document.getElementById('forma').appendChild(div);
 
-
-
-
-
-
-
-
-
-
                     response = JSON.parse(response);
-
 
                     const membershipsData = document.getElementById('memberships');
                     const srcArray = response;
 
                     membershipsData.innerHTML = srcArray.reduce((options, {Memberships_Id,Memberships_Name}) =>
-                            options+=`<option value="${Memberships_Name}" selected>${Memberships_Name}</option>`);
-
-
-
-
-
-
-
-
+                            options+=`<option value="${Memberships_Name}" >${Memberships_Name}</option>`,
+                            `<option value=""  selected="false" disabled="disabled"></option>`);
                 }
             });
         }

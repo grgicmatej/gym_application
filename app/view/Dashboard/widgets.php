@@ -81,15 +81,7 @@
                     <div class="col-lg-12">
                         <div class="card-block">
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
-                            <div class="row forma" id="forma">
-                                <!-- Tu sam stao, treba preko JS poslati <form> -->
-
-
-
-
-
-
-                            </div>
+                            <div class="row forma" id="forma"></div>
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                             <div class="row">
                                 <div class="col-sm-4">
