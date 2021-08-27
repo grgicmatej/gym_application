@@ -142,10 +142,8 @@
                         $(this).modal('hide');
                     });
                     $(this).fadeIn(400, function notification(){
-                        toastr.success('Uspješno potvrđen dolazak.');
+                        successNotification('Uspješno potvrđen dolazak.')
                     });
-
-
             }
 
         });
@@ -153,20 +151,22 @@
     });
     // arrivalCounter end
 
+
     // widgets
-    $('.toastrDefaultSuccess').click(function() {
-        toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultInfo').click(function() {
-        toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultError').click(function() {
-        toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultWarning').click(function() {
-        toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
+    function successNotification(message){
+        toastr.success(message)
+    }
+    function infoNotification(message){
+        toastr.info(message)
+    }
+    function errorNotification(message){
+        toastr.error(message)
+    }
+    function warningNotification(message){
+        toastr.warning(message)
+    }
     // widgets end
+
 
     // membershipData modal
     $('.membershipData').on('click', function () {
@@ -184,17 +184,12 @@
                 data: {data: id},
                 url: 'http://localhost:8080/gym.com.hr_v2/User/allMemberships/',
                 success: function (response) {
-                    //alert(response); // ispiše dobre podatke
-
-
 
                     $("#membershipData").modal('show');
-
 
                     const div = document.createElement('div');
 
                     div.className = 'row';
-
                     div.innerHTML = `
                     <form action="http://localhost:8080/gym.com.hr_v2/User/addNewUserMembership/`+id+`" method="post" id="newmembershipform">
                     <select id="memberships" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
@@ -209,13 +204,13 @@
 
                     membershipsData.innerHTML = srcArray.reduce((options, {Memberships_Id,Memberships_Name}) =>
                             options+=`<option value="${Memberships_Name}" >${Memberships_Name}</option>`,
-                            `<option value=""  selected="false" disabled="disabled"></option>`);
+                            `<option value=""  selected="false" disabled="disabled">Odaberi članarinu</option>`);
                 }
             });
         }
     });
 
-    //
+    // membershipData modal end
 
 
 </script>

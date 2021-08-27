@@ -162,6 +162,14 @@ class User
         return round((self::currentMonthlyUsers()->newMonthlyUsers/self::previousMonthUsers()->previousMonthlyUsers)*100, 2);
     }
 
+    public static function lastUserMembershipExtension()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Users_Memberships ORDER BY Users_Memberships_Id DESC LIMIT 1 ');
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public static function newArrival($id)
     {
         $db=Db::getInstance();
@@ -181,6 +189,108 @@ class User
         $stmt->bindValue('usersArrivalsUserId', $id);
         $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
         $stmt->bindValue('usersArrivalsGymId', $_SESSION["Gym_Id"]);
+        $stmt->execute();
+    }
+
+    public static function newUserMembershipExtension($membershipData, $id)
+    {
+
+        $usersMembershipsStartDate=date_format(date_create(), 'Y.m.d');
+        $usersMembershipsStartDatetemp=date_format(date_create(), 'd.m.Y');
+        $dateSeconds=strtotime($usersMembershipsStartDatetemp) + ($membershipData->Memberships_Duration * 86400);
+        $usersMembershipsEndDate=date('Y.m.d', $dateSeconds);
+        $usersMembershipsCurentDate=date_format(date_create(), 'Y.m.d');
+
+        $usersMembershipsMembershipActive = ($usersMembershipsCurentDate<=$usersMembershipsEndDate) ? 1 : 0;
+            /*
+        if ($usersMembershipsCurentDate <= $usersMembershipsEndDate) {
+            $usersMembershipsMembershipActive=1;
+        } else {
+            $usersMembershipsMembershipActive=0;
+        }
+            */
+        $db=Db::getInstance();
+        $stmt=$db->prepare("
+                            INSERT INTO Users_Memberships
+                                (
+                                Users_Memberships_Users_Id,
+                                Users_Memberships_Membership_Name,
+                                Users_Memberships_Start_Date,
+                                Users_Memberships_End_Date,
+                                Users_Memberships_Curent_Date,
+                                Users_Memberships_Price,
+                                Users_Memberships_Membership_Active,
+                                Users_Memberships_Admin_Id,
+                                Users_Memberships_Gym_Id
+                                )
+                                VALUES
+                                (
+                                :usersMembershipsUsersId,
+                                :usersMembershipsMembershipName,
+                                :usersMembershipsStartDate,
+                                :usersMembershipsEndDate,
+                                :usersMembershipsCurentDate,
+                                :usersMembershipsPrice,
+                                :usersMembershipsMembershipActive,
+                                :usersMembershipsAdminId,
+                                :usersMembershipsGymId
+                                )
+                            ");
+        $stmt->bindValue('usersMembershipsUsersId', $id);
+        $stmt->bindValue('usersMembershipsMembershipName', $membershipData->Memberships_Name);
+        $stmt->bindValue('usersMembershipsStartDate', $usersMembershipsStartDate);
+        $stmt->bindValue('usersMembershipsEndDate', $usersMembershipsEndDate);
+        $stmt->bindValue('usersMembershipsCurentDate', $usersMembershipsCurentDate);
+        $stmt->bindValue('usersMembershipsPrice', $membershipData->Memberships_Price);
+        $stmt->bindValue('usersMembershipsMembershipActive', $usersMembershipsMembershipActive);
+        $stmt->bindValue('usersMembershipsAdminId', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->bindValue('usersMembershipsGymId', $_SESSION['Gym_Id']);
+        $stmt->execute();
+    }
+
+    public static function newUserMembershipExtensionArchive($lastMembership, $membershipData, $id)
+    {
+        $usersMembershipsStartDate=date_format(date_create(), 'Y.m.d');
+        $usersMembershipsStartDatetemp=date_format(date_create(), 'd.m.Y');
+        $dateSeconds=strtotime($usersMembershipsStartDatetemp) + ($membershipData->Memberships_Duration * 86400);
+        $usersMembershipsEndDate=date('Y.m.d', $dateSeconds);
+
+        $db=Db::getInstance();
+        $stmt=$db->prepare("
+                            INSERT INTO Users_Memberships_Archive
+                                (
+                                Users_Memberships_Id,
+                                Users_Memberships_Users_Id,
+                                Users_Memberships_Membership_Id,
+                                Users_Memberships_Membership_Name,
+                                Users_Memberships_Start_Date,
+                                Users_Memberships_End_Date,
+                                Users_Memberships_Price,
+                                Users_Memberships_Gym_Id,
+                                Users_Memberships_Admin_Id
+                                )
+                                VALUES
+                                (
+                                :usersMembershipsId,
+                                :usersMembershipsUsersId,
+                                :usersMembershipsMembershipId,
+                                :usersMembershipsMembershipName,
+                                :usersMembershipsStartDate,
+                                :usersMembershipsEndDate,
+                                :usersMembershipsPrice,                                
+                                :usersMembershipsGymId,
+                                :usersMembershipsAdminId
+                                )
+                            ");
+        $stmt->bindValue('usersMembershipsId', $lastMembership->Users_Memberships_Id);
+        $stmt->bindValue('usersMembershipsUsersId', $id);
+        $stmt->bindValue('usersMembershipsMembershipId', $membershipData->Memberships_Id);
+        $stmt->bindValue('usersMembershipsMembershipName', $membershipData->Memberships_Name);
+        $stmt->bindValue('usersMembershipsStartDate', $usersMembershipsStartDate);
+        $stmt->bindValue('usersMembershipsEndDate', $usersMembershipsEndDate);
+        $stmt->bindValue('usersMembershipsPrice', $membershipData->Memberships_Price);
+        $stmt->bindValue('usersMembershipsGymId', $_SESSION['Gym_Id']);
+        $stmt->bindValue('usersMembershipsAdminId', Session::getInstance()->getUser()->Staff_Id);
         $stmt->execute();
     }
 
@@ -262,6 +372,15 @@ class User
                                     ORDER BY Users_Memberships.Users_Memberships_Id DESC
                                     ');
         $stmt->bindValue('usersId', $id);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function viewUserEmail($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare("SELECT Users_Email FROM Users WHERE Users_Id=:Users_Id");
+        $stmt->bindValue('Users_Id', $id);
         $stmt->execute();
         return $stmt->fetch();
     }

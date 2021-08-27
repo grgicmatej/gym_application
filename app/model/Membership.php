@@ -15,6 +15,16 @@ class Membership
         return $stmt->fetchAll();
     }
 
+    public static function membershipEndDate($membershipData)
+    {
+
+        $usersMembershipsStartDatetemp=date_format(date_create(), 'd.m.Y');
+        $dateSeconds=strtotime($usersMembershipsStartDatetemp) + ($membershipData->Memberships_Duration * 86400);
+        $usersMembershipsEndDate=date('y-m-d', $dateSeconds);
+        return $usersMembershipsEndDate;
+
+    }
+
     public static function timeUpdate()
     {
         $date=date_create();
@@ -31,5 +41,14 @@ class Membership
                                 ');
         $stmt->bindValue('Users_Memberships_Membership_Active', 0);
         $stmt->execute();
+    }
+
+    public static function selectMembership()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Name=:Memberships_Name');
+        $stmt->bindValue('Memberships_Name', Request::post('usersMembershipsMembershipName'));
+        $stmt->execute();
+        return $stmt->fetch();
     }
 }
