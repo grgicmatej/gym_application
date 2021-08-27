@@ -185,17 +185,29 @@
                 url: 'http://localhost:8080/gym.com.hr_v2/User/allMemberships/',
                 success: function (response) {
 
+
+                    $('form').on('submit', function (e) {
+
+                        e.preventDefault();
+
+                        $.ajax({
+                            type: 'post',
+                            url: 'http://localhost:8080/gym.com.hr_v2/User/addNewUserMembership/'+id,
+                            data: $('#formforma').serialize(),
+                            success: function () {
+                                $("#membershipData").fadeOut(400, function (){
+                                    $(this).modal('hide');
+                                });
+                                location.reload();
+                                $(this).fadeIn(400, function notification(){
+                                    successNotification('Uspješno produžena članarina.')
+                                });
+                            }
+                        });
+
+                    });
+
                     $("#membershipData").modal('show');
-
-                    const div = document.createElement('div');
-
-                    div.className = 'row';
-                    div.innerHTML = `
-                    <form action="http://localhost:8080/gym.com.hr_v2/User/addNewUserMembership/`+id+`" method="post" id="newmembershipform">
-                    <select id="memberships" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
-                    </form>`;
-
-                    document.getElementById('forma').appendChild(div);
 
                     response = JSON.parse(response);
 

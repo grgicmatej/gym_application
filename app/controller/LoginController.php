@@ -10,6 +10,7 @@ class LoginController extends SecurityController
             if (Staff::passwordCheck()){
                 Admin::logedUserStart();
                 Dashboard::changeGym();
+                //missing sending email part if current or past day <= today
                 header( 'Location:'.App::config('url').'Dashboard/dashboardCheck');
             }else{
                 $view=New View();

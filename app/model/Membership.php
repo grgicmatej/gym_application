@@ -17,21 +17,18 @@ class Membership
 
     public static function membershipEndDate($membershipData)
     {
-
         $usersMembershipsStartDatetemp=date_format(date_create(), 'd.m.Y');
         $dateSeconds=strtotime($usersMembershipsStartDatetemp) + ($membershipData->Memberships_Duration * 86400);
         $usersMembershipsEndDate=date('y-m-d', $dateSeconds);
         return $usersMembershipsEndDate;
-
     }
 
     public static function timeUpdate()
     {
-        $date=date_create();
-        $usersMembershipsCurentDate=date_format($date, 'Y.m.d');
+        $usersMembershipsCurentDate=date_format(date_create(), 'Y.m.d');
         $db=Db::getInstance();
-        $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_Curent_Date=:Users_Memberships_Curent_Date');
-        $stmt->bindValue('Users_Memberships_Curent_Date', $usersMembershipsCurentDate);
+        $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_Curent_Date=:UsersMembershipsCurentDate');
+        $stmt->bindValue('UsersMembershipsCurentDate', $usersMembershipsCurentDate);
         $stmt->execute();
 
         $db=Db::getInstance();
@@ -46,8 +43,8 @@ class Membership
     public static function selectMembership()
     {
         $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Name=:Memberships_Name');
-        $stmt->bindValue('Memberships_Name', Request::post('usersMembershipsMembershipName'));
+        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Name=:membershipsName');
+        $stmt->bindValue('membershipsName', Request::post('usersMembershipsMembershipName'));
         $stmt->execute();
         return $stmt->fetch();
     }

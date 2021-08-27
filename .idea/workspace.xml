@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/model/Sale.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Sender.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Membership.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Membership.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
       <workItem from="1629899118161" duration="944000" />
       <workItem from="1629979468516" duration="78000" />
       <workItem from="1630046226981" duration="1413000" />
-      <workItem from="1630063309044" duration="5697000" />
+      <workItem from="1630063309044" duration="7879000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -220,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630047639428</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="userController ready for extending the memberships">
+      <created>1630069235142</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1630069235142</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,13 +250,14 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="memberships modal prep" />
     <MESSAGE value="fixed ID problem in JS, started doing logic in UserController" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ID problem in JS, started doing logic in UserController" />
+    <MESSAGE value="userController ready for extending the memberships" />
+    <option name="LAST_COMMIT_MESSAGE" value="userController ready for extending the memberships" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1630047633849">
+    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1630069229686">
       <screen x="0" y="25" width="1920" height="984" />
     </state>
-    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.984/1920.25.1920.1055@0.25.1920.984" timestamp="1630047633849" />
+    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.984/1920.25.1920.1055@0.25.1920.984" timestamp="1630069229686" />
     <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629746928562" />
     <state x="307" y="120" key="DiffContextDialog" timestamp="1629469303772">
       <screen x="0" y="25" width="1920" height="991" />
