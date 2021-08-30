@@ -13296,7 +13296,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .navbar-search-block {
     position: absolute;
     padding: 0 1rem;
-    left: 0;
+    left: 100;
     top: 0;
     right: 0;
     bottom: 0;

@@ -52,7 +52,7 @@
 }
 
 .font_white{
-    color: #FFF;
+    color: #FFF !important;
 }
 /* profile widget */
 
@@ -184,6 +184,10 @@ h6 {
     transition: all 0.3s ease-in-out
 }
 
-.ml-10{
-    margin-left: 10px !important;
+.ml-14{
+    margin-left: 14px !important;
+}
+
+.mr-14{
+    margin-right: 14px !important;
 }
