@@ -202,6 +202,15 @@
                                 $(this).fadeIn(400, function notification(){
                                     successNotification('Uspješno produžena članarina.')
                                 });
+                                /*
+                                    možda tu dohvatiti ID od tog reda gdje je ta članarina (user_id)
+                                    i polja start_date, end_date, membership_name, membership_active
+                                    zamijeniti sa novim podacima koje povućem isto preko ajaxa.
+
+                                    Time bi izbjegao ovaj location.reload gore, UX je bolji i nema zbunjivanja
+                                    jel članarina produžena ili ne. Ovo bi bila najbolja opcija
+                                 */
+                                //
                             }
                         });
 
