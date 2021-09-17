@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/css/design11.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/js/design26.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/head_css.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/head_css.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +85,7 @@
       <workItem from="1629899118161" duration="980000" />
       <workItem from="1630566504848" duration="551000" />
       <workItem from="1630574030333" duration="320000" />
-      <workItem from="1631874397911" duration="4928000" />
+      <workItem from="1631874397911" duration="6018000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -222,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631884371301</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="removing sidebar search option, better looking this way">
+      <created>1631884922628</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1631884922628</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,13 +261,18 @@
     <MESSAGE value="membership_purchase new idea on how to process it" />
     <MESSAGE value="membership_purchase and displaying data without need for page reloading" />
     <MESSAGE value="testing without &quot;more info&quot; button" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing without &quot;more info&quot; button" />
+    <MESSAGE value="removing sidebar search option, better looking this way" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing sidebar search option, better looking this way" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1631884367451">
+    <state x="696" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631885098220">
       <screen x="0" y="25" width="1920" height="981" />
     </state>
-    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631884367451" />
+    <state x="696" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631885098220" />
+    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1631884917662">
+      <screen x="0" y="25" width="1920" height="981" />
+    </state>
+    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631884917662" />
     <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574218974" />
     <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629746928562" />
     <state x="307" y="120" key="DiffContextDialog" timestamp="1629469303772">
