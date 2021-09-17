@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +80,8 @@
       <workItem from="1629814256007" duration="1464000" />
       <workItem from="1629899118161" duration="980000" />
       <workItem from="1630566504848" duration="551000" />
+      <workItem from="1630574030333" duration="320000" />
+      <workItem from="1631874397911" duration="3620000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -196,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629746933593</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="membership_purchase new idea on how to process it">
+      <created>1630574223059</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1630574223059</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,12 +233,14 @@
     <MESSAGE value="navbar fix" />
     <MESSAGE value="clanarine" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="membership_purchase new idea on how to process it" />
+    <option name="LAST_COMMIT_MESSAGE" value="membership_purchase new idea on how to process it" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="120" key="CommitChangelistDialog2" timestamp="1629746928562">
-      <screen x="0" y="25" width="1920" height="991" />
+    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1630574218974">
+      <screen x="0" y="25" width="1920" height="982" />
     </state>
+    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574218974" />
     <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629746928562" />
     <state x="307" y="120" key="DiffContextDialog" timestamp="1629469303772">
       <screen x="0" y="25" width="1920" height="991" />
@@ -239,9 +254,10 @@
       <screen x="0" y="25" width="1920" height="991" />
     </state>
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629119609532" />
-    <state x="559" y="257" key="Vcs.Push.Dialog.v2" timestamp="1629747040964">
-      <screen x="0" y="25" width="1920" height="991" />
+    <state x="559" y="255" key="Vcs.Push.Dialog.v2" timestamp="1630574229044">
+      <screen x="0" y="25" width="1920" height="982" />
     </state>
+    <state x="559" y="255" key="Vcs.Push.Dialog.v2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574229044" />
     <state x="559" y="257" key="Vcs.Push.Dialog.v2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629747040964" />
     <state x="659" y="275" width="655" height="640" key="find.popup" timestamp="1629455621404">
       <screen x="0" y="25" width="1920" height="991" />
@@ -251,5 +267,9 @@
       <screen x="0" y="25" width="1920" height="991" />
     </state>
     <state x="781" y="418" key="git4idea.remote.GitConfigureRemotesDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628691948364" />
+    <state x="625" y="241" key="search.everywhere.popup" timestamp="1630574186763">
+      <screen x="0" y="25" width="1920" height="982" />
+    </state>
+    <state x="625" y="241" key="search.everywhere.popup/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574186763" />
   </component>
 </project>

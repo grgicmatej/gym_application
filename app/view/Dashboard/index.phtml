@@ -151,12 +151,12 @@
                                                 ?>
                                                 <td class="text-center"><?=$data->Users_Id?></td>
                                                 <td class="text-center"><?=$data->Users_Name." ".$data->Users_Surname?></td>
-                                                <td class="text-center"><?=$data->Users_Memberships_Membership_Name?></td>
-                                                <td style="background-color: <?= $data->Users_Memberships_Membership_Active? "#74C687":"#E87C87" ?>; color: white; font-weight: bolder" class="text-center">
+                                                <td class="text-center" id="<?=$data->Users_Id?>_membershipsName"><?=$data->Users_Memberships_Membership_Name?></td>
+                                                <td id="<?=$data->Users_Id?>_membershipsStatus" style="background-color: <?= $data->Users_Memberships_Membership_Active? "#74C687":"#E87C87" ?>; color: white; font-weight: bolder" class="text-center">
                                                     <?= $data->Users_Memberships_Membership_Active? "Da" : "Ne"?>
                                                 </td>
-                                                <td class="text-center"><?=$realdate_Start?></td>
-                                                <td class="text-center"><?=$realdate_End?></td>
+                                                <td class="text-center" id="<?=$data->Users_Id?>_membershipsStartDate"><?=$realdate_Start?></td>
+                                                <td class="text-center" id="<?=$data->Users_Id?>_membershipsEndDate"><?=$realdate_End?></td>
                                                 <td class="text-center profileData" id="i_<?= $data->Users_Id?>">
                                                     <p>
                                                         <a class="submitlink linkanimation" id="i_<?= $data->Users_Id ?>">Pregled <i class="fad fa-user ml-10"></i></a>
