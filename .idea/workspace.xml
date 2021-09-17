@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
       <workItem from="1629899118161" duration="980000" />
       <workItem from="1630566504848" duration="551000" />
       <workItem from="1630574030333" duration="320000" />
-      <workItem from="1631874397911" duration="4328000" />
+      <workItem from="1631874397911" duration="4928000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -214,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631883669623</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="testing without &quot;more info&quot; button">
+      <created>1631884371301</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1631884371301</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,13 +248,14 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="membership_purchase new idea on how to process it" />
     <MESSAGE value="membership_purchase and displaying data without need for page reloading" />
-    <option name="LAST_COMMIT_MESSAGE" value="membership_purchase and displaying data without need for page reloading" />
+    <MESSAGE value="testing without &quot;more info&quot; button" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing without &quot;more info&quot; button" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1631883662861">
+    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1631884367451">
       <screen x="0" y="25" width="1920" height="981" />
     </state>
-    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631883662861" />
+    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631884367451" />
     <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574218974" />
     <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629746928562" />
     <state x="307" y="120" key="DiffContextDialog" timestamp="1629469303772">
