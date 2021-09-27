@@ -106,16 +106,15 @@
                     $("#profileData").modal('show');
                     $("#email").text(response["Users_Email"]);
                     $("#id").text(response["Users_Id"]);
-                    $("#ime").text(response["Users_Name"]+" "+response["Users_Surname"]);
-                    $("#telefon").text(response["Users_Phone"]);
-                    $("#imeclanarine").text(response["Users_Memberships_Membership_Name"]);
+                    $("#usersName").text(response["Users_Name"]+" "+response["Users_Surname"]);
+                    $("#usersPhone").text(response["Users_Phone"]);
+                    $("#membershipName").text(response["Users_Memberships_Membership_Name"]);
                     $("#status").text(response["Users_Status"]);
-                    $("#datumrodenja").text(formatDate (response["Users_Birthday"]));
-                    $("#trajanjeclanarine").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
-                    $("#brojdolazaka").text("Broj dolazaka ovaj tjedan: "+response["countrow"]);
+                    $("#birthday").text(formatDate (response["Users_Birthday"]));
+                    $("#membershipDuration").text(formatDate (response["Users_Memberships_Start_Date"])+"  -  "+formatDate (response["Users_Memberships_End_Date"]));
+                    $("#numberOfArrivals").text("Broj dolazaka ovaj tjedan: "+response["countrow"]);
 
-                    $("#potvrdidolazak").html("<a><span class='btn btn-block btn-outline-info' >Potvrda dolaska</span></a>");
-                    //$("#potvrdidolazak").html("<a href='<?= App::config("url") ?>User/addUserArrival/"+response["Users_Id"]+"'   ><span class='linkanimation_black' >Potvrdi dolazak</span></a>");
+                    $("#confirmArrival").html("<a><span class='btn btn-block btn-outline-info' >Potvrda dolaska</span></a>");
                     globalVariable = response["Users_Id"];
                 }
             });
@@ -139,7 +138,7 @@
             data: {data: id},
             url: 'http://localhost:8080/gym.com.hr_v2/User/addUserArrival/' + id,
             success: function () { // do tu valja
-                    $("#profileData").fadeOut(400, function (){
+                    $("#profileData").fadeOut(800, function (){
                         $(this).modal('hide');
                     });
                     $(this).fadeIn(400, function notification(){
@@ -195,7 +194,7 @@
                             url: 'http://localhost:8080/gym.com.hr_v2/User/addNewUserMembership/'+id,
                             data: $('#formforma').serialize(),
                             success: function () {
-                                $("#membershipData").fadeOut(400, function (){
+                                $("#membershipData").fadeOut(800, function (){
                                     $(this).modal('hide');
                                 });
                                 $(this).fadeIn(400, function notification(){
