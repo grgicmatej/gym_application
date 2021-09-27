@@ -20,6 +20,19 @@ class UserController extends SecurityController
         Sender::addNewRecipient(User::viewUserEmail($id), $id, Membership::membershipEndDate(Membership::selectMembership()));
     }
 
+    public function addNewUser()
+    {
+        if (!User::checkUsersId()) {
+            echo json_encode(false);
+        } else {
+            Upload::uploadPhoto();
+            User::newUser(Upload::getFileName());
+            User::addUserGymRegistration();
+            User::newUserFirstMembershipExtension();
+            echo json_encode(true);
+        }
+    }
+
     public function allMemberships()
     {
         echo json_encode(Membership::allActiveMemberships());

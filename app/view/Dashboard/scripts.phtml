@@ -238,7 +238,6 @@
             });
         }
     });
-
     // membershipData modal end
 
 
@@ -246,4 +245,37 @@
     $('.newUserRegistration').on('click', function () {
         $("#newUserRegistration").modal('show');
     });
+
+        $('form').on('submit', function (e) {
+
+            e.preventDefault();
+
+            $.ajax({
+                type: 'post',
+                url: 'http://localhost:8080/gym.com.hr_v2/User/addNewUser/',
+                data: $('#formformaNewUser').serialize(),
+                success: function (response) {
+                    response = JSON.parse(response);
+
+                    if (response === false){ // već postoji id, izbaciti error
+                        warningNotification('Već postoji korisnik s tim ID brojem kartice.')
+                    }else{ // sve ok
+                        $("#newUserRegistration").fadeOut(800, function (){
+                            $(this).modal('hide');
+                        });
+                        $(this).fadeIn(400, function notification(){
+                            successNotification('Uspješno registriran korisnik.')
+                        });
+                    }
+                }
+            });
+        });
+        // Registration of new user end
+
+        /*
+        Registracija radi uredno ali na frontendu treba makniti 1- iz id korisnika i pronaći način da se fetcha i taj podatak za tablicu
+        Možda na princip kao i za membership
+         */
+        //
+        /
 </script>
