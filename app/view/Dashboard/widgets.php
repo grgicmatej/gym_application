@@ -69,9 +69,8 @@
 </div>
 <!-- profileData Modal end -->
 
-<!-- membershipData -->
+<!-- membershipData Modal start-->
 <div class="modal fade" id="membershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="container-fluid">
@@ -100,8 +99,9 @@
         </div>
     </div>
 </div>
+<!-- membershipData Modal end -->
 
-<!-- newUserRegistration -->
+<!-- newUserRegistration Modal start -->
 <div class="modal fade" id="newUserRegistration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -215,3 +215,119 @@
         </div>
     </div>
 </div>
+<!-- newUserRegistration Modal end -->
+
+<!-- staffSettings Modal start -->
+<div class="modal fade" id="staffSettings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Postavke</h6>
+                    <br>
+                    <form id="formformaStaffSettingsPassword">
+                        <div class="row">
+                            <div class="col-12"><p>Postavljanje nove lozinke</p></div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Trenutna lozinka<span class="mandatoryField"> *</span></label><br>
+                                <input type="password" class="newUserInputForm" name="Staff_Password" placeholder="Trenutna lozinka" oninvalid="this.setCustomValidity('Ovo polje ne smije biti prazno.')" oninput="setCustomValidity('')" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Nova lozinka <span class="mandatoryField"> *</span></label><br>
+                                <input type="password" class="newUserInputForm" name="Staff_New_Password" placeholder="Nova lozinka" oninvalid="this.setCustomValidity('Ovo polje ne smije biti prazno i lozinka mora imati više od 6 znakova.')" oninput="setCustomValidity('')" minlength="6" required >
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaStaffSettingsPassword" value="Spremanje lozinke">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="newUserInputForm" name="Users_Address" placeholder="Adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu korisnika')" oninput="setCustomValidity('')" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Mjesto korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="newUserInputForm" name="Users_City" placeholder="Mjesto korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime korisnika')" oninput="setCustomValidity('')" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="newUserInputForm" name="Users_Oib" min="11" max="11" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB korisnika')" oninput="setCustomValidity('')" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Datum rođenja korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="date" class="newUserInputForm" name="Users_Birthday" placeholder="Datum rođenja korisnika" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum rođenja')" oninput="setCustomValidity('')" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Spol korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select id="gender" class="newUserInputForm" name="Users_Gender">
+                                    <option value="Muško" class="newUserInputForm" selected>Muško</option>
+                                    <option value="Žensko">Žensko</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Status korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select id="status" class="newUserInputForm" name="Users_Status">
+                                    <option value="Zaposlen/a" selected>Zaposlen/a</option>
+                                    <option value="Student/ica">Student/ica</option>
+                                    <option value="Učenik/ca">Učenik/ca</option>
+                                    <option value="Umirovljenik/ica">Umirovljenik/ica</option>
+                                    <option value="Nezaposlen/a">Nezaposlen/a</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Referenca korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select id="reference" class="newUserInputForm" name="Users_Reference">
+                                    <option value="Preporuka druge osobe">Preporuka druge osobe</option>
+                                    <option value="Društvene mreže" selected>Društvene mreže</option>
+                                    <option value="Na radnom mjestu">Na radnom mjestu</option>
+                                    <option value="Drugo">Drugo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Firma / ustanova / fakultet korisnika</label><br>
+                                <input class="newUserInputForm" name="Users_Company" id="inputEmailAddress" type="text" placeholder="Unesi firmu/ustanovu/fakultet korisnika (neobavezno)">
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Slika korisnika</label><br>
+                                <input type="file" name="myfile" id="fileToUpload">
+                            </div>
+                        </div>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaNewUser" value="Registracija korisnika">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- staffSettings Modal end -->

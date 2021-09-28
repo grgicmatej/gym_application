@@ -245,32 +245,66 @@
         $("#newUserRegistration").modal('show');
     });
 
-        $('form').on('submit', function (e) {
+    $('form').on('submit', function (e) {
 
-            e.preventDefault();
+        e.preventDefault();
 
-            $.ajax({
-                type: 'post',
-                url: urlAddress + 'User/addNewUser/',
-                data: $('#formformaNewUser').serialize(),
-                success: function (response) {
-                    response = JSON.parse(response);
+        $.ajax({
+            type: 'post',
+            url: urlAddress + 'User/addNewUser/',
+            data: $('#formformaNewUser').serialize(),
+            success: function (response) {
+                response = JSON.parse(response);
 
-                    if (response === false){
-                        warningNotification('Već postoji korisnik s tim ID brojem kartice.');
-                    }else{
-                        $("#newUserRegistration").fadeOut(800, function (){
-                            $(this).modal('hide');
-                        });
+                if (response === false){
+                    warningNotification('Već postoji korisnik s tim ID brojem kartice.');
+                }else{
+                    $("#newUserRegistration").fadeOut(800, function (){
+                        $(this).modal('hide');
+                    });
 
-                        $(this).fadeIn(400, function notification(){
-                            successNotification('Uspješno registriran korisnik. Pričekajte osvježavanje aplikacije');
-                        });
-                        setTimeout(location.reload.bind(location), 400);
+                    $(this).fadeIn(400, function notification(){
+                        successNotification('Uspješno registriran korisnik. Pričekajte osvježavanje aplikacije');
+                    });
+                    setTimeout(location.reload.bind(location), 400);
 
-                    }
                 }
-            });
+            }
         });
+    });
+    // Registration of new user end
+
+    // staffSettings modal start
+    $('.staffSettings').on('click', function () {
+        $("#staffSettings").modal('show');
+    });
+
+    $('#formformaStaffSettingsPassword').on('submit', function (e) {
+        //console.log("tu sam došao");
+
+        e.preventDefault();
+
+        $.ajax({
+            type: 'post',
+            url: urlAddress + 'Staff/passwordChange/',
+            data: $('#formformaStaffSettingsPassword').serialize(),
+            success: function (response) {
+                response = JSON.parse(response);
+
+                if (response === false){
+                    warningNotification('Trenutna lozinka nije točna. Pokušajte ponovo.');
+                }else{
+                    $("#staffSettings").fadeOut(800, function (){
+                        $(this).modal('hide');
+                    });
+
+                    $(this).fadeIn(400, function notification(){
+                        successNotification('Nova lozinka je uspješno postavljena.');
+                    });
+                }
+            }
+        });
+    });
+    // staffSettings modal end
 
 </script>
