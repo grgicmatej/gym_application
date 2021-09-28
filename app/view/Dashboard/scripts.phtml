@@ -10,7 +10,6 @@
 <script src="<?= App::config("url") ?>vendor/js/design9.js"></script>
 <script src="<?= App::config("url") ?>vendor/js/design10.js"></script>
 
-
 <script src="<?= App::config("url") ?>vendor/js/design11.js"></script>
 <script src="<?= App::config("url") ?>vendor/js/design12.js"></script>
 <script src="<?= App::config("url") ?>vendor/js/design13.js"></script>
@@ -29,7 +28,6 @@
 <script src="<?= App::config("url") ?>vendor/js/design25.js"></script>
 <script src="<?= App::config("url") ?>vendor/js/design26.js"></script>
 
-
 <!-- Additional JS -->
 <script src="<?= App::config("url") ?>vendor/js/scripts.js"></script>
 
@@ -37,6 +35,11 @@
 <script src="<?= App::config("url") ?>vendor/Bootstrap/bootstrap.js"></script>
 
 <script>
+    // Variables start
+    const urlAddress = 'http://localhost:8080/gym.com.hr_v2/';
+    // Variables end
+
+
     // Chart script
     var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
 
@@ -99,7 +102,7 @@
 
                 method: "POST",
                 data: {data: id},
-                url: 'http://localhost:8080/gym.com.hr_v2/User/viewUser/' + id,
+                url: urlAddress + 'User/viewUser/' + id,
                 success: function (response) {
                     response = JSON.parse(response);
 
@@ -136,8 +139,8 @@
 
             method: "POST",
             data: {data: id},
-            url: 'http://localhost:8080/gym.com.hr_v2/User/addUserArrival/' + id,
-            success: function () { // do tu valja
+            url: urlAddress + 'User/addUserArrival/' + id,
+            success: function () {
                     $("#profileData").fadeOut(800, function (){
                         $(this).modal('hide');
                     });
@@ -177,21 +180,18 @@
         });
 
         if (id) {
-
             $.ajax({
-
                 method: "POST",
                 data: {data: id},
-                url: 'http://localhost:8080/gym.com.hr_v2/User/allMemberships/',
+                url: urlAddress + 'User/allMemberships/',
                 success: function (response) {
-
                     $('form').on('submit', function (e) {
 
                         e.preventDefault();
 
                         $.ajax({
                             type: 'post',
-                            url: 'http://localhost:8080/gym.com.hr_v2/User/addNewUserMembership/'+id,
+                            url: urlAddress + 'User/addNewUserMembership/'+id,
                             data: $('#formforma').serialize(),
                             success: function () {
                                 $("#membershipData").fadeOut(800, function (){
@@ -201,12 +201,11 @@
                                     successNotification('Uspješno produžena članarina.')
                                 });
 
-                                /* Ovo je osvježavanje podataka da ne treba refresh*/
                                 $.ajax({
 
                                     method: "POST",
                                     data: {data: id},
-                                    url: 'http://localhost:8080/gym.com.hr_v2/User/viewUser/' + id,
+                                    url: urlAddress + 'User/viewUser/' + id,
                                     success: function (response) {
                                         response = JSON.parse(response);
 
@@ -252,30 +251,26 @@
 
             $.ajax({
                 type: 'post',
-                url: 'http://localhost:8080/gym.com.hr_v2/User/addNewUser/',
+                url: urlAddress + 'User/addNewUser/',
                 data: $('#formformaNewUser').serialize(),
                 success: function (response) {
                     response = JSON.parse(response);
 
-                    if (response === false){ // već postoji id, izbaciti error
-                        warningNotification('Već postoji korisnik s tim ID brojem kartice.')
-                    }else{ // sve ok
+                    if (response === false){
+                        warningNotification('Već postoji korisnik s tim ID brojem kartice.');
+                    }else{
                         $("#newUserRegistration").fadeOut(800, function (){
                             $(this).modal('hide');
                         });
+
                         $(this).fadeIn(400, function notification(){
-                            successNotification('Uspješno registriran korisnik.')
+                            successNotification('Uspješno registriran korisnik. Pričekajte osvježavanje aplikacije');
                         });
+                        setTimeout(location.reload.bind(location), 400);
+
                     }
                 }
             });
         });
-        // Registration of new user end
 
-        /*
-        Registracija radi uredno ali na frontendu treba makniti 1- iz id korisnika i pronaći način da se fetcha i taj podatak za tablicu
-        Možda na princip kao i za membership
-         */
-        //
-        /
 </script>
