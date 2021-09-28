@@ -14,3 +14,16 @@ napomene
 pica
 aktivnost
 postavke
+
+
+build log planner:
+1.0
+    - Osnovne značajke koje već postoje
+    - Bulk csv unos korisnika
+1.1:
+    - Notifikacije
+    - Termin za razne sportove interni
+1.2:
+    - Termin za razne sportove eksterni
+    - Eksterna provjera statusa članarine
+1.3:

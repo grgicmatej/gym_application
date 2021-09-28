@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/footer.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/navbar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/navbar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,8 @@
       <workItem from="1631964793488" duration="858000" />
       <workItem from="1632146529633" duration="1323000" />
       <workItem from="1632748910672" duration="4926000" />
-      <workItem from="1632834357005" duration="4002000" />
+      <workItem from="1632834357005" duration="4281000" />
+      <workItem from="1632851190635" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -270,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632753841750</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="refactoring scripts.phtml, optimizing new user registration">
+      <created>1632838927683</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1632838927683</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,17 +311,18 @@
     <MESSAGE value="reformating scripts and widget frontend" />
     <MESSAGE value="temp hiding search button on top" />
     <MESSAGE value="new user works" />
-    <option name="LAST_COMMIT_MESSAGE" value="new user works" />
+    <MESSAGE value="refactoring scripts.phtml, optimizing new user registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring scripts.phtml, optimizing new user registration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="696" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631885098220">
       <screen x="0" y="25" width="1920" height="981" />
     </state>
     <state x="696" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631885098220" />
-    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1632753836420">
+    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1632838922345">
       <screen x="0" y="25" width="1920" height="981" />
     </state>
-    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632753836420" />
+    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632838922345" />
     <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574218974" />
     <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629746928562" />
     <state x="307" y="120" key="DiffContextDialog" timestamp="1629469303772">
@@ -329,10 +338,10 @@
       <screen x="0" y="25" width="1920" height="991" />
     </state>
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629119609532" />
-    <state x="559" y="255" key="Vcs.Push.Dialog.v2" timestamp="1632750165554">
+    <state x="559" y="255" key="Vcs.Push.Dialog.v2" timestamp="1632838949440">
       <screen x="0" y="25" width="1920" height="981" />
     </state>
-    <state x="559" y="255" key="Vcs.Push.Dialog.v2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632750165554" />
+    <state x="559" y="255" key="Vcs.Push.Dialog.v2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632838949440" />
     <state x="559" y="255" key="Vcs.Push.Dialog.v2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574229044" />
     <state x="559" y="257" key="Vcs.Push.Dialog.v2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629747040964" />
     <state x="659" y="272" width="655" height="634" key="find.popup" timestamp="1632752115042">
