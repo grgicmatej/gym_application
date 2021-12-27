@@ -280,7 +280,7 @@
     });
 
     $('#formformaStaffSettingsPassword').on('submit', function (e) {
-        //console.log("tu sam došao");
+
 
         e.preventDefault();
 
@@ -300,6 +300,33 @@
 
                     $(this).fadeIn(400, function notification(){
                         successNotification('Nova lozinka je uspješno postavljena.');
+                    });
+                }
+            }
+        });
+    });
+
+    $('#formformaStaffSettingsData').on('submit', function (e) {
+
+
+        e.preventDefault();
+
+        $.ajax({
+            type: 'post',
+            url: urlAddress + 'Staff/dataChange/',
+            data: $('#formformaStaffSettingsData').serialize(),
+            success: function (response) {
+                response = JSON.parse(response);
+
+                if (response === false){
+                    warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                }else{
+                    $("#staffSettings").fadeOut(800, function (){
+                        $(this).modal('hide');
+                    });
+
+                    $(this).fadeIn(400, function notification(){
+                        successNotification('Novi podaci su uspješno spremljeni.');
                     });
                 }
             }

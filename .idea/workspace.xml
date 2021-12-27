@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/Staff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Staff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/navbar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/navbar.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
@@ -49,15 +49,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/view/Dashboard" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vendor/css" />
       <recent name="$PROJECT_DIR$/vendor/js" />
       <recent name="$PROJECT_DIR$/vendor/js/Frontend" />
       <recent name="$PROJECT_DIR$/vendor/images" />
       <recent name="$PROJECT_DIR$/vendor/css/Frontend" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/view/Dashboard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,14 +84,12 @@
       <workItem from="1629739777707" duration="4627000" />
       <workItem from="1629814256007" duration="1464000" />
       <workItem from="1629899118161" duration="980000" />
-      <workItem from="1630566504848" duration="551000" />
-      <workItem from="1630574030333" duration="320000" />
-      <workItem from="1631874397911" duration="10052000" />
-      <workItem from="1631964793488" duration="858000" />
-      <workItem from="1632146529633" duration="1323000" />
-      <workItem from="1632748910672" duration="4926000" />
-      <workItem from="1632834357005" duration="4281000" />
-      <workItem from="1632851190635" duration="3795000" />
+      <workItem from="1632767737115" duration="23000" />
+      <workItem from="1636386283329" duration="201000" />
+      <workItem from="1637762550283" duration="58000" />
+      <workItem from="1638179393241" duration="7000" />
+      <workItem from="1640083785450" duration="1064000" />
+      <workItem from="1640614743767" duration="2626000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -212,84 +210,7 @@
       <option name="project" value="LOCAL" />
       <updated>1629746933593</updated>
     </task>
-    <task id="LOCAL-00018" summary="membership_purchase new idea on how to process it">
-      <created>1630574223059</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1630574223059</updated>
-    </task>
-    <task id="LOCAL-00019" summary="membership_purchase and displaying data without need for page reloading">
-      <created>1631883669623</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1631883669623</updated>
-    </task>
-    <task id="LOCAL-00020" summary="testing without &quot;more info&quot; button">
-      <created>1631884371301</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1631884371301</updated>
-    </task>
-    <task id="LOCAL-00021" summary="removing sidebar search option, better looking this way">
-      <created>1631884922628</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1631884922628</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adding pace bar on top">
-      <created>1631886590859</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1631886590859</updated>
-    </task>
-    <task id="LOCAL-00023" summary="new user registration modal ready (frontend only)">
-      <created>1631890581502</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1631890581502</updated>
-    </task>
-    <task id="LOCAL-00024" summary="reformating scripts and widget frontend">
-      <created>1632750163150</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1632750163150</updated>
-    </task>
-    <task id="LOCAL-00025" summary="temp hiding search button on top">
-      <created>1632750269281</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1632750269281</updated>
-    </task>
-    <task id="LOCAL-00026" summary="new user works">
-      <created>1632753841750</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1632753841750</updated>
-    </task>
-    <task id="LOCAL-00027" summary="refactoring scripts.phtml, optimizing new user registration">
-      <created>1632838927683</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1632838927683</updated>
-    </task>
-    <task id="LOCAL-00028" summary="refactoring &amp; build log planner">
-      <created>1632851837530</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1632851837530</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +219,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Landing page" />
     <MESSAGE value="login part done &amp; started doing dashboard" />
     <MESSAGE value="Dashboard almost complete, reformating &amp; optimizing code" />
     <MESSAGE value="fixing navbar dropdown and some more reformating code" />
@@ -312,62 +234,16 @@
     <MESSAGE value="navbar fix" />
     <MESSAGE value="clanarine" />
     <MESSAGE value="refactoring" />
-    <MESSAGE value="membership_purchase new idea on how to process it" />
-    <MESSAGE value="membership_purchase and displaying data without need for page reloading" />
-    <MESSAGE value="testing without &quot;more info&quot; button" />
-    <MESSAGE value="removing sidebar search option, better looking this way" />
-    <MESSAGE value="adding pace bar on top" />
-    <MESSAGE value="new user registration modal ready (frontend only)" />
-    <MESSAGE value="reformating scripts and widget frontend" />
-    <MESSAGE value="temp hiding search button on top" />
-    <MESSAGE value="new user works" />
-    <MESSAGE value="refactoring scripts.phtml, optimizing new user registration" />
-    <MESSAGE value="refactoring &amp; build log planner" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring &amp; build log planner" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="696" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631885098220">
-      <screen x="0" y="25" width="1920" height="981" />
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640616704852">
+      <screen x="0" y="25" width="1920" height="975" />
     </state>
-    <state x="696" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631885098220" />
-    <state x="557" y="119" key="CommitChangelistDialog2" timestamp="1632851831904">
-      <screen x="0" y="25" width="1920" height="981" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
+    <state x="659" y="267" width="602" height="490" key="find.popup" timestamp="1640617499127">
+      <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632851831904" />
-    <state x="557" y="119" key="CommitChangelistDialog2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574218974" />
-    <state x="557" y="120" key="CommitChangelistDialog2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629746928562" />
-    <state x="307" y="120" key="DiffContextDialog" timestamp="1629469303772">
-      <screen x="0" y="25" width="1920" height="991" />
-    </state>
-    <state x="307" y="120" key="DiffContextDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629469303772" />
-    <state x="527" y="248" key="NewPhpClassDialog" timestamp="1632854079347">
-      <screen x="0" y="25" width="1920" height="981" />
-    </state>
-    <state x="527" y="248" key="NewPhpClassDialog/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632854079347" />
-    <state x="527" y="250" key="NewPhpClassDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629123787468" />
-    <state x="781" y="448" key="NewPhpFileDialog" timestamp="1629119609532">
-      <screen x="0" y="25" width="1920" height="991" />
-    </state>
-    <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629119609532" />
-    <state x="559" y="255" key="Vcs.Push.Dialog.v2" timestamp="1632838949440">
-      <screen x="0" y="25" width="1920" height="981" />
-    </state>
-    <state x="559" y="255" key="Vcs.Push.Dialog.v2/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632838949440" />
-    <state x="559" y="255" key="Vcs.Push.Dialog.v2/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574229044" />
-    <state x="559" y="257" key="Vcs.Push.Dialog.v2/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629747040964" />
-    <state x="659" y="272" width="655" height="634" key="find.popup" timestamp="1632752115042">
-      <screen x="0" y="25" width="1920" height="981" />
-    </state>
-    <state x="659" y="272" width="655" height="634" key="find.popup/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1632752115042" />
-    <state x="659" y="275" width="655" height="640" key="find.popup/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1629455621404" />
-    <state x="781" y="418" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1628691948364">
-      <screen x="0" y="25" width="1920" height="991" />
-    </state>
-    <state x="781" y="418" key="git4idea.remote.GitConfigureRemotesDialog/0.25.1920.991/1920.25.1920.1055@0.25.1920.991" timestamp="1628691948364" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1631888697895">
-      <screen x="0" y="25" width="1920" height="981" />
-    </state>
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/0.25.1920.981/1920.25.1920.1055@0.25.1920.981" timestamp="1631888697895" />
-    <state x="625" y="241" key="search.everywhere.popup/0.25.1920.982/1920.25.1920.1055@0.25.1920.982" timestamp="1630574186763" />
+    <state x="659" y="267" width="602" height="490" key="find.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640617499127" />
   </component>
 </project>

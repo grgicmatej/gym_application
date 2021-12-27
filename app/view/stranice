@@ -4,7 +4,7 @@ aktivni korisnici
 inaktivni korisnici
 svi korisnici
 
-novi korisnik
+novi korisnik - spremno
 
 zaposelnici
 članarine
@@ -13,7 +13,7 @@ financije
 napomene
 pica
 aktivnost
-postavke
+postavke - spremno
 
 
 build log planner:
@@ -24,6 +24,7 @@ build log planner:
     - Notifikacije
     - Termin za razne sportove interni
     - ugradnja log sustava
+    - Engleska verzija
 1.2:
     - Termin za razne sportove eksterni
     - Eksterna provjera statusa članarine

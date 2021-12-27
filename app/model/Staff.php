@@ -57,4 +57,25 @@ class staff
             return false;
         }
     }
+
+    public static function userDataChange()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Staff SET Staff_Oib=:Staff_Oib, Staff_Phone=:Staff_Phone, Staff_Email=:Staff_Email WHERE Staff_Id=:Staff_Id');
+        $stmt->bindValue('Staff_Oib', Request::post('Staff_Oib'));
+        $stmt->bindValue('Staff_Phone', Request::post('Staff_Phone'));
+        $stmt->bindValue('Staff_Email', Request::post('Staff_Email'));
+        $stmt->bindValue('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->execute();
+        return true;
+    }
+
+    public static function staffData()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Staff WHERE Staff_Id=:Staff_Id');
+        $stmt->bindValue('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
 }

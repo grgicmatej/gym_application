@@ -11,10 +11,11 @@ class DashboardController extends SecurityController
         $view->render('Dashboard/index',
             [
                 'staffName'             => Session::getInstance()->getUser()->Staff_Username,
+                'staffData'             => Staff::staffData(),
                 'gymData'               => Dashboard::gymData(),
                 'gymDataCount'          => Dashboard::gymDataCount(),
                 'gymName'               => Dashboard::gymName(),
-                'userData'              => User::allUsersThreeMonths(),
+                //'userData'              => User::allUsersThreeMonths(),
                 'allUsersCount'         => User::allUsersCount(),
                 'activeUsersCount'      => User::allActiveUsersCount(),
                 'inactiveUsersCount'    => User::allInactiveUsersCount(),
