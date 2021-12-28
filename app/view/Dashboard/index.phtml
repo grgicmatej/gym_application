@@ -97,6 +97,70 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="search-box">
+                        <input type="text" name="search" id="search" placeholder="Search" class="form-control" onkeyup="searchfunction()" />
+                        <div class="card-body" style="max-width: available">
+                            <table class="table" id="dt1" width=100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th style="width: auto">Šifra korisnika</th>
+                                    <th style="width: auto">Ime i prezime</th>
+                                    <th style="width: auto">Vrsta članarine</th>
+                                    <th style="width: auto">Aktivan</th>
+                                    <th style="width: auto">Datum početka</th>
+                                    <th style="width: auto">Datum isteka</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+
+                                <tfoot>
+                                <tr>
+                                    <th>Šifra korisnika</th>
+                                    <th>Ime i prezime</th>
+                                    <th>Vrsta članarine</th>
+                                    <th>Aktivan</th>
+                                    <th>Datum početka</th>
+                                    <th>Datum isteka</th>
+                                    <th></th>
+                                </tr>
+                                </tfoot>
+
+                                <tbody id="dataTableBody">
+
+                                <!--
+                                        <tr>
+                                            <td class="text-center" id="X_usersId"></td>
+                                            <td class="text-center" id="X_usersName"></td>
+                                            <td class="text-center" id="X_membershipsName"></td>
+                                            <td id="X_membershipsStatus" style="background-color: #74C687; color: white; font-weight: bolder" class="text-center"></td>
+                                            <td class="text-center" id="X_membershipsStartDate"></td>
+                                            <td class="text-center" id="X_membershipsEndDate"></td>
+                                            <td class="text-center profileData" id="i_X_Users_Id">
+                                                <p>
+                                                    <a class="submitlink linkanimation" id="i_X">Pregled <i class="fad fa-user ml-10"></i></a>
+                                                </p>
+                                            </td>
+                                        </tr>
+ -->
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <!--
+                         Users_Memberships_Membership_Active? "#74C687":"#E87C87"
+                         -->
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="row">
                     <section class="col-xl-8 col-lg-12 d-none d-lg-block d-xl-block connectedSortable">
 
                         <div class="card">
@@ -105,7 +169,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body" style="max-width: available">
-                                <table class="table" id="dataTable" width=100%" cellspacing="0">
+                                <!-- <table class="table" id="dataTable" width=100%" cellspacing="0">
                                     <thead>
                                     <tr>
                                         <th style="width: auto">Šifra korisnika</th>
@@ -133,8 +197,8 @@
                                     <tbody>
 
                                     <?php
-                                    $array=[];
-                                    ?>
+                                $array=[];
+                                ?>
 
                                     <?php foreach ($userData as $data):?>
 
@@ -142,22 +206,22 @@
                                         <?php
 
 
-                                        if (!in_array($Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id, $array)):
-                                            array_push($array, $Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id);
-                                            ?>
+                                    if (!in_array($Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id, $array)):
+                                        array_push($array, $Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id);
+                                        ?>
                                             <tr>
                                                 <?php
-                                                if (!empty($data->Users_Memberships_Start_Date)):
-                                                    $timestamp = strtotime($data->Users_Memberships_Start_Date);
-                                                    $realdate_Start = date("d.m.Y", $timestamp);
+                                        if (!empty($data->Users_Memberships_Start_Date)):
+                                            $timestamp = strtotime($data->Users_Memberships_Start_Date);
+                                            $realdate_Start = date("d.m.Y", $timestamp);
 
-                                                    $timestamp = strtotime($data->Users_Memberships_End_Date);
-                                                    $realdate_End = date("d.m.Y", $timestamp);
-                                                else:
-                                                    $realdate_Start = "";
-                                                    $realdate_End = "";
-                                                endif;
-                                                ?>
+                                            $timestamp = strtotime($data->Users_Memberships_End_Date);
+                                            $realdate_End = date("d.m.Y", $timestamp);
+                                        else:
+                                            $realdate_Start = "";
+                                            $realdate_End = "";
+                                        endif;
+                                        ?>
                                                 <td class="text-center" id="<?=$data->Users_Id?>_usersId"><?=substr(strrchr($data->Users_Id, '-'), 1)?></td>
                                                 <td class="text-center" id="<?=$data->Users_Id?>_usersName"><?=$data->Users_Name." ".$data->Users_Surname?></td>
                                                 <td class="text-center" id="<?=$data->Users_Id?>_membershipsName"><?=$data->Users_Memberships_Membership_Name?></td>
@@ -173,15 +237,16 @@
                                                 </td>
                                             </tr>
                                         <?
-                                        else:
-                                            continue;
+                                    else:
+                                        continue;
 
-                                        endif;
-                                        ?>
+                                    endif;
+                                    ?>
 
                                     <? endforeach;?>
                                     </tbody>
-                                </table>
+                                </table> -->
+
                             </div>
                             <!-- /.card-body -->
                         </div>

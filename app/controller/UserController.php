@@ -42,4 +42,9 @@ class UserController extends SecurityController
     {
         echo json_encode(User::essentialUserData($id));
     }
+
+    public function userDataSearch()
+    {
+        User::allUsersSearch();
+    }
 }

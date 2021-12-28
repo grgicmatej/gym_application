@@ -59,6 +59,84 @@ class User
         return $stmt->fetchAll();
     }
 
+    public static function allUsersSearch()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT
+                                    Users.Users_Id as Users_Id_Main,
+                                    Users.Users_Name,
+                                    Users.Users_Surname,
+                                    Users_Memberships.Users_Memberships_Membership_Name,
+                                    Users_Memberships.Users_Memberships_Membership_Active,
+                                    Users_Memberships.Users_Memberships_Users_Id,
+                                    Users_Memberships.Users_Memberships_Start_Date,
+                                    Users_Memberships.Users_Memberships_End_Date,
+                                    Users_Gym.Gym_Id,
+                                    Users_Gym.Users_Id
+                                    FROM
+                                    Users
+                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
+                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
+
+                                    WHERE Users_Gym.Gym_Id=:usersGym AND 
+                                    (Users.Users_Id LIKE :parametar_id
+                                    OR Users.Users_Name LIKE :parametar 
+                                    OR Users.Users_Surname LIKE :parametar)
+                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
+                                    ');
+        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('parametar_id', '%'.Request::post('query').'%');
+        $stmt->bindValue('parametar', trim(Request::post('query'), " ").'%');
+        $stmt->execute();
+
+        $uData = $stmt->fetchAll();
+        $array=[];
+
+
+         foreach ($uData as $data){
+             if (!in_array($Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id, $array)){
+                 array_push($array, $Users_Memberships_Users_Id = $data->Users_Memberships_Users_Id);?>
+                 <tr>
+                     <?php
+                     if (!empty($data->Users_Memberships_Start_Date)):
+                         $timestamp = strtotime($data->Users_Memberships_Start_Date);
+                         $realdate_Start = date("d.m.Y", $timestamp);
+
+                         $timestamp = strtotime($data->Users_Memberships_End_Date);
+                         $realdate_End = date("d.m.Y", $timestamp);
+                     else:
+                         $realdate_Start = "";
+                         $realdate_End = "";
+                     endif;
+                     ?>
+                     <td class="text-center" id="<?=$data->Users_Id_Main?>_usersId"><?=substr(strrchr($data->Users_Id_Main, '-'), 1)?></td>
+                     <td class="text-center" id="<?=$data->Users_Id_Main?>_usersName"><?=$data->Users_Name." ".$data->Users_Surname?></td>
+                     <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsName"><?=$data->Users_Memberships_Membership_Name?></td>
+                     <td id="<?=$data->Users_Id_Main?>_membershipsStatus" style="background-color: <?= $data->Users_Memberships_Membership_Active? "#74C687":"#E87C87" ?>; color: white; font-weight: bolder" class="text-center">
+                         <?= $data->Users_Memberships_Membership_Active? "Da" : "Ne"?>
+                     </td>
+                     <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsStartDate"><?=$realdate_Start?></td>
+                     <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsEndDate"><?=$realdate_End?></td>
+                     <td class="text-center" id="">
+                         <p>
+                             <a class="submitlink linkanimation profileData" id="i_<?= $data->Users_Id_Main ?>">i_<?= $data->Users_Id_Main ?> Pregled <i class="fad fa-user ml-10"></i></a>
+                         </p>
+                     </td>
+                 </tr>
+                 <?php
+
+             }else{
+             continue;
+             }
+         }
+
+
+
+
+
+
+    }
+
     public static function allActiveUsers()
     {
         $db=Db::getInstance();

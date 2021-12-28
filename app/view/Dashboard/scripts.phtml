@@ -37,6 +37,7 @@
 <script>
     // Variables start
     const urlAddress = 'http://localhost:8080/gym.com.hr_v2/';
+    document.getElementById("dt1").style.display = "none";
     // Variables end
 
 
@@ -334,4 +335,31 @@
     });
     // staffSettings modal end
 
+    // Search bar start
+
+    function searchfunction(){
+
+        if (document.getElementById("search").value.length > 2){ // uđe ako je tražilica više od 2
+            var tekst = $('#search').val();
+            $.ajax({
+                url: urlAddress + 'User/userDataSearch/',
+                method:"POST",
+                data:{query: tekst},
+                success:function(data)
+                {
+                    document.getElementById('dataTableBody').innerHTML = "";
+
+                    document.getElementById("dt1").style.display = "block";
+                    var d1 = document.getElementById('dataTableBody');
+                    d1.insertAdjacentHTML('beforeend', data);
+
+
+                }
+            });
+        }else {
+            document.getElementById("dt1").style.display = "none";
+            document.getElementById('dataTableBody').innerHTML = "";
+
+        }
+    }
 </script>

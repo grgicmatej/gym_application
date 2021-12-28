@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="refactoring">
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Staff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Staff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,8 @@
       <workItem from="1637762550283" duration="58000" />
       <workItem from="1638179393241" duration="7000" />
       <workItem from="1640083785450" duration="1064000" />
-      <workItem from="1640614743767" duration="2626000" />
+      <workItem from="1640614743767" duration="3556000" />
+      <workItem from="1640680834660" duration="6837000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -210,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629746933593</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Staff settings are ready">
+      <created>1640618503991</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1640618503991</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,12 +239,14 @@
     <MESSAGE value="navbar fix" />
     <MESSAGE value="clanarine" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="Staff settings are ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Staff settings are ready" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640616704852">
-      <screen x="0" y="25" width="1920" height="975" />
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640618498676">
+      <screen x="0" y="25" width="1920" height="974" />
     </state>
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640618498676" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
     <state x="659" y="267" width="602" height="490" key="find.popup" timestamp="1640617499127">
       <screen x="0" y="25" width="1920" height="974" />
