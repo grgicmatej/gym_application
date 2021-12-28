@@ -10,14 +10,19 @@ class UserController extends SecurityController
 
     public function addNewUserMembership($id)
     {
-        User::newUserMembershipExtension(Membership::selectMembership(), $id);
-        User::lastUserMembershipExtension();
-        User::newUserMembershipExtensionArchive(User::lastUserMembershipExtension(), Membership::selectMembership(), $id);
+        if (Request::post('usersMembershipsMembershipName') == "disabled"){
+            echo json_encode(false);
+        }else{
+            User::newUserMembershipExtension(Membership::selectMembership(), $id);
+            User::lastUserMembershipExtension();
+            User::newUserMembershipExtensionArchive(User::lastUserMembershipExtension(), Membership::selectMembership(), $id);
 
-        Sale::newMembershipSale(Membership::selectMembership());
+            Sale::newMembershipSale(Membership::selectMembership());
 
-        Sender::deleteRecipient($id);
-        Sender::addNewRecipient(User::viewUserEmail($id), $id, Membership::membershipEndDate(Membership::selectMembership()));
+            Sender::deleteRecipient($id);
+            Sender::addNewRecipient(User::viewUserEmail($id), $id, Membership::membershipEndDate(Membership::selectMembership()));
+            echo json_encode(true);
+        }
     }
 
     public function addNewUser()

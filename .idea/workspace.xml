@@ -87,7 +87,7 @@
       <workItem from="1638179393241" duration="7000" />
       <workItem from="1640083785450" duration="1064000" />
       <workItem from="1640614743767" duration="3556000" />
-      <workItem from="1640680834660" duration="6837000" />
+      <workItem from="1640680834660" duration="14822000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640618503991</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="New search works">
+      <created>1640695440717</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1640695440717</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,14 +247,27 @@
     <MESSAGE value="clanarine" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="Staff settings are ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Staff settings are ready" />
+    <MESSAGE value="New search works" />
+    <option name="LAST_COMMIT_MESSAGE" value="New search works" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640618498676">
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640695435124">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640618498676" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640695435124" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
+    <state x="191" y="108" key="DiffContextDialog" timestamp="1640698218314">
+      <screen x="0" y="25" width="1920" height="974" />
+    </state>
+    <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640698218314" />
+    <state x="599" y="218" key="RollbackChangesDialog" timestamp="1640698219649">
+      <screen x="0" y="25" width="1920" height="974" />
+    </state>
+    <state x="599" y="218" key="RollbackChangesDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640698219649" />
+    <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640701246485">
+      <screen x="0" y="25" width="1920" height="975" />
+    </state>
+    <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640701246485" />
     <state x="659" y="267" width="602" height="490" key="find.popup" timestamp="1640617499127">
       <screen x="0" y="25" width="1920" height="974" />
     </state>

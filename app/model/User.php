@@ -117,9 +117,9 @@ class User
                      </td>
                      <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsStartDate"><?=$realdate_Start?></td>
                      <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsEndDate"><?=$realdate_End?></td>
-                     <td class="text-center" id="">
+                     <td class="text-center profileData" id="i_<?= $data->Users_Id_Main ?>">
                          <p>
-                             <a class="submitlink linkanimation profileData" id="i_<?= $data->Users_Id_Main ?>">i_<?= $data->Users_Id_Main ?> Pregled <i class="fad fa-user ml-10"></i></a>
+                             <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
                          </p>
                      </td>
                  </tr>
