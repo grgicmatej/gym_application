@@ -152,17 +152,14 @@ $('form').on('submit', function (e) {
         type: 'post',
         url: urlAddress + 'User/addNewUser/',
         data: $('#formformaNewUser').serialize(),
-        success: function (response) {
-            response = JSON.parse(response);
-            if (response === true)  {
-                $("#newUserRegistration").fadeOut(800, function () {
-                    $(this).modal('hide');
-                });
-                $(this).fadeIn(400, function notification() {
-                    successNotification('Uspješno registriran korisnik.');
-                });
-                clearInput(1000);
-            }
+        success: function () {
+            $("#newUserRegistration").fadeOut(800, function () {
+                $(this).modal('hide');
+            });
+            $(this).fadeIn(400, function notification() {
+                successNotification('Uspješno registriran korisnik.');
+            });
+            clearInput(1000);
         }
     });
 });

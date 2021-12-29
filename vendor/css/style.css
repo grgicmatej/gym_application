@@ -204,3 +204,14 @@ h6 {
 .f-w-100{
     font-weight: 100 !important;
 }
+
+.mainsearchbox{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.div_mainsearbox{
+    padding: 3rem;
+    min-height: 292px;
+}

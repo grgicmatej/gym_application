@@ -40,7 +40,6 @@ class UserController extends SecurityController
         User::newUser(Upload::getFileName());
         User::addUserGymRegistration();
         User::newUserFirstMembershipExtension();
-        echo json_encode(true);
     }
 
     public function allMemberships()
