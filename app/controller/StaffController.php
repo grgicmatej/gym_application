@@ -3,14 +3,18 @@
 
 class StaffController extends SecurityController
 {
-    public function passwordChange()
+    public function passwordChecker()
     {
         if (Staff::passwordChangeCheck()){
-            Staff::newPassword();
             echo json_encode(true);
         }else{
             echo json_encode(false);
         }
+    }
+
+    public function passwordChange()
+    {
+        Staff::newPassword();
     }
 
     public function dataChange()

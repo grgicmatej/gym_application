@@ -25,17 +25,22 @@ class UserController extends SecurityController
         }
     }
 
-    public function addNewUser()
+    public function checkUsersId()
     {
         if (!User::checkUsersId()) {
             echo json_encode(false);
-        } else {
-            Upload::uploadPhoto();
-            User::newUser(Upload::getFileName());
-            User::addUserGymRegistration();
-            User::newUserFirstMembershipExtension();
+        } else{
             echo json_encode(true);
         }
+    }
+
+    public function addNewUser()
+    {
+        Upload::uploadPhoto();
+        User::newUser(Upload::getFileName());
+        User::addUserGymRegistration();
+        User::newUserFirstMembershipExtension();
+        echo json_encode(true);
     }
 
     public function allMemberships()

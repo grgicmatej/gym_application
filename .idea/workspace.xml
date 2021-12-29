@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vendor/js/inputsanitizers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,8 @@
       <workItem from="1638179393241" duration="7000" />
       <workItem from="1640083785450" duration="1064000" />
       <workItem from="1640614743767" duration="3556000" />
-      <workItem from="1640680834660" duration="14822000" />
+      <workItem from="1640680834660" duration="16664000" />
+      <workItem from="1640769822014" duration="13019000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -222,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640695440717</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="search radi">
+      <created>1640703750926</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1640703750926</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,18 +259,19 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="Staff settings are ready" />
     <MESSAGE value="New search works" />
-    <option name="LAST_COMMIT_MESSAGE" value="New search works" />
+    <MESSAGE value="search radi" />
+    <option name="LAST_COMMIT_MESSAGE" value="search radi" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640695435124">
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640703745367">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640695435124" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640703745367" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
-    <state x="191" y="108" key="DiffContextDialog" timestamp="1640698218314">
+    <state x="191" y="108" key="DiffContextDialog" timestamp="1640703743411">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640698218314" />
+    <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640703743411" />
     <state x="599" y="218" key="RollbackChangesDialog" timestamp="1640698219649">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
@@ -268,9 +280,13 @@
       <screen x="0" y="25" width="1920" height="975" />
     </state>
     <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640701246485" />
-    <state x="659" y="267" width="602" height="490" key="find.popup" timestamp="1640617499127">
+    <state x="659" y="267" width="602" height="490" key="find.popup" timestamp="1640791652348">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="659" y="267" width="602" height="490" key="find.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640617499127" />
+    <state x="659" y="267" width="602" height="490" key="find.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640791652348" />
+    <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1640789321496">
+      <screen x="0" y="25" width="1920" height="974" />
+    </state>
+    <state x="625" y="239" width="670" height="676" key="search.everywhere.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640789321496" />
   </component>
 </project>
