@@ -1,8 +1,12 @@
 index                   +
 teretane
-aktivni korisnici
-inaktivni korisnici
-svi korisnici
+
+
+Nogomet
+Biljar
+aktivni korisnici       / potrebno? - zakomentirano
+inaktivni korisnici     / potrebno? - zakomentirano
+svi korisnici           / potrebno? - zakomentirano
 
 novi korisnik           +
 
@@ -11,8 +15,8 @@ zaposelnici
 statistika
 financije
 napomene
-pica
-aktivnost
+pića
+aktivnost               / za 1.1.
 postavke                +
 
 
@@ -20,6 +24,8 @@ build log planner:
 1.0
     - Osnovne značajke koje već postoje
     - Bulk csv unos korisnika
+    - Mob verzija
+    - Frontend landing page
 1.1:
     - Notifikacije
     - Termin za razne sportove interni
