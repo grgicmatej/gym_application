@@ -19,10 +19,6 @@ class StaffController extends SecurityController
 
     public function dataChange()
     {
-        if (Staff::userDataChange()){
-            echo json_encode(true);
-        }else{
-            echo json_encode(false);
-        }
+        Staff::userDataChange();
     }
 }

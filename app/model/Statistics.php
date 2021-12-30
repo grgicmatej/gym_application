@@ -20,11 +20,9 @@ class Statistics
 
     public static function monthsInYear()
     {
-        $i=1;
-        do{
+        for ($i=1; $i<=date('m'); $i++){
             $months[]=$i;
-            $i++;
-        } while ($i<=date('m'));
+        }
         return $months;
     }
 

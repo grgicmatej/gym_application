@@ -3,62 +3,6 @@
 
 class User
 {
-    public static function allUsers()
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT
-                                    Users.Users_Id,
-                                    Users.Users_Name,
-                                    Users.Users_Surname,
-                                    Users_Memberships.Users_Memberships_Membership_Name,
-                                    Users_Memberships.Users_Memberships_Membership_Active,
-                                    Users_Memberships.Users_Memberships_Users_Id,
-                                    Users_Memberships.Users_Memberships_Start_Date,
-                                    Users_Memberships.Users_Memberships_End_Date,
-                                    Users_Gym.Gym_Id,
-                                    Users_Gym.Users_Id
-                                    FROM
-                                    Users
-                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
-                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
-
-                                    WHERE Users_Gym.Gym_Id=:usersGym 
-                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
-                                    ');
-        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-
-    public static function allUsersThreeMonths()
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT
-                                    Users.Users_Id,
-                                    Users.Users_Name,
-                                    Users.Users_Surname,
-                                    Users_Memberships.Users_Memberships_Membership_Name,
-                                    Users_Memberships.Users_Memberships_Membership_Active,
-                                    Users_Memberships.Users_Memberships_Users_Id,
-                                    Users_Memberships.Users_Memberships_Start_Date,
-                                    Users_Memberships.Users_Memberships_End_Date,
-                                    Users_Gym.Gym_Id,
-                                    Users_Gym.Users_Id
-                                    FROM
-                                    Users
-                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
-                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
-
-                                    WHERE Users_Gym.Gym_Id=:usersGym 
-                                    AND Users_Memberships.Users_Memberships_End_Date>:twoMonthPeriod
-                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
-                                    ');
-        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
-        $stmt->bindValue('twoMonthPeriod', date('Y-m-d', strtotime("-60 days")));
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-
     public static function allUsersSearch()
     {
         $db=Db::getInstance();
@@ -129,77 +73,37 @@ class User
              continue;
              }
          }
-
-
-
-
-
-
     }
 
-    public static function allActiveUsers()
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT
-                                    Users.Users_Id,
-                                    Users.Users_Name,
-                                    Users.Users_Surname,
-                                    Users_Memberships.Users_Memberships_Membership_Name,
-                                    Users_Memberships.Users_Memberships_Users_Id,
-                                    Users_Memberships.Users_Memberships_Membership_Active,
-                                    Users_Memberships.Users_Memberships_Start_Date,
-                                    Users_Memberships.Users_Memberships_End_Date,
-                                    Users_Memberships.Users_Memberships_Curent_Date,
-                                    Users_Gym.Gym_Id,
-                                    Users_Gym.Users_Id
-                                    FROM
-                                    Users
-                                    LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
-                                    LEFT JOIN Users_Gym         ON Users_Gym.Users_Id=Users.Users_Id
-
-                                    WHERE 
-                                    Users_Memberships.Users_Memberships_End_Date > Users_Memberships.Users_Memberships_Curent_Date 
-                                    AND 
-                                    Users_Gym.Gym_Id=:usersGym
-                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
-                                    ');
-        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
 
     public static function allUsersCount()
     {
-        $tempData=self::allUsers();
-        $array=[];
-        foreach ($tempData as $data) {
-            if (!in_array($usersMembershipsUsersId=$data->Users_Memberships_Users_Id, $array)) {
-                array_push($array, $usersMembershipsUsersId=$data->Users_Memberships_Users_Id);
-            } else {
-                continue;
-            }
-        }
-
-        return count($array);
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT COUNT(Users_Id) as allUsersCount FROM Users_Gym WHERE Gym_Id=:Gym_Id');
+        $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->execute();
+        return $stmt->fetch();
     }
-
     public static function allActiveUsersCount()
     {
-        $tempdata=self::allActiveUsers();
-        $array=[];
-        foreach ($tempdata as $data) {
-            if (!in_array($usersMembershipsUsersId=$data->Users_Memberships_Users_Id, $array)) {
-                array_push($array, $usersMembershipsUsersId=$data->Users_Memberships_Users_Id);
-            } else {
-                continue;
-            }
-        }
-        return count($array);
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT
+                                        COUNT(Users_Memberships_Users_Id) as activeUsersCount
+                                            FROM Users_Memberships
+                                            LEFT JOIN Users_Gym ON Users_Gym.Users_Id=Users_Memberships.Users_Memberships_Users_Id
+                                            WHERE 
+                                            Users_Memberships.Users_Memberships_End_Date > Users_Memberships.Users_Memberships_Curent_Date
+                                            AND 
+                                            Users_Gym.Gym_Id=:Gym_Id 
+                                    ');
+        $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->execute();
+        return $stmt->fetch();
     }
 
     public static function allInactiveUsersCount()
     {
-        return self::allUsersCount() - self::allActiveUsersCount();
+        return self::allUsersCount()->allUsersCount - self::allActiveUsersCount()->activeUsersCount;
     }
 
     public static function addUserGymRegistration()
@@ -256,8 +160,7 @@ class User
 
     public static function previousMonthUsers()
     {
-        $datestring=date('Y-m-d').' first day of last month';
-        $dt=date_create($datestring);
+        $dt=date_create(date('Y-m-d').' first day of last month');
 
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT COUNT(Users_Id) AS previousMonthlyUsers FROM Users WHERE 
@@ -374,9 +277,7 @@ class User
         $usersMembershipsStartDatetemp=date_format(date_create(), 'd.m.Y');
         $dateSeconds=strtotime($usersMembershipsStartDatetemp) + ($membershipData->Memberships_Duration * 86400);
         $usersMembershipsEndDate=date('Y.m.d', $dateSeconds);
-        $usersMembershipsCurentDate=date_format(date_create(), 'Y.m.d');
-
-        $usersMembershipsMembershipActive = ($usersMembershipsCurentDate<=$usersMembershipsEndDate) ? 1 : 0;
+        $usersMembershipsMembershipActive = (date_format(date_create(), 'Y.m.d')<=$usersMembershipsEndDate) ? 1 : 0;
 
         $db=Db::getInstance();
         $stmt=$db->prepare("
@@ -409,7 +310,7 @@ class User
         $stmt->bindValue('usersMembershipsMembershipName', $membershipData->Memberships_Name);
         $stmt->bindValue('usersMembershipsStartDate', $usersMembershipsStartDate);
         $stmt->bindValue('usersMembershipsEndDate', $usersMembershipsEndDate);
-        $stmt->bindValue('usersMembershipsCurentDate', $usersMembershipsCurentDate);
+        $stmt->bindValue('usersMembershipsCurentDate', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('usersMembershipsPrice', $membershipData->Memberships_Price);
         $stmt->bindValue('usersMembershipsMembershipActive', $usersMembershipsMembershipActive);
         $stmt->bindValue('usersMembershipsAdminId', Session::getInstance()->getUser()->Staff_Id);

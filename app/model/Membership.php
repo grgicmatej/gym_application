@@ -5,7 +5,6 @@ class Membership
 {
     public static function allActiveMemberships()
     {
-
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Gym_Id=:membershipsGymId AND Memberships_Active=:membershipsActive AND Memberships_Visible=:membershipsVisible');
         $stmt->bindValue('membershipsGymId', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
@@ -25,10 +24,8 @@ class Membership
 
     public static function timeUpdate()
     {
-        $usersMembershipsCurentDate=date_format(date_create(), 'Y.m.d');
         $db=Db::getInstance();
-        $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_Curent_Date=:UsersMembershipsCurentDate');
-        $stmt->bindValue('UsersMembershipsCurentDate', $usersMembershipsCurentDate);
+        $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_Curent_Date=NOW()');
         $stmt->execute();
 
         $db=Db::getInstance();

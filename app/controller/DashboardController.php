@@ -15,15 +15,12 @@ class DashboardController extends SecurityController
                 'gymData'               => Dashboard::gymData(),
                 'gymDataCount'          => Dashboard::gymDataCount(),
                 'gymName'               => Dashboard::gymName(),
-                //'userData'              => User::allUsersThreeMonths(),
-                'allUsersCount'         => User::allUsersCount(),
-                'activeUsersCount'      => User::allActiveUsersCount(),
-                'inactiveUsersCount'    => User::allInactiveUsersCount(),
-                'newMonthlyUsers'       => User::currentMonthlyUsers(),
+                'activeUsersCount'      => User::allActiveUsersCount()->activeUsersCount,
+                'newMonthlyUsers'       => User::currentMonthlyUsers()->newMonthlyUsers,
                 'monthlyUserProportion' => User::monthlyUserProportion(),
                 'yearlyStats'           => Statistics::yearlyStats(),
                 'monthsInYear'          => Statistics::monthsInYear(),
-                'monthlyIncome'         => Statistics::monthlyIncome()
+                'monthlyIncome'         => Statistics::monthlyIncome()->Users_Memberships_Price_Month
             ]);
 
     }

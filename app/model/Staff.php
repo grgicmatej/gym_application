@@ -67,7 +67,6 @@ class staff
         $stmt->bindValue('Staff_Email', Request::post('Staff_Email'));
         $stmt->bindValue('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
         $stmt->execute();
-        return true;
     }
 
     public static function staffData()

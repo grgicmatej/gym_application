@@ -16,17 +16,12 @@ class Dashboard
         $stmt->bindValue('staffId', isset(Session::getInstance()->getUser()->Staff_Id) ? Session::getInstance()->getUser()->Staff_Id : 0);
         $stmt->bindValue('gymId', $id);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
     public static function changeGym()
     {
-        $data=self::gymDataLimit1();
-        foreach ($data as $d) {
-            $gymId=$d->Gym_Id;
-        }
-        $_SESSION['Gym_Id']=$gymId;
-
+        $_SESSION['Gym_Id']=self::gymDataLimit1()->Gym_Id;
     }
 
     Public static function gymData() //Provjerava sve teretane koje su u vlasništvu Staff_Id
@@ -65,17 +60,13 @@ class Dashboard
                 ');
         $stmt->bindValue('staffId', isset(Session::getInstance()->getUser()->Staff_Id) ? Session::getInstance()->getUser()->Staff_Id : 0);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
     public static function gymName()
     {
-        $gymId=isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0;
-        $data=self::checkGymData($gymId);
-        foreach ($data as $d){
-            $gymName=$d->Gym_Name;
-        }
-        $gymName=empty($gymName) ? '' : $gymName;
+        $data=self::checkGymData(isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $gymName=empty($data->Gym_Name) ? '' : $data->Gym_Name;
         return $gymName;
     }
 }

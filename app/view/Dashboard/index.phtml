@@ -41,7 +41,7 @@
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3><?=$activeUsersCount?></h3>
+                                <h3><?=number_format($activeUsersCount, 0, '', '.')?></h3>
                                 <p>Aktivnih korisnika</p>
                             </div>
                             <div class="icon">
@@ -69,7 +69,7 @@
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-warning">
                             <div class="inner">
-                                <h3 style="color: #FFF"><?=$newMonthlyUsers->newMonthlyUsers?></h3>
+                                <h3 style="color: #FFF"><?=number_format($newMonthlyUsers, 0, '', '.') ?></h3>
 
                                 <p style="color: #FFF">Novih korisnika ovaj mjesec</p>
                             </div>
@@ -84,7 +84,7 @@
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-danger">
                             <div class="inner">
-                                <h3><?=$monthlyIncome->Users_Memberships_Price_Month?> KN</h3>
+                                <h3><?=number_format($monthlyIncome, 2, ',', '.') ?> KN</h3>
                                 <p>Mjesečni prihodi</p>
                             </div>
                             <div class="icon">

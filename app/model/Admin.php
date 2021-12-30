@@ -9,22 +9,18 @@ class Admin
         $stmt=$db->prepare('SELECT * FROM Activity_Staff WHERE Activity_Staff_Staff_Id=:activityStaffStaffId ORDER BY Activity_Staff_Staff_Id DESC LIMIT 1');
         $stmt->bindValue('activityStaffStaffId', Session::getInstance()->getUser()->Staff_Id);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
     public static function endStaffActivity()
     {
-        $data = self::checkStaffActivity();
-        foreach ($data as $d){
-            $activityStaffId=$d->Activity_Staff_Id;
-        }
         $db=Db::getInstance();
         $stmt=$db->prepare('UPDATE Activity_Staff SET
                                 Activity_Staff_End_Time=NOW()
                                 WHERE
                                 Activity_Staff_Id=:activityStaffId
                               ');
-        $stmt->bindValue('activityStaffId', $activityStaffId);
+        $stmt->bindValue('activityStaffId', self::checkStaffActivity()->Activity_Staff_Id);
         $stmt->execute();
     }
     

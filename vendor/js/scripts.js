@@ -194,18 +194,16 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
         type: 'post',
         url: urlAddress + 'Staff/dataChange/',
         data: $('#formformaStaffSettingsData').serialize(),
-        success: function (response) {
-            response = JSON.parse(response);
-            if (response === false) {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            } else {
-                $("#staffSettings").fadeOut(800, function () {
-                    $(this).modal('hide');
-                });
-                $(this).fadeIn(400, function notification() {
-                    successNotification('Novi podaci su uspješno spremljeni.');
-                });
-            }
+        success: function () {
+            $("#staffSettings").fadeOut(800, function () {
+                $(this).modal('hide');
+            });
+            $(this).fadeIn(400, function notification() {
+                successNotification('Novi podaci su uspješno spremljeni.');
+            });
+        },
+        error: function () {
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
 });
