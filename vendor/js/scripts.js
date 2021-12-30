@@ -146,7 +146,7 @@ $('.newUserRegistration').on('click', function () {
     $("#newUserRegistration").modal('show');
 });
 
-$('form').on('submit', function (e) {
+$('#formformaNewUser').on('submit', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'post',
@@ -237,42 +237,20 @@ function searchfunction() {
 // Clear input start
 function clearInput(time) {
     setTimeout(function (){
-        // Ciscenje new user input start
-        document.getElementById('Users_Id').value = '';
-        document.getElementById('Users_Name').value = '';
-        document.getElementById('Users_Surname').value = '';
-        document.getElementById('Users_Email').value = '';
-        document.getElementById('Users_Phone').value = '';
-        document.getElementById('Users_Address').value = '';
-        document.getElementById('Users_City').value = '';
-        document.getElementById('Users_Oib').value = '';
-        document.getElementById('Users_Birthday').value = '';
-        document.getElementById('Users_Gender').value = '';
-        document.getElementById('Users_Status').value = '';
-        document.getElementById('Users_Reference').value = '';
-        RemoveClass(Users_Id);
-        RemoveClass(Users_Name);
-        RemoveClass(Users_Surname);
-        RemoveClass(Users_Email);
-        RemoveClass(Users_Phone);
-        RemoveClass(Users_Address);
-        RemoveClass(Users_City);
-        RemoveClass(Users_Oib);
-        RemoveClass(Users_Birthday);
-        RemoveClass(Users_Gender);
-        RemoveClass(Users_Status);
-        RemoveClass(Users_Reference);
-        // Ciscenje new user input end
+        let userId= [
+            "Users_Id", "Users_Name", "Users_Surname", "Users_Email", "Users_Phone", "Users_Address", "Users_City",
+            "Users_Oib", "Users_Birthday", "Users_Gender", "Users_Status", "Users_Reference", "Staff_Password", "Staff_New_Password",
+            "Staff_Oib", "Staff_Phone", "Staff_Email"
+        ];
 
-        // Ciscenje staff input start
-        document.getElementById('Staff_Password').value = '';
-        document.getElementById('Staff_New_Password').value = '';
-        RemoveClass(Staff_Password);
-        RemoveClass(Staff_New_Password);
-        RemoveClass(Staff_Oib);
-        RemoveClass(Staff_Phone);
-        RemoveClass(Staff_Email);
-        // Ciscenje staff input end
+        userId.forEach((element) => {
+            RemoveClass(element)
+            if (element === 'Staff_Oib' || element === 'Staff_Phone' || element === 'Staff_Email'){
+                return
+            }else {
+                document.getElementById(element).value = '';
+            }
+        });
     }, time);
 }
 // Clear input end

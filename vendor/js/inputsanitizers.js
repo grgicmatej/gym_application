@@ -1,6 +1,5 @@
 // Input sanitizers start
 
-// Variables start
 var Users_Id = document.getElementById('Users_Id');
 var Users_Name = document.getElementById('Users_Name');
 var Users_Surname = document.getElementById('Users_Surname');
@@ -23,9 +22,7 @@ var Staff_Email = document.getElementById('Staff_Email');
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-// Variables end
 
-// Users_Id start
 Users_Id.addEventListener('blur', function() {
     if (this.value.length > 2 && !letters.test(this.value) && !specialCharacters.test(this.value)) {
         $.ajax({
@@ -48,143 +45,53 @@ Users_Id.addEventListener('blur', function() {
         this.className += " is-warning";
     }
 });
-// Users_Id end
 
-// Users_Name start
 Users_Name.addEventListener('blur', function() {
-    if (this.value.length > 2 && !numbers.test(this.value) && !specialCharacters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkNameValue(this);
 });
-// Users_Name end
 
-// Users_Surname start
 Users_Surname.addEventListener('blur', function() {
-    if (this.value.length > 2 && !numbers.test(this.value) && !specialCharacters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkNameValue(this);
 });
-// Users_Surname end
 
-// Users_Email start
 Users_Email.addEventListener('blur', function() {
-    if (this.value.length > 4 && this.value.includes('@') && !this.value.includes(' ')) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkEmailValue(this)
 });
-// Users_Email end
 
-// Users_Phone start
 Users_Phone.addEventListener('blur', function() {
-    if (this.value.length > 7 && !letters.test(this.value) && !specialCharacters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkPhoneValue(this)
 });
-// Users_Phone end
 
-// Users_Address start
 Users_Address.addEventListener('blur', function() {
-    if (this.value.length < 3){
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    } else {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    }
+    checkForLength(this, 3);
 });
-// Users_Address end
 
-// Users_City start
 Users_City.addEventListener('blur', function() {
-    if (this.value.length > 2 && !numbers.test(this.value) && !specialCharacters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkNameValue(this)
 });
-// Users_City end
 
-// Users_Oib start
 Users_Oib.addEventListener('blur', function() {
-    if (this.value.length === 11 && numbers.test(this.value) && !specialCharacters.test(this.value) && !letters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkOibValue(this)
 });
-// Users_Oib end
 
-// Users_Birthday start
 Users_Birthday.addEventListener('blur', function() {
-    if (this.value === '') {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    } else {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    }
+    checkForEmptyData(this);
 });
-// Users_Birthday end
 
-// Users_Gender start
 Users_Gender.addEventListener('blur', function() {
-    if (this.value === '') {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    } else {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    }
+    checkForEmptyData(this);
 });
-// Users_Gender end
 
-// Users_Status start
 Users_Status.addEventListener('blur', function() {
-    if (this.value === '') {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    } else {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    }
+    checkForEmptyData(this);
 });
-// Users_Status end
 
-// Users_Reference start
 Users_Reference.addEventListener('blur', function() {
-    if (this.value === '') {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    } else {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    }
+    checkForEmptyData(this);
 });
-// Users_Reference end
 
 ////// Staff form
 
-// Staff_Password start
 Staff_Password.addEventListener('blur', function() {
     if (this.value.length > 2 && !specialCharacters.test(this.value)) {
         $.ajax({
@@ -208,9 +115,7 @@ Staff_Password.addEventListener('blur', function() {
         this.className += " is-warning";
     }
 });
-// Staff_Password end
 
-// Staff_New_Password start
 Staff_New_Password.addEventListener('blur', function() {
     if (this.value !== '' && this.value.length > 5 && !specialCharacters.test(this.value)) {
         RemoveWarningClass(this)
@@ -220,47 +125,83 @@ Staff_New_Password.addEventListener('blur', function() {
         this.className += " is-warning";
     }
 });
-// Staff_New_Password end
 
-// Staff_Oib start
 Staff_Oib.addEventListener('blur', function() {
-    if (this.value.length === 11 && numbers.test(this.value) && !specialCharacters.test(this.value) && !letters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkOibValue(this)
 });
-// Staff_Oib end
 
-// Staff_Email start
 Staff_Email.addEventListener('blur', function() {
-    if (this.value.length > 4 && this.value.includes('@') && !this.value.includes(' ')) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkEmailValue(this)
 });
-// Staff_Email end
 
-// Staff_Phone start
 Staff_Phone.addEventListener('blur', function() {
-    if (this.value.length > 7 && !letters.test(this.value) && !specialCharacters.test(this.value)) {
-        RemoveWarningClass(this)
-        this.className += " is-valid";
-    } else {
-        RemoveValidClass(this)
-        this.className += " is-warning";
-    }
+    checkPhoneValue(this)
 });
-// Staff_Phone end
+
+function checkForEmptyData(dataId){
+    if (dataId.value === '') {
+        RemoveValidClass(dataId)
+        dataId.className += " is-warning";
+    } else {
+        RemoveWarningClass(dataId)
+        dataId.className += " is-valid";
+    }
+}
+
+function checkForLength(dataId, dataLength){
+    if (dataId.value.length < dataLength){
+        RemoveValidClass(dataId)
+        dataId.className += " is-warning";
+    } else {
+        RemoveWarningClass(dataId)
+        dataId.className += " is-valid";
+    }
+}
+
+function checkNameValue(dataId){
+    if (dataId.value.length > 2 && !numbers.test(dataId.value) && !specialCharacters.test(dataId.value)) {
+        RemoveWarningClass(dataId)
+        dataId.className += " is-valid";
+    } else {
+        RemoveValidClass(dataId)
+        dataId.className += " is-warning";
+    }
+}
+
+function checkEmailValue(dataId){
+    if (dataId.value.length > 4 && dataId.value.includes('@') && !dataId.value.includes(' ')) {
+        RemoveWarningClass(dataId)
+        dataId.className += " is-valid";
+    } else {
+        RemoveValidClass(dataId)
+        dataId.className += " is-warning";
+    }
+}
+
+function checkPhoneValue(dataId){
+    if (dataId.value.length > 7 && !letters.test(dataId.value) && !specialCharacters.test(dataId.value)) {
+        RemoveWarningClass(dataId)
+        dataId.className += " is-valid";
+    } else {
+        RemoveValidClass(dataId)
+        dataId.className += " is-warning";
+    }
+}
+
+function checkOibValue(dataId){
+    if (dataId.value.length === 11 && numbers.test(dataId.value) && !specialCharacters.test(dataId.value) && !letters.test(dataId.value)) {
+        RemoveWarningClass(dataId)
+        dataId.className += " is-valid";
+    } else {
+        RemoveValidClass(dataId)
+        dataId.className += " is-warning";
+    }
+}
 
 function RemoveValidClass(elem) {
     elem.className = elem.className.replace(/(?:^|\s)is-valid(?!\S)/g, '')
 }
+
 function RemoveWarningClass(elem) {
     elem.className = elem.className.replace(/(?:^|\s)is-warning(?!\S)/g, '')
 }
