@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Membership.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Membership.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Staff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Staff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/scripts.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +88,11 @@
       <workItem from="1640083785450" duration="1064000" />
       <workItem from="1640614743767" duration="3556000" />
       <workItem from="1640680834660" duration="16664000" />
-      <workItem from="1640769822014" duration="22666000" />
+      <workItem from="1640769822014" duration="24291000" />
+      <workItem from="1641202152640" duration="598000" />
+      <workItem from="1641301910679" duration="1173000" />
+      <workItem from="1641305342631" duration="2432000" />
+      <workItem from="1641385263013" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -264,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640869218988</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="refactoring and optimizing">
+      <created>1640872807561</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1640872807561</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,13 +300,14 @@
     <MESSAGE value="cleaning" />
     <MESSAGE value="customizing sidebar" />
     <MESSAGE value="customizing and refactoring js" />
-    <option name="LAST_COMMIT_MESSAGE" value="customizing and refactoring js" />
+    <MESSAGE value="refactoring and optimizing" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring and optimizing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640869214037">
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640872802103">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640869214037" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640872802103" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
     <state x="191" y="108" key="DiffContextDialog" timestamp="1640703743411">
       <screen x="0" y="25" width="1920" height="974" />

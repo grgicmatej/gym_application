@@ -80,7 +80,7 @@
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
                             <div class="row forma" id="forma">
                                 <form id="formforma">
-                                <select id="memberships" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
+                                <select id="memberships" class="" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
                                 </form>
                             </div>
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
