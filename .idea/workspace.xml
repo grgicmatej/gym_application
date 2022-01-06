@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="optimizing search query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,8 @@
       <workItem from="1641202152640" duration="598000" />
       <workItem from="1641301910679" duration="1173000" />
       <workItem from="1641305342631" duration="2432000" />
-      <workItem from="1641385263013" duration="646000" />
+      <workItem from="1641385263013" duration="6347000" />
+      <workItem from="1641459118190" duration="966000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -269,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640872807561</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="More optimizing, cleaning database">
+      <created>1641386237110</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1641386237110</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,18 +308,19 @@
     <MESSAGE value="customizing sidebar" />
     <MESSAGE value="customizing and refactoring js" />
     <MESSAGE value="refactoring and optimizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring and optimizing" />
+    <MESSAGE value="More optimizing, cleaning database" />
+    <option name="LAST_COMMIT_MESSAGE" value="More optimizing, cleaning database" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1640872802103">
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1641459684743">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640872802103" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641459684743" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
-    <state x="191" y="108" key="DiffContextDialog" timestamp="1640703743411">
+    <state x="191" y="108" key="DiffContextDialog" timestamp="1641386203211">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640703743411" />
+    <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641386203211" />
     <state x="599" y="218" key="RollbackChangesDialog" timestamp="1640698219649">
       <screen x="0" y="25" width="1920" height="974" />
     </state>

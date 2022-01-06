@@ -10,59 +10,29 @@ class User
                                     Users.Users_Id as Users_Id_Main,
                                     Users.Users_Name,
                                     Users.Users_Surname,
-                                    Users_Memberships.Users_Memberships_Id,
                                     Users_Memberships.Users_Memberships_Membership_Name,
                                     Users_Memberships.Users_Memberships_Membership_Active,
-                                    Users_Memberships.Users_Memberships_Users_Id,
                                     Users_Memberships.Users_Memberships_Start_Date,
-                                    Users_Memberships.Users_Memberships_End_Date,
-                                    Users_Memberships.Users_Memberships_Gym_Id
+                                    Users_Memberships.Users_Memberships_End_Date
                                     FROM
                                     Users
                                     LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
-                                    WHERE Users_Memberships.Users_Memberships_Gym_Id=:usersGym AND 
+                                    WHERE 
+                                    Users_Memberships.Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id
+                                    AND
                                     (Users.Users_Id LIKE :parametar_id
-                                    OR Users.Users_Name LIKE :parametar 
-                                    OR Users.Users_Surname LIKE :parametar)
-                                    ORDER BY Users_Memberships.Users_Memberships_Id DESC
+                                    OR Users.Users_Surname LIKE :parametar
+                                    OR CONCAT(Users.Users_Name, :spacing, Users.Users_Surname) LIKE :parametar
+                                    )
+                                    ORDER BY Users.Users_Id ASC
                                     ');
-        $stmt->bindValue('usersGym', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
-        $stmt->bindValue('parametar_id', '%'.Request::post('query').'%');
+        $stmt->bindValue('Users_Memberships_Gym_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0));
+        $stmt->bindValue('parametar_id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0).'-'.Request::post('query').'%');
         $stmt->bindValue('parametar', trim(Request::post('query'), " ").'%');
+        $stmt->bindValue('spacing', ' ');
+
         $stmt->execute();
-
-        $uData = $stmt->fetchAll();
-
-         foreach ($uData as $data):?>
-                 <tr>
-                     <?php
-                     if (!empty($data->Users_Memberships_Start_Date)):
-                         $timestamp = strtotime($data->Users_Memberships_Start_Date);
-                         $realdate_Start = date("d.m.Y", $timestamp);
-
-                         $timestamp = strtotime($data->Users_Memberships_End_Date);
-                         $realdate_End = date("d.m.Y", $timestamp);
-                     else:
-                         $realdate_Start = "";
-                         $realdate_End = "";
-                     endif;
-                     ?>
-                     <td class="text-center" id="<?=$data->Users_Id_Main?>_usersId"><?=substr(strrchr($data->Users_Id_Main, '-'), 1)?></td>
-                     <td class="text-center" id="<?=$data->Users_Id_Main?>_usersName"><?=$data->Users_Name." ".$data->Users_Surname?></td>
-                     <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsName"><?=$data->Users_Memberships_Membership_Name?></td>
-                     <td id="<?=$data->Users_Id_Main?>_membershipsStatus" style="background-color: <?= $data->Users_Memberships_Membership_Active? "#74C687":"#E87C87" ?>; color: white; font-weight: bolder" class="text-center">
-                         <?= $data->Users_Memberships_Membership_Active? "Da" : "Ne"?>
-                     </td>
-                     <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsStartDate"><?=$realdate_Start?></td>
-                     <td class="text-center" id="<?=$data->Users_Id_Main?>_membershipsEndDate"><?=$realdate_End?></td>
-                     <td class="text-center profileData" id="i_<?= $data->Users_Id_Main ?>">
-                         <p>
-                             <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
-                         </p>
-                     </td>
-                 </tr>
-                 <?php
-                 endforeach;
+        return $stmt->fetchAll();
     }
 
 

@@ -53,7 +53,7 @@ class UserController extends SecurityController
 
     public function userDataSearch()
     {
-        User::allUsersSearch();
+        echo json_encode(User::allUsersSearch());
     }
 
 

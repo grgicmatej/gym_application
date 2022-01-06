@@ -13,7 +13,7 @@ $(document).ajaxComplete(function () {
 
                     $("#profileData").modal('show');
                     $("#email").text(response["Users_Email"]);
-                    $("#id").text(response["Users_Id"]);
+                    $("#id").text(response["Users_Id"].split('-').pop());
                     $("#usersName").text(response["Users_Name"] + " " + response["Users_Surname"]);
                     $("#usersPhone").text(response["Users_Phone"]);
                     $("#membershipName").text(response["Users_Memberships_Membership_Name"]);
@@ -213,16 +213,33 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
 
 function searchfunction() {
     if (document.getElementById("search").value.length > 2) {
-        var tekst = $('#search').val();
         $.ajax({
             url: urlAddress + 'User/userDataSearch/',
             method: "POST",
-            data: {query: tekst},
+            data: {query: $('#search').val()},
             success: function (data) {
                 document.getElementById('dataTableBody').innerHTML = "";
                 document.getElementById("dt1").style.display = "block";
-                var d1 = document.getElementById('dataTableBody');
-                d1.insertAdjacentHTML('beforeend', data);
+
+                response = JSON.parse(data);
+                const searchData = document.getElementById('dataTableBody');
+
+                searchData.innerHTML = response.reduce((options, {Users_Id_Main, Users_Name, Users_Surname, Users_Memberships_Membership_Name, Users_Memberships_Membership_Active, Users_Memberships_Start_Date, Users_Memberships_End_Date}) =>
+                        options += `<tr>
+                                        <td class="text-center" id="${Users_Id_Main}_usersId">${Users_Id_Main.split('-').pop()}</td>
+                                        <td class="text-left" id="${Users_Id_Main}_usersName">${Users_Name} ${Users_Surname}</td>
+                                        <td class="text-left" id="${Users_Id_Main}_membershipsName">${Users_Memberships_Membership_Name}</td>
+                                        <td id="${Users_Id_Main}_membershipsStatus" style="background-color: ${Users_Memberships_Membership_Active ? '#74C687': '#E87C87'}; color: white; font-weight: bolder" class="text-center">
+                                            ${Users_Memberships_Membership_Active ? 'Da': 'Ne'}
+                                        </td>
+                                        <td class="text-center" id="${Users_Id_Main}_membershipsStartDate">${formatDate(Users_Memberships_Start_Date)}</td>
+                                        <td class="text-center" id="${Users_Id_Main}_membershipsEndDate">${formatDate(Users_Memberships_End_Date)}</td>
+                                        <td class="text-center profileData" id="i_${Users_Id_Main}">
+                                            <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
+                                        </td>
+                                    </tr>
+                                    `,
+                                    ``);
             }
         });
     } else {
