@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="optimizing search query">
+      <change afterPath="$PROJECT_DIR$/app/controller/AditionalController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Timers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +95,9 @@
       <workItem from="1641301910679" duration="1173000" />
       <workItem from="1641305342631" duration="2432000" />
       <workItem from="1641385263013" duration="6347000" />
-      <workItem from="1641459118190" duration="966000" />
+      <workItem from="1641459118190" duration="17674000" />
+      <workItem from="1641545163370" duration="1457000" />
+      <workItem from="1641558100839" duration="2658000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -276,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641386237110</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="optimizing search query">
+      <created>1641460727614</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1641460727614</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,18 +321,23 @@
     <MESSAGE value="customizing and refactoring js" />
     <MESSAGE value="refactoring and optimizing" />
     <MESSAGE value="More optimizing, cleaning database" />
-    <option name="LAST_COMMIT_MESSAGE" value="More optimizing, cleaning database" />
+    <MESSAGE value="optimizing search query" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimizing search query" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1641459684743">
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1641474814498">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641459684743" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641474814498" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
     <state x="191" y="108" key="DiffContextDialog" timestamp="1641386203211">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
     <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641386203211" />
+    <state x="527" y="242" key="NewPhpClassDialog" timestamp="1641461769199">
+      <screen x="0" y="25" width="1920" height="974" />
+    </state>
+    <state x="527" y="242" key="NewPhpClassDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641461769199" />
     <state x="599" y="218" key="RollbackChangesDialog" timestamp="1640698219649">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
@@ -337,9 +354,9 @@
       <screen x="0" y="25" width="1920" height="974" />
     </state>
     <state x="1224" y="247" width="602" height="490" key="find.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640872501599" />
-    <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1640789321496">
+    <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1641463209976">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="625" y="239" width="670" height="676" key="search.everywhere.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1640789321496" />
+    <state x="625" y="239" width="670" height="676" key="search.everywhere.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641463209976" />
   </component>
 </project>

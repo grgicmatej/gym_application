@@ -33,8 +33,17 @@ $(document).ajaxComplete(function () {
 function formatDate(input) {
     var datePart = input.match(/\d+/g),
         year = datePart[0],
-        month = datePart[1], day = datePart[2];
+        month = datePart[1],
+        day = datePart[2];
     return day + '.' + month + '.' + year + '.';
+}
+
+function formatTime(input){
+    var timePart = input.match(/\d+/g),
+        hour = timePart[3],
+        minute = timePart[4],
+        second = timePart[5];
+    return hour + ':' + minute + ':' + second;
 }
 // profileData modal end
 
@@ -210,7 +219,6 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
 // staffSettings modal end
 
 // Search bar start
-
 function searchfunction() {
     if (document.getElementById("search").value.length > 2) {
         $.ajax({
@@ -269,3 +277,131 @@ function clearInput(time) {
     }, time);
 }
 // Clear input end
+
+// tableSports modal start
+$('.tableSports').on('click', function () {
+    document.getElementById('formabiljarbutton').innerHTML = ''
+    $.ajax({
+        url: urlAddress + 'Aditional/checkTimer',
+        method: "POST",
+        data: {sportId: 1},
+        success: function (data) {
+            response = JSON.parse(data)
+            if (response === true){
+                var stopWatchValue = 'Pokreni štopericu'
+            }else {
+                var stopWatchValue = 'Zaustavi štopericu'
+            }
+            document.getElementById('formabiljarbutton').innerHTML = stopWatchValue
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+
+    $("#tableSports").modal('show');
+});
+// tableSports modal end
+
+
+
+// Biljar timer start and stop
+$('#formabiljarbutton').on('click', function (e) {
+    e.preventDefault();
+    $.ajax({
+        url: urlAddress + 'Aditional/manipulateTimer',
+        method: "POST",
+        data: {sportId: 1},
+        success: function (response) {
+            response = JSON.parse(response)
+            if (response === true){ // pokrenuta štoperica
+
+
+
+
+                $.ajax({
+                    url: urlAddress + 'Aditional/checkStartedTime',
+                    method: "POST",
+                    data: {sportId: 1},
+                    success: function (response) {
+                        response = JSON.parse(response)
+
+                        startStopWatch()
+                        //console.log(formatTime(response["Timers_Start_Time"]))
+                    }
+
+                });
+
+
+
+
+            }else { // zaustavljena štoperica
+                console.log("tu sam2");
+                stopStopWatch()
+            }
+        }
+
+    });
+});
+
+// mainWatch start
+
+
+var stopwatchInterval = 0;
+function startStopWatch(){
+    let prevTime, elapsedTime = 0;
+
+    var updateTime = function () {
+        var tempTime = elapsedTime;
+        var milliseconds = tempTime % 1000;
+        tempTime = Math.floor(tempTime / 1000);
+        var seconds = tempTime % 60;
+        tempTime = Math.floor(tempTime / 60);
+        var minutes = tempTime % 60;
+        tempTime = Math.floor(tempTime / 60);
+        var hours = tempTime % 60;
+
+        var time = hours + " : " + minutes + " : " + seconds;
+
+        console.log(time)
+    };
+
+    stopwatchInterval = setInterval(function () {
+            if (!prevTime) {
+                prevTime = Date.now();
+            }
+
+            elapsedTime += Date.now() - prevTime;
+            prevTime = Date.now();
+
+            updateTime();
+        }, 1000);
+}
+
+function stopStopWatch(){
+    clearInterval(stopwatchInterval)
+}
+
+// štoperica radi, treba napraviti zaustavljanje, promjenu gumba, prikaz štoperice itd
+
+
+
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+
+    var time = h + ":" + m + ":" + s;
+    document.getElementById("clockDisplay").innerText = time;
+    document.getElementById("clockDisplay").textContent = time;
+
+    setTimeout(showTime, 1000);
+}
+showTime();
+//showTimePassed(startTime);
+// mainWatch end

@@ -290,3 +290,45 @@
     </div>
 </div>
 <!-- staffSettings Modal end -->
+
+<!-- tableSports Modal start-->
+<div class="modal fade" id="tableSports" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Stolni sportovi</h6>
+                            <div class="row">
+                                <!-- <form id="formforma">
+                                    <select id="memberships" class="" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
+                                </form> -->
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">Biljar
+                                    <p><span class="mandatoryField linkanimation">*  Cijena iznosi 0,50kn/min</span>
+                                    </p>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-1"></div>
+                                        <div class="col-sm-12 col-md-8">
+                                            <p class="m-b-10 btn btn-block btn-outline-info" id="formabiljarbutton"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">Stolni nogomet</div>
+                                <div class="col-sm-12 col-md-4">Stolni tenis</div>
+
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- membershipData Modal end -->
