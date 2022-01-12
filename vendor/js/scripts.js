@@ -278,77 +278,39 @@ function clearInput(time) {
 }
 // Clear input end
 
+
+
+
+
+// ovo vratiti gore kad sve radi
+
 // tableSports modal start
 $('.tableSports').on('click', function () {
-    document.getElementById('formabiljarbutton').innerHTML = ''
-    $.ajax({
-        url: urlAddress + 'Aditional/checkTimer',
-        method: "POST",
-        data: {sportId: 1},
-        success: function (data) {
-            response = JSON.parse(data)
-            if (response === true){
-                var stopWatchValue = 'Pokreni štopericu'
-            }else {
-                var stopWatchValue = 'Zaustavi štopericu'
-            }
-            document.getElementById('formabiljarbutton').innerHTML = stopWatchValue
-        },
-        error: function (){
-            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-        }
-    });
-
-    $("#tableSports").modal('show');
+    checkTimerbutton(1)
+    checkTimerbutton(2)
+    checkTimerbutton(3)
 });
 // tableSports modal end
 
 
 
 // Biljar timer start and stop
-$('#formabiljarbutton').on('click', function (e) {
-    e.preventDefault();
-    $.ajax({
-        url: urlAddress + 'Aditional/manipulateTimer',
-        method: "POST",
-        data: {sportId: 1},
-        success: function (response) {
-            response = JSON.parse(response)
-            if (response === true){ // pokrenuta štoperica
-
-
-
-
-                $.ajax({
-                    url: urlAddress + 'Aditional/checkStartedTime',
-                    method: "POST",
-                    data: {sportId: 1},
-                    success: function (response) {
-                        response = JSON.parse(response)
-
-                        startStopWatch()
-                        //console.log(formatTime(response["Timers_Start_Time"]))
-                    }
-
-                });
-
-
-
-
-            }else { // zaustavljena štoperica
-                console.log("tu sam2");
-                stopStopWatch()
-            }
-        }
-
-    });
+$('#formabutton_1').on('click', function (e) {
+    manipulateTimer(1)
 });
 
-// mainWatch start
+// Stolni nogomet timer start and stop
+$('#formabutton_2').on('click', function (e) {
+    manipulateTimer(2)
+});
 
+// Stolni tenis timer start and stop
+$('#formabutton_3').on('click', function (e) {
+    manipulateTimer(3)
+});
 
 var stopwatchInterval = 0;
-function startStopWatch(){
+function startStopWatch(sportId){
     let prevTime, elapsedTime = 0;
 
     var updateTime = function () {
@@ -363,7 +325,7 @@ function startStopWatch(){
 
         var time = hours + " : " + minutes + " : " + seconds;
 
-        console.log(time)
+        document.getElementById('podatakProtekloVrijeme_'+sportId).innerHTML = 'Proteklo vrijeme: '+time
     };
 
     stopwatchInterval = setInterval(function () {
@@ -382,10 +344,93 @@ function stopStopWatch(){
     clearInterval(stopwatchInterval)
 }
 
-// štoperica radi, treba napraviti zaustavljanje, promjenu gumba, prikaz štoperice itd
+function checkTimerbutton(sportId){
+    document.getElementById('formabutton_'+sportId).innerHTML = ''
+    $.ajax({
+        url: urlAddress + 'Aditional/checkTimer',
+        method: "POST",
+        data: {Timers_Sport_Id: sportId},
+        success: function (data) {
+            response = JSON.parse(data)
+            if (response === true){
+                var stopWatchValue = 'Pokreni štopericu'
+            }else {
+                var stopWatchValue = 'Zaustavi štopericu'
+            }
+            document.getElementById('formabutton_'+sportId).innerHTML = stopWatchValue
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
 
+    $("#tableSports").modal('show');
+}
 
+function manipulateTimer(sportId){
+    $.ajax({
+        url: urlAddress + 'Aditional/manipulateTimer',
+        method: "POST",
+        data: {Timers_Sport_Id: sportId},
+        success: function (response) {
+            response = JSON.parse(response)
+            if (response === true){ // pokrenuta štoperica
+                $.ajax({
+                    url: urlAddress + 'Aditional/checkStartedTime',
+                    method: "POST",
+                    data: {Timers_Sport_Id: sportId},
+                    success: function (response) {
+                        response = JSON.parse(response) // ovo je početno vrijeme, koristiti za neku drugu verziju
+                        startStopWatch(sportId)
+                        checkTimerbutton(sportId)
+                        document.getElementById('podatakStart_'+sportId).innerHTML = '* Korištenje u tijeku'
 
+                        successNotification('Štoperica je uspješno pokrenuta')
+                        $("#tableSports").fadeOut(1500, function () {
+                            $(this).modal('hide');
+                        });
+                    }
+                });
+            }else { // zaustavljena štoperica
+                stopStopWatch()
+                $.ajax({
+                    url: urlAddress + 'Aditional/checkTotalTime',
+                    method: "POST",
+                    data: {Timers_Sport_Id: sportId},
+                    success: function (response) {
+                        response = JSON.parse(response)
+
+                        checkTimerbutton(sportId)
+                        document.getElementById('podatakStart_'+sportId).innerHTML = ''
+                        document.getElementById('podatakProtekloVrijeme_'+sportId).innerHTML = ''
+                        successNotification('Štoperica je uspješno zaustavljena')
+                        $("#tableSports").fadeOut(1500, function () {
+                            $(this).modal('hide');
+                        });
+                        $("#tableSportsCheckout").modal('show');
+
+                        $.ajax({
+                            url: urlAddress + 'Aditional/checkSportsName',
+                            method: "POST",
+                            data: {Sport_Settings_Sport_Id: sportId},
+                            success: function (data) {
+                                data = JSON.parse(data)
+                                document.getElementById('sportsName').innerHTML = data["Sport_Settings_Name"]
+                                document.getElementById('ProtekloVrijeme').innerHTML = 'Ukupno vrijeme: '+response["TimeDifference"]+' '+'minuta'
+                                document.getElementById('SportNaplata').innerHTML = 'Ukupna naplata: <b>'+response["TotalPrice"]+' '+'kn </b>' // formatirati
+                            },
+                            error: function (){
+                                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    });
+}
+
+// mainWatch start
 function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
@@ -403,5 +448,11 @@ function showTime(){
     setTimeout(showTime, 1000);
 }
 showTime();
-//showTimePassed(startTime);
 // mainWatch end
+
+$('#sportsCheckout').on('click', function () {
+    infoNotification('Štoperica je restartirana i spremna za ponovno korištenje.')
+    $("#tableSportsCheckout").fadeOut(1500, function () {
+        $(this).modal('hide');
+    });
+});

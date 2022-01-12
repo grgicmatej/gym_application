@@ -14,21 +14,18 @@
 <body class="hold-transition sidebar-mini layout-fixed pace-primary">
 
 <div class="wrapper">
-    <?php include "widgets.php";?>
+    <?php include "widgets.phtml";?>
     <?php include "navbar.phtml"?>
     <?php include "sidebar.phtml";?>
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Nadzor</h1>
-
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="<?= App::config("url") ?>Dashboard/Dashboard" class="linkanimation">Kontrolna ploča</a></li>
+                            <li class="breadcrumb-item linkanimation">Kontrolna ploča</li>
                         </ol>
                     </div>
                 </div>
@@ -96,14 +93,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div>
+                    <div class="row">
                     <section class="col-xl-8 col-lg-12 d-none d-lg-block d-xl-block connectedSortable">
-
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Pregled korisnika</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <!-- /.card-header -->
+                            <div class="card-tools">
+
+                            </div>
                             <div class="card-body div_mainsearbox">
 
                                 <input type="text" name="search" id="search" placeholder="Pretraživanje korisnika po broju kartice, imenu ili prezimenu" class="form-control text-center mainsearchbox" onkeyup="searchfunction()" />
@@ -137,7 +141,6 @@
                                 </div>
 
                             </div>
-                            <!-- /.card-body -->
                         </div>
                     </section>
                     <section class="col-xl-4 d-lg-none d-xl-block connectedSortable">
@@ -148,7 +151,6 @@
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                         <i class="fas fa-minus"></i>
                                     </button>
-
                                 </div>
                             </div>
                             <div class="card-body">
