@@ -33,4 +33,9 @@ class AditionalController extends SecurityController
     {
         echo json_encode(Sports::checkSportsName());
     }
+
+    public function checkCalendar()
+    {
+        echo json_encode(Calendar::checkCalendar());
+    }
 }

@@ -2,7 +2,7 @@ index                   +
 teretane
 
 
-Stolni sportovi
+Stolni sportovi         +
 Nogomet
 
 aktivni korisnici       / potrebno? - zakomentirano
@@ -11,7 +11,7 @@ svi korisnici           / potrebno? - zakomentirano
 
 novi korisnik           +
 
-zaposelnici
+zaposlenici
 članarine
 statistika
 financije
@@ -33,6 +33,7 @@ build log planner:
     - ugradnja log sustava
     - Engleska verzija
     - promjena lozinke svaka 3mj
+    - pravi kalendar za nogomet
 1.2:
     - Termin za razne sportove eksterni
     - Eksterna provjera statusa članarine

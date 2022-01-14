@@ -278,12 +278,6 @@ function clearInput(time) {
 }
 // Clear input end
 
-
-
-
-
-// ovo vratiti gore kad sve radi
-
 // tableSports modal start
 $('.tableSports').on('click', function () {
     checkTimerbutton(1)
@@ -291,8 +285,6 @@ $('.tableSports').on('click', function () {
     checkTimerbutton(3)
 });
 // tableSports modal end
-
-
 
 // Biljar timer start and stop
 $('#formabutton_1').on('click', function (e) {
@@ -309,6 +301,7 @@ $('#formabutton_3').on('click', function (e) {
     manipulateTimer(3)
 });
 
+// stopwatch start
 var stopwatchInterval = 0;
 function startStopWatch(sportId){
     let prevTime, elapsedTime = 0;
@@ -430,6 +423,14 @@ function manipulateTimer(sportId){
     });
 }
 
+$('#sportsCheckout').on('click', function () {
+    infoNotification('Štoperica je restartirana i spremna za ponovno korištenje.')
+    $("#tableSportsCheckout").fadeOut(1500, function () {
+        $(this).modal('hide');
+    });
+});
+// stopwatch end
+
 // mainWatch start
 function showTime(){
     var date = new Date();
@@ -450,9 +451,100 @@ function showTime(){
 showTime();
 // mainWatch end
 
-$('#sportsCheckout').on('click', function () {
-    infoNotification('Štoperica je restartirana i spremna za ponovno korištenje.')
-    $("#tableSportsCheckout").fadeOut(1500, function () {
-        $(this).modal('hide');
+
+
+
+
+
+
+
+
+
+
+// vratiti gore kad bude spremno
+
+// calendar start
+window.onload = function() {
+    calendar()
+}
+
+function calendar(){
+    $.ajax({
+        url: urlAddress + 'Aditional/checkCalendar/',
+        method: "POST",
+        success: function (data) {
+            alert(data)
+            alert(typeof data)
+            response = JSON.parse(data);
+
+
+
+                // tu sam stao, treba napraviti foreach, vjerojatno na istu foru kao i kod grafa
+
+
+            const searchData = document.getElementById('dataTableBody');
+
+            response.reduce((options, {Soccer_Contact_Name}) =>
+                alert(Soccer_Contact_Name)
+                    );
+
+
+
+
+
+
+            /* initialize the calendar
+             -----------------------------------------------------------------*/
+            //Date for the calendar events (dummy data)
+            var date = new Date()
+            var d    = date.getDate(),
+                m    = date.getMonth(),
+                y    = date.getFullYear()
+
+            var Calendar = FullCalendar.Calendar;
+
+            var calendarEl = document.getElementById('calendar');
+
+
+            var calendar = new Calendar(calendarEl, {
+                headerToolbar: {
+                    left  : 'prev,next today',
+                    center: 'title',
+                    right : 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                themeSystem: 'bootstrap',
+                //Random default events
+
+                /*
+                parametri:
+                 {
+                    plava boja za nogomet: #16A2B8
+                        title          : '',
+                        start          : new Date(y, m, d, 12, 0),
+                        end            : new Date(y, m, d, 14, 0),
+                        backgroundColor: '#f56954', //red
+                        borderColor    : '#f56954', //red
+                        allDay         : false
+                        url            : 'https://www.google.com/'
+                    },
+                 */
+
+
+                editable  : false,
+                droppable : false,
+            });
+            calendar.render();
+
+        }
     });
-});
+
+
+}
+
+
+
+
+
+
+
+// calendar end

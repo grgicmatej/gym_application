@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/model/Sports.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/TestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Calendar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/css/design12.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/js/design27.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/AditionalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/AditionalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Timers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Timers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Sports.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Sports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/head_css.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/head_css.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
     </list>
@@ -42,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -53,11 +57,11 @@
       <recent name="$PROJECT_DIR$/app/view/Dashboard" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/vendor/css" />
+      <recent name="$PROJECT_DIR$/vendor" />
+      <recent name="$PROJECT_DIR$/app/model" />
       <recent name="$PROJECT_DIR$/vendor/js" />
-      <recent name="$PROJECT_DIR$/vendor/js/Frontend" />
-      <recent name="$PROJECT_DIR$/vendor/images" />
-      <recent name="$PROJECT_DIR$/vendor/css/Frontend" />
+      <recent name="$PROJECT_DIR$/vendor/css" />
+      <recent name="$PROJECT_DIR$/app/view/Dashboard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,7 +106,10 @@
       <workItem from="1641647821613" duration="4420000" />
       <workItem from="1641818802926" duration="3000" />
       <workItem from="1641912230804" duration="2954000" />
-      <workItem from="1641987022001" duration="3679000" />
+      <workItem from="1641987022001" duration="5302000" />
+      <workItem from="1642061675532" duration="486000" />
+      <workItem from="1642070239498" duration="2337000" />
+      <workItem from="1642161274362" duration="9219000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -300,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641574442390</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="tablesport stopwatch ready and functioning">
+      <created>1641991041827</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1641991041827</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +323,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="login part done &amp; started doing dashboard" />
     <MESSAGE value="Dashboard almost complete, reformating &amp; optimizing code" />
     <MESSAGE value="fixing navbar dropdown and some more reformating code" />
     <MESSAGE value="Logout part done" />
@@ -334,22 +347,25 @@
     <MESSAGE value="More optimizing, cleaning database" />
     <MESSAGE value="optimizing search query" />
     <MESSAGE value="working on stopwatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on stopwatch" />
+    <MESSAGE value="tablesport stopwatch ready and functioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="tablesport stopwatch ready and functioning" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1641574436982">
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1641991034759">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
-    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641574436982" />
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641991034759" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
     <state x="191" y="108" key="DiffContextDialog" timestamp="1641386203211">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
     <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641386203211" />
-    <state x="527" y="242" key="NewPhpClassDialog" timestamp="1641989162046">
-      <screen x="0" y="25" width="1920" height="974" />
+    <state x="527" y="243" key="NewPhpClassDialog" timestamp="1642170552291">
+      <screen x="0" y="25" width="1920" height="977" />
     </state>
     <state x="527" y="242" key="NewPhpClassDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641989162046" />
+    <state x="527" y="243" key="NewPhpClassDialog/0.25.1920.977/1920.25.1920.1055@0.25.1920.977" timestamp="1642170552291" />
+    <state x="527" y="243" key="NewPhpClassDialog/0.25.1920.979/1920.25.1920.1055@0.25.1920.979" timestamp="1642164400749" />
     <state x="599" y="218" key="RollbackChangesDialog" timestamp="1640698219649">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
@@ -363,10 +379,11 @@
     </state>
     <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641989213810" />
     <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640701246485" />
-    <state x="1224" y="247" width="602" height="490" key="find.popup" timestamp="1641988162448">
-      <screen x="0" y="25" width="1920" height="974" />
+    <state x="1224" y="248" width="602" height="493" key="find.popup" timestamp="1642164182737">
+      <screen x="0" y="25" width="1920" height="979" />
     </state>
     <state x="1224" y="247" width="602" height="490" key="find.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641988162448" />
+    <state x="1224" y="248" width="602" height="493" key="find.popup/0.25.1920.979/1920.25.1920.1055@0.25.1920.979" timestamp="1642164182737" />
     <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1641463209976">
       <screen x="0" y="25" width="1920" height="974" />
     </state>
