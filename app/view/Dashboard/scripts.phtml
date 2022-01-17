@@ -98,4 +98,50 @@
     })
 
     // chart script end
+
+    // soccer calendar start
+    var Calendar = FullCalendar.Calendar;
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new Calendar(calendarEl, {
+        headerToolbar: {
+            left  : 'prev,next today',
+            center: 'title',
+            right : 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        themeSystem: 'bootstrap',
+
+        /*
+           parametri:
+           {
+           plava boja za nogomet: #16A2B8
+                    title          : '',
+                    start          : new Date(y, m, d, 12, 0),
+                    end            : new Date(y, m, d, 14, 0),
+                    backgroundColor: '#f56954', //red
+                    borderColor    : '#f56954', //red
+                    allDay         : false
+                    url            : 'https://www.google.com/'
+                },
+        */
+
+        events: [
+            <?php foreach ($calendarData as $cd):?>
+            {
+                title          : '<?=$cd->Soccer_Contact_Name?>',
+                start          : new Date(<?=$cd->SoccerYearStart?>,<?=($cd->SoccerMonthStart)-1?>, <?=$cd->SoccerDayStart?>, <?=$cd->SoccerHourStart?>, 0),
+                end            : new Date(<?=$cd->SoccerYearEnd?>,<?=($cd->SoccerMonthEnd)-1?>, <?=$cd->SoccerDayEnd?>, <?=$cd->SoccerHourEnd?>, 0),
+                backgroundColor: '#16A2B8',
+                borderColor    : '#16A2B8',
+                url            : urlAddress+'Check/test/<?=$cd->Soccer_Id?>',
+                allDay         : false
+            }
+            <?php endforeach;?>,
+        ],
+        editable  : false,
+        droppable : false,
+    });
+    calendar.render();
+
+    // soccer calendar end
 </script>
