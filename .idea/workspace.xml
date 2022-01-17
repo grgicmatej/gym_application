@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="calendar display in working condition">
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +105,7 @@
       <workItem from="1642070239498" duration="2337000" />
       <workItem from="1642161274362" duration="9385000" />
       <workItem from="1642180919354" duration="2283000" />
-      <workItem from="1642425552165" duration="886000" />
+      <workItem from="1642425552165" duration="3414000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -316,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642172411348</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="calendar display in working condition">
+      <created>1642426495772</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1642426495772</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +333,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fixing navbar dropdown and some more reformating code" />
     <MESSAGE value="Logout part done" />
     <MESSAGE value="stats chart is ready" />
     <MESSAGE value="user widget with essential data" />
@@ -350,18 +357,21 @@
     <MESSAGE value="working on stopwatch" />
     <MESSAGE value="tablesport stopwatch ready and functioning" />
     <MESSAGE value="working on calendar for soccer" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on calendar for soccer" />
+    <MESSAGE value="calendar display in working condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="calendar display in working condition" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1642172405949">
-      <screen x="0" y="25" width="1920" height="977" />
+    <state x="442" y="102" key="CommitChangelistDialog2" timestamp="1642426491245">
+      <screen x="0" y="25" width="1920" height="971" />
     </state>
+    <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.971/1920.25.1920.1055@0.25.1920.971" timestamp="1642426491245" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641991034759" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640616704852" />
     <state x="442" y="102" key="CommitChangelistDialog2/0.25.1920.977/1920.25.1920.1055@0.25.1920.977" timestamp="1642172405949" />
-    <state x="191" y="108" key="DiffContextDialog" timestamp="1641386203211">
-      <screen x="0" y="25" width="1920" height="974" />
+    <state x="191" y="108" key="DiffContextDialog" timestamp="1642426488869">
+      <screen x="0" y="25" width="1920" height="971" />
     </state>
+    <state x="191" y="108" key="DiffContextDialog/0.25.1920.971/1920.25.1920.1055@0.25.1920.971" timestamp="1642426488869" />
     <state x="191" y="108" key="DiffContextDialog/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641386203211" />
     <state x="527" y="243" key="NewPhpClassDialog" timestamp="1642170552291">
       <screen x="0" y="25" width="1920" height="977" />
@@ -383,10 +393,11 @@
     </state>
     <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641989213810" />
     <state x="556" y="122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.975/1920.25.1920.1055@0.25.1920.975" timestamp="1640701246485" />
-    <state x="1224" y="246" width="602" height="548" key="find.popup" timestamp="1642182748979">
-      <screen x="0" y="25" width="1920" height="969" />
+    <state x="1224" y="246" width="602" height="550" key="find.popup" timestamp="1642426769738">
+      <screen x="0" y="25" width="1920" height="971" />
     </state>
     <state x="1224" y="246" width="602" height="548" key="find.popup/0.25.1920.969/1920.25.1920.1055@0.25.1920.969" timestamp="1642182748979" />
+    <state x="1224" y="246" width="602" height="550" key="find.popup/0.25.1920.971/1920.25.1920.1055@0.25.1920.971" timestamp="1642426769738" />
     <state x="1224" y="247" width="602" height="490" key="find.popup/0.25.1920.974/1920.25.1920.1055@0.25.1920.974" timestamp="1641988162448" />
     <state x="1224" y="248" width="602" height="493" key="find.popup/0.25.1920.979/1920.25.1920.1055@0.25.1920.979" timestamp="1642164182737" />
     <state x="625" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1641463209976">
