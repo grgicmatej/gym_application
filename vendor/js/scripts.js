@@ -212,7 +212,10 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
             });
         },
         error: function () {
-            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            $(this).fadeIn(400, function notification() {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            });
+
         }
     });
 });
@@ -450,7 +453,3 @@ function showTime(){
 }
 showTime();
 // mainWatch end
-
-// calendar modal start
-
-// calendar modal end
