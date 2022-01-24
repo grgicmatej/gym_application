@@ -21,7 +21,6 @@ class DashboardController extends SecurityController
                 'yearlyStats'           => Statistics::yearlyStats(),
                 'monthsInYear'          => Statistics::monthsInYear(),
                 'monthlyIncome'         => Statistics::monthlyIncome()->Users_Memberships_Price_Month,
-                'calendarData'          => Calendar::checkCalendar()
             ]);
 
     }
