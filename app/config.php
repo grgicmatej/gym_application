@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "url"=>"http://localhost:8080/gym.com.hr_v2/",
+    "url"=>"http://localhost:8080/gym2/",
     "dev"=>true,
     "nazivApp" => "",
     "db"=> [
