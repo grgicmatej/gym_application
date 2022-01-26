@@ -3,7 +3,9 @@ teretane
 
 
 Stolni sportovi         +
-Nogomet
+Nogomet                 +
+
+// Tu sam stao, CRUD radi ali treba iskoristiti inputSanitizers pa dodijeliti klase za unos kontakta/telefona/starta/enda, očistiti po završetku
 
 aktivni korisnici       / potrebno? - zakomentirano
 inaktivni korisnici     / potrebno? - zakomentirano

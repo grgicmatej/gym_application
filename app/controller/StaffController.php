@@ -21,4 +21,9 @@ class StaffController extends SecurityController
     {
         Staff::userDataChange();
     }
+
+    public function staffInfo()
+    {
+        echo json_encode(Staff::staffData());
+    }
 }

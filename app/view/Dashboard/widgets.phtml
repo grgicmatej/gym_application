@@ -257,18 +257,18 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <label class="nav-item linkanimation f-w-100">OIB <span class="mandatoryField"> *</span></label><br>
-                                <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="Staff_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required value="<?=$staffData->Staff_Oib?>">
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="Staff_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
                                 <label class="nav-item linkanimation f-w-100">Kontakt telefon <span class="mandatoryField"> *</span></label><br>
-                                <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="Staff_Phone" placeholder="Kontakt telefon" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required value="<?=$staffData->Staff_Phone?>">
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="Staff_Phone" placeholder="Kontakt telefon"  oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <label class="nav-item linkanimation f-w-100">Kontakt email <span class="mandatoryField"> *</span></label><br>
-                                <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="Staff_Email" placeholder="Kontakt e-mail adresa" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required value="<?=$staffData->Staff_Email?>">
+                                <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="Staff_Email" placeholder="Kontakt e-mail adresa" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required >
                             </div>
                         </div>
                         <br>

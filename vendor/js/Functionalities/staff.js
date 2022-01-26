@@ -1,6 +1,20 @@
 // staffSettings modal start
 $('.staffSettings').on('click', function () {
-    $("#staffSettings").modal('show');
+    $.ajax({
+        type: 'post',
+        url: urlAddress + 'Staff/staffInfo/',
+        success: function (response) {
+            response = JSON.parse(response)
+            $("#staffSettings").modal('show');
+            $("#Staff_Oib").val(response["Staff_Oib"]);
+            $("#Staff_Phone").val(response["Staff_Phone"]);
+            $("#Staff_Email").val(response["Staff_Email"]);
+        },
+        error: function ()
+        {
+
+        }
+    });
 });
 
 $('#formformaStaffSettingsPassword').on('submit', function (e) {
