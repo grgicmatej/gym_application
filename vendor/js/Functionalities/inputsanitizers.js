@@ -211,3 +211,43 @@ function RemoveClass(elem) {
     elem.className = elem.className.replace(/(?:^|\s)is-warning(?!\S)/g, '')
 }
 // Input sanitizers end
+
+
+// Clear input start
+function clearInput(time) {
+    setTimeout(function (){
+        let elementsId= [
+            "Users_Id", "Users_Name", "Users_Surname", "Users_Email", "Users_Phone", "Users_Address", "Users_City",
+            "Users_Oib", "Users_Birthday", "Users_Gender", "Users_Status", "Users_Reference", "Users_Company",
+            "Staff_Password", "Staff_New_Password", "Staff_Oib", "Staff_Phone", "Staff_Email"
+        ];
+
+        elementsId.forEach((element) => {
+            RemoveClass(document.getElementById(element))
+            if (element === 'Staff_Oib' || element === 'Staff_Phone' || element === 'Staff_Email' || element === 'Users_Gender' || element === 'Users_Status' || element === 'Users_Reference'){
+                return
+            }else {
+                document.getElementById(element).value = '';
+            }
+        });
+    }, time);
+}
+// Clear input end
+
+// Date and time formating start
+function formatDate(input) {
+    var datePart = input.match(/\d+/g),
+        year = datePart[0],
+        month = datePart[1],
+        day = datePart[2];
+    return day + '.' + month + '.' + year + '.';
+}
+
+function formatTime(input){
+    var timePart = input.match(/\d+/g),
+        hour = timePart[3],
+        minute = timePart[4],
+        second = timePart[5];
+    return hour + ':' + minute + ':' + second;
+}
+// Date and time formating end
