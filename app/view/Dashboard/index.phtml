@@ -95,79 +95,79 @@
                 </div>
                 <div>
                     <div class="row">
-                    <section class="col-xl-8 col-lg-12 d-none d-lg-block d-xl-block connectedSortable">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Pregled korisnika</h3>
+                        <section class="col-xl-8 col-lg-12 d-none d-lg-block d-xl-block connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Pregled korisnika</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
                                 <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-tools">
 
-                            </div>
-                            <div class="card-body div_mainsearbox">
+                                </div>
+                                <div class="card-body div_mainsearbox">
 
-                                <input type="text" name="search" id="search" placeholder="Pretraživanje korisnika po broju kartice, imenu ili prezimenu" class="form-control text-center mainsearchbox" onkeyup="searchfunction()" />
-                                <div class="card-body" id="dt1" style="max-width: available">
-                                    <table class="table" id="" width=100%" cellspacing="0">
-                                        <thead>
-                                        <tr>
-                                            <th style="width: auto">Šifra korisnika</th>
-                                            <th style="width: auto">Ime i prezime</th>
-                                            <th style="width: auto">Vrsta članarine</th>
-                                            <th style="width: auto">Aktivan</th>
-                                            <th style="width: auto">Datum početka</th>
-                                            <th style="width: auto">Datum isteka</th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
+                                    <input type="text" name="search" id="search" placeholder="Pretraživanje korisnika po broju kartice, imenu ili prezimenu" class="form-control text-center mainsearchbox" onkeyup="searchfunction()" />
+                                    <div class="card-body" id="dt1" style="max-width: available">
+                                        <table class="table" id="" width=100%" cellspacing="0">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: auto">Šifra korisnika</th>
+                                                <th style="width: auto">Ime i prezime</th>
+                                                <th style="width: auto">Vrsta članarine</th>
+                                                <th style="width: auto">Aktivan</th>
+                                                <th style="width: auto">Datum početka</th>
+                                                <th style="width: auto">Datum isteka</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
 
-                                        <tfoot>
-                                        <tr>
-                                            <th>Šifra korisnika</th>
-                                            <th>Ime i prezime</th>
-                                            <th>Vrsta članarine</th>
-                                            <th>Aktivan</th>
-                                            <th>Datum početka</th>
-                                            <th>Datum isteka</th>
-                                            <th></th>
-                                        </tr>
-                                        </tfoot>
-                                        <tbody id="dataTableBody"></tbody>
-                                    </table>
+                                            <tfoot>
+                                            <tr>
+                                                <th>Šifra korisnika</th>
+                                                <th>Ime i prezime</th>
+                                                <th>Vrsta članarine</th>
+                                                <th>Aktivan</th>
+                                                <th>Datum početka</th>
+                                                <th>Datum isteka</th>
+                                                <th></th>
+                                            </tr>
+                                            </tfoot>
+                                            <tbody id="dataTableBody"></tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section class="col-xl-4 d-lg-none d-xl-block connectedSortable">
-                        <div class="card ">
-                            <div class="card-header">
-                                <h3 class="card-title">Statistika novih korisnika</h3>
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
+                        </section>
+                        <section class="col-xl-4 d-lg-none d-xl-block connectedSortable">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <h3 class="card-title">Statistika novih korisnika</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart">
+                                        <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <div class="chart">
-                                    <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            <div id="calendar"></div>
+                            <div class="card bg-gradient-success">
+                                <div class="card-body pt-0 text-center">
+                                    <h1 id="clockDisplay" style="padding-top: 20px" onload="showTime()"></h1>
+                                    <h4><?=date('d.m.Y')?></h4>
                                 </div>
                             </div>
-                        </div>
-                        <div id="calendar"></div>
-                        <div class="card bg-gradient-success">
-                            <div class="card-body pt-0 text-center">
-                                <h1 id="clockDisplay" style="padding-top: 20px" onload="showTime()"></h1>
-                                <h4><?=date('d.m.Y')?></h4>
-                            </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
-            </div>
         </section>
     </div>
     <?php include "footer.phtml";?>

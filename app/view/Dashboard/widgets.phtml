@@ -80,7 +80,7 @@
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
                             <div class="row forma" id="forma">
                                 <form id="formforma">
-                                <select id="memberships" class="" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
+                                    <select id="memberships" class="" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
                                 </form>
                             </div>
                             <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
@@ -107,110 +107,110 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="container">
-                        <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Registracija novog korisnika</h6>
-                            <form id="formformaNewUser">
-                                <div class="row forma" id="forma">
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">ID broj kartice <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_Id" id="Users_Id" placeholder="ID broj kartice" oninvalid="this.setCustomValidity('Molimo unesite ispravan ID broj kartice.')" oninput="setCustomValidity('')"minlength="3" required>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Ime korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_Name" id="Users_Name" placeholder="Ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Prezime korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_Surname" id="Users_Surname" placeholder="Prezime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno prezime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">E-mail adresa korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="email" class=" form-control newUserInputForm" name="Users_Email" id="Users_Email" placeholder="E-mail adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Kontakt telefon korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_Phone" id="Users_Phone" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Adresa korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_Address" id="Users_Address" placeholder="Adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu adresu korisnika.')" oninput="setCustomValidity('')" minlength="3" required >
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Mjesto korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_City" id="Users_City" placeholder="Mjesto korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno mjesto korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">OIB korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="text" class=" form-control newUserInputForm" name="Users_Oib" id="Users_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB korisnika.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Datum rođenja korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <input type="date" class=" form-control newUserInputForm" name="Users_Birthday" id="Users_Birthday" placeholder="Datum rođenja korisnika" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum rođenja.')" oninput="setCustomValidity('')" required >
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Spol korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <select class=" form-control newUserInputForm" name="Users_Gender" id="Users_Gender"  required>
-                                        <option value="Muško" class=" form-control newUserInputForm" selected>Muško</option>
-                                        <option value="Žensko">Žensko</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Status korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <select class=" form-control newUserInputForm" name="Users_Status" id="Users_Status" required>
-                                            <option value="Zaposlen/a" selected>Zaposlen/a</option>
-                                            <option value="Student/ica">Student/ica</option>
-                                            <option value="Učenik/ca">Učenik/ca</option>
-                                            <option value="Umirovljenik/ica">Umirovljenik/ica</option>
-                                            <option value="Nezaposlen/a">Nezaposlen/a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Referenca korisnika <span class="mandatoryField"> *</span></label><br>
-                                        <select class=" form-control newUserInputForm" name="Users_Reference" id="Users_Reference" required>
-                                            <option value="Preporuka druge osobe">Preporuka druge osobe</option>
-                                            <option value="Društvene mreže" selected>Društvene mreže</option>
-                                            <option value="Na radnom mjestu">Na radnom mjestu</option>
-                                            <option value="Drugo">Drugo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-7 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Firma / ustanova / fakultet korisnika</label><br>
-                                        <input class="form-control newUserInputForm" name="Users_Company" id="inputEmailAddress" type="text" placeholder="Unesi firmu/ustanovu/fakultet korisnika (neobavezno)">
-                                    </div>
-                                    <div class="col-lg-1"></div>
-                                    <div class="col-lg-4 col-md-12">
-                                        <label class="nav-item linkanimation f-w-100">Slika korisnika</label><br>
-                                        <input type="file" name="myfile" id="fileToUpload">
-                                    </div>
-                                </div>
-                            </form>
-                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <span class="mandatoryField linkanimation">*  Obavezna polja</span>
-                                </div>
-                                <div class="col-sm-4"></div>
-                                <div class="col-sm-4">
-                                    <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaNewUser" value="Registracija korisnika">
-                                </div>
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Registracija novog korisnika</h6>
+                    <form id="formformaNewUser">
+                        <div class="row forma" id="forma">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">ID broj kartice <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Id" id="Users_Id" placeholder="ID broj kartice" oninvalid="this.setCustomValidity('Molimo unesite ispravan ID broj kartice.')" oninput="setCustomValidity('')"minlength="3" required>
                             </div>
-                            <br>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Ime korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Name" id="Users_Name" placeholder="Ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Prezime korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Surname" id="Users_Surname" placeholder="Prezime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno prezime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
                         </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">E-mail adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class=" form-control newUserInputForm" name="Users_Email" id="Users_Email" placeholder="E-mail adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Phone" id="Users_Phone" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Address" id="Users_Address" placeholder="Adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu adresu korisnika.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Mjesto korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_City" id="Users_City" placeholder="Mjesto korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno mjesto korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Oib" id="Users_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB korisnika.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Datum rođenja korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="date" class=" form-control newUserInputForm" name="Users_Birthday" id="Users_Birthday" placeholder="Datum rođenja korisnika" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum rođenja.')" oninput="setCustomValidity('')" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Spol korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Gender" id="Users_Gender"  required>
+                                    <option value="Muško" class=" form-control newUserInputForm" selected>Muško</option>
+                                    <option value="Žensko">Žensko</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Status korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Status" id="Users_Status" required>
+                                    <option value="Zaposlen/a" selected>Zaposlen/a</option>
+                                    <option value="Student/ica">Student/ica</option>
+                                    <option value="Učenik/ca">Učenik/ca</option>
+                                    <option value="Umirovljenik/ica">Umirovljenik/ica</option>
+                                    <option value="Nezaposlen/a">Nezaposlen/a</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Referenca korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Reference" id="Users_Reference" required>
+                                    <option value="Preporuka druge osobe">Preporuka druge osobe</option>
+                                    <option value="Društvene mreže" selected>Društvene mreže</option>
+                                    <option value="Na radnom mjestu">Na radnom mjestu</option>
+                                    <option value="Drugo">Drugo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Firma / ustanova / fakultet korisnika</label><br>
+                                <input class="form-control newUserInputForm" name="Users_Company" id="Users_Company" type="text" placeholder="Unesi firmu/ustanovu/fakultet korisnika (neobavezno)">
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Slika korisnika</label><br>
+                                <input type="file" name="myfile" id="fileToUpload">
+                            </div>
+                        </div>
+                    </form>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaNewUser" value="Registracija korisnika">
+                        </div>
+                    </div>
+                    <br>
+                </div>
             </div>
         </div>
     </div>
@@ -252,26 +252,26 @@
 
                     <form id="formformaStaffSettingsData">
                         <div class="dropdown-divider"></div>
-                            <br>
-
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <label class="nav-item linkanimation f-w-100">OIB <span class="mandatoryField"> *</span></label><br>
-                                    <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="Staff_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required value="<?=$staffData->Staff_Oib?>">
-                                </div>
-                            </div>
                         <br>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <label class="nav-item linkanimation f-w-100">Kontakt telefon <span class="mandatoryField"> *</span></label><br>
-                                    <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="Staff_Phone" placeholder="Kontakt telefon" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required value="<?=$staffData->Staff_Phone?>">
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <label class="nav-item linkanimation f-w-100">Kontakt email <span class="mandatoryField"> *</span></label><br>
-                                    <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="Staff_Email" placeholder="Kontakt e-mail adresa" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required value="<?=$staffData->Staff_Email?>">
-                                </div>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="Staff_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required value="<?=$staffData->Staff_Oib?>">
                             </div>
-                            <br>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="Staff_Phone" placeholder="Kontakt telefon" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required value="<?=$staffData->Staff_Phone?>">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt email <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="Staff_Email" placeholder="Kontakt e-mail adresa" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required value="<?=$staffData->Staff_Email?>">
+                            </div>
+                        </div>
+                        <br>
                         <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                         <div class="row">
                             <div class="col-sm-4">
@@ -387,8 +387,8 @@
 </div>
 <!-- tableSports checkout Modal end -->
 
-<!-- soccer calendar modal start -->
-<div class="modal fade" id="soccerCalendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- calendar modal start -->
+<div class="modal fade" id="eventCalendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="container-fluid">
@@ -401,14 +401,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="row m-b-20">
+                    <div class="col-sm-12 col-lg-4"></div>
+                    <div class="col-sm-12 col-lg-4"></div>
+                    <div class="col-sm-12 col-lg-3">
+                        <p class="m-b-10 btn btn-block btn-outline-info newCalendarEvent" id=""><i class="nav-icon fas fa-plus"></i> Novi termin</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- soccer calendar modal end -->
+<!-- calendar modal end -->
 
-<!-- soccer calendar details modal start -->
-<div class="modal fade" id="soccerCalendarDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- calendar event details modal start -->
+<div class="modal fade" id="eventCalendarDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="container-fluid">
@@ -423,31 +431,31 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Kontakt osoba</p>
-                                                <h6 class="text-muted f-w-400" id="Soccer_Contact_Name"></h6>
+                                                <h6 class="text-muted f-w-400" id="Event_Contact_Name"></h6>
                                             </div>
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Kontakt telefon</p>
-                                                <h6 class="text-muted f-w-400" id="Soccer_Contact_Phone"></h6>
+                                                <h6 class="text-muted f-w-400" id="Event_Contact_Phone"></h6>
                                             </div>
                                         </div>
                                         <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Početak termina</p>
-                                                <h6 class="text-muted f-w-400" id="Soccer_Start_Time"></h6>
+                                                <h6 class="text-muted f-w-400" id="Event_Start_Time"></h6>
                                             </div>
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Kraj termina</p>
-                                                <h6 class="text-muted f-w-400" id="Soccer_End_Time"></h6>
+                                                <h6 class="text-muted f-w-400" id="Event_End_Time"></h6>
                                             </div>
                                         </div>
                                         <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <p class="m-b-10 f-w-600 " id="SoccerCalendarCancel"></p>
+                                                <p class="m-b-10 f-w-600 " id="eventCalendarCancel"></p>
                                             </div>
                                             <div class="col-sm-6">
-                                                <p class="m-b-10 f-w-600" id="SoccerCalendarConfirm"></p>
+                                                <p class="m-b-10 f-w-600" id="eventCalendarConfirm"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -460,4 +468,62 @@
         </div>
     </div>
 </div>
-<!-- soccer calendar details modal end -->
+<!-- calendar event details modal end -->
+
+<!-- New calendar event start -->
+<div class="modal fade" id="newCalendarEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="newEventFrom">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Novi termin</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o korisniku</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt osoba</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Name" id="Event_Contact_Name" placeholder="Kontakt ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravne podatke.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Phone" id="Event_Contact_Phone" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početak termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_Start_Time" id="Event_Start_Time" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kraj termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_End_Time" id="Event_Start_Time" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary" id="newEventCancel">Odustani</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-2"></div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newEventFrom" value="Spremi termin">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- New calendar event end -->

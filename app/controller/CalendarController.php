@@ -12,8 +12,18 @@ class CalendarController extends SecurityController
         echo json_encode(Calendar::checkCalendarDetails());
     }
 
+    public function confirmEvent()
+    {
+        Calendar::confirmEvent();
+    }
+
     public function removeEvent()
     {
         Calendar::removeEvent();
+    }
+
+    public function newEvent()
+    {
+        Calendar::newEvent();
     }
 }
