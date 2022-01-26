@@ -219,7 +219,8 @@ function clearInput(time) {
         let elementsId= [
             "Users_Id", "Users_Name", "Users_Surname", "Users_Email", "Users_Phone", "Users_Address", "Users_City",
             "Users_Oib", "Users_Birthday", "Users_Gender", "Users_Status", "Users_Reference", "Users_Company",
-            "Staff_Password", "Staff_New_Password", "Staff_Oib", "Staff_Phone", "Staff_Email"
+            "Staff_Password", "Staff_New_Password", "Staff_Oib", "Staff_Phone", "Staff_Email",
+            "Event_Contact_Name_New", "Event_Contact_Phone_New", "Event_Start_Time_New", "Event_End_Time_New"
         ];
 
         elementsId.forEach((element) => {
