@@ -243,6 +243,14 @@ function formatDate(input) {
     return day + '.' + month + '.' + year + '.';
 }
 
+function formatDateWithLine(input) {
+    var datePart = input.match(/\d+/g),
+        year = datePart[0],
+        month = datePart[1],
+        day = datePart[2];
+    return year + '-' + month + '-' + day;
+}
+
 function formatTime(input){
     var timePart = input.match(/\d+/g),
         hour = timePart[3],

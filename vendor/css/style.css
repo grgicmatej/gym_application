@@ -215,3 +215,9 @@ h6 {
     padding: 3rem;
     min-height: 292px;
 }
+
+.editEventButton{
+    font-size: 14px;
+    margin-left: 20px;
+    color: #16A2B8;
+}

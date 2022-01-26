@@ -67,4 +67,16 @@ class Calendar
         $stmt->bindValue('Event_Sport_Id', 4);
         $stmt->execute();
     }
+
+    public static function updateEvent($eventId)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Events SET Event_Start_Time=:Event_Start_Time, Event_End_Time=:Event_End_Time, Event_Contact_Name=:Event_Contact_Name, Event_Contact_Phone=:Event_Contact_Phone WHERE Event_Id=:Event_Id');
+        $stmt->bindValue('Event_Start_Time', date("Y-m-d H:00:00",strtotime(Request::post('Event_Start_Time'))));
+        $stmt->bindValue('Event_End_Time', date("Y-m-d H:00:00",strtotime(Request::post('Event_End_Time'))));
+        $stmt->bindValue('Event_Contact_Name', Request::post('Event_Contact_Name'));
+        $stmt->bindValue('Event_Contact_Phone', Request::post('Event_Contact_Phone'));
+        $stmt->bindValue('Event_Id', $eventId);
+        $stmt->execute();
+    }
 }

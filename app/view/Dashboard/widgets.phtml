@@ -423,28 +423,28 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Rezerviran termin</h6>
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Rezerviran termin <span id="editEventCalendar"></span></h6>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card-block">
                                         <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o korisniku</h6>
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-12 col-md-6">
                                                 <p class="m-b-10 f-w-600">Kontakt osoba</p>
                                                 <h6 class="text-muted f-w-400" id="Event_Contact_Name"></h6>
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-12 col-md-6">
                                                 <p class="m-b-10 f-w-600">Kontakt telefon</p>
                                                 <h6 class="text-muted f-w-400" id="Event_Contact_Phone"></h6>
                                             </div>
                                         </div>
                                         <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-12 col-md-6">
                                                 <p class="m-b-10 f-w-600">Početak termina</p>
                                                 <h6 class="text-muted f-w-400" id="Event_Start_Time"></h6>
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-12 col-md-6">
                                                 <p class="m-b-10 f-w-600">Kraj termina</p>
                                                 <h6 class="text-muted f-w-400" id="Event_End_Time"></h6>
                                             </div>
@@ -479,7 +479,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <form id="newEventFrom">
+                            <form id="newEventForm">
                                 <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Novi termin</h6>
                                 <div class="row">
                                     <div class="col-12">
@@ -513,7 +513,7 @@
                                                 </div>
                                                 <div class="col-sm-12 col-md-2"></div>
                                                 <div class="col-sm-12 col-md-5">
-                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newEventFrom" value="Spremi termin">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newEventForm" value="Spremi termin">
                                                 </div>
                                             </div>
                                         </div>
@@ -528,3 +528,61 @@
     </div>
 </div>
 <!-- New calendar event end -->
+
+<!-- Update calendar event start -->
+<div class="modal fade" id="editCalendarEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="updateEventForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje termina</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o korisniku</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt osoba</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Name" id="Event_Contact_Name_Edit" placeholder="Kontakt ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravne podatke.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Phone" id="Event_Contact_Phone_Edit" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početak termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_Start_Time" id="Event_Start_Time_Edit" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kraj termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_End_Time" id="Event_End_Time_Edit" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600 " id="updateEventCalendarCancel"></p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-2"></div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600" id="updateEventCalendarConfirm"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Update calendar event end -->

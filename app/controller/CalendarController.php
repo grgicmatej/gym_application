@@ -26,4 +26,9 @@ class CalendarController extends SecurityController
     {
         Calendar::newEvent();
     }
+
+    public function updateEvent($eventId)
+    {
+        Calendar::updateEvent($eventId);
+    }
 }
