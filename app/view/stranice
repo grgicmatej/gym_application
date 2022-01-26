@@ -28,6 +28,7 @@ build log planner:
     - Mob verzija
     - Frontend landing page
 1.1:
+    - Dodati više sportova u kalendar, trenutno postavljen samo nogomet
     - Notifikacije
     - Termin za razne sportove interni
     - ugradnja log sustava
