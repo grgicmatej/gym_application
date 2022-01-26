@@ -92,68 +92,61 @@ $('.eventCalendar').on('click', function () {
                             });
 
                             $('.editEvent').on('click', function () {
-                            $.ajax({
-                                method: "POST",
-                                data: {data: id},
-                                url: urlAddress + 'Calendar/checkCalendarDetails/',
-                                success: function () {
-                                    $("#editCalendarEvent").modal('show');
-                                    $("#Event_Contact_Name_Edit").val(response["Event_Contact_Name"]);
-                                    $("#Event_Contact_Phone_Edit").val(response['Event_Contact_Phone']);
-                                    $("#Event_Start_Time_Edit").val(formatDateWithLine(response['Event_Start_Time'])+'T'+formatTime(response['Event_Start_Time']));
-                                    $("#Event_End_Time_Edit").val(formatDateWithLine(response['Event_End_Time'])+'T'+formatTime(response['Event_End_Time']));
+                                $("#editCalendarEvent").modal('show');
+                                $("#Event_Contact_Name_Edit").val(response["Event_Contact_Name"]);
+                                $("#Event_Contact_Phone_Edit").val(response['Event_Contact_Phone']);
+                                $("#Event_Start_Time_Edit").val(formatDateWithLine(response['Event_Start_Time'])+'T'+formatTime(response['Event_Start_Time']));
+                                $("#Event_End_Time_Edit").val(formatDateWithLine(response['Event_End_Time'])+'T'+formatTime(response['Event_End_Time']));
 
-                                    $("#updateEventCalendarCancel").html("<a class='updateEventCancel'><span class='btn btn-block btn-outline-secondary'>Otkazivanje</span></a>");
-                                    $("#updateEventCalendarConfirm").html("<input type='hidden' name='Event_Id' value='"+id+"' ><input type='submit' class='m-b-10 f-w-600 btn btn-block btn-outline-info' form='updateEventForm' value='Spremi termin'>");
+                                $("#updateEventCalendarCancel").html("<a class='updateEventCancel'><span class='btn btn-block btn-outline-secondary'>Otkazivanje</span></a>");
+                                $("#updateEventCalendarConfirm").html("<input type='hidden' name='Event_Id' value='"+id+"' ><input type='submit' class='m-b-10 f-w-600 btn btn-block btn-outline-info' form='updateEventForm' value='Spremi termin'>");
 
-                                    $('.updateEventCancel').on('click', function () {
-                                        $("#editCalendarEvent").fadeOut(800, function () {
-                                            $(this).modal('hide');
-                                        });
+                                $('.updateEventCancel').on('click', function () {
+                                    $("#editCalendarEvent").fadeOut(800, function () {
+                                        $(this).modal('hide');
                                     });
+                                });
 
-                                    $('#updateEventForm').on('submit', function (e) {
-                                        e.preventDefault();
-                                        $.ajax({
-                                            method: 'POST',
-                                            data: $('#updateEventForm').serialize(),
-                                            url: urlAddress + 'Calendar/updateEvent/'+id,
-                                            success: function () {
-                                                $("#editCalendarEvent").fadeOut(800, function () {
-                                                    $(this).modal('hide');
-                                                });
-                                                $("#eventCalendarDetails").fadeOut(800, function () {
-                                                    $(this).modal('hide');
-                                                });
-                                                $("#eventCalendar").fadeOut(800, function () {
-                                                    $(this).modal('hide');
-                                                });
-                                                $(this).fadeIn(400, function notification() {
-                                                    successNotification('Uspješno izmijenjen termin.');
-                                                });
-                                                clearInput(1000);
+                                $('#updateEventForm').on('submit', function (e) {
+                                    e.preventDefault();
+                                    $.ajax({
+                                        method: 'POST',
+                                        data: $('#updateEventForm').serialize(),
+                                        url: urlAddress + 'Calendar/updateEvent/'+id,
+                                        success: function () {
+                                            $("#editCalendarEvent").fadeOut(800, function () {
+                                                $(this).modal('hide');
+                                            });
+                                            $("#eventCalendarDetails").fadeOut(800, function () {
+                                                $(this).modal('hide');
+                                            });
+                                            $("#eventCalendar").fadeOut(800, function () {
+                                                $(this).modal('hide');
+                                            });
+                                            $(this).fadeIn(400, function notification() {
+                                                successNotification('Uspješno izmijenjen termin.');
+                                            });
+                                            clearInput(1000);
                                             },
-                                            error: function (){
-                                                $("#editCalendarEvent").fadeOut(800, function () {
-                                                    $(this).modal('hide');
-                                                });
-                                                $("#eventCalendarDetails").fadeOut(800, function () {
-                                                    $(this).modal('hide');
-                                                });
-                                                $("#eventCalendar").fadeOut(800, function () {
-                                                    $(this).modal('hide');
-                                                });
-                                                $(this).fadeIn(400, function notification() {
-                                                    warningNotification('Došlo je do pogreške. Pokušajte ponovo.')
-                                                });
-                                            }
-                                        });
+                                        error: function (){
+                                            $("#editCalendarEvent").fadeOut(800, function () {
+                                                $(this).modal('hide');
+                                            });
+                                            $("#eventCalendarDetails").fadeOut(800, function () {
+                                                $(this).modal('hide');
+                                            });
+                                            $("#eventCalendar").fadeOut(800, function () {
+                                                $(this).modal('hide');
+                                            });
+                                            $(this).fadeIn(400, function notification() {
+                                                warningNotification('Došlo je do pogreške. Pokušajte ponovo.')
+                                            });
+                                        }
                                     });
-                                },
-                                error: function () {
-                                }
+                                });
+
                             });
-                            });
+
                         },
                         error: function () {
                             $("#eventCalendarDetails").fadeOut(800, function () {
