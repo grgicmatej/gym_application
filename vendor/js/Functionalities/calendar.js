@@ -41,7 +41,7 @@ $('.eventCalendar').on('click', function () {
                             $("#Event_Start_Time").text(formatDate(response['Event_Start_Time'])+' '+formatTime(response['Event_Start_Time']));
                             $("#Event_End_Time").text(formatDate(response['Event_End_Time'])+' '+formatTime(response['Event_End_Time']));
 
-                            $("#eventCalendarCancel").html("<a class='eventCancel' id='eventCancel_"+id+"'><span class='btn btn-block btn-outline-secondary'>Otkazivanje termina</span></a>");
+                            $("#eventCalendarCancel").html("<a class='eventCancel' id='eventCancel_"+id+"'><span class='btn btn-block btn-outline-secondary'>Otkazivanje</span></a>");
                             $("#eventCalendarConfirm").html("<a><span class='btn btn-block btn-outline-info eventConfirm' id='eventConfirm_"+id+"' >Potvrda dolaska</span></a>");
 
                             $('.eventCancel').on('click', function () {
