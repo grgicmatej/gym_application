@@ -69,12 +69,21 @@ class staff
         $stmt->execute();
     }
 
-    public static function staffData()
+    public static function StaffData()
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Staff WHERE Staff_Id=:Staff_Id');
         $stmt->bindValue('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
         $stmt->execute();
         return $stmt->fetch();
+    }
+
+    public static function allStaffData()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Staff.Staff_Id AS StaffID, Staff.Staff_Name, Staff.Staff_Surname, Staff.Staff_Username, Staff.Staff_Phone, Staff.Staff_Email, Staff.Staff_Active, Staff_Gym.Staff_Id FROM Staff LEFT JOIN Staff_Gym ON Staff.Staff_Id=Staff_Gym.Staff_Id WHERE Staff_Gym.Gym_Id=:Gym_Id');
+        $stmt->bindValue('Gym_Id', $_SESSION['Gym_Id']);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 }

@@ -56,4 +56,40 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
         }
     });
 });
+
+$('.staff').on('click', function () {
+    $("#staffData").modal('show');
+    $.ajax({
+        url: urlAddress + 'Staff/allStaffInfo/',
+        method: "POST",
+        success: function (data) {
+            document.getElementById('dataTableBodyStaff').innerHTML = "";
+            document.getElementById("dt2").style.display = "block";
+
+            response = JSON.parse(data);
+            const searchData = document.getElementById('dataTableBodyStaff');
+
+            searchData.innerHTML = response.reduce((options, {Staff_Id, Staff_Name, Staff_Surname, Staff_Username, Staff_Phone, Staff_Email, Staff_Active}) =>
+                    options += `<tr>
+                                        <td class="text-left" id="${Staff_Id}_staffName">${Staff_Name} ${Staff_Surname}</td>
+                                        <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
+                                        <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
+                                        <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
+                                        <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? '#74C687': '#E87C87'}; color: white; font-weight: bolder" class="text-center">
+                                            ${(Staff_Active == 1) ? 'Da': 'Ne'}
+                                        </td>
+                                        <td class="text-center staffProfileData" id="i_${Staff_Id}">
+                                            <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
+                                        </td>
+                                    </tr>
+                                    `,
+                ``);
+        }
+    });
+});
+
+
+// tu sam stao, urediti staff profile datu da ima profil kao i za korisnika. Dodati opcije "Deaktiviraj/aktiviraj zaposlenika", "Restartiraj lozinku"
+
+
 // staffSettings modal end
