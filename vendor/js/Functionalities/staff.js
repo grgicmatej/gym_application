@@ -53,7 +53,6 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
             $(this).fadeIn(400, function notification() {
                 warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
             });
-
         }
     });
 });
