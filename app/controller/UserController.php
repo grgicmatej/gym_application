@@ -24,15 +24,6 @@ class UserController extends SecurityController
         }
     }
 
-    public function checkUsersId()
-    {
-        if (!User::checkUsersId()) {
-            echo json_encode(false);
-        } else{
-            echo json_encode(true);
-        }
-    }
-
     public function addNewUser()
     {
         Upload::uploadPhoto();
@@ -46,15 +37,44 @@ class UserController extends SecurityController
         echo json_encode(Membership::allActiveMemberships());
     }
 
-    public function viewUser($id)
+    public function checkUsersId()
     {
-        echo json_encode(User::essentialUserData($id));
+        echo json_encode(User::checkUsersId());
+    }
+
+    public function checkUserMemberships()
+    {
+        echo json_encode(User::checkUserMemberships());
+    }
+
+    public function checkPausedMembership()
+    {
+        echo json_encode(User::checkPausedMembership()); // vrati true ako nije pod pauzom
+    }
+
+    public function pauseMembership()
+    {
+        if (User::checkPausedMembership()){
+            User::pauseMembership(User::viewUserEssentialData(Request::post('userId')));
+            User::pauseMembershipArchive(User::pausedMembership(Request::post('userId')), User::viewUserEssentialData(Request::post('userId')));
+            echo json_encode(false);
+        }else{
+            // tu sam stao, treba napraviti resume membershipa
+            echo json_encode(true);
+        }
+
     }
 
     public function userDataSearch()
     {
         echo json_encode(User::allUsersSearch());
     }
+
+    public function viewUser($id)
+    {
+        echo json_encode(User::essentialUserData($id));
+    }
+
 
 
 

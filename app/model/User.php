@@ -5,8 +5,8 @@ class User
 {
     public static function allUsersSearch()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT
                                     Users.Users_Id as Users_Id_Main,
                                     Users.Users_Name,
                                     Users.Users_Surname,
@@ -27,27 +27,27 @@ class User
                                     ORDER BY Users.Users_Id ASC
                                     ');
         $stmt->bindValue('Users_Memberships_Gym_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0));
-        $stmt->bindValue('parametar_id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0).'-'.Request::post('query').'%');
-        $stmt->bindValue('parametar', trim(Request::post('query'), " ").'%');
+        $stmt->bindValue('parametar_id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('query') . '%');
+        $stmt->bindValue('parametar', trim(Request::post('query'), " ") . '%');
         $stmt->bindValue('spacing', ' ');
 
         $stmt->execute();
         return $stmt->fetchAll();
     }
 
-
     public static function allUsersCount()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT COUNT(Users_Id) as allUsersCount FROM Users_Gym WHERE Gym_Id=:Gym_Id');
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT COUNT(Users_Id) as allUsersCount FROM Users_Gym WHERE Gym_Id=:Gym_Id');
         $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
         $stmt->execute();
         return $stmt->fetch();
     }
+
     public static function allActiveUsersCount()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT
                                         COUNT(Users_Memberships_Users_Id) as activeUsersCount
                                             FROM Users_Memberships
                                             LEFT JOIN Users_Gym ON Users_Gym.Users_Id=Users_Memberships.Users_Memberships_Users_Id
@@ -68,8 +68,8 @@ class User
 
     public static function addUserGymRegistration()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('INSERT INTO Users_Gym 
+        $db = Db::getInstance();
+        $stmt = $db->prepare('INSERT INTO Users_Gym 
                                 (
                                 Users_Id,
                                 Gym_Id
@@ -80,15 +80,15 @@ class User
                                 :Gym_Id
                                 )
                                 ');
-        $stmt->bindValue('Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0).'-'.Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
         $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
         $stmt->execute();
     }
 
     public static function currentMonthlyUsers()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT COUNT(Users_Id) AS newMonthlyUsers FROM Users WHERE 
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT COUNT(Users_Id) AS newMonthlyUsers FROM Users WHERE 
                                         MONTH(Users_Registration)=:currentMonth 
                                         AND 
                                         YEAR(Users_Registration)=:currentYear');
@@ -100,8 +100,8 @@ class User
 
     public static function checkUsersId()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT 
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT 
                                     Users.Users_Id,
                                     Users_Gym.Gym_Id
                                     FROM Users
@@ -109,51 +109,59 @@ class User
                                     WHERE (Users.Users_Id=:Users_Id AND Users_Gym.Gym_Id=:Gym_Id) OR (Users.Users_Id=:Users_Id_New AND Users_Gym.Gym_Id=:Gym_Id)');
         $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
         $stmt->bindValue('Users_Id', Request::post('Users_Id'));
-        $stmt->bindValue('Users_Id_New', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0).'-'.Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id_New', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
         $stmt->execute();
         if ($stmt->rowCount() != 0) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }
 
-    public static function previousMonthUsers()
+    public static function checkUserMemberships()
     {
-        $dt=date_create(date('Y-m-d').' first day of last month');
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT Users_Memberships_Membership_Name, Users_Memberships_Start_Date, Users_Memberships_End_Date, Staff_Name, Staff_Surname FROM Users_Memberships_Archive LEFT JOIN Staff ON Users_Memberships_Archive.Users_Memberships_Admin_Id = Staff.Staff_Id WHERE Users_Memberships_Users_Id=:Users_Memberships_Users_Id AND Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id ORDER BY Users_Memberships_Archive_Id DESC');
+        $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION['Gym_Id']);
+        $stmt->bindValue('Users_Memberships_Users_Id', Request::post('Users_Memberships_Users_Id'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT COUNT(Users_Id) AS previousMonthlyUsers FROM Users WHERE 
-                                        DAY(Users_Registration)<=:currentDay
-                                        AND
-                                        MONTH(Users_Registration)=:previousMonth 
-                                        AND 
-                                        YEAR(Users_Registration)=:yearOfPreviousMonth        
-                                        ');
-        $stmt->bindValue('currentDay', date('d'));
-        $stmt->bindValue('previousMonth', $dt->format('m'));
-        $stmt->bindValue('yearOfPreviousMonth', $dt->format('Y'));
+    public static function checkPausedMembership()
+    {
+        if (empty(self::pausedMembership(Request::post('userId')))){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static function essentialUserData($id)
+    {
+        $objMerged = (object)array_merge(
+            (array)self::viewUserEssentialData($id), (array)self::userArrivalCount($id));
+
+        return $objMerged;
+    }
+
+    public static function lastUserMembershipExtension()
+    {
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT * FROM Users_Memberships ORDER BY Users_Memberships_Id DESC LIMIT 1 ');
         $stmt->execute();
         return $stmt->fetch();
     }
 
     public static function monthlyUserProportion()
     {
-        return round((self::currentMonthlyUsers()->newMonthlyUsers/self::previousMonthUsers()->previousMonthlyUsers)*100, 2);
-    }
-
-    public static function lastUserMembershipExtension()
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT * FROM Users_Memberships ORDER BY Users_Memberships_Id DESC LIMIT 1 ');
-        $stmt->execute();
-        return $stmt->fetch();
+        return round((self::currentMonthlyUsers()->newMonthlyUsers / self::previousMonthUsers()->previousMonthlyUsers) * 100, 2);
     }
 
     public static function newArrival($id)
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('INSERT INTO Users_Arrivals
+        $db = Db::getInstance();
+        $stmt = $db->prepare('INSERT INTO Users_Arrivals
                             (
                             Users_Arrivals_User_Id,
                             Users_Arrivals_Week,
@@ -174,8 +182,8 @@ class User
 
     public static function newUser($usersPhoto)
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare("INSERT INTO Users
+        $db = Db::getInstance();
+        $stmt = $db->prepare("INSERT INTO Users
                                 (
                                     Users_Id,
                                     Users_Name, 
@@ -212,7 +220,7 @@ class User
                                     :Users_Photo
                                 )
                                 ");
-        $stmt->bindValue('Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0).'-'.Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
         $stmt->bindValue('Users_Name', Request::post('Users_Name'));
         $stmt->bindValue('Users_Surname', Request::post('Users_Surname'));
         $stmt->bindValue('Users_City', Request::post('Users_City'));
@@ -223,7 +231,7 @@ class User
         $stmt->bindValue('Users_Oib', Request::post('Users_Oib'));
         $stmt->bindValue('Users_Gender', Request::post('Users_Gender'));
         $stmt->bindValue('Users_Reference', Request::post('Users_Reference'));
-        $stmt->bindValue('Users_Company', !empty(Request::post('Users_Company'))? Request::post('Users_Company') : '');
+        $stmt->bindValue('Users_Company', !empty(Request::post('Users_Company')) ? Request::post('Users_Company') : '');
         $stmt->bindValue('Users_Status', Request::post('Users_Status'));
         $stmt->bindValue('Users_Registration', date("Y-m-d"));
         $stmt->bindValue('Users_Photo', $usersPhoto);
@@ -232,10 +240,10 @@ class User
 
     public static function newUserMembershipExtension($membershipData, $id)
     {
-        $usersMembershipsEndDate=date('Y.m.d', strtotime(date_format(date_create(), 'd.m.Y')) + ($membershipData->Memberships_Duration * 86400));
+        $usersMembershipsEndDate = date('Y.m.d', strtotime(date_format(date_create(), 'd.m.Y')) + ($membershipData->Memberships_Duration * 86400));
 
-        $db=Db::getInstance();
-        $stmt=$db->prepare('UPDATE Users_Memberships
+        $db = Db::getInstance();
+        $stmt = $db->prepare('UPDATE Users_Memberships
                             SET
                             Users_Memberships_Membership_Name=:Users_Memberships_Membership_Name,
                             Users_Memberships_Start_Date=NOW(),
@@ -264,10 +272,10 @@ class User
 
     public static function newUserMembershipExtensionArchive($lastMembership, $membershipData, $id)
     {
-        $usersMembershipsEndDate=date('Y.m.d', strtotime(date_format(date_create(), 'd.m.Y')) + ($membershipData->Memberships_Duration * 86400));
+        $usersMembershipsEndDate = date('Y.m.d', strtotime(date_format(date_create(), 'd.m.Y')) + ($membershipData->Memberships_Duration * 86400));
 
-        $db=Db::getInstance();
-        $stmt=$db->prepare("
+        $db = Db::getInstance();
+        $stmt = $db->prepare("
                             INSERT INTO Users_Memberships_Archive
                                 (
                                 Users_Memberships_Id,
@@ -306,8 +314,8 @@ class User
 
     public static function newUserFirstMembershipExtension()
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare("
+        $db = Db::getInstance();
+        $stmt = $db->prepare("
                             INSERT INTO Users_Memberships
                                 (
                                 Users_Memberships_Users_Id,
@@ -333,7 +341,7 @@ class User
                                 :Users_Memberships_Gym_Id
                                 )
                             ");
-        $stmt->bindValue('Users_Memberships_Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0).'-'.Request::post('Users_Id'));
+        $stmt->bindValue('Users_Memberships_Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
         $stmt->bindValue('Users_Memberships_Membership_Name', '-');
         $stmt->bindValue('Users_Memberships_Start_Date', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('Users_Memberships_End_Date', date_format(date_create(), 'Y.m.d'));
@@ -343,6 +351,82 @@ class User
         $stmt->bindValue('Users_Memberships_Admin_Id', Session::getInstance()->getUser()->Staff_Id);
         $stmt->bindValue('Users_Memberships_Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
         $stmt->execute();
+    }
+
+    public static function previousMonthUsers()
+    {
+        $dt = date_create(date('Y-m-d') . ' first day of last month');
+
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT COUNT(Users_Id) AS previousMonthlyUsers FROM Users WHERE 
+                                        DAY(Users_Registration)<=:currentDay
+                                        AND
+                                        MONTH(Users_Registration)=:previousMonth 
+                                        AND 
+                                        YEAR(Users_Registration)=:yearOfPreviousMonth        
+                                        ');
+        $stmt->bindValue('currentDay', date('d'));
+        $stmt->bindValue('previousMonth', $dt->format('m'));
+        $stmt->bindValue('yearOfPreviousMonth', $dt->format('Y'));
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function pauseMembership($membershipData)
+    {
+        $db = Db::getInstance();
+        $stmt = $db->prepare("INSERT INTO Memberships_Pause 
+                                (Memberships_Pause_User_Id, Memberships_Pause_Membership_Id, Memberships_Pause_Staff_Id, Memberships_Pause_Start_Date, Memberships_Pause_Active)
+                                VALUES
+                                (:Memberships_Pause_User_Id, :Memberships_Pause_Membership_Id, :Memberships_Pause_Staff_Id, NOW(), :Memberships_Pause_Active)");
+        $stmt->bindValue('Memberships_Pause_User_Id', $membershipData->Users_Id);
+        $stmt->bindValue('Memberships_Pause_Membership_Id', $membershipData->Users_Memberships_Id);
+        $stmt->bindValue('Memberships_Pause_Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->bindValue('Memberships_Pause_Active', 1);
+        $stmt->execute();
+    }
+
+    public static function pauseMembershipArchive($pauseMembershipData, $membershipData)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare("INSERT INTO Memberships_Pause_Archive 
+                                (Memberships_Pause_Id, Memberships_Pause_User_Id, Memberships_Pause_Membership_Id, Memberships_Pause_Staff_Id, Memberships_Pause_Start_Date, Memberships_Pause_Active)
+                                VALUES
+                                (:Memberships_Pause_Id, :Memberships_Pause_User_Id, :Memberships_Pause_Membership_Id, :Memberships_Pause_Staff_Id, NOW(), :Memberships_Pause_Active)");
+        $stmt->bindValue('Memberships_Pause_Id', $pauseMembershipData->Memberships_Pause_Id);
+        $stmt->bindValue('Memberships_Pause_User_Id', $membershipData->Users_Id);
+        $stmt->bindValue('Memberships_Pause_Membership_Id', $membershipData->Users_Memberships_Id);
+        $stmt->bindValue('Memberships_Pause_Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->bindValue('Memberships_Pause_Active', 1);
+        $stmt->execute();
+    }
+
+    public static function pausedMembership($userId)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Memberships_Pause_Id FROM Memberships_Pause WHERE 
+                                            Memberships_Pause_User_Id=:Memberships_Pause_User_Id 
+                                            AND 
+                                            Memberships_Pause_Active=:Memberships_Pause_Active
+                                            ');
+        $stmt->bindValue('Memberships_Pause_Active', 1);
+        $stmt->bindValue('Memberships_Pause_User_Id', $userId);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function userArrivalCount($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT COUNT(Users_Arrivals_Id) AS countrow FROM Users_Arrivals WHERE 
+                                        Users_Arrivals_User_Id=:usersArrivalsUserId 
+                                        AND
+                                        (Users_Arrivals_Week)=:usersArrivalsWeek
+                                        ');
+        $stmt->bindValue('usersArrivalsUserId', $id);
+        $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
+        $stmt->execute();
+        return $stmt->fetch();
     }
 
     public static function viewUserEssentialData($id)
@@ -359,6 +443,7 @@ class User
                                     Users.Users_Birthday,
                                     Users.Users_Photo,
                                     Users.Users_Status,
+                                    Users_Memberships.Users_Memberships_Id,
                                     Users_Memberships.Users_Memberships_Membership_Name,
                                     Users_Memberships.Users_Memberships_Membership_Active,
                                     Users_Memberships.Users_Memberships_Users_Id,
@@ -390,27 +475,5 @@ class User
         $stmt->bindValue('Users_Id', $id);
         $stmt->execute();
         return $stmt->fetch();
-    }
-
-    public static function userArrivalCount($id)
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT COUNT(Users_Arrivals_Id) AS countrow FROM Users_Arrivals WHERE 
-                                        Users_Arrivals_User_Id=:usersArrivalsUserId 
-                                        AND
-                                        (Users_Arrivals_Week)=:usersArrivalsWeek
-                                        ');
-        $stmt->bindValue('usersArrivalsUserId', $id);
-        $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
-        $stmt->execute();
-        return $stmt->fetch();
-    }
-
-    public static function essentialUserData($id)
-    {
-        $objMerged = (object) array_merge(
-            (array) self::viewUserEssentialData($id), (array) self::userArrivalCount($id));
-
-        return $objMerged;
     }
 }

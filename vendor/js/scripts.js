@@ -13,10 +13,3 @@ $.ajax({
 });
     ajax primjer kraj
 */
-
-
-$('#testgumb').on('click', function () {
-    document.getElementById("test12").style.display = "block";
-});
-
-//gumb radi za pojavljivanje opcija, treba to finesirati, neki fade in napravit
