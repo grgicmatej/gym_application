@@ -404,7 +404,7 @@ class User
     public static function pausedMembership($userId)
     {
         $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT Memberships_Pause_Id FROM Memberships_Pause WHERE 
+        $stmt=$db->prepare('SELECT * FROM Memberships_Pause WHERE 
                                             Memberships_Pause_User_Id=:Memberships_Pause_User_Id 
                                             AND 
                                             Memberships_Pause_Active=:Memberships_Pause_Active
@@ -413,6 +413,22 @@ class User
         $stmt->bindValue('Memberships_Pause_User_Id', $userId);
         $stmt->execute();
         return $stmt->fetch();
+    }
+
+    public static function resumeMembership()
+    {
+        $db = Db::getInstance();
+        $stmt = $db->prepare("DELETE FROM Memberships_Pause WHERE Memberships_Pause_User_Id=:Memberships_Pause_User_Id");
+        $stmt->bindValue('Memberships_Pause_User_Id', Request::post('userId'));
+        $stmt->execute();
+    }
+
+    public static function resumeMembershipArchive()
+    {
+        $db = Db::getInstance();
+        $stmt = $db->prepare("UPDATE Memberships_Pause_Archive SET Memberships_Pause_End_Date=NOW(), Memberships_Pause_Active=false WHERE Memberships_Pause_User_Id=:Memberships_Pause_User_Id");
+        $stmt->bindValue('Memberships_Pause_User_Id', Request::post('userId'));
+        $stmt->execute();
     }
 
     public static function userArrivalCount($id)

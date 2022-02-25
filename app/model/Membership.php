@@ -22,6 +22,15 @@ class Membership
         return $usersMembershipsEndDate;
     }
 
+    public static function selectMembership()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Name=:membershipsName');
+        $stmt->bindValue('membershipsName', Request::post('usersMembershipsMembershipName'));
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public static function timeUpdate()
     {
         $db=Db::getInstance();
@@ -37,12 +46,21 @@ class Membership
         $stmt->execute();
     }
 
-    public static function selectMembership()
+   public static function updateMembership($membershipData, $membershipEndDate)
+   {
+       $db=Db::getInstance();
+       $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_End_Date=:Users_Memberships_End_Date WHERE Users_Memberships_Id=:Users_Memberships_Id');
+       $stmt->bindValue('Users_Memberships_End_Date', date('Y-m-d', strtotime($membershipData->Users_Memberships_End_Date.'+'.$membershipEndDate.' days')));
+       $stmt->bindValue('Users_Memberships_Id',$membershipData->Users_Memberships_Id);
+       $stmt->execute();
+   }
+
+    public static function updateMembershipArchive($membershipData, $membershipEndDate)
     {
         $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Name=:membershipsName');
-        $stmt->bindValue('membershipsName', Request::post('usersMembershipsMembershipName'));
+        $stmt=$db->prepare('UPDATE Users_Memberships_Archive SET Users_Memberships_End_Date=:Users_Memberships_End_Date WHERE Users_Memberships_Id=:Users_Memberships_Id');
+        $stmt->bindValue('Users_Memberships_End_Date', date('Y-m-d', strtotime($membershipData->Users_Memberships_End_Date.'+'.$membershipEndDate.' days')));
+        $stmt->bindValue('Users_Memberships_Id',$membershipData->Users_Memberships_Id);
         $stmt->execute();
-        return $stmt->fetch();
     }
 }

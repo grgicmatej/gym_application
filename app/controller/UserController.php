@@ -59,7 +59,10 @@ class UserController extends SecurityController
             User::pauseMembershipArchive(User::pausedMembership(Request::post('userId')), User::viewUserEssentialData(Request::post('userId')));
             echo json_encode(false);
         }else{
-            // tu sam stao, treba napraviti resume membershipa
+            Membership::updateMembership(User::viewUserEssentialData(Request::post('userId')), Timers::timeDifference(User::pausedMembership(Request::post('userId'))));
+            Membership::updateMembershipArchive(User::viewUserEssentialData(Request::post('userId')), Timers::timeDifference(User::pausedMembership(Request::post('userId'))));
+            User::resumeMembership();
+            User::resumeMembershipArchive();
             echo json_encode(true);
         }
 

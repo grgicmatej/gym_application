@@ -85,36 +85,30 @@ $('#formformaNewUser').on('submit', function (e) {
 // Registration of new user end
 
 // Additional user settings start
+function checkMembershipPause(){
+    var id = globalVariable;
+    $.ajax({
+        method: "POST",
+        data: {userId: id},
+        url: urlAddress + 'User/checkPausedMembership/',
+        success: function (response) {
+            response=JSON.parse(response)
+            if (response === true){
+                $("#additionalUserSettingsUserMembershipPauseButton").text('Zamrzavanje članarine');
+            }else{
+                $("#additionalUserSettingsUserMembershipPauseButton").text('Nastavak članarine');
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+}
+
 $('#additionalUserSettingsButton').on('click', function () {
     if (document.getElementById('additionalUserSettings').style.display === "none"){
         $('#additionalUserSettings').fadeIn('slow', function () {});
-        var id = globalVariable;
-
-
-        $.ajax({
-            method: "POST",
-            data: {userId: id},
-            url: urlAddress + 'User/checkPausedMembership/',
-            success: function (response) {
-                if (response === true){
-                    $("#additionalUserSettingsUserMembershipPauseButton").text('Zamrzavanje članarine');
-                }else{
-                    $("#additionalUserSettingsUserMembershipPauseButton").text('Nastavak članarine');
-                }
-            },
-            error: function (){
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            }
-        });
-
-
-
-
-
-
-
-
-
+        checkMembershipPause()
     }else {
         $('#additionalUserSettings').fadeOut('slow', function () {});
     }
@@ -164,6 +158,7 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
         data: {userId: id},
         url: urlAddress + 'User/pauseMembership/',
         success: function (response) {
+            response = JSON.parse(response)
             $("#profileData").fadeOut(800, function () {
                 $(this).modal('hide');
             });
@@ -185,6 +180,6 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
 });
 // Pause current membership end
 
-
+// pauziranje i nastavljanje radi uredno, treba srediti da se updatea frontend na indexu i da se oboja u žuto, Također možda neka obavijest na profilu?
 
 // Additional user settings end
