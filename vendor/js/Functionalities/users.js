@@ -202,7 +202,4 @@ function changeActiveMembershipStatusField(id, text, color){
         }
     });
 }
-
-// pauziranje i nastavljanje radi uredno, treba srediti da se updatea frontend na indexu i da se oboja u žuto, Također možda neka obavijest na profilu?
-
 // Additional user settings end
