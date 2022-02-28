@@ -10,9 +10,10 @@ $('.staffSettings').on('click', function () {
             $("#Staff_Phone").val(response["Staff_Phone"]);
             $("#Staff_Email").val(response["Staff_Email"]);
         },
-        error: function ()
-        {
-
+        error: function () {
+            $(this).fadeIn(400, function notification() {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            });
         }
     });
 });
@@ -31,6 +32,11 @@ $('#formformaStaffSettingsPassword').on('submit', function (e) {
                 successNotification('Nova lozinka je uspješno postavljena.');
             });
             clearInput();
+        },
+        error: function () {
+            $(this).fadeIn(400, function notification() {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            });
         }
     });
 });

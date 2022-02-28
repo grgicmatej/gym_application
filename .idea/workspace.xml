@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/AditionalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/AditionalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Sale.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Sale.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Timers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Timers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-    </list>
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +120,7 @@
       <workItem from="1645691060345" duration="6686000" />
       <workItem from="1645800276969" duration="2318000" />
       <workItem from="1645808991088" duration="2269000" />
-      <workItem from="1646044182223" duration="3617000" />
+      <workItem from="1646044182223" duration="4091000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

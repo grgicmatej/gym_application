@@ -79,6 +79,11 @@ function manipulateTimer(sportId){
                         $("#tableSports").fadeOut(1500, function () {
                             $(this).modal('hide');
                         });
+                    },
+                    error: function () {
+                        $(this).fadeIn(400, function notification() {
+                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                        });
                     }
                 });
             }else { // zaustavljena štoperica
@@ -112,6 +117,11 @@ function manipulateTimer(sportId){
                             error: function (){
                                 warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                             }
+                        });
+                    },
+                    error: function () {
+                        $(this).fadeIn(400, function notification() {
+                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                         });
                     }
                 });

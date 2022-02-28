@@ -199,6 +199,11 @@ function changeActiveMembershipStatusField(id, text, color){
             document.getElementById(id + '_membershipsStatus').style.backgroundColor = color;
 
             globalVariable = response["Users_Id"];
+        },
+        error: function () {
+            $(this).fadeIn(400, function notification() {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            });
         }
     });
 }
