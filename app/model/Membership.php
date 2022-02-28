@@ -1,7 +1,7 @@
 <?php
 
 
-class Membership
+class Membership extends Timers
 {
     public static function allActiveMemberships()
     {

@@ -49,23 +49,12 @@ class UserController extends SecurityController
 
     public function checkPausedMembership()
     {
-        echo json_encode(User::checkPausedMembership()); // vrati true ako nije pod pauzom
+        echo json_encode(User::checkPausedMembership());
     }
 
     public function pauseMembership()
     {
-        if (User::checkPausedMembership()){
-            User::pauseMembership(User::viewUserEssentialData(Request::post('userId')));
-            User::pauseMembershipArchive(User::pausedMembership(Request::post('userId')), User::viewUserEssentialData(Request::post('userId')));
-            echo json_encode(false);
-        }else{
-            Membership::updateMembership(User::viewUserEssentialData(Request::post('userId')), Timers::timeDifference(User::pausedMembership(Request::post('userId'))));
-            Membership::updateMembershipArchive(User::viewUserEssentialData(Request::post('userId')), Timers::timeDifference(User::pausedMembership(Request::post('userId'))));
-            User::resumeMembership();
-            User::resumeMembershipArchive();
-            echo json_encode(true);
-        }
-
+        echo json_encode(User::pauseUser());
     }
 
     public function userDataSearch()

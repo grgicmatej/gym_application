@@ -1,7 +1,7 @@
 <?php
 
 
-class User
+class User extends Membership
 {
     public static function allUsersSearch()
     {
@@ -370,6 +370,21 @@ class User
         $stmt->bindValue('yearOfPreviousMonth', $dt->format('Y'));
         $stmt->execute();
         return $stmt->fetch();
+    }
+
+    public static function pauseUser()
+    {
+        if (self::checkPausedMembership()){
+            self::pauseMembership(self::viewUserEssentialData(Request::post('userId')));
+            self::pauseMembershipArchive(self::pausedMembership(Request::post('userId')), self::viewUserEssentialData(Request::post('userId')));
+            return false;
+        }else{
+            self::updateMembership(self::viewUserEssentialData(Request::post('userId')), self::timeDifference(self::pausedMembership(Request::post('userId'))));
+            self::updateMembershipArchive(self::viewUserEssentialData(Request::post('userId')), self::timeDifference(self::pausedMembership(Request::post('userId'))));
+            self::resumeMembership();
+            self::resumeMembershipArchive();
+            return true;
+        }
     }
 
     public static function pauseMembership($membershipData)
