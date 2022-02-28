@@ -31,22 +31,7 @@ $('.membershipData').on('click', function () {
                                 $(this).fadeIn(400, function notification() {
                                     successNotification('Uspješno produžena članarina.')
                                 });
-                                $.ajax({
-                                    method: "POST",
-                                    data: {data: id},
-                                    url: urlAddress + 'User/viewUser/' + id,
-                                    success: function (response) {
-                                        response = JSON.parse(response);
-
-                                        $("#" + id + "_membershipsStartDate").text(formatDate(response["Users_Memberships_Start_Date"]));
-                                        $("#" + id + "_membershipsEndDate").text(formatDate(response["Users_Memberships_End_Date"]));
-                                        $("#" + id + "_membershipsName").text(response["Users_Memberships_Membership_Name"]);
-                                        $("#" + id + "_membershipsStatus").text("Da");
-                                        document.getElementById(id + '_membershipsStatus').style.backgroundColor = "#74C687";
-
-                                        globalVariable = response["Users_Id"];
-                                    }
-                                });
+                                changeActiveMembershipStatusField(id, "Da", "#74C687")
                             }
                         }
                     });

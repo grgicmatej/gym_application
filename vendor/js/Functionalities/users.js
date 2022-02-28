@@ -166,10 +166,14 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
                 $(this).fadeIn(400, function notification() {
                     successNotification('Članarina je uspješno pauzirana.')
                 });
+                changeActiveMembershipStatusField(id, 'Zamrznuto', '#FFD75F')
+                $('#additionalUserSettings').fadeOut('slow', function () {});
             }else {
                 $(this).fadeIn(400, function notification() {
                     successNotification('Članarina je uspješno nastavljena.')
                 });
+                changeActiveMembershipStatusField(id, 'Da', '#74C687')
+                $('#additionalUserSettings').fadeOut('slow', function () {});
             }
 
         },
@@ -179,6 +183,25 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
     });
 });
 // Pause current membership end
+
+function changeActiveMembershipStatusField(id, text, color){
+    $.ajax({
+        method: "POST",
+        data: {data: id},
+        url: urlAddress + 'User/viewUser/' + id,
+        success: function (response) {
+            response = JSON.parse(response);
+
+            $("#" + id + "_membershipsStartDate").text(formatDate(response["Users_Memberships_Start_Date"]));
+            $("#" + id + "_membershipsEndDate").text(formatDate(response["Users_Memberships_End_Date"]));
+            $("#" + id + "_membershipsName").text(response["Users_Memberships_Membership_Name"]);
+            $("#" + id + "_membershipsStatus").text(text);
+            document.getElementById(id + '_membershipsStatus').style.backgroundColor = color;
+
+            globalVariable = response["Users_Id"];
+        }
+    });
+}
 
 // pauziranje i nastavljanje radi uredno, treba srediti da se updatea frontend na indexu i da se oboja u žuto, Također možda neka obavijest na profilu?
 

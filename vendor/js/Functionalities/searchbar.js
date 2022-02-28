@@ -12,13 +12,14 @@ function searchfunction() {
                 response = JSON.parse(data);
                 const searchData = document.getElementById('dataTableBody');
 
-                searchData.innerHTML = response.reduce((options, {Users_Id_Main, Users_Name, Users_Surname, Users_Memberships_Membership_Name, Users_Memberships_Membership_Active, Users_Memberships_Start_Date, Users_Memberships_End_Date}) =>
-                        options += `<tr>
+                searchData.innerHTML = response.reduce((options, {Users_Id_Main, Users_Name, Users_Surname, Users_Memberships_Membership_Name, Users_Memberships_Membership_Active, Users_Memberships_Start_Date, Users_Memberships_End_Date, Memberships_Pause_Active}) =>
+                        options +=
+                            `<tr>
                                         <td class="text-center" id="${Users_Id_Main}_usersId">${Users_Id_Main.split('-').pop()}</td>
                                         <td class="text-left" id="${Users_Id_Main}_usersName">${Users_Name} ${Users_Surname}</td>
                                         <td class="text-left" id="${Users_Id_Main}_membershipsName">${Users_Memberships_Membership_Name}</td>
-                                        <td id="${Users_Id_Main}_membershipsStatus" style="background-color: ${Users_Memberships_Membership_Active ? '#74C687': '#E87C87'}; color: white; font-weight: bolder" class="text-center">
-                                            ${Users_Memberships_Membership_Active ? 'Da': 'Ne'}
+                                        <td id="${Users_Id_Main}_membershipsStatus" style="background-color: ${Memberships_Pause_Active ? '#FFD75F' : (Users_Memberships_Membership_Active === "1" ? '#74C687': '#E87C87')}; color: white; font-weight: bolder" class="text-center">
+                                            ${Memberships_Pause_Active ? 'Zamrznuto' : (Users_Memberships_Membership_Active === "1" ? 'Da': 'Ne')}
                                         </td>
                                         <td class="text-center" id="${Users_Id_Main}_membershipsStartDate">${formatDate(Users_Memberships_Start_Date)}</td>
                                         <td class="text-center" id="${Users_Id_Main}_membershipsEndDate">${formatDate(Users_Memberships_End_Date)}</td>

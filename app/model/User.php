@@ -13,10 +13,12 @@ class User extends Membership
                                     Users_Memberships.Users_Memberships_Membership_Name,
                                     Users_Memberships.Users_Memberships_Membership_Active,
                                     Users_Memberships.Users_Memberships_Start_Date,
-                                    Users_Memberships.Users_Memberships_End_Date
+                                    Users_Memberships.Users_Memberships_End_Date,
+                                    Memberships_Pause.Memberships_Pause_Active
                                     FROM
                                     Users
                                     LEFT JOIN Users_Memberships ON Users_Memberships.Users_Memberships_Users_Id=Users.Users_Id
+                                    LEFT JOIN Memberships_Pause ON Memberships_Pause.Memberships_Pause_User_Id=Users.Users_Id
                                     WHERE 
                                     Users_Memberships.Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id
                                     AND
