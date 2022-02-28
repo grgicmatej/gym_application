@@ -25,7 +25,7 @@ class LoginController extends SecurityController
     public function logout()
     {
         Admin::endStaffActivity();
-        Session::getInstance()->logout();
+        Admin::staffLogOut();
         $view=New View();
         $view->render('index');
     }

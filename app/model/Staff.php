@@ -38,6 +38,7 @@ class staff
             Session::getInstance()->login($user);
             return true;
         } else {
+            unset($user->Users_Password);
             return false;
         }
     }

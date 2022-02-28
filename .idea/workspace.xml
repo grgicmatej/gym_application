@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="backup commit">
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/AditionalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/AditionalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Sale.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Sale.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Timers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Timers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/searchbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/searchbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +129,7 @@
       <workItem from="1645691060345" duration="6686000" />
       <workItem from="1645800276969" duration="2318000" />
       <workItem from="1645808991088" duration="2269000" />
-      <workItem from="1646044182223" duration="2144000" />
+      <workItem from="1646044182223" duration="3617000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -380,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645453700429</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="removing unnecessary code">
+      <created>1646046560248</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1646046560248</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +410,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="counter working, modal hiding after finishing counting." />
     <MESSAGE value="arrivalCounter and notifications fully ready and working" />
     <MESSAGE value="navbar fix" />
     <MESSAGE value="clanarine" />
@@ -425,6 +434,7 @@
     <MESSAGE value="calendar feature - JS component" />
     <MESSAGE value="calendar feature - CSS component" />
     <MESSAGE value="backup commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup commit" />
+    <MESSAGE value="removing unnecessary code" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing unnecessary code" />
   </component>
 </project>

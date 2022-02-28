@@ -46,4 +46,9 @@ class Admin
         $stmt->bindValue('Activity_Staff_Staff_Id', Session::getInstance()->getUser()->Staff_Id);
         $stmt->execute();
     }
+
+    public static function staffLogOut()
+    {
+        Session::getInstance()->logout();
+    }
 }

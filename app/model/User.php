@@ -3,6 +3,22 @@
 
 class User extends Membership
 {
+    public static function addNewUserMembership($id)
+    {
+        if (Request::post('usersMembershipsMembershipName') == "disabled"){
+            return false;
+        }else{
+            self::newUserMembershipExtension(self::selectMembership(), $id);
+            self::newUserMembershipExtensionArchive(self::lastUserMembershipExtension(), self::selectMembership(), $id);
+
+            self::newMembershipSale(self::selectMembership());
+
+            self::deleteRecipient($id);
+            self::addNewRecipient(self::viewUserEmail($id), $id, self::membershipEndDate(self::selectMembership()));
+            return true;
+        }
+    }
+
     public static function allUsersSearch()
     {
         $db = Db::getInstance();

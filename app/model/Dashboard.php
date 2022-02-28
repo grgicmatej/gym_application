@@ -3,7 +3,7 @@
 
 class Dashboard
 {
-    public static function checkGymData($id) // Uzima podatke od tražene teretane u vlasništvu Staff_Id
+    public static function checkGymData($id)
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT  
@@ -24,7 +24,7 @@ class Dashboard
         $_SESSION['Gym_Id']=self::gymDataLimit1()->Gym_Id;
     }
 
-    Public static function gymData() //Provjerava sve teretane koje su u vlasništvu Staff_Id
+    Public static function gymData()
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT  
@@ -46,7 +46,7 @@ class Dashboard
         return count(self::gymData());
     }
 
-    Public static function gymDataLimit1() //Provjerava sve teretane koje su u vlasništvu Staff_Id sa limitom 1
+    Public static function gymDataLimit1()
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT  

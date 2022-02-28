@@ -1,7 +1,7 @@
 <?php
 
 
-class Sale
+class Sale extends Sender
 {
     public static function newMembershipSale($membershipData)
     {
