@@ -173,7 +173,7 @@ class User extends Membership
 
     public static function monthlyUserProportion()
     {
-        return round((self::currentMonthlyUsers()->newMonthlyUsers / self::previousMonthUsers()->previousMonthlyUsers) * 100, 2);
+        return round((self::currentMonthlyUsers()->newMonthlyUsers / (self::previousMonthUsers()->previousMonthlyUsers != 0 ? self::previousMonthUsers()->previousMonthlyUsers : 1)) * 100, 2 );
     }
 
     public static function newArrival($id)
