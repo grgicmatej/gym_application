@@ -210,14 +210,13 @@ function changeActiveMembershipStatusField(id, text, color){
 }
 
 // User edit start
-$('#additionalUserSettingsUserSettingsButton').on('click', function () {
-    console.log("Uređivanje korisnika")
-
+$('.additionalUserSettingsUserSettingsButton').on('click', function () {
+    // console.log("Uređivanje korisnika")
+    // console.log(globalVariable)
     // tu sam stao, treba napraviti da se pokupe podaci i da se napuni novi widget dio, ovo ispod je sve kopirano od profileData, treba iskoristiti widget za nove korisnike
 
-    var id = $(this).attr('id');
-    if (id) {
-        id = id.split('_')[1];
+    var id = globalVariable;
+
         $.ajax({
             method: "POST",
             data: {data: id},
@@ -225,25 +224,41 @@ $('#additionalUserSettingsUserSettingsButton').on('click', function () {
             success: function (response) {
                 response = JSON.parse(response);
 
-                $("#profileData").modal('show');
-                $("#email").text(response["Users_Email"]);
-                $("#id").text(response["Users_Id"].split('-').pop());
-                $("#usersName").text(response["Users_Name"] + " " + response["Users_Surname"]);
-                $("#usersPhone").text(response["Users_Phone"]);
-                $("#membershipName").text(response["Users_Memberships_Membership_Name"]);
-                $("#status").text(response["Users_Status"]);
-                $("#birthday").text(formatDate(response["Users_Birthday"]));
-                $("#membershipDuration").text(formatDate(response["Users_Memberships_Start_Date"]) + "  -  " + formatDate(response["Users_Memberships_End_Date"]));
-                $("#numberOfArrivals").text("Broj dolazaka ovaj tjedan: " + response["countrow"]);
+                $("#editUserData").modal('show');
+                document.getElementById("Edit_Users_Id").value = response["Users_Id"].split('-').pop();
+                document.getElementById("Edit_Users_Name").value = response["Users_Name"];
+                document.getElementById("Edit_Users_Surname").value = response["Users_Surname"];
+                document.getElementById("Edit_Users_Email").value = response["Users_Email"];
+                document.getElementById("Edit_Users_Phone").value = response["Users_Phone"];
+                document.getElementById("Edit_Users_Address").value = response["Users_Address"];
+                document.getElementById("Edit_Users_City").value = response["Users_City"];
+                document.getElementById("Edit_Users_Oib").value = response["Users_Oib"];
+                document.getElementById("Edit_Users_Birthday").value = response["Users_Birthday"];
+                document.getElementById("Edit_Users_Gender").value = response["Users_Gender"];
+                document.getElementById("Edit_Users_Status").value = response["Users_Status"];
+                document.getElementById("Edit_Users_Reference").value = response["Users_Reference"];
+                document.getElementById("Edit_Users_Company").value = response["Users_Company"] !== null ? response["Users_Company"] : "";
 
-                $("#confirmArrival").html("<a><span class='btn btn-block btn-outline-info' >Potvrda dolaska</span></a>");
-                globalVariable = response["Users_Id"];
+
+                $('#formformaEditUser').on('submit', function (e) {
+                    e.preventDefault();
+                    $.ajax({
+                        type: "post",
+                        url: urlAddress + 'User/EditUser/'+response["Users_Id"],
+                        data: $('#formformaEditUser').serialize(),
+                        success: function (response) {
+                            alert(response)
+                        },
+                        error: function (){
+                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                        }
+                    });
+                });
             },
             error: function (){
                 warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
             }
         });
-    }
 });
 
 

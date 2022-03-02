@@ -41,6 +41,11 @@ class UserController extends SecurityController
         echo json_encode(User::checkPausedMembership());
     }
 
+    public function editUser($id)
+    {
+        echo json_encode($id);
+    }
+
     public function pauseMembership()
     {
         echo json_encode(User::pauseUser());
