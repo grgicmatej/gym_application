@@ -19,19 +19,40 @@ $('.staffSettings').on('click', function () {
 });
 
 $('#formformaStaffSettingsPassword').on('submit', function (e) {
+
+
     e.preventDefault();
-    $.ajax({
+
+    $.ajax({ // ovo je za provjeru trenutne lozinke
         type: 'post',
-        url: urlAddress + 'Staff/passwordChange/',
+        url: urlAddress + 'Staff/passwordChecker/',
         data: $('#formformaStaffSettingsPassword').serialize(),
-        success: function () {
-            $("#staffSettings").fadeOut(800, function () {
-                $(this).modal('hide');
-            });
-            $(this).fadeIn(400, function notification() {
-                successNotification('Nova lozinka je uspješno postavljena.');
-            });
-            clearInput();
+        success: function (response) {
+            if (response === 'true'){
+                $.ajax({
+                    type: 'post',
+                    url: urlAddress + 'Staff/passwordChange/',
+                    data: $('#formformaStaffSettingsPassword').serialize(),
+                    success: function () {
+                        $("#staffSettings").fadeOut(800, function () {
+                            $(this).modal('hide');
+                        });
+                        $(this).fadeIn(400, function notification() {
+                            successNotification('Nova lozinka je uspješno postavljena.');
+                        });
+                        clearInput();
+                    },
+                    error: function () {
+                        $(this).fadeIn(400, function notification() {
+                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                        });
+                    }
+                });
+            }else {
+                $(this).fadeIn(400, function notification() {
+                    warningNotification('Trenutna lozinka nije točna. Pokušajte ponovo.');
+                });
+            }
         },
         error: function () {
             $(this).fadeIn(400, function notification() {

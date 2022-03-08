@@ -155,6 +155,58 @@ class User extends Membership
         }
     }
 
+    public static function editUserPrepare($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Id FROM Users WHERE Users_Id=:Users_Id');
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->execute();
+        if ($stmt->rowCount() == 0) { // Id je promijenjen
+            if (self::checkUsersId()){// ako je true, ne postoji ID i može promjena
+                self::editUser($id);
+                self::updateUsersId($id);
+            } else {
+                return false;
+            }
+        } else { // Id nije promijenjen
+            self::editUser($id);
+            return true;
+        }
+    }
+
+    public static function editUser($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users SET 
+                                     Users_Name=:Users_Name, 
+                                     Users_Surname=:Users_Surname, 
+                                     Users_Email=:Users_Email, 
+                                     Users_Phone=:Users_Phone, 
+                                     Users_Address=:Users_Address, 
+                                     Users_City=:Users_City, 
+                                     Users_Oib=:Users_Oib, 
+                                     Users_Birthday=:Users_Birthday, 
+                                     Users_Gender=:Users_Gender, 
+                                     Users_Status=:Users_Status, 
+                                     Users_Reference=:Users_Reference, 
+                                     Users_Company=:Users_Company 
+                                    WHERE Users_Id=:Users_Id');
+        $stmt->bindValue('Users_Name', Request::post('Users_Name'));
+        $stmt->bindValue('Users_Surname', Request::post('Users_Surname'));
+        $stmt->bindValue('Users_Email', Request::post('Users_Email'));
+        $stmt->bindValue('Users_Phone', Request::post('Users_Phone'));
+        $stmt->bindValue('Users_Address', Request::post('Users_Address'));
+        $stmt->bindValue('Users_City', Request::post('Users_City'));
+        $stmt->bindValue('Users_Oib', Request::post('Users_Oib'));
+        $stmt->bindValue('Users_Birthday', Request::post('Users_Birthday'));
+        $stmt->bindValue('Users_Gender', Request::post('Users_Gender'));
+        $stmt->bindValue('Users_Status', Request::post('Users_Status'));
+        $stmt->bindValue('Users_Reference', Request::post('Users_Reference'));
+        $stmt->bindValue('Users_Company', Request::post('Users_Company') !== null ? Request::post('Users_Company') : "");
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->execute();
+    }
+
     public static function essentialUserData($id)
     {
         $objMerged = (object)array_merge(
@@ -476,6 +528,19 @@ class User extends Membership
         $stmt->bindValue('usersArrivalsWeek', date("oW", strtotime(date('Y-m-d'))));
         $stmt->execute();
         return $stmt->fetch();
+    }
+
+    public static function updateUsersId($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users SET
+                                Users_Id=:Users_Id_New
+                                WHERE
+                                Users_Id=:Users_Id
+                                ');
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->bindValue('Users_Id_New', $_COOKIE['Gym_Id']."-".Request::post('Users_Id'));
+        $stmt->execute();
     }
 
     public static function viewUserEssentialData($id)
