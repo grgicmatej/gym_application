@@ -43,8 +43,7 @@ class UserController extends SecurityController
 
     public function editUser($id)
     {
-        User::editUserPrepare($id);
-        echo json_encode($id);
+        echo json_encode(User::editUserPrepare($id));
     }
 
     public function pauseMembership()

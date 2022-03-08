@@ -157,14 +157,15 @@ class User extends Membership
 
     public static function editUserPrepare($id)
     {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT Users_Id FROM Users WHERE Users_Id=:Users_Id');
-        $stmt->bindValue('Users_Id', $id);
-        $stmt->execute();
-        if ($stmt->rowCount() == 0) { // Id je promijenjen
+        if ($id !== ($_SESSION['Gym_Id'].'-'.Request::post('Users_Id'))) { // Id je promijenjen
             if (self::checkUsersId()){// ako je true, ne postoji ID i može promjena
                 self::editUser($id);
                 self::updateUsersId($id);
+                self::updateUsersArrivals($id);
+                self::updateUsersGym($id);
+                self::updateUsersMemberships($id);
+                self::updateUsersMembershipsArchive($id);
+                return true;
             } else {
                 return false;
             }
@@ -539,7 +540,59 @@ class User extends Membership
                                 Users_Id=:Users_Id
                                 ');
         $stmt->bindValue('Users_Id', $id);
-        $stmt->bindValue('Users_Id_New', $_COOKIE['Gym_Id']."-".Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id_New', $_SESSION["Gym_Id"]."-".Request::post('Users_Id'));
+        $stmt->execute();
+    }
+
+    public static function updateUsersArrivals($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users_Arrivals SET
+                                Users_Arrivals_User_Id=:Users_Id_New
+                                WHERE
+                                Users_Arrivals_User_Id=:Users_Id
+                                ');
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->bindValue('Users_Id_New', $_SESSION["Gym_Id"]."-".Request::post('Users_Id'));
+        $stmt->execute();
+    }
+
+    public static function updateUsersGym($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users_Gym SET
+                                Users_Id=:Users_Id_New
+                                WHERE
+                                Users_Id=:Users_Id
+                                ');
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->bindValue('Users_Id_New', $_SESSION['Gym_Id']."-".Request::post('Users_Id'));
+        $stmt->execute();
+    }
+
+    public static function updateUsersMemberships($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users_Memberships SET
+                                Users_Memberships_Users_Id=:Users_Id_New
+                                WHERE
+                                Users_Memberships_Users_Id=:Users_Id
+                                ');
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->bindValue('Users_Id_New',$_SESSION['Gym_Id']."-".Request::post('Users_Id'));
+        $stmt->execute();
+    }
+
+    public static function updateUsersMembershipsArchive($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users_Memberships_Archive SET
+                                Users_Memberships_Users_Id=:Users_Id_New
+                                WHERE
+                                Users_Memberships_Users_Id=:Users_Id
+                                ');
+        $stmt->bindValue('Users_Id', $id);
+        $stmt->bindValue('Users_Id_New', $_SESSION['Gym_Id']."-".Request::post('Users_Id'));
         $stmt->execute();
     }
 

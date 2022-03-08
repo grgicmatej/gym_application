@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/staff.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/staff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/inputsanitizers.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/inputsanitizers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,7 @@
       <workItem from="1646220261563" duration="4058000" />
       <workItem from="1646224672273" duration="218000" />
       <workItem from="1646599218814" duration="68000" />
-      <workItem from="1646746124129" duration="3236000" />
+      <workItem from="1646746124129" duration="4515000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -392,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646046560248</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="password change bugfix">
+      <created>1646751330036</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1646751330036</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +420,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="arrivalCounter and notifications fully ready and working" />
     <MESSAGE value="navbar fix" />
     <MESSAGE value="clanarine" />
     <MESSAGE value="refactoring" />
@@ -437,6 +444,7 @@
     <MESSAGE value="calendar feature - CSS component" />
     <MESSAGE value="backup commit" />
     <MESSAGE value="removing unnecessary code" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing unnecessary code" />
+    <MESSAGE value="password change bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="password change bugfix" />
   </component>
 </project>

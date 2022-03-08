@@ -211,10 +211,6 @@ function changeActiveMembershipStatusField(id, text, color){
 
 // User edit start
 $('.additionalUserSettingsUserSettingsButton').on('click', function () {
-    // console.log("Uređivanje korisnika")
-    // console.log(globalVariable)
-    // tu sam stao, treba napraviti da se pokupe podaci i da se napuni novi widget dio, ovo ispod je sve kopirano od profileData, treba iskoristiti widget za nove korisnike
-
     var id = globalVariable;
 
         $.ajax({
@@ -239,7 +235,7 @@ $('.additionalUserSettingsUserSettingsButton').on('click', function () {
                 document.getElementById("Edit_Users_Reference").value = response["Users_Reference"];
                 document.getElementById("Edit_Users_Company").value = response["Users_Company"] !== null ? response["Users_Company"] : "";
 
-
+                alert(response["Users_Id"])
                 $('#formformaEditUser').on('submit', function (e) {
                     e.preventDefault();
                     $.ajax({
@@ -247,7 +243,15 @@ $('.additionalUserSettingsUserSettingsButton').on('click', function () {
                         url: urlAddress + 'User/EditUser/'+response["Users_Id"],
                         data: $('#formformaEditUser').serialize(),
                         success: function (response) {
+
+                            response = JSON.parse(response)
                             alert(response)
+                            if (response === true){
+                                alert(response + ' promijenjeni podaci')
+                            }else {
+                                alert(response + ' problem sa podacima')
+                            }
+                            // tu sam stao, promjena ID radi kako treba, promjena podataka radi kako treba, treba srediti fade oute, inpute sanitizirat i tu ove alertove počistit
                         },
                         error: function (){
                             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');

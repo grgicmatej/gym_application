@@ -13,6 +13,8 @@ var Users_Gender = document.getElementById('Users_Gender');
 var Users_Status = document.getElementById('Users_Status');
 var Users_Reference = document.getElementById('Users_Reference');
 
+var Users_Id_Edit = document.getElementById('Users_Id_Edit');
+
 var Staff_Password = document.getElementById('Staff_Password');
 var Staff_New_Password = document.getElementById('Staff_New_Password');
 var Staff_Oib = document.getElementById('Staff_Oib');
@@ -115,6 +117,34 @@ Staff_Password.addEventListener('blur', function() {
         this.className += " is-warning";
     }
 });
+
+// prep za input sanitizer
+/*
+Users_Id_Edit.addEventListener('blur', function() {
+    if (this.value.length > 2 && !specialCharacters.test(this.value)) {
+        $.ajax({
+            type: 'post',
+            url: urlAddress + 'Staff/passwordChecker/',
+            data: $('#formformaStaffSettingsPassword').serialize(),
+            success: function (response) {
+                response = JSON.parse(response);
+                if (response === false) {
+                    warningNotification('Trenutna lozinka nije točna. Pokušajte ponovo.');
+                    RemoveValidClass(Staff_Password)
+                    Staff_Password.className += " is-warning";
+                } else {
+                    RemoveWarningClass(Staff_Password)
+                    Staff_Password.className += " is-valid";
+                }
+            }
+        });
+    } else {
+        RemoveValidClass(this)
+        this.className += " is-warning";
+    }
+});
+*/
+
 
 Staff_New_Password.addEventListener('blur', function() {
     if (this.value !== '' && this.value.length > 5 && !specialCharacters.test(this.value)) {
