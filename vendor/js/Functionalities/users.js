@@ -148,15 +148,57 @@ $('#additionalUserSettingsHistoryMembershipsButton').on('click', function () {
 
 // Adding existing membership
 $('#additionalUserSettingsAddExistingMembershipsButton').on('click', function () {
+    $("#editUserMembershipData").modal('show');
     console.log("postojeća članarina")
 });
+
+$('#formformaEditMembershipUser').on('submit', function (e) {
+    var id = globalVariable;
+    e.preventDefault();
+    $.ajax({
+        type: 'post',
+        url: urlAddress + 'User/editMembershipUser/'+id,
+        data: $('#formformaEditMembershipUser').serialize(),
+        success: function (response) {
+            alert(response)
+            response = JSON.parse(response)
+            alert(response)
+            if (response === false){
+                $(this).fadeIn(400, function notification() {
+                    warningNotification('Datumi su pogrešno označeni. Pokušajte ponovo.');
+                });
+            }else {
+                $(this).fadeIn(400, function notification() {
+                    successNotification('Sve ok.');
+                });
+            }
+
+            /*
+            $("#newUserRegistration").fadeOut(800, function () {
+                $(this).modal('hide');
+            });
+            $(this).fadeIn(400, function notification() {
+                successNotification('Uspješno registriran korisnik.');
+            });
+            clearInput(1000);
+
+             */
+        },
+        error: function (){
+            $(this).fadeIn(400, function notification() {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            });
+        }
+    });
+});
+
 
 // Pause current membership start
 $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
     var id = globalVariable;
     $.ajax({
         method: "POST",
-        data: {userId: id},
+        data: {userId: globalVariable},
         url: urlAddress + 'User/pauseMembership/',
         success: function (response) {
             response = JSON.parse(response)
@@ -179,7 +221,9 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
 
         },
         error: function (){
-            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            $(this).fadeIn(400, function notification() {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            });
         }
     });
 });

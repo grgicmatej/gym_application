@@ -46,6 +46,11 @@ class UserController extends SecurityController
         echo json_encode(User::editUserPrepare($id));
     }
 
+    public function editMembershipUser($id)
+    {
+        echo json_encode(User::editMembershipUser($id));
+    }
+
     public function pauseMembership()
     {
         echo json_encode(User::pauseUser());
@@ -60,8 +65,6 @@ class UserController extends SecurityController
     {
         echo json_encode(User::essentialUserData($id));
     }
-
-
 
 
     // Ovo je za ciscenje baze

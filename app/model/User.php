@@ -208,6 +208,16 @@ class User extends Membership
         $stmt->execute();
     }
 
+    public static function editMembershipUser($id)
+    {
+        // tu sam stao, ne valja
+        if(date_diff(date_create(Request::post('Users_Memberships_Start_Date')), date_create(Request::post('Users_Memberships_End_Date'))) < 0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     public static function essentialUserData($id)
     {
         $objMerged = (object)array_merge(
