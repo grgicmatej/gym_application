@@ -234,8 +234,6 @@ $('.additionalUserSettingsUserSettingsButton').on('click', function () {
                 document.getElementById("Edit_Users_Status").value = response["Users_Status"];
                 document.getElementById("Edit_Users_Reference").value = response["Users_Reference"];
                 document.getElementById("Edit_Users_Company").value = response["Users_Company"] !== null ? response["Users_Company"] : "";
-
-                alert(response["Users_Id"])
                 $('#formformaEditUser').on('submit', function (e) {
                     e.preventDefault();
                     $.ajax({
@@ -245,16 +243,30 @@ $('.additionalUserSettingsUserSettingsButton').on('click', function () {
                         success: function (response) {
 
                             response = JSON.parse(response)
-                            alert(response)
                             if (response === true){
-                                alert(response + ' promijenjeni podaci')
+                                $("#editUserData").fadeOut(800, function () {
+                                    $(this).modal('hide');
+                                });
+                                $("#profileData").fadeOut(800, function () {
+                                    $(this).modal('hide');
+                                });
+                                $(this).fadeIn(400, function notification() {
+                                    successNotification('Podaci su uspješno spremljeni.')
+                                });
+                                $('#additionalUserSettings').fadeOut('slow', function () {});
+                                clearSearchTable()
+                                clearInput(1000)
+                                formReset();
                             }else {
-                                alert(response + ' problem sa podacima')
+                                $(this).fadeIn(400, function notification() {
+                                    warningNotification('ID broj kartice već postoji. Pokušajte ponovo.');
+                                });
+                                $('#additionalUserSettings').fadeOut('slow', function () {});
                             }
-                            // tu sam stao, promjena ID radi kako treba, promjena podataka radi kako treba, treba srediti fade oute, inpute sanitizirat i tu ove alertove počistit
                         },
                         error: function (){
                             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                            $('#additionalUserSettings').fadeOut('slow', function () {});
                         }
                     });
                 });

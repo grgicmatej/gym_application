@@ -36,4 +36,9 @@ function searchfunction() {
         document.getElementById('dataTableBody').innerHTML = "";
     }
 }
+
+function clearSearchTable(){
+    document.getElementById("dt1").style.display = "none";
+    document.getElementById("search").value = "";
+}
 // Search bar end

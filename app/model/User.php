@@ -157,8 +157,8 @@ class User extends Membership
 
     public static function editUserPrepare($id)
     {
-        if ($id !== ($_SESSION['Gym_Id'].'-'.Request::post('Users_Id'))) { // Id je promijenjen
-            if (self::checkUsersId()){// ako je true, ne postoji ID i može promjena
+        if ($id !== ($_SESSION['Gym_Id'].'-'.Request::post('Users_Id'))) {
+            if (self::checkUsersId()){
                 self::editUser($id);
                 self::updateUsersId($id);
                 self::updateUsersArrivals($id);
@@ -169,7 +169,7 @@ class User extends Membership
             } else {
                 return false;
             }
-        } else { // Id nije promijenjen
+        } else {
             self::editUser($id);
             return true;
         }
