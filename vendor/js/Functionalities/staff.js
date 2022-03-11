@@ -5,25 +5,20 @@ $('.staffSettings').on('click', function () {
         url: urlAddress + 'Staff/staffInfo/',
         success: function (response) {
             response = JSON.parse(response)
-            $("#staffSettings").modal('show');
+            fadeIn("#staffSettings")
             $("#Staff_Oib").val(response["Staff_Oib"]);
             $("#Staff_Phone").val(response["Staff_Phone"]);
             $("#Staff_Email").val(response["Staff_Email"]);
         },
         error: function () {
-            $(this).fadeIn(400, function notification() {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            });
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
 });
 
 $('#formformaStaffSettingsPassword').on('submit', function (e) {
-
-
     e.preventDefault();
-
-    $.ajax({ // ovo je za provjeru trenutne lozinke
+    $.ajax({
         type: 'post',
         url: urlAddress + 'Staff/passwordChecker/',
         data: $('#formformaStaffSettingsPassword').serialize(),
@@ -34,30 +29,20 @@ $('#formformaStaffSettingsPassword').on('submit', function (e) {
                     url: urlAddress + 'Staff/passwordChange/',
                     data: $('#formformaStaffSettingsPassword').serialize(),
                     success: function () {
-                        $("#staffSettings").fadeOut(800, function () {
-                            $(this).modal('hide');
-                        });
-                        $(this).fadeIn(400, function notification() {
-                            successNotification('Nova lozinka je uspješno postavljena.');
-                        });
+                        fadeOut("#staffSettings")
+                        successNotification('Nova lozinka je uspješno postavljena.');
                         clearInput(1000, 'formformaStaffSettingsPassword');
                     },
                     error: function () {
-                        $(this).fadeIn(400, function notification() {
-                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-                        });
+                        warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                     }
                 });
             }else {
-                $(this).fadeIn(400, function notification() {
-                    warningNotification('Trenutna lozinka nije točna. Pokušajte ponovo.');
-                });
+                warningNotification('Trenutna lozinka nije točna. Pokušajte ponovo.');
             }
         },
         error: function () {
-            $(this).fadeIn(400, function notification() {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            });
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
 });
@@ -69,23 +54,17 @@ $('#formformaStaffSettingsData').on('submit', function (e) {
         url: urlAddress + 'Staff/dataChange/',
         data: $('#formformaStaffSettingsData').serialize(),
         success: function () {
-            $("#staffSettings").fadeOut(800, function () {
-                $(this).modal('hide');
-            });
-            $(this).fadeIn(400, function notification() {
-                successNotification('Novi podaci su uspješno spremljeni.');
-            });
+            fadeOut("#staffSettings")
+            successNotification('Novi podaci su uspješno spremljeni.');
         },
         error: function () {
-            $(this).fadeIn(400, function notification() {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            });
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
 });
 
 $('.staff').on('click', function () {
-    $("#staffData").modal('show');
+    fadeIn("#staffData")
     $.ajax({
         url: urlAddress + 'Staff/allStaffInfo/',
         method: "POST",
@@ -98,25 +77,21 @@ $('.staff').on('click', function () {
 
             searchData.innerHTML = response.reduce((options, {Staff_Id, Staff_Name, Staff_Surname, Staff_Username, Staff_Phone, Staff_Email, Staff_Active}) =>
                     options += `<tr>
-                                        <td class="text-left" id="${Staff_Id}_staffName">${Staff_Name} ${Staff_Surname}</td>
-                                        <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
-                                        <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
-                                        <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
-                                        <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? '#74C687': '#E87C87'}; color: white; font-weight: bolder" class="text-center">
-                                            ${(Staff_Active == 1) ? 'Da': 'Ne'}
-                                        </td>
-                                        <td class="text-center staffProfileData" id="i_${Staff_Id}">
-                                            <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
-                                        </td>
-                                    </tr>
-                                    `,
+                                    <td class="text-left" id="${Staff_Id}_staffName">${Staff_Name} ${Staff_Surname}</td>
+                                    <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
+                                    <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
+                                    <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
+                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? '#74C687': '#E87C87'}; color: white; font-weight: bolder" class="text-center">
+                                        ${(Staff_Active == 1) ? 'Da': 'Ne'}
+                                    </td>
+                                    <td class="text-center staffProfileData" id="i_${Staff_Id}">
+                                        <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
+                                    </td>
+                                </tr>
+                                `,
                 ``);
         }
     });
 });
-
-
 // tu sam stao, urediti staff profile datu da ima profil kao i za korisnika. Dodati opcije "Deaktiviraj/aktiviraj zaposlenika", "Restartiraj lozinku"
-
-
 // staffSettings modal end

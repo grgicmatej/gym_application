@@ -399,3 +399,18 @@ function formatTime(input){
     return hour + ':' + minute + ':' + second;
 }
 // Date and time formating end
+
+// fadeIn fadeOut optimizing start
+function fadeIn(elementId)
+{
+    $(elementId).fadeIn(400, function () {
+        $(this).modal('show');
+    });
+}
+function fadeOut(elementId)
+{
+    $(elementId).fadeOut(400, function () {
+        $(this).modal('hide');
+    });
+}
+// fadeIn fadeOut optimizing end

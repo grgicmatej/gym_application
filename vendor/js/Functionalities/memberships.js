@@ -1,10 +1,6 @@
 // membershipData modal
 $('.membershipData').on('click', function () {
-
-    $("#profileData").fadeOut(400, function () {
-        $(this).modal('hide');
-    });
-
+    fadeOut("#profileData")
     if (globalVariable) {
         $.ajax({
             method: "POST",
@@ -20,22 +16,16 @@ $('.membershipData').on('click', function () {
                         success: function (response) {
                             response = JSON.parse(response);
                             if (response === false) {
-                                $(this).fadeIn(400, function notification() {
-                                    warningNotification('Molimo odaberite članarinu.')
-                                });
+                                warningNotification('Molimo odaberite članarinu.')
                             } else {
-                                $("#membershipData").fadeOut(800, function () {
-                                    $(this).modal('hide');
-                                });
-                                $(this).fadeIn(400, function notification() {
-                                    successNotification('Uspješno produžena članarina.')
-                                });
+                                fadeOut("#membershipData")
+                                successNotification('Uspješno produžena članarina.')
                                 changeActiveMembershipStatusField(globalVariable, "Da", "#74C687")
                             }
                         }
                     });
                 });
-                $("#membershipData").modal('show');
+                fadeIn("#membershipData")
                 response = JSON.parse(response);
                 const membershipsData = document.getElementById('memberships');
                 const srcArray = response;

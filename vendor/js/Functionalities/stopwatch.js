@@ -5,7 +5,6 @@ function startStopWatch(sportId){
 
     var updateTime = function () {
         var tempTime = elapsedTime;
-        var milliseconds = tempTime % 1000;
         tempTime = Math.floor(tempTime / 1000);
         var seconds = tempTime % 60;
         tempTime = Math.floor(tempTime / 60);
@@ -22,10 +21,8 @@ function startStopWatch(sportId){
         if (!prevTime) {
             prevTime = Date.now();
         }
-
         elapsedTime += Date.now() - prevTime;
         prevTime = Date.now();
-
         updateTime();
     }, 1000);
 }
@@ -42,19 +39,13 @@ function checkTimerbutton(sportId){
         data: {Timers_Sport_Id: sportId},
         success: function (data) {
             response = JSON.parse(data)
-            if (response === true){
-                var stopWatchValue = 'Pokreni štopericu'
-            }else {
-                var stopWatchValue = 'Zaustavi štopericu'
-            }
-            document.getElementById('formabutton_'+sportId).innerHTML = stopWatchValue
+            document.getElementById('formabutton_'+sportId).innerHTML = response === true ? 'Pokreni štopericu' : 'Zaustavi štopericu';
         },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
-
-    $("#tableSports").modal('show');
+    fadeIn("#tableSports")
 }
 
 function manipulateTimer(sportId){
@@ -64,7 +55,7 @@ function manipulateTimer(sportId){
         data: {Timers_Sport_Id: sportId},
         success: function (response) {
             response = JSON.parse(response)
-            if (response === true){ // pokrenuta štoperica
+            if (response === true){
                 $.ajax({
                     url: urlAddress + 'Aditional/checkStartedTime',
                     method: "POST",
@@ -76,14 +67,10 @@ function manipulateTimer(sportId){
                         document.getElementById('podatakStart_'+sportId).innerHTML = '* Korištenje u tijeku'
 
                         successNotification('Štoperica je uspješno pokrenuta')
-                        $("#tableSports").fadeOut(1500, function () {
-                            $(this).modal('hide');
-                        });
+                        fadeOut("#tableSports")
                     },
                     error: function () {
-                        $(this).fadeIn(400, function notification() {
-                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-                        });
+                        warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                     }
                 });
             }else { // zaustavljena štoperica
@@ -99,10 +86,8 @@ function manipulateTimer(sportId){
                         document.getElementById('podatakStart_'+sportId).innerHTML = ''
                         document.getElementById('podatakProtekloVrijeme_'+sportId).innerHTML = ''
                         successNotification('Štoperica je uspješno zaustavljena')
-                        $("#tableSports").fadeOut(1500, function () {
-                            $(this).modal('hide');
-                        });
-                        $("#tableSportsCheckout").modal('show');
+                        fadeOut("#tableSports")
+                        fadeIn("#tableSportsCheckout")
 
                         $.ajax({
                             url: urlAddress + 'Aditional/checkSportsName',
@@ -120,9 +105,7 @@ function manipulateTimer(sportId){
                         });
                     },
                     error: function () {
-                        $(this).fadeIn(400, function notification() {
-                            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-                        });
+                        warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                     }
                 });
             }
@@ -132,8 +115,6 @@ function manipulateTimer(sportId){
 
 $('#sportsCheckout').on('click', function () {
     infoNotification('Štoperica je restartirana i spremna za ponovno korištenje.')
-    $("#tableSportsCheckout").fadeOut(1500, function () {
-        $(this).modal('hide');
-    });
+    fadeOut("#tableSportsCheckout")
 });
 // stopwatch end
