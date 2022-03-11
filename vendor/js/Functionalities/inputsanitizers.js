@@ -349,8 +349,9 @@ function RemoveClass(elem) {
 
 
 // Clear input start
-function clearInput(time) {
+function clearInput(time, formId) {
     setTimeout(function (){
+        document.getElementById(formId).reset();
         let elementsId= [
             "Users_Id", "Users_Name", "Users_Surname", "Users_Email", "Users_Phone", "Users_Address", "Users_City",
             "Users_Oib", "Users_Birthday", "Users_Gender", "Users_Status", "Users_Reference", "Users_Company",
@@ -372,11 +373,6 @@ function clearInput(time) {
     }, time);
 }
 // Clear input end
-
-function formReset(){
-    let form = document.getElementById('formformaEditUser');
-    form.reset();
-}
 
 // Date and time formating start
 function formatDate(input) {

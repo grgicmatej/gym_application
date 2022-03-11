@@ -126,7 +126,7 @@ $('.eventCalendar').on('click', function () {
                                             $(this).fadeIn(400, function notification() {
                                                 successNotification('Uspješno izmijenjen termin.');
                                             });
-                                            clearInput(1000);
+                                            clearInput(1000, 'updateEventForm');
                                             },
                                         error: function (){
                                             $("#editCalendarEvent").fadeOut(800, function () {
@@ -204,7 +204,7 @@ $('#newEventForm').on('submit', function (e) {
             $(this).fadeIn(400, function notification() {
                 successNotification('Uspješno spremljen termin.');
             });
-            clearInput(1000);
+            clearInput(1000, 'newEventForm');
         },
         error: function (){
             $("#newCalendarEvent").fadeOut(800, function () {

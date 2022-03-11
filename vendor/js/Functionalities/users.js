@@ -76,7 +76,7 @@ $('#formformaNewUser').on('submit', function (e) {
             $(this).fadeIn(400, function notification() {
                 successNotification('Uspješno registriran korisnik.');
             });
-            clearInput(1000);
+            clearInput(1000, 'formformaNewUser');
         },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -171,7 +171,7 @@ $('#formformaEditMembershipUser').on('submit', function (e) {
                     successNotification('Uspješno postavljena članarina.');
                 });
                 $('#additionalUserSettings').fadeOut('slow', function () {});
-                clearInput(1000);
+                clearInput(1000, 'formformaEditMembershipUser');
                 changeActiveMembershipStatusField(globalVariable, "Da", "#74C687")
 
             },
@@ -295,8 +295,7 @@ $('.additionalUserSettingsUserSettingsButton').on('click', function () {
                                 });
                                 $('#additionalUserSettings').fadeOut('slow', function () {});
                                 clearSearchTable()
-                                clearInput(1000)
-                                formReset();
+                                clearInput(1000, 'formformaEditUser')
                             }else {
                                 $(this).fadeIn(400, function notification() {
                                     warningNotification('ID broj kartice već postoji. Pokušajte ponovo.');

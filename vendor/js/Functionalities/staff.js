@@ -40,7 +40,7 @@ $('#formformaStaffSettingsPassword').on('submit', function (e) {
                         $(this).fadeIn(400, function notification() {
                             successNotification('Nova lozinka je uspješno postavljena.');
                         });
-                        clearInput();
+                        clearInput(1000, 'formformaStaffSettingsPassword');
                     },
                     error: function () {
                         $(this).fadeIn(400, function notification() {
