@@ -120,7 +120,7 @@ Edit_Users_Id.addEventListener('blur', function() {
             success: function (response) {
                 response = JSON.parse(response);
                 if (response === false && (Edit_Users_Id.value !== globalVariable.split('-').pop())) {
-                    warningNotification('Već postoji korisnik s tim ID brojem kartice.'); // tu sam stao, treba popraviti da ne gleda ID ako je od tog korisnika
+                    warningNotification('Već postoji korisnik s tim ID brojem kartice.');
                     RemoveValidClass(Edit_Users_Id)
                     Edit_Users_Id.className += " is-warning";
                 } else {
