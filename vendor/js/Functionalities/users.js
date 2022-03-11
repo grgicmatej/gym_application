@@ -153,49 +153,45 @@ $('#additionalUserSettingsAddExistingMembershipsButton').on('click', function ()
 });
 
 $('#formformaEditMembershipUser').on('submit', function (e) {
-    var id = globalVariable;
     e.preventDefault();
-    $.ajax({
-        type: 'post',
-        url: urlAddress + 'User/editMembershipUser/'+id,
-        data: $('#formformaEditMembershipUser').serialize(),
-        success: function (response) {
-            alert(response)
-            response = JSON.parse(response)
-            alert(response)
-            if (response === false){
-                $(this).fadeIn(400, function notification() {
-                    warningNotification('Datumi su pogrešno označeni. Pokušajte ponovo.');
+
+    if(new Date(document.getElementById('Edit_Users_Memberships_Start_Date').value) < new Date(document.getElementById('Edit_Users_Memberships_End_Date').value)) {
+        $.ajax({
+            type: 'post',
+            url: urlAddress + 'User/editMembershipUser/'+globalVariable,
+            data: $('#formformaEditMembershipUser').serialize(),
+            success: function () {
+                $("#editUserMembershipData").fadeOut(800, function () {
+                    $(this).modal('hide');
                 });
-            }else {
+                $("#profileData").fadeOut(800, function () {
+                    $(this).modal('hide');
+                });
                 $(this).fadeIn(400, function notification() {
-                    successNotification('Sve ok.');
+                    successNotification('Uspješno postavljena članarina.');
+                });
+                $('#additionalUserSettings').fadeOut('slow', function () {});
+                clearInput(1000);
+                changeActiveMembershipStatusField(globalVariable, "Da", "#74C687")
+
+            },
+            error: function (){
+                $(this).fadeIn(400, function notification() {
+                    warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                 });
             }
+        });
+    } else {
+        $(this).fadeIn(400, function notification() {
+            warningNotification('Početni datum ne može biti veći od završnog. Pokušajte ponovo.');
+        });
+    }
 
-            /*
-            $("#newUserRegistration").fadeOut(800, function () {
-                $(this).modal('hide');
-            });
-            $(this).fadeIn(400, function notification() {
-                successNotification('Uspješno registriran korisnik.');
-            });
-            clearInput(1000);
-
-             */
-        },
-        error: function (){
-            $(this).fadeIn(400, function notification() {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            });
-        }
-    });
 });
 
 
 // Pause current membership start
 $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
-    var id = globalVariable;
     $.ajax({
         method: "POST",
         data: {userId: globalVariable},
@@ -209,13 +205,13 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
                 $(this).fadeIn(400, function notification() {
                     successNotification('Članarina je uspješno pauzirana.')
                 });
-                changeActiveMembershipStatusField(id, 'Zamrznuto', '#FFD75F')
+                changeActiveMembershipStatusField(globalVariable, 'Zamrznuto', '#FFD75F')
                 $('#additionalUserSettings').fadeOut('slow', function () {});
             }else {
                 $(this).fadeIn(400, function notification() {
                     successNotification('Članarina je uspješno nastavljena.')
                 });
-                changeActiveMembershipStatusField(id, 'Da', '#74C687')
+                changeActiveMembershipStatusField(globalVariable, 'Da', '#74C687')
                 $('#additionalUserSettings').fadeOut('slow', function () {});
             }
 

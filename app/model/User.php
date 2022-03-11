@@ -9,7 +9,7 @@ class User extends Membership
             return false;
         }else{
             self::newUserMembershipExtension(self::selectMembership(), $id);
-            self::newUserMembershipExtensionArchive(self::lastUserMembershipExtension(), self::selectMembership(), $id);
+            self::newUserMembershipExtensionArchive(self::lastUserMembershipExtension($id), self::selectMembership(), $id);
 
             self::newMembershipSale(self::selectMembership());
 
@@ -17,6 +17,59 @@ class User extends Membership
             self::addNewRecipient(self::viewUserEmail($id), $id, self::membershipEndDate(self::selectMembership()));
             return true;
         }
+    }
+
+    public static function addCurrentUserMembership($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Users_Memberships SET Users_Memberships_Membership_Name=:Users_Memberships_Membership_Name, Users_Memberships_Price=:Users_Memberships_Price, Users_Memberships_Start_Date=:Users_Memberships_Start_Date, Users_Memberships_End_Date=:Users_Memberships_End_Date WHERE Users_Memberships_Users_Id=:Users_Memberships_Users_Id');
+        $stmt->bindValue('Users_Memberships_Membership_Name', Request::post('Users_Memberships_Membership_Name'));
+        $stmt->bindValue('Users_Memberships_Price', Request::post('Users_Memberships_Price'));
+        $stmt->bindValue('Users_Memberships_Start_Date', Request::post('Users_Memberships_Start_Date'));
+        $stmt->bindValue('Users_Memberships_End_Date', Request::post('Users_Memberships_End_Date'));
+        $stmt->bindValue('Users_Memberships_Users_Id', $id);
+        $stmt->execute();
+    }
+
+    public static function addCurrentUserMembershipExtensionArchive($lastMembership, $id)
+    {
+        $db = Db::getInstance();
+        $stmt = $db->prepare("
+                            INSERT INTO Users_Memberships_Archive
+                                (
+                                Users_Memberships_Id,
+                                Users_Memberships_Users_Id,
+                                Users_Memberships_Membership_Id,
+                                Users_Memberships_Membership_Name,
+                                Users_Memberships_Start_Date,
+                                Users_Memberships_End_Date,
+                                Users_Memberships_Price,
+                                Users_Memberships_Gym_Id,
+                                Users_Memberships_Admin_Id
+                                )
+                                VALUES
+                                (
+                                :Users_Memberships_Id,
+                                :Users_Memberships_Users_Id,
+                                :Users_Memberships_Membership_Id,
+                                :Users_Memberships_Membership_Name,
+                                :Users_Memberships_Start_Date,
+                                :Users_Memberships_End_Date,
+                                :Users_Memberships_Price,                                
+                                :Users_Memberships_Gym_Id,
+                                :Users_Memberships_Admin_Id
+                                )
+                            ");
+        $stmt->bindValue('Users_Memberships_Id', $lastMembership->Users_Memberships_Id);
+        $stmt->bindValue('Users_Memberships_Users_Id', $id);
+        $stmt->bindValue('Users_Memberships_Membership_Id', 'custom');
+        $stmt->bindValue('Users_Memberships_Membership_Name', Request::post('Users_Memberships_Membership_Name'));
+        $stmt->bindValue('Users_Memberships_Start_Date', Request::post('Users_Memberships_Start_Date'));
+        $stmt->bindValue('Users_Memberships_End_Date', Request::post('Users_Memberships_End_Date'));
+        $stmt->bindValue('Users_Memberships_Price', Request::post('Users_Memberships_Price'));
+        $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION['Gym_Id']);
+        $stmt->bindValue('Users_Memberships_Admin_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->execute();
     }
 
     public static function allUsersSearch()
@@ -210,12 +263,13 @@ class User extends Membership
 
     public static function editMembershipUser($id)
     {
-        // tu sam stao, ne valja
-        if(date_diff(date_create(Request::post('Users_Memberships_Start_Date')), date_create(Request::post('Users_Memberships_End_Date'))) < 0){
-            return false;
-        }else{
-            return true;
-        }
+        self::addCurrentUserMembership($id);
+        self::addCurrentUserMembershipExtensionArchive(self::lastUserMembershipExtension($id), $id);
+
+        self::existingMembershipSale();
+
+        self::deleteRecipient($id);
+        self::addNewRecipientFromExistingMembership(self::viewUserEmail($id), $id);
     }
 
     public static function essentialUserData($id)
@@ -226,10 +280,11 @@ class User extends Membership
         return $objMerged;
     }
 
-    public static function lastUserMembershipExtension()
+    public static function lastUserMembershipExtension($id)
     {
         $db = Db::getInstance();
-        $stmt = $db->prepare('SELECT * FROM Users_Memberships ORDER BY Users_Memberships_Id DESC LIMIT 1 ');
+        $stmt = $db->prepare('SELECT * FROM Users_Memberships WHERE Users_Memberships_Users_Id=:Users_Memberships_Users_Id ORDER BY Users_Memberships_Id DESC LIMIT 1 ');
+        $stmt->bindValue('Users_Memberships_Users_Id', $id);
         $stmt->execute();
         return $stmt->fetch();
     }

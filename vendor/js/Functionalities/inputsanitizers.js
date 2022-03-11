@@ -14,19 +14,23 @@ var Users_Status = document.getElementById('Users_Status');
 var Users_Reference = document.getElementById('Users_Reference');
 
 var Edit_Users_Id = document.getElementById('Edit_Users_Id');
-var Edit_Users_Id_value = document.getElementById('Edit_Users_Id').value;
 var Edit_Users_Name = document.getElementById('Edit_Users_Name');
 var Edit_Users_Surname = document.getElementById('Edit_Users_Surname');
 var Edit_Users_Email = document.getElementById('Edit_Users_Email');
 var Edit_Users_Phone = document.getElementById('Edit_Users_Phone');
 var Edit_Users_Address = document.getElementById('Edit_Users_Address');
-var Edit_Users_City = document.getElementById('Edit_Users_Oib');
+var Edit_Users_City = document.getElementById('Edit_Users_City');
+var Edit_Users_Oib = document.getElementById('Edit_Users_Oib');
 var Edit_Users_Birthday = document.getElementById('Edit_Users_Birthday');
 var Edit_Users_Gender = document.getElementById('Edit_Users_Gender');
 var Edit_Users_Status = document.getElementById('Edit_Users_Status');
 var Edit_Users_Reference = document.getElementById('Edit_Users_Reference');
 var Edit_Users_Company = document.getElementById('Edit_Users_Company');
 
+var Edit_Users_Memberships_Membership_Name = document.getElementById('Edit_Users_Memberships_Membership_Name');
+var Edit_Users_Memberships_Price = document.getElementById('Edit_Users_Memberships_Price');
+var Edit_Users_Memberships_Start_Date = document.getElementById('Edit_Users_Memberships_Start_Date');
+var Edit_Users_Memberships_End_Date = document.getElementById('Edit_Users_Memberships_End_Date');
 
 var Staff_Password = document.getElementById('Staff_Password');
 var Staff_New_Password = document.getElementById('Staff_New_Password');
@@ -115,7 +119,7 @@ Edit_Users_Id.addEventListener('blur', function() {
             data: $('#formformaEditUser').serialize(),
             success: function (response) {
                 response = JSON.parse(response);
-                if (response === false && (Edit_Users_Id_value !== Edit_Users_Id.value)) {
+                if (response === false && (Edit_Users_Id.value !== globalVariable.split('-').pop())) {
                     warningNotification('Već postoji korisnik s tim ID brojem kartice.'); // tu sam stao, treba popraviti da ne gleda ID ako je od tog korisnika
                     RemoveValidClass(Edit_Users_Id)
                     Edit_Users_Id.className += " is-warning";
@@ -173,6 +177,25 @@ Edit_Users_Status.addEventListener('blur', function() {
 Edit_Users_Reference.addEventListener('blur', function() {
     checkForEmptyData(this);
 });
+
+// edit existing membership
+Edit_Users_Memberships_Membership_Name.addEventListener('blur', function() {
+    checkNameValue(this);
+});
+
+Edit_Users_Memberships_Price.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Users_Memberships_Start_Date.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Users_Memberships_End_Date.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+//tusam
 
 ///// Staff input sanitizers
 
@@ -334,7 +357,8 @@ function clearInput(time) {
             "Staff_Password", "Staff_New_Password", "Staff_Oib", "Staff_Phone", "Staff_Email",
             "Event_Contact_Name_New", "Event_Contact_Phone_New", "Event_Start_Time_New", "Event_End_Time_New",
             "Edit_Users_Id", "Edit_Users_Name", "Edit_Users_Surname", "Edit_Users_Email", "Edit_Users_Phone", "Edit_Users_Address",
-            "Edit_Users_City", "Edit_Users_Oib", "Edit_Users_Birthday", "Edit_Users_Gender", "Edit_Users_Status", "Edit_Users_Reference", "Edit_Users_Company"
+            "Edit_Users_City", "Edit_Users_Oib", "Edit_Users_Birthday", "Edit_Users_Gender", "Edit_Users_Status", "Edit_Users_Reference", "Edit_Users_Company",
+            'Edit_Users_Memberships_Membership_Name', 'Edit_Users_Memberships_Price','Edit_Users_Memberships_Start_Date','Edit_Users_Memberships_End_Date'
         ];
 
         elementsId.forEach((element) => {

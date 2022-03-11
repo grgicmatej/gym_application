@@ -30,6 +30,28 @@ class Sender
         $stmt->execute();
     }
 
+    public static function addNewRecipientFromExistingMembership($usersEmail, $usersId)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('INSERT INTO Sender
+                            (
+                            Sender_Users_Id,
+                            Sender_Users_Email,
+                            Sender_Date
+                            )
+                            VALUES
+                            (
+                            :senderUsersId,
+                            :senderUsersEmail,
+                            :senderDate
+                            )
+                            ');
+        $stmt->bindValue('senderUsersId', $usersId);
+        $stmt->bindValue('senderUsersEmail', $usersEmail->Users_Email);
+        $stmt->bindValue('senderDate', date_create(Request::post('Users_Memberships_End_Date'))->modify('-5 days')->format('Y-m-d'));
+        $stmt->execute();
+    }
+
     public static function deleteRecipient($usersId)
     {
         $db=Db::getInstance();
