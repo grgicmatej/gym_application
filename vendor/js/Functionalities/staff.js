@@ -1,3 +1,44 @@
+// staff profileData modal
+$(document).ajaxComplete(function () {
+    $('.staffProfileData').on('click', function () {
+        var id = $(this).attr('id');
+        if (id) {
+            id = id.split('_')[1];
+            $.ajax({
+                method: "POST",
+                data: {data: id},
+                url: urlAddress + 'Staff/staffInfo/' + id,
+                success: function (response) {
+                    response = JSON.parse(response);
+                    fadeOut("#staffData")
+                    fadeIn("#staffProfileData")
+                    $("#staffEmail").html("<a href='mailto:"+(response["Staff_Email"])+"'><span class='linkanimation'>"+response["Staff_Email"]+"</span></a>");
+                    $("#staffUsersName").text(response["Staff_Username"]);
+                    $("#staffPhone").html("<a href='tel:"+(response["Staff_Phone"])+"'><span class='linkanimation'>"+response["Staff_Phone"]+"</span></a>");
+                    $("#staffSurname").text(response["Staff_Surname"]);
+                    $("#staffName").text(response["Staff_Name"]);
+                    document.getElementById("staffActiveStatusIcon").style.color = response["Staff_Active"] == true ? '#28a745' : '#dc3545';
+                },
+                error: function (){
+                    warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                }
+            });
+        }
+    });
+});
+
+$('#additionalStaffSettingsButton').on('click', function () {
+    if (document.getElementById('additionalStaffSettings').style.display === "none"){
+        fadeIn('#additionalStaffSettings')
+        checkMembershipPause()
+    }else {
+        fadeOut('#additionalStaffSettings')
+    }
+});
+
+// staff profileData modal end
+
+
 // staffSettings modal start
 $('.staffSettings').on('click', function () {
     $.ajax({

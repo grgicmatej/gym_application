@@ -93,6 +93,76 @@
 </div>
 <!-- profileData Modal end -->
 
+<!-- staffProfileeData Modal -->
+<div class="modal fade" id="staffProfileData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 bg-c-lite-green" id="modal-body">
+                        <div class="card-block text-center text-white" style="padding-top: 25%">
+                            <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                            <h5 class="f-w-600" id="staffUsersName"></h5>
+                            <h6 id="id" class=""></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o zaposleniku <i class="fas fa-circle staffActiveStatusIcon" id="staffActiveStatusIcon"></i></h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Ime</p>
+                                    <h6 class="text-muted f-w-400" id="staffName"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Prezime</p>
+                                    <h6 class="text-muted f-w-400" id="staffSurname"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Email adresa</p>
+                                    <h6 class="text-muted f-w-400" id="staffEmail"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                    <h6 class="text-muted f-w-400" id="staffPhone"></h6>
+                                </div>
+
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-12 text-left">
+                                    <h6 class="text-muted f-w-400" id="additionalStaffSettingsButton">Napredno upravljanje <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span></h6>
+                                </div>
+                            </div>
+                            <div id="additionalStaffSettings" style="display: none;">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsUserMembershipPauseButton">Povijest članarina</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalUserSettingsUserSettingsButton">Uređivanje zaposlenika</p>
+                                    </div>
+                                </div>
+                                <div class="row m-t-40">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsHistoryMembershipsButton">Restartiranje lozinke</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsAddExistingMembershipsButton">Deaktivacija korisnika</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- staffProfileeData Modal end -->
+
 <!-- membershipData Modal start-->
 <div class="modal fade" id="membershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
