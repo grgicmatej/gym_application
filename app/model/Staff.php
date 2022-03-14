@@ -70,11 +70,11 @@ class staff
         $stmt->execute();
     }
 
-    public static function StaffData()
+    public static function StaffData($id)
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Staff WHERE Staff_Id=:Staff_Id');
-        $stmt->bindValue('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->bindValue('Staff_Id', $id !== 0 ? $id : Session::getInstance()->getUser()->Staff_Id);
         $stmt->execute();
         return $stmt->fetch();
     }

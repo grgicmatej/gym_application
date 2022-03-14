@@ -11,7 +11,7 @@ $(document).ajaxComplete(function () {
                 success: function (response) {
                     response = JSON.parse(response);
 
-                    $("#profileData").modal('show');
+                    fadeIn("#profileData")
                     $("#email").text(response["Users_Email"]);
                     $("#id").text(response["Users_Id"].split('-').pop());
                     $("#usersName").text(response["Users_Name"] + " " + response["Users_Surname"]);
@@ -44,12 +44,8 @@ $('.potvrdidolazak').on('click', function () {
         data: {data: id},
         url: urlAddress + 'User/addUserArrival/' + id,
         success: function () {
-            $("#profileData").fadeOut(800, function () {
-                $(this).modal('hide');
-            });
-            $(this).fadeIn(400, function notification() {
-                successNotification('Uspješno potvrđen dolazak.')
-            });
+            fadeOut("#profileData")
+            successNotification('Uspješno potvrđen dolazak.')
         },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -60,7 +56,7 @@ $('.potvrdidolazak').on('click', function () {
 
 // Registration of new user
 $('.newUserRegistration').on('click', function () {
-    $("#newUserRegistration").modal('show');
+    fadeIn("#newUserRegistration")
 });
 
 $('#formformaNewUser').on('submit', function (e) {
@@ -70,13 +66,9 @@ $('#formformaNewUser').on('submit', function (e) {
         url: urlAddress + 'User/addNewUser/',
         data: $('#formformaNewUser').serialize(),
         success: function () {
-            $("#newUserRegistration").fadeOut(800, function () {
-                $(this).modal('hide');
-            });
-            $(this).fadeIn(400, function notification() {
-                successNotification('Uspješno registriran korisnik.');
-            });
-            clearInput(1000);
+            fadeOut("#newUserRegistration")
+            successNotification('Uspješno registriran korisnik.');
+            clearInput(1000, 'formformaNewUser');
         },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -108,20 +100,19 @@ function checkMembershipPause(){
 
 $('#additionalUserSettingsButton').on('click', function () {
     if (document.getElementById('additionalUserSettings').style.display === "none"){
-        $('#additionalUserSettings').fadeIn('slow', function () {});
+        fadeIn('#additionalUserSettings')
         checkMembershipPause()
     }else {
-        $('#additionalUserSettings').fadeOut('slow', function () {});
+        fadeOut('#additionalUserSettings')
     }
 });
 
 // History of memberships
 $('#additionalUserSettingsHistoryMembershipsButton').on('click', function () {
-    var id = globalVariable;
-    $("#membershipHistoryUserData").modal('show');
+    fadeIn("#membershipHistoryUserData")
     $.ajax({
         method: "POST",
-        data: {Users_Memberships_Users_Id: id},
+        data: {Users_Memberships_Users_Id: globalVariable},
         url: urlAddress + 'User/checkUserMemberships/',
         success: function (data) {
             document.getElementById('dataTableBodyUserHistoryMemberships').innerHTML = "";
@@ -132,12 +123,12 @@ $('#additionalUserSettingsHistoryMembershipsButton').on('click', function () {
 
             searchData.innerHTML = response.reduce((options, {Users_Memberships_Membership_Name, Users_Memberships_Start_Date, Users_Memberships_End_Date, Staff_Name, Staff_Surname}) =>
                     options += `<tr>
-                                        <td class="text-left" id="">${Users_Memberships_Membership_Name}</td>
-                                        <td class="text-left" id="">${formatDate(Users_Memberships_Start_Date)}</td>
-                                        <td class="text-left" id="">${formatDate(Users_Memberships_End_Date)}</td>
-                                        <td class="text-left" id="">${Staff_Name} ${Staff_Surname}</td>
-                                    </tr>
-                                    `,
+                                    <td class="text-left" id="">${Users_Memberships_Membership_Name}</td>
+                                    <td class="text-left" id="">${formatDate(Users_Memberships_Start_Date)}</td>
+                                    <td class="text-left" id="">${formatDate(Users_Memberships_End_Date)}</td>
+                                    <td class="text-left" id="">${Staff_Name} ${Staff_Surname}</td>
+                                </tr>
+                                `,
                 ``);
         },
         error: function (){
@@ -148,8 +139,7 @@ $('#additionalUserSettingsHistoryMembershipsButton').on('click', function () {
 
 // Adding existing membership
 $('#additionalUserSettingsAddExistingMembershipsButton').on('click', function () {
-    $("#editUserMembershipData").modal('show');
-    console.log("postojeća članarina")
+    fadeIn("#editUserMembershipData")
 });
 
 $('#formformaEditMembershipUser').on('submit', function (e) {
@@ -161,34 +151,21 @@ $('#formformaEditMembershipUser').on('submit', function (e) {
             url: urlAddress + 'User/editMembershipUser/'+globalVariable,
             data: $('#formformaEditMembershipUser').serialize(),
             success: function () {
-                $("#editUserMembershipData").fadeOut(800, function () {
-                    $(this).modal('hide');
-                });
-                $("#profileData").fadeOut(800, function () {
-                    $(this).modal('hide');
-                });
-                $(this).fadeIn(400, function notification() {
-                    successNotification('Uspješno postavljena članarina.');
-                });
-                $('#additionalUserSettings').fadeOut('slow', function () {});
-                clearInput(1000);
+                fadeOut("#editUserMembershipData")
+                fadeOut("#profileData")
+                successNotification('Uspješno postavljena članarina.')
+                fadeOut("#additionalUserSettings")
+                clearInput(1000, 'formformaEditMembershipUser')
                 changeActiveMembershipStatusField(globalVariable, "Da", "#74C687")
-
             },
             error: function (){
-                $(this).fadeIn(400, function notification() {
-                    warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-                });
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.')
             }
         });
     } else {
-        $(this).fadeIn(400, function notification() {
-            warningNotification('Početni datum ne može biti veći od završnog. Pokušajte ponovo.');
-        });
+        warningNotification('Početni datum ne može biti veći od završnog. Pokušajte ponovo.');
     }
-
 });
-
 
 // Pause current membership start
 $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
@@ -198,28 +175,19 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
         url: urlAddress + 'User/pauseMembership/',
         success: function (response) {
             response = JSON.parse(response)
-            $("#profileData").fadeOut(800, function () {
-                $(this).modal('hide');
-            });
+            fadeOut("#profileData")
             if (response === false){
-                $(this).fadeIn(400, function notification() {
-                    successNotification('Članarina je uspješno pauzirana.')
-                });
+                successNotification('Članarina je uspješno pauzirana.')
                 changeActiveMembershipStatusField(globalVariable, 'Zamrznuto', '#FFD75F')
-                $('#additionalUserSettings').fadeOut('slow', function () {});
+                fadeOut('#additionalUserSettings')
             }else {
-                $(this).fadeIn(400, function notification() {
-                    successNotification('Članarina je uspješno nastavljena.')
-                });
+                successNotification('Članarina je uspješno nastavljena.')
                 changeActiveMembershipStatusField(globalVariable, 'Da', '#74C687')
-                $('#additionalUserSettings').fadeOut('slow', function () {});
+                fadeOut('#additionalUserSettings')
             }
-
         },
         error: function (){
-            $(this).fadeIn(400, function notification() {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            });
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
 });
@@ -242,25 +210,21 @@ function changeActiveMembershipStatusField(id, text, color){
             globalVariable = response["Users_Id"];
         },
         error: function () {
-            $(this).fadeIn(400, function notification() {
-                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-            });
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
         }
     });
 }
 
 // User edit start
 $('.additionalUserSettingsUserSettingsButton').on('click', function () {
-    var id = globalVariable;
-
         $.ajax({
             method: "POST",
-            data: {data: id},
-            url: urlAddress + 'User/viewUser/' + id,
+            data: {data: globalVariable},
+            url: urlAddress + 'User/viewUser/' + globalVariable,
             success: function (response) {
                 response = JSON.parse(response);
 
-                $("#editUserData").modal('show');
+                fadeIn("#editUserData")
                 document.getElementById("Edit_Users_Id").value = response["Users_Id"].split('-').pop();
                 document.getElementById("Edit_Users_Name").value = response["Users_Name"];
                 document.getElementById("Edit_Users_Surname").value = response["Users_Surname"];
@@ -284,29 +248,20 @@ $('.additionalUserSettingsUserSettingsButton').on('click', function () {
 
                             response = JSON.parse(response)
                             if (response === true){
-                                $("#editUserData").fadeOut(800, function () {
-                                    $(this).modal('hide');
-                                });
-                                $("#profileData").fadeOut(800, function () {
-                                    $(this).modal('hide');
-                                });
-                                $(this).fadeIn(400, function notification() {
-                                    successNotification('Podaci su uspješno spremljeni.')
-                                });
-                                $('#additionalUserSettings').fadeOut('slow', function () {});
+                                fadeOut("#editUserData");
+                                fadeOut("#profileData");
+                                successNotification('Podaci su uspješno spremljeni.');
+                                fadeOut('#additionalUserSettings')
                                 clearSearchTable()
-                                clearInput(1000)
-                                formReset();
+                                clearInput(1000, 'formformaEditUser')
                             }else {
-                                $(this).fadeIn(400, function notification() {
-                                    warningNotification('ID broj kartice već postoji. Pokušajte ponovo.');
-                                });
-                                $('#additionalUserSettings').fadeOut('slow', function () {});
+                                warningNotification('ID broj kartice već postoji. Pokušajte ponovo.');
+                                fadeOut('#additionalUserSettings')
                             }
                         },
                         error: function (){
                             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
-                            $('#additionalUserSettings').fadeOut('slow', function () {});
+                            fadeOut('#additionalUserSettings')
                         }
                     });
                 });

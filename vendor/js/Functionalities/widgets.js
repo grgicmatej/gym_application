@@ -1,17 +1,25 @@
 // widgets
 function successNotification(message) {
-    toastr.success(message)
+    $(this).fadeIn(400, function notification() {
+        toastr.success(message)
+    });
 }
 
 function infoNotification(message) {
-    toastr.info(message)
+    $(this).fadeIn(400, function notification() {
+        toastr.info(message)
+    });
 }
 
 function errorNotification(message) {
-    toastr.error(message)
+    $(this).fadeIn(400, function notification() {
+        toastr.error(message)
+    });
 }
 
 function warningNotification(message) {
-    toastr.warning(message)
+    $(this).fadeIn(400, function notification() {
+        toastr.warning(message)
+    });
 }
 // widgets end
