@@ -20,7 +20,7 @@ $('.membershipData').on('click', function () {
                             } else {
                                 fadeOut("#membershipData")
                                 successNotification('Uspješno produžena članarina.')
-                                changeActiveMembershipStatusField(globalVariable, "Da", "#74C687")
+                                changeActiveMembershipStatusField(globalVariable, "Da", successColor)
                             }
                         }
                     });

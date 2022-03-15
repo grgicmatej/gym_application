@@ -156,7 +156,7 @@ $('#formformaEditMembershipUser').on('submit', function (e) {
                 successNotification('Uspješno postavljena članarina.')
                 fadeOut("#additionalUserSettings")
                 clearInput(1000, 'formformaEditMembershipUser')
-                changeActiveMembershipStatusField(globalVariable, "Da", "#74C687")
+                changeActiveMembershipStatusField(globalVariable, "Da", successColor)
             },
             error: function (){
                 warningNotification('Došlo je do pogreške. Pokušajte ponovo.')
@@ -178,11 +178,11 @@ $('#additionalUserSettingsUserMembershipPauseButton').on('click', function () {
             fadeOut("#profileData")
             if (response === false){
                 successNotification('Članarina je uspješno pauzirana.')
-                changeActiveMembershipStatusField(globalVariable, 'Zamrznuto', '#FFD75F')
+                changeActiveMembershipStatusField(globalVariable, 'Zamrznuto', membershipPauseColor)
                 fadeOut('#additionalUserSettings')
             }else {
                 successNotification('Članarina je uspješno nastavljena.')
-                changeActiveMembershipStatusField(globalVariable, 'Da', '#74C687')
+                changeActiveMembershipStatusField(globalVariable, 'Da', successColor)
                 fadeOut('#additionalUserSettings')
             }
         },

@@ -15,7 +15,7 @@ $('.eventCalendar').on('click', function () {
                 end: new Date(response[i]["EventYearEnd"], (response[i]["EventMonthEnd"]-1), response[i]["EventDayEnd"], response[i]["EventHourEnd"], 0, 0),
                 allday: false,
                 id: response[i]["Event_Id"],
-                backgroundColor: '#16A2B8'
+                backgroundColor: calendarFieldColor
             })}
             fadeIn("#eventCalendar")
 

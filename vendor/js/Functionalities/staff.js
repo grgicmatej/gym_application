@@ -17,7 +17,7 @@ $(document).ajaxComplete(function () {
                     $("#staffPhone").html("<a href='tel:"+(response["Staff_Phone"])+"'><span class='linkanimation'>"+response["Staff_Phone"]+"</span></a>");
                     $("#staffSurname").text(response["Staff_Surname"]);
                     $("#staffName").text(response["Staff_Name"]);
-                    document.getElementById("staffActiveStatusIcon").style.color = response["Staff_Active"] == true ? '#28a745' : '#dc3545';
+                    document.getElementById("staffActiveStatusIcon").style.color = response["Staff_Active"] == true ? successColor : errorColor;
                 },
                 error: function (){
                     warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -122,7 +122,7 @@ $('.staff').on('click', function () {
                                     <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
                                     <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
                                     <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
-                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? '#74C687': '#E87C87'}; color: white; font-weight: bolder" class="text-center">
+                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
                                         ${(Staff_Active == 1) ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center staffProfileData" id="i_${Staff_Id}">
