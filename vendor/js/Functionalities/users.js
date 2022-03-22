@@ -100,10 +100,10 @@ function checkMembershipPause(){
 
 $('#additionalUserSettingsButton').on('click', function () {
     if (document.getElementById('additionalUserSettings').style.display === "none"){
-        fadeIn('#additionalUserSettings')
+        document.getElementById('additionalUserSettings').style.display = "block";
         checkMembershipPause()
     }else {
-        fadeOut('#additionalUserSettings')
+        document.getElementById('additionalUserSettings').style.display = "none";
     }
 });
 

@@ -29,10 +29,9 @@ $(document).ajaxComplete(function () {
 
 $('#additionalStaffSettingsButton').on('click', function () {
     if (document.getElementById('additionalStaffSettings').style.display === "none"){
-        fadeIn('#additionalStaffSettings')
-        checkMembershipPause()
+        document.getElementById('additionalStaffSettings').style.display = "block";
     }else {
-        fadeOut('#additionalStaffSettings')
+        document.getElementById('additionalStaffSettings').style.display = "none";
     }
 });
 
