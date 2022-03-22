@@ -3,6 +3,11 @@
 
 class StaffController extends SecurityController
 {
+    public function changeActiveStatusStaff()
+    {
+        echo json_encode(Staff::changeActiveStatus());
+    }
+
     public function passwordChecker()
     {
         echo json_encode(Staff::passwordChangeCheck());

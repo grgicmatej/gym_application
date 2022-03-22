@@ -3,6 +3,26 @@
 
 class staff
 {
+    public static function checkActiveStatusStaff()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Staff WHERE Staff_Id=:Staff_Id AND Staff_Active=:Staff_Active');
+        $stmt->bindValue('Staff_Id', Request::post('staffId'));
+        $stmt->bindValue('Staff_Active', true);
+        $stmt->execute();
+        return $stmt->rowCount();
+    }
+
+    public static function changeActiveStatus()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Staff SET Staff_Active=:Staff_Active WHERE Staff_Id=:Staff_Id');
+        $stmt->bindValue('Staff_Active', (self::checkActiveStatusStaff() ? 0 : 1));
+        $stmt->bindValue('Staff_Id', Request::post('staffId'));
+        $stmt->execute();
+        return self::checkActiveStatusStaff();
+    }
+
     public static function loginCheck()
     {
         $db=Db::getInstance();

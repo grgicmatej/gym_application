@@ -3,11 +3,11 @@ $(document).ajaxComplete(function () {
     $('.staffProfileData').on('click', function () {
         var id = $(this).attr('id');
         if (id) {
-            id = id.split('_')[1];
+            globalVariableStaff = id.split('_')[1];
             $.ajax({
                 method: "POST",
-                data: {data: id},
-                url: urlAddress + 'Staff/staffInfo/' + id,
+                data: {data: globalVariableStaff},
+                url: urlAddress + 'Staff/staffInfo/' + globalVariableStaff,
                 success: function (response) {
                     response = JSON.parse(response);
                     fadeOut("#staffData")
@@ -17,7 +17,8 @@ $(document).ajaxComplete(function () {
                     $("#staffPhone").html("<a href='tel:"+(response["Staff_Phone"])+"'><span class='linkanimation'>"+response["Staff_Phone"]+"</span></a>");
                     $("#staffSurname").text(response["Staff_Surname"]);
                     $("#staffName").text(response["Staff_Name"]);
-                    document.getElementById("staffActiveStatusIcon").style.color = response["Staff_Active"] == true ? successColor : errorColor;
+                    $("#additionalStaffSettingsDeactivateStaff").text(response["Staff_Active"] === '1'? 'Deaktivacija zaposlenika' : 'Aktivacija zaposlenika');
+                    document.getElementById("staffActiveStatusIcon").style.color = response["Staff_Active"] === '1'? successColor : errorColor;
                 },
                 error: function (){
                     warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -133,5 +134,32 @@ $('.staff').on('click', function () {
         }
     });
 });
-// tu sam stao, urediti staff profile datu da ima profil kao i za korisnika. Dodati opcije "Deaktiviraj/aktiviraj zaposlenika", "Restartiraj lozinku"
+
+// Activate - deactivate staff start
+
+$('#additionalStaffSettingsDeactivateStaff').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {staffId: globalVariableStaff},
+        url: urlAddress + 'Staff/changeActiveStatusStaff/',
+        success: function (response) {
+            response = JSON.parse(response)
+            fadeOut("#staffProfileData")
+            if (response === 0){
+                successNotification('Zaposlenik je uspješno deaktiviran.')
+                fadeOut('#additionalStaffSettings')
+            }else {
+                successNotification('Zaposlenik je uspješno aktiviran.')
+                fadeOut('#additionalStaffSettings')
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+
+// Activate - deactivate staff end
+
+
 // staffSettings modal end
