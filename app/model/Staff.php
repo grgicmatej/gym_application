@@ -90,7 +90,7 @@ class staff
         $stmt->execute();
     }
 
-    public static function StaffData($id)
+    public static function staffData($id)
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Staff WHERE Staff_Id=:Staff_Id');
