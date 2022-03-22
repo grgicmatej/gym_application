@@ -45,6 +45,18 @@ class staff
         unset($_POST['Staff_Password']);
     }
 
+    public static function newPasswordByAdmin()
+    {
+        $newPassword=self::generatePassword();
+
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Staff SET Staff_Password=:Staff_Password WHERE Staff_Id=:Staff_Id');
+        $stmt->bindValue('Staff_Password', password_hash($newPassword, PASSWORD_BCRYPT));
+        $stmt->bindValue('Staff_Id', Request::post('staffId'));
+        $stmt->execute();
+        return $newPassword;
+    }
+
     public static function passwordCheck()
     {
         $db=Db::getInstance();
@@ -106,5 +118,16 @@ class staff
         $stmt->bindValue('Gym_Id', $_SESSION['Gym_Id']);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    public static function generatePassword()
+    {
+        $characters = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomPassword = '';
+        for ($i = 0; $i < 10; $i++) {
+            $randomPassword .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomPassword;
     }
 }

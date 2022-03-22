@@ -3,6 +3,11 @@
 
 class StaffController extends SecurityController
 {
+    public function changeStaffPassword()
+    {
+        echo json_encode(Staff::newPasswordByAdmin());
+    }
+
     public function changeActiveStatusStaff()
     {
         echo json_encode(Staff::changeActiveStatus());

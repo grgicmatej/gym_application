@@ -136,7 +136,6 @@ $('.staff').on('click', function () {
 });
 
 // Activate - deactivate staff start
-
 $('#additionalStaffSettingsDeactivateStaff').on('click', function () {
     $.ajax({
         method: "POST",
@@ -158,8 +157,29 @@ $('#additionalStaffSettingsDeactivateStaff').on('click', function () {
         }
     });
 });
-
 // Activate - deactivate staff end
+
+// Staff password restart start
+$('#additionalStaffSettingsRestartPassword').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {staffId: globalVariableStaff},
+        url: urlAddress + 'Staff/changeStaffPassword/',
+        success: function (response) {
+            response = JSON.parse(response)
+            fadeOut("#staffProfileData")
+            successNotification('Lozinka zaposlenika je uspješno generirana.')
+            fadeOut('#additionalStaffSettings')
+            fadeIn('#newPasswordModal')
+            $("#newStaffPassword").text(response);
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// Staff password restart end
+
 
 
 // staffSettings modal end
