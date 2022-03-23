@@ -3,6 +3,16 @@
 
 class staff
 {
+    public static function checkStaffMemberships()
+    {
+        $db = Db::getInstance();
+        $stmt = $db->prepare('SELECT Users.Users_Name, Users.Users_Surname, Users_Memberships_Archive.Users_Memberships_Membership_Name, Users_Memberships_Archive.Users_Memberships_Start_Date, Users_Memberships_Archive.Users_Memberships_Price FROM Users_Memberships_Archive LEFT JOIN Users ON Users_Memberships_Archive.Users_Memberships_Users_Id = Users.Users_Id WHERE Users_Memberships_Archive.Users_Memberships_Admin_Id=:Users_Memberships_Admin_Id AND Users_Memberships_Archive.Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id ORDER BY Users_Memberships_Archive.Users_Memberships_Start_Date DESC');
+        $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION['Gym_Id']);
+        $stmt->bindValue('Users_Memberships_Admin_Id', Request::post('Users_Memberships_Admin_Id'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public static function checkActiveStatusStaff()
     {
         $db=Db::getInstance();

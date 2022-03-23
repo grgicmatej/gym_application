@@ -204,5 +204,35 @@ function toggleClassStaff(className){
     }
 }
 
+// staff history memberships start
+$('#additionalStaffSettingsHistoryMembershipsButton').on('click', function () {
+    fadeIn("#membershipHistoryStaffData")
+    $.ajax({
+        method: "POST",
+        data: {Users_Memberships_Admin_Id: globalVariableStaff},
+        url: urlAddress + 'Staff/checkStaffMemberships/',
+        success: function (data) {
+            document.getElementById('dataTableBodyStaffHistoryMemberships').innerHTML = "";
+            document.getElementById("dt4").style.display = "block";
+
+            response = JSON.parse(data);
+            const searchData = document.getElementById('dataTableBodyStaffHistoryMemberships');
+
+            searchData.innerHTML = response.reduce((options, {Users_Name, Users_Surname, Users_Memberships_Membership_Name, Users_Memberships_Start_Date, Users_Memberships_Price}) =>
+                    options += `<tr>
+                                    <td class="text-left" id="">${Users_Name} ${Users_Surname}</td>
+                                    <td class="text-left" id="">${Users_Memberships_Membership_Name}</td>
+                                    <td class="text-left" id="">${formatDate(Users_Memberships_Start_Date)}</td>
+                                    <td class="text-left" id="">${Users_Memberships_Price}</td>
+                                </tr>
+                                `,
+                ``);
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// staff history memberships end
 
 // staffSettings modal end

@@ -138,7 +138,7 @@
                             <div id="additionalStaffSettings" style="display: none;">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsUserMembershipPauseButton">Povijest članarina</p>
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalStaffSettingsHistoryMembershipsButton">Povijest članarina</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 btn btn-block btn-outline-secondary additionalUserSettingsUserSettingsButton">Uređivanje zaposlenika</p>
@@ -883,7 +883,7 @@
 <!-- all Staff check modal end -->
 
 <!-- user history memberships modal start -->
-<div class="modal fade" id="membershipHistoryUserData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="membershipHistoryUserData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
 
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -914,7 +914,6 @@
 </div>
 <!-- user history memberships modal end -->
 
-
 <!-- new password Modal start -->
 <div class="modal fade" id="newPasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-sm">
@@ -939,3 +938,33 @@
     </div>
 </div>
 <!-- new password Modal end -->
+
+<!-- Staff history memberships modal start -->
+<div class="modal fade" id="membershipHistoryStaffData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Pregled svih članarina zaposlenika</h6>
+
+                    <div class="card-body" id="dt4" style="max-width: available">
+                        <table class="table" id="" width=100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th style="width: auto">Korisnik</th>
+                                <th style="width: auto">Naziv članarine</th>
+                                <th style="width: auto">Datum</th>
+                                <th style="width: auto">Cijena</th>
+                            </tr>
+                            </thead>
+                            <tbody id="dataTableBodyStaffHistoryMemberships"></tbody>
+                        </table>
+                    </div>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Staff history memberships modal end -->
