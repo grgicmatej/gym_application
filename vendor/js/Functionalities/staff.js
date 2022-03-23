@@ -112,18 +112,18 @@ $('.staff').on('click', function () {
         success: function (data) {
             document.getElementById('dataTableBodyStaff').innerHTML = "";
             document.getElementById("dt2").style.display = "block";
-
+            $("#displayInactiveStaff").html('Prikaži inaktivne zaposlenike <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span>');
             response = JSON.parse(data);
             const searchData = document.getElementById('dataTableBodyStaff');
 
             searchData.innerHTML = response.reduce((options, {Staff_Id, Staff_Name, Staff_Surname, Staff_Username, Staff_Phone, Staff_Email, Staff_Active}) =>
-                    options += `<tr>
+                    options += `<tr class="staffActive_${Staff_Active}">
                                     <td class="text-left" id="${Staff_Id}_staffName">${Staff_Name} ${Staff_Surname}</td>
                                     <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
                                     <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
                                     <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
                                     <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
-                                        ${(Staff_Active == 1) ? 'Da': 'Ne'}
+                                        ${(Staff_Active) ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center staffProfileData" id="i_${Staff_Id}">
                                         <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
@@ -131,8 +131,18 @@ $('.staff').on('click', function () {
                                 </tr>
                                 `,
                 ``);
+            var elements = document.getElementsByClassName("staffActive_0");
+
+            for (var i = 0; i < elements.length; i++){
+                elements[i].style.display = 'none';
+            }
+
         }
     });
+});
+
+$('#displayInactiveStaff').on('click', function () {
+   toggleClassStaff('staffActive_0')
 });
 
 // Activate - deactivate staff start
@@ -180,6 +190,19 @@ $('#additionalStaffSettingsRestartPassword').on('click', function () {
 });
 // Staff password restart end
 
+function toggleClassStaff(className){
+    var elements = document.getElementsByClassName(className)
+
+    for (var i = 0; i < elements.length; i++){
+        if (elements[i].style.display === 'none'){
+            elements[i].style.display = 'table-row';
+            $("#displayInactiveStaff").html('Sakrij inaktivne zaposlenike <span><i style="padding-left: 5px" class="fas fa-angle-down"></i></span>');
+        }else {
+            elements[i].style.display = 'none';
+            $("#displayInactiveStaff").html('Prikaži inaktivne zaposlenike <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span>');
+        }
+    }
+}
 
 
 // staffSettings modal end
