@@ -235,4 +235,57 @@ $('#additionalStaffSettingsHistoryMembershipsButton').on('click', function () {
 });
 // staff history memberships end
 
+// edit staff data start
+$('.additionalStaffEditSettings').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {data: globalVariableStaff},
+        url: urlAddress + 'Staff/staffInfo/' + globalVariableStaff,
+        success: function (response) {
+            response = JSON.parse(response)
+            fadeOut("#staffProfileData")
+            fadeIn("#staffEdit")
+            document.getElementById("Staff_Name_Edit").value = response["Staff_Name"];
+            document.getElementById("Staff_Surname_Edit").value = response["Staff_Surname"];
+            document.getElementById("Staff_Username_Edit").value = response["Staff_Username"];
+            document.getElementById("Staff_Oib_Edit").value = response["Staff_Oib"];
+            document.getElementById("Staff_Phone_Edit").value = response["Staff_Phone"];
+            document.getElementById("Staff_Email_Edit").value = response["Staff_Email"];
+            },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+
+$('#formformaEditStaff').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Staff/editStaff/'+globalVariableStaff,
+        data: $('#formformaEditStaff').serialize(),
+        success: function (response) {
+
+            response = JSON.parse(response)
+            if (response === true){
+                fadeOut("#staffEdit");
+                successNotification('Podaci zaposlenika su uspješno spremljeni.');
+                clearInput(1000, 'formformaEditStaff')
+                fadeOut('#additionalStaffSettingsButton')
+            }else {
+                warningNotification('Korisničko ime zaposlenika već postoji. Pokušajte ponovo.');
+                fadeOut('#additionalStaffSettingsButton')
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#additionalUserSettings')
+            fadeOut('#additionalStaffSettingsButton')
+        }
+    });
+});
+
+//spremanje staff edit podataka radi ali treba validirati i označiti sve podatke sa onim klasama,
+// također provjeriti je li username isti kao i prijašnji pa ako je da ne izbacuje grešku
+// edit staff data end
 // staffSettings modal end
