@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/Staff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Staff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/inputsanitizers.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/inputsanitizers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,7 @@
       <workItem from="1647959545129" duration="19000" />
       <workItem from="1647959605829" duration="2918000" />
       <workItem from="1648039599065" duration="8618000" />
-      <workItem from="1648126448721" duration="6283000" />
+      <workItem from="1648126448721" duration="6870000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

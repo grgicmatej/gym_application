@@ -5,8 +5,8 @@ teretane
 Stolni sportovi         +
 Nogomet                 +
 
+// za nogomet, treba validirati datume, ne smije prihvacat datum enda ranije od starta, takoder ovaj komentar dolje
 // Tu sam stao, CRUD radi ali treba iskoristiti inputSanitizers pa dodijeliti klase za unos kontakta/telefona/starta/enda, očistiti po završetku
-// očišćeno za unos novog, još treba dodijeliti klase za C i U segment
 
 aktivni korisnici       / potrebno? - zakomentirano
 inaktivni korisnici     / potrebno? - zakomentirano
@@ -14,7 +14,7 @@ svi korisnici           / potrebno? - zakomentirano
 
 novi korisnik           +
 
-zaposlenici
+zaposlenici             +
 članarine
 statistika
 financije
