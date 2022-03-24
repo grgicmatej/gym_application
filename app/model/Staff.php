@@ -5,9 +5,9 @@ class staff
 {
     public static function editStaff($id)
     {
-        if (!self::checkStaffUsername()){
-            $db=Db::getInstance();
-            $stmt=$db->prepare('UPDATE Staff SET 
+        if (((self::staffData($id)->Staff_Username != Request::post('Staff_Username')) && !self::checkStaffUsername()) || (self::staffData($id)->Staff_Username == Request::post('Staff_Username'))){
+            $db = Db::getInstance();
+            $stmt = $db->prepare('UPDATE Staff SET 
                                         Staff_Name=:Staff_Name, 
                                         Staff_Surname=:Staff_Surname, 
                                         Staff_Username=:Staff_Username, 
@@ -25,7 +25,8 @@ class staff
             $stmt->bindValue('Staff_Id', $id);
             $stmt->execute();
             return true;
-        }else{
+
+        } else {
             return false;
         }
     }

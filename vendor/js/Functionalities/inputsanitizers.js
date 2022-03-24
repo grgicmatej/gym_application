@@ -38,6 +38,13 @@ var Staff_Oib = document.getElementById('Staff_Oib');
 var Staff_Phone = document.getElementById('Staff_Phone');
 var Staff_Email = document.getElementById('Staff_Email');
 
+var Edit_Staff_Name = document.getElementById('Edit_Staff_Name');
+var Edit_Staff_Surname = document.getElementById('Edit_Staff_Surname');
+var Edit_Staff_Username = document.getElementById('Edit_Staff_Username');
+var Edit_Staff_Oib = document.getElementById('Edit_Staff_Oib');
+var Edit_Staff_Phone = document.getElementById('Edit_Staff_Phone');
+var Edit_Staff_Email = document.getElementById('Edit_Staff_Email');
+
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -195,8 +202,6 @@ Edit_Users_Memberships_End_Date.addEventListener('blur', function() {
     checkForEmptyData(this);
 });
 
-//tusam
-
 ///// Staff input sanitizers
 
 Staff_Password.addEventListener('blur', function() {
@@ -271,6 +276,68 @@ Staff_Email.addEventListener('blur', function() {
 
 Staff_Phone.addEventListener('blur', function() {
     checkPhoneValue(this)
+});
+
+
+
+
+
+// edit existing staff
+
+Edit_Staff_Name
+    .addEventListener('blur', function() {
+        checkNameValue(this);
+    });
+
+Edit_Staff_Surname.addEventListener('blur', function() {
+    checkNameValue(this);
+});
+
+Edit_Staff_Email.addEventListener('blur', function() {
+    checkEmailValue(this)
+});
+
+Edit_Staff_Phone.addEventListener('blur', function() {
+    checkPhoneValue(this)
+});
+
+Edit_Staff_Oib.addEventListener('blur', function() {
+    checkOibValue(this)
+});
+
+Edit_Staff_Username.addEventListener('blur', function() {
+    if (this.value.length > 3) {
+        $.ajax({
+            type: 'post',
+            url: urlAddress + 'Staff/staffInfo/'+globalVariableStaff,
+            success: function (response) {
+                response = JSON.parse(response);
+                if (Edit_Staff_Username.value !== response['Staff_Username']) {
+                    $.ajax({
+                        type: 'post',
+                        url: urlAddress + 'Staff/checkStaffUsername/',
+                        data: {Staff_Username: Edit_Staff_Username.value},
+                        success: function (response) {
+                            response = JSON.parse(response);
+                            if (response === 1) {
+                                warningNotification('Korisničko ime zaposlenika već postoji. Pokušajte ponovo.');
+                                RemoveValidClass(Edit_Staff_Username)
+                                Edit_Staff_Username.className += " is-warning";
+                            } else {
+                                RemoveWarningClass(Edit_Staff_Username)
+                                Edit_Staff_Username.className += " is-valid";
+                            }
+                        }
+                    });
+                }else {
+                    RemoveWarningClass(Edit_Staff_Username)
+                    Edit_Staff_Username.className += " is-valid";
+                }
+            }});
+    } else {
+        RemoveValidClass(this)
+        this.className += " is-warning";
+    }
 });
 
 function checkForEmptyData(dataId){

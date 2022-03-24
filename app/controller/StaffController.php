@@ -47,4 +47,9 @@ class StaffController extends SecurityController
     {
         echo json_encode(Staff::checkStaffMemberships());
     }
+
+    public function checkStaffUsername()
+    {
+        echo json_encode(Staff::checkStaffUsername());
+    }
 }

@@ -245,12 +245,12 @@ $('.additionalStaffEditSettings').on('click', function () {
             response = JSON.parse(response)
             fadeOut("#staffProfileData")
             fadeIn("#staffEdit")
-            document.getElementById("Staff_Name_Edit").value = response["Staff_Name"];
-            document.getElementById("Staff_Surname_Edit").value = response["Staff_Surname"];
-            document.getElementById("Staff_Username_Edit").value = response["Staff_Username"];
-            document.getElementById("Staff_Oib_Edit").value = response["Staff_Oib"];
-            document.getElementById("Staff_Phone_Edit").value = response["Staff_Phone"];
-            document.getElementById("Staff_Email_Edit").value = response["Staff_Email"];
+            document.getElementById("Edit_Staff_Name").value = response["Staff_Name"];
+            document.getElementById("Edit_Staff_Surname").value = response["Staff_Surname"];
+            document.getElementById("Edit_Staff_Username").value = response["Staff_Username"];
+            document.getElementById("Edit_Staff_Oib").value = response["Staff_Oib"];
+            document.getElementById("Edit_Staff_Phone").value = response["Staff_Phone"];
+            document.getElementById("Edit_Staff_Email").value = response["Staff_Email"];
             },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -284,8 +284,5 @@ $('#formformaEditStaff').on('submit', function (e) {
         }
     });
 });
-
-//spremanje staff edit podataka radi ali treba validirati i označiti sve podatke sa onim klasama,
-// također provjeriti je li username isti kao i prijašnji pa ako je da ne izbacuje grešku
 // edit staff data end
 // staffSettings modal end
