@@ -285,4 +285,35 @@ $('#formformaEditStaff').on('submit', function (e) {
     });
 });
 // edit staff data end
+
+// new staff start
+$('.newStaff').on('click', function () {
+    fadeOut('#staffData');
+    fadeIn("#newStaffRegistration");
+});
+
+$('#formformaNewStaff').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Staff/newStaff/',
+        data: $('#formformaNewStaff').serialize(),
+        success: function (response) {
+            response = JSON.parse(response)
+            if (response === false){
+                warningNotification('Korisničko ime zaposlenika već postoji. Pokušajte ponovo.');
+            }else {
+                fadeOut("#newStaffRegistration");
+                successNotification('Novi zaposlenik je uspješno spremljen.');
+                clearInput(1000, 'formformaNewStaff')
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#newStaffRegistration')
+        }
+    });
+});
+// new staff end
+
 // staffSettings modal end

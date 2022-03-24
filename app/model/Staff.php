@@ -3,6 +3,81 @@
 
 class staff
 {
+    public static function newStaff()
+    {
+        if(self::newStaffData()){
+            self::newStaffGymId(self::lastAddedStaff()->Staff_Id);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public static function lastAddedStaff()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Staff ORDER BY Staff_Id DESC LIMIT 1');
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function newStaffGymId($staffId)
+    {
+
+        $db=Db::getInstance();
+        $stmt=$db->prepare('INSERT INTO Staff_Gym (Staff_Id, Gym_Id) VALUES (:Staff_Id, :Gym_Id)');
+        $stmt->bindValue('Staff_Id', $staffId);
+        $stmt->bindValue('Gym_Id', $_SESSION['Gym_Id']);
+        $stmt->execute();
+    }
+
+    public static function newStaffData()
+    {
+        if (!self::checkStaffUsername()){
+            $newPassword=self::generatePassword();
+            $db = Db::getInstance();
+            $stmt = $db->prepare('INSERT INTO Staff 
+                                        (
+                                         Staff_Parent_Id,
+                                         Staff_Name,
+                                         Staff_Surname,
+                                         Staff_Username,
+                                         Staff_Password,
+                                         Staff_Phone,
+                                         Staff_Email,
+                                         Staff_Oib,
+                                         Staff_Adminstatus,
+                                         Staff_Active
+                                        ) 
+                                        VALUES 
+                                        (
+                                         :Staff_Parent_Id,
+                                         :Staff_Name,
+                                         :Staff_Surname,
+                                         :Staff_Username,
+                                         :Staff_Password,
+                                         :Staff_Phone,
+                                         :Staff_Email,
+                                         :Staff_Oib,
+                                         :Staff_Adminstatus,
+                                         true
+                                        )');
+            $stmt->bindValue('Staff_Parent_Id', Session::getInstance()->getUser()->Staff_Id);
+            $stmt->bindValue('Staff_Name', Request::post('Staff_Name'));
+            $stmt->bindValue('Staff_Surname', Request::post('Staff_Surname'));
+            $stmt->bindValue('Staff_Username', Request::post('Staff_Username'));
+            $stmt->bindValue('Staff_Password', password_hash(Request::post('Staff_Password'), PASSWORD_BCRYPT));
+            $stmt->bindValue('Staff_Phone', Request::post('Staff_Phone'));
+            $stmt->bindValue('Staff_Email', Request::post('Staff_Email'));
+            $stmt->bindValue('Staff_Oib', Request::post('Staff_Oib'));
+            $stmt->bindValue('Staff_Adminstatus', 3);
+            $stmt->execute();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static function editStaff($id)
     {
         if (((self::staffData($id)->Staff_Username != Request::post('Staff_Username')) && !self::checkStaffUsername()) || (self::staffData($id)->Staff_Username == Request::post('Staff_Username'))){
