@@ -112,18 +112,18 @@ $('.staff').on('click', function () {
         success: function (data) {
             document.getElementById('dataTableBodyStaff').innerHTML = "";
             document.getElementById("dt2").style.display = "block";
-
+            $("#displayInactiveStaff").html('Prikaži inaktivne zaposlenike <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span>');
             response = JSON.parse(data);
             const searchData = document.getElementById('dataTableBodyStaff');
 
             searchData.innerHTML = response.reduce((options, {Staff_Id, Staff_Name, Staff_Surname, Staff_Username, Staff_Phone, Staff_Email, Staff_Active}) =>
-                    options += `<tr>
+                    options += `<tr class="staffActive_${Staff_Active}">
                                     <td class="text-left" id="${Staff_Id}_staffName">${Staff_Name} ${Staff_Surname}</td>
                                     <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
                                     <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
                                     <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
                                     <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
-                                        ${(Staff_Active == 1) ? 'Da': 'Ne'}
+                                        ${(Staff_Active) ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center staffProfileData" id="i_${Staff_Id}">
                                         <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
@@ -131,8 +131,18 @@ $('.staff').on('click', function () {
                                 </tr>
                                 `,
                 ``);
+            var elements = document.getElementsByClassName("staffActive_0");
+
+            for (var i = 0; i < elements.length; i++){
+                elements[i].style.display = 'none';
+            }
+
         }
     });
+});
+
+$('#displayInactiveStaff').on('click', function () {
+   toggleClassStaff('staffActive_0')
 });
 
 // Activate - deactivate staff start
@@ -180,6 +190,130 @@ $('#additionalStaffSettingsRestartPassword').on('click', function () {
 });
 // Staff password restart end
 
+function toggleClassStaff(className){
+    var elements = document.getElementsByClassName(className)
 
+    for (var i = 0; i < elements.length; i++){
+        if (elements[i].style.display === 'none'){
+            elements[i].style.display = 'table-row';
+            $("#displayInactiveStaff").html('Sakrij inaktivne zaposlenike <span><i style="padding-left: 5px" class="fas fa-angle-down"></i></span>');
+        }else {
+            elements[i].style.display = 'none';
+            $("#displayInactiveStaff").html('Prikaži inaktivne zaposlenike <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span>');
+        }
+    }
+}
+
+// staff history memberships start
+$('#additionalStaffSettingsHistoryMembershipsButton').on('click', function () {
+    fadeIn("#membershipHistoryStaffData")
+    $.ajax({
+        method: "POST",
+        data: {Users_Memberships_Admin_Id: globalVariableStaff},
+        url: urlAddress + 'Staff/checkStaffMemberships/',
+        success: function (data) {
+            document.getElementById('dataTableBodyStaffHistoryMemberships').innerHTML = "";
+            document.getElementById("dt4").style.display = "block";
+
+            response = JSON.parse(data);
+            const searchData = document.getElementById('dataTableBodyStaffHistoryMemberships');
+
+            searchData.innerHTML = response.reduce((options, {Users_Name, Users_Surname, Users_Memberships_Membership_Name, Users_Memberships_Start_Date, Users_Memberships_Price}) =>
+                    options += `<tr>
+                                    <td class="text-left" id="">${Users_Name} ${Users_Surname}</td>
+                                    <td class="text-left" id="">${Users_Memberships_Membership_Name}</td>
+                                    <td class="text-left" id="">${formatDate(Users_Memberships_Start_Date)}</td>
+                                    <td class="text-left" id="">${Users_Memberships_Price}</td>
+                                </tr>
+                                `,
+                ``);
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// staff history memberships end
+
+// edit staff data start
+$('.additionalStaffEditSettings').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {data: globalVariableStaff},
+        url: urlAddress + 'Staff/staffInfo/' + globalVariableStaff,
+        success: function (response) {
+            response = JSON.parse(response)
+            fadeOut("#staffProfileData")
+            fadeIn("#staffEdit")
+            document.getElementById("Edit_Staff_Name").value = response["Staff_Name"];
+            document.getElementById("Edit_Staff_Surname").value = response["Staff_Surname"];
+            document.getElementById("Edit_Staff_Username").value = response["Staff_Username"];
+            document.getElementById("Edit_Staff_Oib").value = response["Staff_Oib"];
+            document.getElementById("Edit_Staff_Phone").value = response["Staff_Phone"];
+            document.getElementById("Edit_Staff_Email").value = response["Staff_Email"];
+            },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+
+$('#formformaEditStaff').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Staff/editStaff/'+globalVariableStaff,
+        data: $('#formformaEditStaff').serialize(),
+        success: function (response) {
+
+            response = JSON.parse(response)
+            if (response === true){
+                fadeOut("#staffEdit");
+                successNotification('Podaci zaposlenika su uspješno spremljeni.');
+                clearInput(1000, 'formformaEditStaff')
+                fadeOut('#additionalStaffSettingsButton')
+            }else {
+                warningNotification('Korisničko ime zaposlenika već postoji. Pokušajte ponovo.');
+                fadeOut('#additionalStaffSettingsButton')
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#additionalUserSettings')
+            fadeOut('#additionalStaffSettingsButton')
+        }
+    });
+});
+// edit staff data end
+
+// new staff start
+$('.newStaff').on('click', function () {
+    fadeOut('#staffData');
+    fadeIn("#newStaffRegistration");
+});
+
+$('#formformaNewStaff').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Staff/newStaff/',
+        data: $('#formformaNewStaff').serialize(),
+        success: function (response) {
+            response = JSON.parse(response)
+            if (response === false){
+                warningNotification('Korisničko ime zaposlenika već postoji. Pokušajte ponovo.');
+            }else {
+                fadeOut("#newStaffRegistration");
+                successNotification('Novi zaposlenik je uspješno spremljen.');
+                clearInput(1000, 'formformaNewStaff')
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#newStaffRegistration')
+        }
+    });
+});
+// new staff end
 
 // staffSettings modal end
