@@ -53,6 +53,16 @@ var New_Staff_Oib = document.getElementById('New_Staff_Oib');
 var New_Staff_Phone = document.getElementById('New_Staff_Phone');
 var New_Staff_Email = document.getElementById('New_Staff_Email');
 
+var Event_Contact_Name_New = document.getElementById('Event_Contact_Name_New');
+var Event_Contact_Phone_New = document.getElementById('Event_Contact_Phone_New');
+var Event_Start_Time_New = document.getElementById('Event_Start_Time_New');
+var Event_End_Time_New = document.getElementById('Event_End_Time_New');
+
+var Event_Contact_Name_Edit = document.getElementById('Event_Contact_Name_Edit');
+var Event_Contact_Phone_Edit = document.getElementById('Event_Contact_Phone_Edit');
+var Event_Start_Time_Edit = document.getElementById('Event_Start_Time_Edit');
+var Event_End_Time_Edit = document.getElementById('Event_End_Time_Edit');
+
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -263,7 +273,6 @@ Users_Id_Edit.addEventListener('blur', function() {
 });
 */
 
-
 Staff_New_Password.addEventListener('blur', function() {
     if (this.value !== '' && this.value.length > 5 && !specialCharacters.test(this.value)) {
         RemoveWarningClass(this)
@@ -285,10 +294,6 @@ Staff_Email.addEventListener('blur', function() {
 Staff_Phone.addEventListener('blur', function() {
     checkPhoneValue(this)
 });
-
-
-
-
 
 // edit existing staff
 Edit_Staff_Name.addEventListener('blur', function() {
@@ -346,8 +351,6 @@ Edit_Staff_Username.addEventListener('blur', function() {
     }
 });
 
-
-
 // new staff
 New_Staff_Name.addEventListener('blur', function() {
     checkNameValue(this);
@@ -403,10 +406,41 @@ New_Staff_Username.addEventListener('blur', function() {
     }
 });
 
+// event sanitizers
 
+Event_Contact_Name_New.addEventListener('blur', function() {
+    checkNameValue(this);
+});
 
+Event_Contact_Phone_New.addEventListener('blur', function() {
+    checkNameValue(this);
+});
 
+Event_Start_Time_New.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
 
+Event_End_Time_New.addEventListener('blur', function() {
+    checkForDates(Event_Start_Time_New, Event_End_Time_New);
+});
+
+// edit event
+
+Event_Contact_Name_Edit.addEventListener('blur', function() {
+    checkNameValue(this);
+});
+
+Event_Contact_Phone_Edit.addEventListener('blur', function() {
+    checkNameValue(this);
+});
+
+Event_Start_Time_Edit.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Event_End_Time_Edit.addEventListener('blur', function() {
+    checkForDates(Event_Start_Time_Edit, Event_End_Time_Edit);
+});
 
 function checkForEmptyData(dataId){
     if (dataId.value === '') {
@@ -415,6 +449,22 @@ function checkForEmptyData(dataId){
     } else {
         RemoveWarningClass(dataId)
         dataId.className += " is-valid";
+    }
+}
+
+function checkForDates(dateStart, dateEnd)
+{
+    let date1 = new Date(dateStart.value);
+    let date2 = new Date(dateEnd.value);
+    if (date1.getTime() > date2.getTime()){
+        warningNotification('Datum završetka ne smije biti prije datuma početka.')
+        RemoveValidClass(dateEnd);
+        dateEnd.className += " is-warning";
+        return false;
+    }else{
+        RemoveWarningClass(dateEnd)
+        dateEnd.className += " is-valid";
+        return true;
     }
 }
 
