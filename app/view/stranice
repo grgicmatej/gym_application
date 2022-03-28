@@ -48,3 +48,6 @@ build log planner:
     - Termin za razne sportove eksterni
     - Eksterna provjera statusa članarine
 1.3:
+
+// bug:
+kad se iz random ID-a mijenja, treba se promijeniti i u gym_users i u users_memberships
