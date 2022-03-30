@@ -3,6 +3,16 @@
 
 class Membership extends Timers
 {
+    public static function allMemberships()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Gym_Id=:membershipsGymId AND Memberships_Visible=:membershipsVisible');
+        $stmt->bindValue('membershipsGymId', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('membershipsVisible', 1);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public static function allActiveMemberships()
     {
         $db=Db::getInstance();
@@ -27,6 +37,15 @@ class Membership extends Timers
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Name=:membershipsName');
         $stmt->bindValue('membershipsName', Request::post('usersMembershipsMembershipName'));
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public static function selectMembershipById()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Id=:Memberships_Id');
+        $stmt->bindValue('Memberships_Id', Request::post('Memberships_Id'));
         $stmt->execute();
         return $stmt->fetch();
     }

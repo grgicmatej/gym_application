@@ -1106,7 +1106,7 @@
 </div>
 <!-- newStaff Modal end -->
 
-<!-- memberships modal start -->
+<!-- all memberships modal start -->
 <div class="modal fade" id="allMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
 
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -1144,4 +1144,123 @@
         </div>
     </div>
 </div>
-<!-- memberships modal end -->
+<!-- all memberships modal end -->
+
+<!-- profileData Modal -->
+<div class="modal fade" id="checkMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini <i class="fas fa-circle membershipActiveStatusIcon" id="membershipActiveStatusIcon"></i></h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Naziv članarine</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Name"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Trajanje članarine</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Duration"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Cijena članarine</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Price"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Status</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Status"></h6>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-12 text-left">
+                                    <h6 class="text-muted f-w-400" id="additionalMembershipSettingsButton">Napredno upravljanje <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span></h6>
+                                </div>
+                            </div>
+                            <div id="additionalUserSettings" style="display: none;">
+                                <div class="row m-t-40">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsHistoryMembershipsButton">Povijest članarina</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsAddExistingMembershipsButton">Postojeća članarina</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsUserMembershipPauseButton"></p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalUserSettingsUserSettingsButton">Uređivanje korisnika</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- profileData Modal end -->
+
+<!-- edit membership profile modal start -->
+<!-- OVO JE ZA EDIT -->
+<div class="modal fade" id="editMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="updateEventForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Pregled članarine</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Naziv članarine</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Memberships_Name" id="Edit_Memberships_Name" placeholder="Naziv članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Price" id="Edit_Memberships_Price" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Trajanje članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="Edit_Memberships_Duration" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Status članarine</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="" id="" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600 " id="updateEventCalendarCancel"></p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-2"></div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600" id="updateEventCalendarConfirm"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit membership profile modal end -->

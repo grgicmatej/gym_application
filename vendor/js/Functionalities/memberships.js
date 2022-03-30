@@ -5,7 +5,7 @@ $('.membershipData').on('click', function () {
         $.ajax({
             method: "POST",
             data: {data: globalVariable},
-            url: urlAddress + 'Membership/allMemberships/',
+            url: urlAddress + 'Membership/allActiveMemberships/',
             success: function (response) {
                 $('#formforma').on('submit', function (e) {
                     e.preventDefault();
@@ -56,10 +56,10 @@ $('.memberships').on('click', function () {
                                     <td class="text-left" id="${Memberships_Id}_membershipName">${Memberships_Name}</td>
                                     <td class="text-left" id="${Memberships_Id}_membershipDuration">${Memberships_Duration} dana</td>
                                     <td class="text-left" id="${Memberships_Id}_membershipPrice">${Memberships_Price} kn</td>
-                                    <td id="${Memberships_Id}_membershipActive" style="background-color: ${(Memberships_Active) ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
-                                        ${(Memberships_Active) ? 'Da': 'Ne'}
+                                    <td id="${Memberships_Id}_membershipActive" style="background-color: ${(Memberships_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
+                                        ${(Memberships_Active === '1') ? 'Da': 'Ne'}
                                     </td>
-                                    <td class="text-center membershipProfileData" id="i_${Memberships_Id}">
+                                    <td class="text-center membershipProfileData" id="memid_${Memberships_Id}">
                                         <a class="submitlink linkanimation "> Uređivanje <i class="fad fa-edit ml-10"></i></a>
                                     </td>
                                 </tr>
@@ -78,6 +78,37 @@ $('.memberships').on('click', function () {
 $('#displayInactiveMemberships').on('click', function () {
     toggleClassMemberships('membershipActive_0')
 });
+
+// membership profile modal start
+$(document).ajaxComplete(function () {
+
+$('.membershipProfileData').on('click', function () {
+    var id = $(this).attr('id');
+    if (id) {
+        id = id.split('_')[1];
+        $.ajax({
+            method: "POST",
+            data: {Memberships_Id: id},
+            url: urlAddress + 'Membership/checkMembership/',
+            success: function (response) {
+                response = JSON.parse(response);
+                fadeOut("#allMembershipData")
+                fadeIn("#checkMembershipData")
+                $("#Memberships_Name").text(response["Memberships_Name"]);
+                $("#Memberships_Duration").text(response["Memberships_Duration"]+" dana");
+                $("#Memberships_Price").text(response["Memberships_Price"]+" kn");
+                $("#Memberships_Status").text(response["Memberships_Active"] === '1'? "Aktivno" : "Inaktivno");
+                document.getElementById("membershipActiveStatusIcon").style.color = response["Memberships_Active"] === '1'? successColor : errorColor;
+            },
+            error: function (){
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            }
+        });
+    }
+});
+});
+// tu sam stao, prikaz membershipa radi, treba dodati pod napredno upravljanje: aktivacija/deaktivacija, uređivanje, brisanje
+// membership profile modal end
 
 // memberships data modal end
 
