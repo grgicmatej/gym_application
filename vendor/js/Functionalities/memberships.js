@@ -60,7 +60,7 @@ $('.memberships').on('click', function () {
                                         ${(Memberships_Active === '1') ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center membershipProfileData" id="memid_${Memberships_Id}">
-                                        <a class="submitlink linkanimation "> Uređivanje <i class="fad fa-edit ml-10"></i></a>
+                                        <a class="submitlink linkanimation "> Pregled <i class="fad fa-edit ml-10"></i></a>
                                     </td>
                                 </tr>
                                 `,
@@ -99,6 +99,8 @@ $('.membershipProfileData').on('click', function () {
                 $("#Memberships_Price").text(response["Memberships_Price"]+" kn");
                 $("#Memberships_Status").text(response["Memberships_Active"] === '1'? "Aktivno" : "Inaktivno");
                 document.getElementById("membershipActiveStatusIcon").style.color = response["Memberships_Active"] === '1'? successColor : errorColor;
+                globalVariableMembership = response["Memberships_Id"]
+                document.getElementById('additionalMembershipSettings').style.display = "none";
             },
             error: function (){
                 warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -107,8 +109,106 @@ $('.membershipProfileData').on('click', function () {
     }
 });
 });
-// tu sam stao, prikaz membershipa radi, treba dodati pod napredno upravljanje: aktivacija/deaktivacija, uređivanje, brisanje
+
+$('#additionalMembershipSettingsButton').on('click', function () {
+    if (document.getElementById('additionalMembershipSettings').style.display === "none"){
+        document.getElementById('additionalMembershipSettings').style.display = "block";
+        checkMembershipStatus()
+    }else {
+        document.getElementById('additionalMembershipSettings').style.display = "none";
+    }
+});
+
+function checkMembershipStatus(){
+    var id = globalVariableMembership;
+    $.ajax({
+        method: "POST",
+        data: {Memberships_Id: id},
+        url: urlAddress + 'membership/checkMembership/',
+        success: function (response) {
+            response=JSON.parse(response)
+            if (response['Memberships_Active'] === '1'){
+                $("#additionalMembershipSettingsMembershipStatusButton").text('Deaktiviranje članarine');
+            }else{
+                $("#additionalMembershipSettingsMembershipStatusButton").text('Aktiviranje članarine');
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+}
 // membership profile modal end
+
+// Activate - deactivate membership start
+$('#additionalMembershipSettingsMembershipStatusButton').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {Memberships_Id: globalVariableMembership},
+        url: urlAddress + 'membership/changeActiveStatusMembership/',
+        success: function (response) {
+            response = JSON.parse(response)
+            fadeOut("#checkMembershipData")
+            if (response === 0){
+                successNotification('Članarina je uspješno deaktivirana.')
+                //fadeOut('#additionalStaffSettings')
+            }else {
+                successNotification('Članarina je uspješno aktivirana.')
+                //fadeOut('#additionalStaffSettings')
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// Activate - deactivate membership end
+
+// memberships edit start
+$('.additionalMembershipSettingsMembershipEditButton').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {Memberships_Id: globalVariableMembership},
+        url: urlAddress + 'Membership/checkMembership/',
+        success: function (response) {
+            response = JSON.parse(response);
+            fadeOut("#checkMembershipData")
+            fadeIn("#editMembershipData")
+            document.getElementById("Edit_Memberships_Name").value = response["Memberships_Name"];
+            document.getElementById("Edit_Memberships_Price").value = response["Memberships_Price"];
+            document.getElementById("Edit_Memberships_Duration").value = response["Memberships_Duration"];
+            document.getElementById("membershipActiveStatusIcon").style.color = response["Memberships_Active"] === '1'? successColor : errorColor;
+            },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+
+$('#updateMembershipForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'membership/editMembership/'+globalVariableMembership,
+        data: $('#updateMembershipForm').serialize(),
+        success: function (response) {
+            response = JSON.parse(response)
+            if (response === true){
+                fadeOut("#editMembershipData");
+                successNotification('Podaci članarine su uspješno spremljeni.');
+                clearInput(1000, 'updateMembershipForm')
+            }else {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            }
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#editMembershipData')
+        }
+    });
+});
+// memberships edit stop
+// tu sam stao, prikaz membershipa radi, treba dodati pod napredno upravljanje: aktivacija/deaktivacija, uređivanje, brisanje
 
 // memberships data modal end
 
