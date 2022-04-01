@@ -16,9 +16,11 @@ class UserController extends SecurityController
     public function addNewUser()
     {
         Upload::uploadPhoto();
-        User::newUser(Upload::getFileName());
-        User::addUserGymRegistration();
-        User::newUserFirstMembershipExtension();
+        User::newUser(Upload::getFileName(), Request::post('probniTrening') == 1 ? 123321123 : null);
+        User::addUserGymRegistration(Request::post('probniTrening') == 1 ? 123321123 : null);
+        User::newUserFirstMembershipExtension(Request::post('probniTrening') == 1 ? 123321123 : null);
+
+        // tu sam stao, ne prolazi kreiranje novih
     }
 
     public function checkUsersId()

@@ -137,7 +137,7 @@ class User extends Membership
         return self::allUsersCount()->allUsersCount - self::allActiveUsersCount()->activeUsersCount;
     }
 
-    public static function addUserGymRegistration()
+    public static function addUserGymRegistration($id)
     {
         $db = Db::getInstance();
         $stmt = $db->prepare('INSERT INTO Users_Gym 
@@ -151,8 +151,8 @@ class User extends Membership
                                 :Gym_Id
                                 )
                                 ');
-        $stmt->bindValue('Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
-        $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Users_Id', ($_SESSION["Gym_Id"]) ?? 0 . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
     }
 
@@ -316,7 +316,7 @@ class User extends Membership
         $stmt->execute();
     }
 
-    public static function newUser($usersPhoto)
+    public static function newUser($usersPhoto, $id)
     {
         $db = Db::getInstance();
         $stmt = $db->prepare("INSERT INTO Users
@@ -356,7 +356,7 @@ class User extends Membership
                                     :Users_Photo
                                 )
                                 ");
-        $stmt->bindValue('Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id',  ($_SESSION["Gym_Id"]) ?? 0 . '-' . $id ?? Request::post('Users_Id'));
         $stmt->bindValue('Users_Name', Request::post('Users_Name'));
         $stmt->bindValue('Users_Surname', Request::post('Users_Surname'));
         $stmt->bindValue('Users_City', Request::post('Users_City'));
@@ -448,7 +448,7 @@ class User extends Membership
         $stmt->execute();
     }
 
-    public static function newUserFirstMembershipExtension()
+    public static function newUserFirstMembershipExtension($id)
     {
         $db = Db::getInstance();
         $stmt = $db->prepare("
@@ -477,7 +477,7 @@ class User extends Membership
                                 :Users_Memberships_Gym_Id
                                 )
                             ");
-        $stmt->bindValue('Users_Memberships_Users_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
+        $stmt->bindValue('Users_Memberships_Users_Id', ($_SESSION["Gym_Id"]) ?? 0 . '-' . $id ?? Request::post('Users_Id'));
         $stmt->bindValue('Users_Memberships_Membership_Name', '-');
         $stmt->bindValue('Users_Memberships_Start_Date', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('Users_Memberships_End_Date', date_format(date_create(), 'Y.m.d'));
