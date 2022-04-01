@@ -13,7 +13,7 @@ class Statistics
                                         ');
         $stmt->bindValue('Current_Month', date('m'));
         $stmt->bindValue('Current_Year', date('Y'));
-        $stmt->bindValue('Sales_Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Sales_Gym_Id',  $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
         return $stmt->fetch();
     }

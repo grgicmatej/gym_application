@@ -21,7 +21,7 @@ class Calendar
 
                                     FROM Events WHERE Event_Completed=:Event_Completed AND Event_Gym_Id=:Event_Gym_Id AND Event_Sport_Id=:Event_Sport_Id');
         $stmt->bindValue('Event_Completed', false);
-        $stmt->bindValue('Event_Gym_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0));
+        $stmt->bindValue('Event_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->bindValue('Event_Sport_Id', 4);
         $stmt->execute();
         return $stmt->fetchAll();

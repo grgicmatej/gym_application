@@ -7,7 +7,7 @@ class Membership extends Timers
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Gym_Id=:membershipsGymId AND Memberships_Visible=:membershipsVisible');
-        $stmt->bindValue('membershipsGymId', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('membershipsGymId', $_SESSION["Gym_Id"] ?? 0);
         $stmt->bindValue('membershipsVisible', 1);
         $stmt->execute();
         return $stmt->fetchAll();
@@ -17,7 +17,7 @@ class Membership extends Timers
     {
         $db=Db::getInstance();
         $stmt=$db->prepare('SELECT * FROM Memberships WHERE Memberships_Gym_Id=:membershipsGymId AND Memberships_Active=:membershipsActive AND Memberships_Visible=:membershipsVisible');
-        $stmt->bindValue('membershipsGymId', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('membershipsGymId', $_SESSION["Gym_Id"] ?? 0);
         $stmt->bindValue('membershipsActive', 1);
         $stmt->bindValue('membershipsVisible', 1);
         $stmt->execute();
@@ -101,7 +101,7 @@ class Membership extends Timers
         $stmt->bindValue('Memberships_Name', Request::post('Memberships_Name'));
         $stmt->bindValue('Memberships_Price', Request::post('Memberships_Price'));
         $stmt->bindValue('Memberships_Duration', Request::post('Memberships_Duration'));
-        $stmt->bindValue('Memberships_Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
     }
 

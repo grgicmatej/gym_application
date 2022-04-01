@@ -97,8 +97,8 @@ class User extends Membership
                                     )
                                     ORDER BY Users.Users_Id ASC
                                     ');
-        $stmt->bindValue('Users_Memberships_Gym_Id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0));
-        $stmt->bindValue('parametar_id', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('query') . '%');
+        $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
+        $stmt->bindValue('parametar_id', ($_SESSION["Gym_Id"] ?? 0) . '-' . Request::post('query') . '%');
         $stmt->bindValue('parametar', trim(Request::post('query'), " ") . '%');
         $stmt->bindValue('spacing', ' ');
 
@@ -110,7 +110,7 @@ class User extends Membership
     {
         $db = Db::getInstance();
         $stmt = $db->prepare('SELECT COUNT(Users_Id) as allUsersCount FROM Users_Gym WHERE Gym_Id=:Gym_Id');
-        $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
         return $stmt->fetch();
     }
@@ -127,7 +127,7 @@ class User extends Membership
                                             AND 
                                             Users_Gym.Gym_Id=:Gym_Id 
                                     ');
-        $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
         return $stmt->fetch();
     }
@@ -151,7 +151,7 @@ class User extends Membership
                                 :Gym_Id
                                 )
                                 ');
-        $stmt->bindValue('Users_Id', ($_SESSION["Gym_Id"]) ?? 0 . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id', (($_SESSION["Gym_Id"]) ?? 0) . '-' . $id ?? Request::post('Users_Id'));
         $stmt->bindValue('Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
     }
@@ -178,9 +178,9 @@ class User extends Membership
                                     FROM Users
                                     LEFT JOIN Users_Gym ON Users_Gym.Users_Id=Users.Users_Id
                                     WHERE (Users.Users_Id=:Users_Id AND Users_Gym.Gym_Id=:Gym_Id) OR (Users.Users_Id=:Users_Id_New AND Users_Gym.Gym_Id=:Gym_Id)');
-        $stmt->bindValue('Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->bindValue('Users_Id', Request::post('Users_Id'));
-        $stmt->bindValue('Users_Id_New', (isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0) . '-' . Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id_New', ($_SESSION["Gym_Id"] ?? 0) . '-' . Request::post('Users_Id'));
         $stmt->execute();
         if ($stmt->rowCount() != 0) {
             return false;
@@ -256,7 +256,7 @@ class User extends Membership
         $stmt->bindValue('Users_Gender', Request::post('Users_Gender'));
         $stmt->bindValue('Users_Status', Request::post('Users_Status'));
         $stmt->bindValue('Users_Reference', Request::post('Users_Reference'));
-        $stmt->bindValue('Users_Company', Request::post('Users_Company') !== null ? Request::post('Users_Company') : "");
+        $stmt->bindValue('Users_Company', Request::post('Users_Company') ?? '');
         $stmt->bindValue('Users_Id', $id);
         $stmt->execute();
     }
@@ -356,7 +356,7 @@ class User extends Membership
                                     :Users_Photo
                                 )
                                 ");
-        $stmt->bindValue('Users_Id',  ($_SESSION["Gym_Id"]) ?? 0 . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id',  (($_SESSION["Gym_Id"]) ?? 0) . '-' . $id ?? Request::post('Users_Id'));
         $stmt->bindValue('Users_Name', Request::post('Users_Name'));
         $stmt->bindValue('Users_Surname', Request::post('Users_Surname'));
         $stmt->bindValue('Users_City', Request::post('Users_City'));
@@ -367,7 +367,7 @@ class User extends Membership
         $stmt->bindValue('Users_Oib', Request::post('Users_Oib'));
         $stmt->bindValue('Users_Gender', Request::post('Users_Gender'));
         $stmt->bindValue('Users_Reference', Request::post('Users_Reference'));
-        $stmt->bindValue('Users_Company', !empty(Request::post('Users_Company')) ? Request::post('Users_Company') : '');
+        $stmt->bindValue('Users_Company', Request::post('Users_Company') ?? '');
         $stmt->bindValue('Users_Status', Request::post('Users_Status'));
         $stmt->bindValue('Users_Registration', date("Y-m-d"));
         $stmt->bindValue('Users_Photo', $usersPhoto);
@@ -477,7 +477,7 @@ class User extends Membership
                                 :Users_Memberships_Gym_Id
                                 )
                             ");
-        $stmt->bindValue('Users_Memberships_Users_Id', ($_SESSION["Gym_Id"]) ?? 0 . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Users_Memberships_Users_Id', (($_SESSION["Gym_Id"]) ?? 0) . '-' . $id ?? Request::post('Users_Id'));
         $stmt->bindValue('Users_Memberships_Membership_Name', '-');
         $stmt->bindValue('Users_Memberships_Start_Date', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('Users_Memberships_End_Date', date_format(date_create(), 'Y.m.d'));
@@ -485,7 +485,7 @@ class User extends Membership
         $stmt->bindValue('Users_Memberships_Price', 0);
         $stmt->bindValue('Users_Memberships_Membership_Active', 0);
         $stmt->bindValue('Users_Memberships_Admin_Id', Session::getInstance()->getUser()->Staff_Id);
-        $stmt->bindValue('Users_Memberships_Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
     }
 

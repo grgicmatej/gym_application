@@ -18,7 +18,7 @@ class Session
 
     public function isLoggedIn()
     {
-        return isset($_SESSION['is_logged_in']) ? true : false;
+        return isset($_SESSION['is_logged_in']);
     }
 
     public static function getInstance()
@@ -30,7 +30,7 @@ class Session
     }
 
     public  function getUser(){
-        return isset($_SESSION['is_logged_in']) ? $_SESSION['is_logged_in'] : false;
+        return $_SESSION['is_logged_in'] ?? false;
     }
 
     public static function startSession($k, $v)
