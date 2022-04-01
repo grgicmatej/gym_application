@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="edit user works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/MembershipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/MembershipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Membership.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Membership.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,20 +24,28 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="staff_functionalities" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/users.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/model/Membership.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/staff.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/view/stranice" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/users.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/model/Membership.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/controller/MembershipController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -162,7 +167,8 @@
       <workItem from="1648472545892" duration="1957000" />
       <workItem from="1648644424837" duration="3168000" />
       <workItem from="1648727243021" duration="3653000" />
-      <workItem from="1648817218234" duration="2767000" />
+      <workItem from="1648817218234" duration="5070000" />
+      <workItem from="1648832962976" duration="783000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
