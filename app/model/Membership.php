@@ -43,6 +43,14 @@ class Membership extends Timers
         return $stmt->rowCount();
     }
 
+    public  static function deleteMembership()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Memberships SET Memberships_Visible=false WHERE Memberships_Id=:Memberships_Id');
+        $stmt->bindValue('Memberships_Id', Request::post('Memberships_Id'));
+        $stmt->execute();
+    }
+
     public static function editMembership($id)
     {
         $db = Db::getInstance();

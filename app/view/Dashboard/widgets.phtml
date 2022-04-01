@@ -1182,20 +1182,21 @@
                             </div>
                             <div id="additionalMembershipSettings" style="display: none;">
                                 <div class="row m-t-40">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
                                         <p class="m-b-10 btn btn-block btn-outline-secondary additionalMembershipSettingsMembershipEditButton" id="additionalMembershipSettingsMembershipEditButton">Uređivanje članarine</p>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
                                         <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalMembershipSettingsMembershipStatusButton"></p>
                                     </div>
                                 </div>
                                 <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12 col-md-5 col-lg-5" id="deletingMembershipCancel">
 
                                     </div>
-                                    <div class="col-sm-6">
-                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalUserSettingsUserSettingsButton">Brisanje članarine</p>
+                                    <div class="col-sm-12 col-md-2 col-lg-2"></div>
+                                    <div class="col-sm-12 col-md-5 col-lg-5" id="deletingMembershipConfirm">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalMembershipSettingsMembershipDeleteFirstButton" id="additionalMembershipSettingsMembershipDeleteFirstButton">Brisanje članarine</p>
                                     </div>
                                 </div>
                             </div>
@@ -1290,7 +1291,7 @@
 
                                                 <div class="col-sm-6">
                                                     <p class="m-b-10 f-w-600">Trajanje članarine</p>
-                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="New_Memberships_Duration" placeholder="Trajanje članarine u danima" oninvalid="this.setCustomValidity('Molimo odaberite ispravno trajanje članarine.')" oninput="setCustomValidity('')" min="0" required >
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="New_Memberships_Duration" placeholder="Trajanje u danima" oninvalid="this.setCustomValidity('Molimo odaberite ispravno trajanje članarine.')" oninput="setCustomValidity('')" min="0" required >
                                                 </div>
                                             </div>
                                             <br>
@@ -1313,3 +1314,30 @@
     </div>
 </div>
 <!-- new membership profile modal end -->
+
+<!-- delete membership modal start -->
+<div class="modal fade" id="deleteMembership" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja članarine</h6>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-secondary cancelMembershipDeleteButton" id="cancelMembershipDeleteButton">Odustani</p>
+                                </div>
+                                <div class="col-sm-12 col-md-2"></div>
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-info confirmMembershipDeleteButton" id="confirmMembershipDeleteButton">Potvrdi brisanje</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete membership modal end -->

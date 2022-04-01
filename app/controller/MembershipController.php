@@ -22,6 +22,11 @@ class MembershipController extends SecurityController
         echo json_encode(Membership::changeActiveStatus());
     }
 
+    public function deleteMembership()
+    {
+        Membership::deleteMembership();
+    }
+
     public function editMembership($id)
     {
         echo json_encode(Membership::editMembership($id));

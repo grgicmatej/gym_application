@@ -215,6 +215,31 @@ $('.createNewMembership').on('click', function () {
     fadeIn("#newMembershipData")
 });
 
+$('.additionalMembershipSettingsMembershipDeleteFirstButton').on('click', function () {
+    fadeOut("#checkMembershipData")
+    fadeIn("#deleteMembership")
+});
+
+$('.cancelMembershipDeleteButton').on('click', function () {
+    fadeOut("#deleteMembership")
+});
+
+$('.confirmMembershipDeleteButton').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {Memberships_Id: globalVariableMembership},
+        url: urlAddress + 'Membership/deleteMembership/',
+        success: function () {
+            fadeOut("#deleteMembership")
+            successNotification('Članarina je uspješno obrisana.');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+
+
 $('#newMembershipForm').on('submit', function (e) {
     e.preventDefault();
     $.ajax({
