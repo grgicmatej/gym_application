@@ -21,11 +21,6 @@ class UserController extends SecurityController
         User::newUserFirstMembershipExtension();
     }
 
-    public function allMemberships()
-    {
-        echo json_encode(Membership::allActiveMemberships());
-    }
-
     public function checkUsersId()
     {
         echo json_encode(User::checkUsersId());

@@ -63,6 +63,13 @@ var Event_Contact_Phone_Edit = document.getElementById('Event_Contact_Phone_Edit
 var Event_Start_Time_Edit = document.getElementById('Event_Start_Time_Edit');
 var Event_End_Time_Edit = document.getElementById('Event_End_Time_Edit');
 
+var New_Memberships_Name = document.getElementById('New_Memberships_Name');
+var New_Memberships_Price = document.getElementById('New_Memberships_Price');
+var New_Memberships_Duration = document.getElementById('New_Memberships_Duration');
+var Edit_Memberships_Name = document.getElementById('Edit_Memberships_Name');
+var Edit_Memberships_Price = document.getElementById('Edit_Memberships_Price');
+var Edit_Memberships_Duration = document.getElementById('Edit_Memberships_Duration');
+
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -440,6 +447,31 @@ Event_Start_Time_Edit.addEventListener('blur', function() {
 
 Event_End_Time_Edit.addEventListener('blur', function() {
     checkForDates(Event_Start_Time_Edit, Event_End_Time_Edit);
+});
+
+// membership sanitizers
+New_Memberships_Name.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Memberships_Name.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+New_Memberships_Price.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Memberships_Price.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+New_Memberships_Duration.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Memberships_Duration.addEventListener('blur', function() {
+    checkForEmptyData(this);
 });
 
 function checkForEmptyData(dataId){
