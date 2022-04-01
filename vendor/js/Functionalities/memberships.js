@@ -208,7 +208,7 @@ $('#updateMembershipForm').on('submit', function (e) {
     });
 });
 // memberships edit stop
-// tu sam stao, prikaz membershipa radi, treba dodati pod napredno upravljanje: aktivacija/deaktivacija, uređivanje, brisanje
+// tu sam stao, još fali brisanje ali napraviti potvrdu prije brisanja
 
 // memberships data modal end
 
