@@ -68,6 +68,35 @@ class Membership extends Timers
         return $usersMembershipsEndDate;
     }
 
+    public static function newMembeship()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('INSERT INTO Memberships 
+                            (
+                             Memberships_Name,
+                             Memberships_Price,
+                             Memberships_Duration,
+                             Memberships_Gym_Id,
+                             Memberships_Active,
+                             Memberships_Visible
+                             )
+                            VALUES
+                            (
+                             :Memberships_Name,
+                             :Memberships_Price,
+                             :Memberships_Duration,
+                             :Memberships_Gym_Id,
+                             true,
+                             true
+                             )
+                            ');
+        $stmt->bindValue('Memberships_Name', Request::post('Memberships_Name'));
+        $stmt->bindValue('Memberships_Price', Request::post('Memberships_Price'));
+        $stmt->bindValue('Memberships_Duration', Request::post('Memberships_Duration'));
+        $stmt->bindValue('Memberships_Gym_Id', isset($_SESSION["Gym_Id"]) ? $_SESSION["Gym_Id"] : 0);
+        $stmt->execute();
+    }
+
     public static function selectMembership()
     {
         $db=Db::getInstance();

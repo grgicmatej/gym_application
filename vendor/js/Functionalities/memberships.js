@@ -208,7 +208,32 @@ $('#updateMembershipForm').on('submit', function (e) {
     });
 });
 // memberships edit stop
-// tu sam stao, još fali brisanje ali napraviti potvrdu prije brisanja
+
+//membership new start
+$('.createNewMembership').on('click', function () {
+    fadeOut("#allMembershipData")
+    fadeIn("#newMembershipData")
+});
+
+$('#newMembershipForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'membership/newMembership/',
+        data: $('#newMembershipForm').serialize(),
+        success: function () {
+            fadeOut("#newMembershipData");
+            successNotification('Nova članarina je uspješno spremljena.');
+            clearInput(1000, 'newMembershipForm')
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#newMembershipData')
+        }
+    });
+});
+//membership new end
+// tu sam stao, još fali brisanje ali napraviti potvrdu prije brisanja, i fali kreiranje nove članarine, sanitizirati inpute
 
 // memberships data modal end
 

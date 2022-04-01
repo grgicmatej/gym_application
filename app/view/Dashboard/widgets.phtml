@@ -1115,7 +1115,7 @@
                 <div class="card-block">
                     <div class="row">
                         <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled članarina</h6></div>
-                        <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info newStaff" id=""><i class="nav-icon fas fa-plus"></i> Nova članarina</p></div>
+                        <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info createNewMembership" id=""><i class="nav-icon fas fa-plus"></i> Nova članarina</p></div>
 
                     </div>
                     <hr>
@@ -1146,7 +1146,7 @@
 </div>
 <!-- all memberships modal end -->
 
-<!-- profileData Modal -->
+<!-- check membership Modal start-->
 <div class="modal fade" id="checkMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered modal-md">
@@ -1206,10 +1206,9 @@
         </div>
     </div>
 </div>
-<!-- profileData Modal end -->
+<!-- check membership Modal end -->
 
 <!-- edit membership profile modal start -->
-<!-- OVO JE ZA EDIT -->
 <div class="modal fade" id="editMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
@@ -1233,12 +1232,12 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <p class="m-b-10 f-w-600">Cijena članarine</p>
-                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Price" id="Edit_Memberships_Price" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Price" id="Edit_Memberships_Price" placeholder="Cijena članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu članarine.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
                                                 </div>
 
                                                 <div class="col-sm-6">
                                                     <p class="m-b-10 f-w-600">Trajanje članarine</p>
-                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="Edit_Memberships_Duration" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="Edit_Memberships_Duration" placeholder="Trajanje članarine u danima" oninvalid="this.setCustomValidity('Molimo odaberite ispravno trajanje članarine.')" oninput="setCustomValidity('')" min="0" required >
                                                 </div>
                                             </div>
                                             <br>
@@ -1261,3 +1260,56 @@
     </div>
 </div>
 <!-- edit membership profile modal end -->
+
+<!-- new membership profile modal start -->
+<div class="modal fade" id="newMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="newMembershipForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Nova članarina</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Naziv članarine</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Memberships_Name" id="New_Memberships_Name" placeholder="Naziv članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Price" id="New_Memberships_Price" placeholder="Cijena članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Trajanje članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="New_Memberships_Duration" placeholder="Trajanje članarine u danima" oninvalid="this.setCustomValidity('Molimo odaberite ispravno trajanje članarine.')" oninput="setCustomValidity('')" min="0" required >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6"></div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newMembershipForm" value="Spremanje podataka">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new membership profile modal end -->

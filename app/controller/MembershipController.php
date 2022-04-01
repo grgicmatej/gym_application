@@ -26,4 +26,9 @@ class MembershipController extends SecurityController
     {
         echo json_encode(Membership::editMembership($id));
     }
+
+    public function newMembership()
+    {
+        Membership::newMembeship();
+    }
 }
