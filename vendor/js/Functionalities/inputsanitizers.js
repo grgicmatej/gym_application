@@ -12,6 +12,7 @@ var Users_Birthday = document.getElementById('Users_Birthday');
 var Users_Gender = document.getElementById('Users_Gender');
 var Users_Status = document.getElementById('Users_Status');
 var Users_Reference = document.getElementById('Users_Reference');
+var tempTrainingCheckbox = document.getElementById('tempTrainingCheckbox');
 
 var Edit_Users_Id = document.getElementById('Edit_Users_Id');
 var Edit_Users_Name = document.getElementById('Edit_Users_Name');
@@ -95,6 +96,25 @@ Users_Id.addEventListener('blur', function() {
     } else {
         RemoveValidClass(this)
         this.className += " is-warning";
+    }
+});
+
+Users_Id.addEventListener('input', function() {
+    if (this.value !== '')
+    {
+        document.getElementById('probniTrening').style.display = 'none';
+    }else {
+        document.getElementById('probniTrening').style.display = 'block';
+
+    }
+});
+
+tempTrainingCheckbox.addEventListener('input', function() {
+    if (Users_Id.disabled === false)
+    {
+        Users_Id.disabled = true
+    }else {
+        Users_Id.disabled = false
     }
 });
 
