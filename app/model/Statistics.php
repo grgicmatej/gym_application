@@ -26,7 +26,7 @@ class Statistics
         return $months;
     }
 
-    public static function yearlyStats()
+    public static function yearlyStatss()
     {
         $userData=[];
         $months=[1,2,3,4,5,6,7,8,9,10,11,12];
@@ -42,5 +42,41 @@ class Statistics
             $userData[]=$stmt->fetch();
         }
         return $userData;
+    }
+
+    public static function yearlyStats()
+    {
+
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT COUNT(Users_Id) AS Users_Count FROM Users WHERE YEAR(Users_Registration)=:previousYear AND YEAR(Users_Registration)=:currentYear GROUP BY YEAR(Users_Registration), MONTH(Users_Registration)
+                                    
+                                         ');
+        $stmt->bindValue('currentYear', date('Y'));
+        $stmt->bindValue('previousYear', date('Y',strtotime("-1 year")));
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+        // tu nešto ne valja
+        /*
+        $userDataPrevious=[];
+        $months=[1,2,3,4,5,6,7,8,9,10,11,12];
+        foreach ($months as $m){
+            $db=Db::getInstance();
+            $stmt=$db->prepare('SELECT COUNT(Users_Id) AS userPreviousData FROM Users WHERE 
+                                            MONTH(Users_Registration)=:monthData 
+                                            AND 
+                                            YEAR(Users_Registration)=:currentYear
+                                            UNION
+                                            SELECT COUNT(Users_Id) AS userDataPreviousYear FROM Users WHERE
+                                            MONTH(Users_Registration)=:monthData 
+                                            AND 
+                                            YEAR(Users_Registration)=:previousYear');
+            $stmt->bindValue('monthData', $m);
+            $stmt->bindValue('currentYear', date('Y'));
+            $stmt->bindValue('previousYear', date('y')-1);
+            $stmt->execute();
+            $userData[]=$stmt->fetch();
+        }
+        */
     }
 }
