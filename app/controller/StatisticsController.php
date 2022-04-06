@@ -6,4 +6,9 @@ class StatisticsController extends SecurityController
     {
         echo json_encode(Statistics::yearlyStats());
     }
+
+    public function yearlyStatsPreviousYear()
+    {
+        echo json_encode(Statistics::yearlyStatsPreviousYear());
+    }
 }
