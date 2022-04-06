@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="stats report">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/StatisticsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StatisticsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Statistics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/statistics.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
