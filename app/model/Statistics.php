@@ -76,4 +76,19 @@ class Statistics
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public static function ageOfUsers()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT SUM(CASE WHEN YEAR(Users_Birthday) < 20 THEN 1 ELSE 0 END) AS data1,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 21 AND 30 THEN 1 ELSE 0 END) AS data2,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 31 AND 40 THEN 1 ELSE 0 END) AS data3,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 41 AND 50 THEN 1 ELSE 0 END) AS data4,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 51 AND 60 THEN 1 ELSE 0 END) AS data5,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) > 61 THEN 1 ELSE 0 END) AS data6
+                                    FROM Users');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
 }

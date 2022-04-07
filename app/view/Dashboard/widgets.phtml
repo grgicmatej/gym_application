@@ -1362,20 +1362,23 @@
                                 <div class="col-12" id="activeUsersStats">
                                     <p>Broj aktivnih korisnika u usporedbi sa prošlom godinom</p>
                                     <div class="card-body">
-                                        <div class="chart">
-                                            <canvas id="areaChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                                        </div>
+                                        <canvas id="areaChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-6 text-center" id="popularMembershipsStats">
-                                    <p>Statistika članarina za <?=date('Y')?> godinu</p>
+                                    <p>Statistika članarina za <?=date('Y')?>. godinu</p>
                                     <div class="card-body">
                                         <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6" id="usersAgeStats"></div>
+                                <div class="col-12 col-md-6 text-center" id="ageOfUsersStats">
+                                    <p>Raspodjela korisnika po starosti</p>
+                                    <div class="card-body">
+                                        <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-4" id="usersGenderStats"></div>

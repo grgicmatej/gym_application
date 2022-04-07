@@ -16,4 +16,9 @@ class StatisticsController extends SecurityController
     {
         echo json_encode(Statistics::popularMemberships());
     }
+
+    public function ageOfUsers()
+    {
+        echo json_encode(Statistics::ageOfUsers());
+    }
 }
