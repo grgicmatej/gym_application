@@ -91,4 +91,31 @@ class Statistics
         return $stmt->fetchAll();
     }
 
+    public static function usersGender()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Gender, COUNT(Users_Gender) AS genderCount
+                                    FROM Users GROUP BY Users_Gender');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function usersStatus()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Status, COUNT(Users_Status) AS statusCount
+                                    FROM Users GROUP BY Users_Status');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function usersReference()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Reference, COUNT(Users_Reference) AS referenceCount
+                                    FROM Users GROUP BY Users_Reference');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
 }

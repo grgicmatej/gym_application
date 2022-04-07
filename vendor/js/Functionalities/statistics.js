@@ -50,8 +50,41 @@ $('.statistics').on('click', function () {
         }
     });
 
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Statistics/usersGender/',
+        success: function (usersGender) {
+           drawUsersGenderGraph(usersGender)
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
 
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Statistics/usersStatus/',
+        success: function (usersStatus) {
+            drawUsersStatusGraph(usersStatus)
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
 
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Statistics/usersReference/',
+        success: function (usersReference) {
+            drawUsersReferenceGraph(usersReference)
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
 
 
 });
@@ -125,14 +158,13 @@ function drawMembershipsGraph(popularMemberships)
 {
     let labels =JSON.parse(popularMemberships).map(({ Users_Memberships_Membership_Name }) => Users_Memberships_Membership_Name)
     let result = JSON.parse(popularMemberships).map(({ membershipsCount }) => membershipsCount)
-    console.log(labels)
     var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
     var donutData        = {
         labels: labels,
         datasets: [
             {
                 data: result,
-                backgroundColor : ['#FF0000', '#FF8001', '#FFFF00', '#00FF80', '#80FF02', '#02FFFF', '#00FF01', '#0280FF', '#0600FF', '#8001FF', '#FF00FF', '#FF0080'],
+                backgroundColor : ['#CCD5E6', '#658DC2', '#B9C6DD', '#4C7DB7', '#A3B5D4', '#4873AB', '#8AA3CC', '#416C9F', '#416C9F', '#32567F'],
             }
         ]
     }
@@ -148,10 +180,8 @@ function drawMembershipsGraph(popularMemberships)
 
 }
 
-
 function drawAgeOfUsersGraph(ageOfUsers)
 {
-    //let result = JSON.parse(popularMemberships).map(({ membershipsCount }) => membershipsCount)
     let result1 = JSON.parse(ageOfUsers).map(({ data1 }) => data1)
     let result2 = JSON.parse(ageOfUsers).map(({ data2 }) => data2)
     let result3 = JSON.parse(ageOfUsers).map(({ data3 }) => data3)
@@ -159,7 +189,6 @@ function drawAgeOfUsersGraph(ageOfUsers)
     let result5 = JSON.parse(ageOfUsers).map(({ data5 }) => data5)
     let result6 = JSON.parse(ageOfUsers).map(({ data6 }) => data6)
 
-    // Get context with jQuery - using jQuery's .get() method.
     var areaChartCanvas = $('#barChart').get(0).getContext('2d')
 
     var areaChartData = {
@@ -205,4 +234,91 @@ function drawAgeOfUsersGraph(ageOfUsers)
         data: areaChartData,
         options: areaChartOptions
     })
+}
+
+function drawUsersGenderGraph(usersGender)
+{
+    let labels =JSON.parse(usersGender).map(({ Users_Gender }) => Users_Gender)
+    let result = JSON.parse(usersGender).map(({ genderCount }) => genderCount)
+    var donutData        = {
+        labels: labels,
+        datasets: [
+            {
+                data: result,
+                backgroundColor : ['#CCD5E6', '#658DC2', '#B9C6DD', '#4C7DB7', '#A3B5D4', '#4873AB', '#8AA3CC', '#416C9F', '#416C9F', '#32567F'],
+            }
+        ]
+    }
+
+    var pieChartCanvas = $('#pieChart1').get(0).getContext('2d')
+    var pieData        = donutData;
+    var pieOptions     = {
+        maintainAspectRatio : false,
+        responsive : true,
+    }
+
+    new Chart(pieChartCanvas, {
+        type: 'pie',
+        data: pieData,
+        options: pieOptions
+    })
+
+}
+
+function drawUsersStatusGraph(usersStatus)
+{
+    let labels =JSON.parse(usersStatus).map(({ Users_Status }) => Users_Status)
+    let result = JSON.parse(usersStatus).map(({ statusCount }) => statusCount)
+    var donutData        = {
+        labels: labels,
+        datasets: [
+            {
+                data: result,
+                backgroundColor : ['#CCD5E6', '#658DC2', '#B9C6DD', '#4C7DB7', '#A3B5D4', '#4873AB', '#8AA3CC', '#416C9F', '#416C9F', '#32567F'],
+            }
+        ]
+    }
+
+    var pieChartCanvas = $('#pieChart2').get(0).getContext('2d')
+    var pieData        = donutData;
+    var pieOptions     = {
+        maintainAspectRatio : false,
+        responsive : true,
+    }
+
+    new Chart(pieChartCanvas, {
+        type: 'pie',
+        data: pieData,
+        options: pieOptions
+    })
+
+}
+
+function drawUsersReferenceGraph(usersReference)
+{
+    let labels =JSON.parse(usersReference).map(({ Users_Reference }) => Users_Reference)
+    let result = JSON.parse(usersReference).map(({ referenceCount }) => referenceCount)
+    var donutData        = {
+        labels: labels,
+        datasets: [
+            {
+                data: result,
+                backgroundColor : ['#CCD5E6', '#658DC2', '#B9C6DD', '#4C7DB7', '#A3B5D4', '#4873AB', '#8AA3CC', '#416C9F', '#416C9F', '#32567F'],
+            }
+        ]
+    }
+
+    var pieChartCanvas = $('#pieChart3').get(0).getContext('2d')
+    var pieData        = donutData;
+    var pieOptions     = {
+        maintainAspectRatio : false,
+        responsive : true,
+    }
+
+    new Chart(pieChartCanvas, {
+        type: 'pie',
+        data: pieData,
+        options: pieOptions
+    })
+
 }

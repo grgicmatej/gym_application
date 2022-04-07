@@ -1366,6 +1366,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <br><br>
                             <div class="row">
                                 <div class="col-12 col-md-6 text-center" id="popularMembershipsStats">
                                     <p>Statistika članarina za <?=date('Y')?>. godinu</p>
@@ -1380,11 +1381,26 @@
                                     </div>
                                 </div>
                             </div>
+                            <br><br>
                             <div class="row">
-                                <div class="col-12 col-md-4" id="usersGenderStats"></div>
-                                <div class="col-12 col-md-4" id="usersStatusStats"></div>
-                                <div class="col-12 col-md-4" id="usersReferenceStats"></div>
-
+                                <div class="col-12 col-md-4 text-center" id="usersGenderStats">
+                                    <p>Spol korisnika</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart1" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 text-center" id="usersStatusStats">
+                                    <p>Status korisnika</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 text-center" id="usersReferenceStats">
+                                    <p>Referenca korisnika</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart3" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
