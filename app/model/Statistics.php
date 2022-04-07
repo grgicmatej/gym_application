@@ -62,4 +62,18 @@ class Statistics
         }
         return $userDataPreviousYear;
     }
+
+    public static function popularMemberships()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Memberships_Membership_Name, COUNT(Users_Memberships_Membership_Name) AS membershipsCount
+                                    FROM Users_Memberships_Archive 
+                                    WHERE YEAR(Users_Memberships_Start_Date)=:Users_Memberships_Start_Date
+                                    AND Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id
+                                    GROUP BY Users_Memberships_Membership_Name');
+        $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
+        $stmt->bindValue('Users_Memberships_Start_Date', date('Y'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
