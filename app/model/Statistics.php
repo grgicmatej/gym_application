@@ -70,9 +70,25 @@ class Statistics
                                     FROM Users_Memberships_Archive 
                                     WHERE YEAR(Users_Memberships_Start_Date)=:Users_Memberships_Start_Date
                                     AND Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id
-                                    GROUP BY Users_Memberships_Membership_Name');
+                                    GROUP BY Users_Memberships_Membership_Name
+                                    LIMIT 10');
         $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->bindValue('Users_Memberships_Start_Date', date('Y'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function ageOfUserss()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT SUM(CASE WHEN YEAR(Users_Birthday) < :under20 THEN 1 ELSE 0 END) AS data1,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 21 AND 30 THEN 1 ELSE 0 END) AS data2,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 31 AND 40 THEN 1 ELSE 0 END) AS data3,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 41 AND 50 THEN 1 ELSE 0 END) AS data4,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 51 AND 60 THEN 1 ELSE 0 END) AS data5,
+                                    SUM(CASE WHEN YEAR(Users_Birthday) > 61 THEN 1 ELSE 0 END) AS data6
+                                    FROM Users');
+        $stmt->bindValue('under20', date('Y' ,strtotime("-20 year")));
         $stmt->execute();
         return $stmt->fetchAll();
     }
@@ -80,15 +96,41 @@ class Statistics
     public static function ageOfUsers()
     {
         $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT SUM(CASE WHEN YEAR(Users_Birthday) < 20 THEN 1 ELSE 0 END) AS data1,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 21 AND 30 THEN 1 ELSE 0 END) AS data2,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 31 AND 40 THEN 1 ELSE 0 END) AS data3,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 41 AND 50 THEN 1 ELSE 0 END) AS data4,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 51 AND 60 THEN 1 ELSE 0 END) AS data5,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) > 61 THEN 1 ELSE 0 END) AS data6
-                                    FROM Users');
+        $stmt=$db->prepare('SELECT Users_Birthday FROM Users LEFT JOIN Users_Gym ON Users.Users_Id = Users_Gym.Users_Id WHERE Users_Gym.Gym_Id=:gymId');
+        $stmt->bindValue('gymId', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
-        return $stmt->fetchAll();
+        $data = $stmt->fetchAll();
+        $maindata = ['data1' => 0, 'data2' => 0, 'data3' => 0, 'data4' => 0, 'data5' => 0, 'data6' => 0];
+        $datenow = date_create_from_format('Y-m-d', date('Y-m-d'));
+
+        foreach ($data as $d)
+        {
+            $date_birthday = date_create_from_format('Y-m-d', $d->Users_Birthday);
+            $diff = (array) date_diff($date_birthday, $datenow);
+            $i = ($diff['y']);
+            switch ($i){
+                case $i < 20:
+                    $maindata['data1'] += 1;
+                    break;
+                case ($i >= 20 && $i < 30):
+                    $maindata['data2'] += 1;
+                    break;
+                case ($i >= 30 && $i < 40):
+                    $maindata['data3'] += 1;
+                    break;
+                case ($i >= 40 && $i < 50):
+                    $maindata['data4'] += 1;
+                    break;
+                case ($i >= 50 && $i < 60):
+                    $maindata['data5'] += 1;
+                    break;
+                case ($i >= 60 && $i < 100):
+                    $maindata['data6'] += 1;
+                    break;
+            }
+
+        }
+        return $maindata;
     }
 
     public static function usersGender()

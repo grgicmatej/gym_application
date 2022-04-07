@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="edit user works">
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="stats report">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/statistics.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="statistics_reports" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,6 +173,7 @@
       <workItem from="1649078261394" duration="2400000" />
       <workItem from="1649090910834" duration="276000" />
       <workItem from="1649091251172" duration="146000" />
+      <workItem from="1649339804551" duration="1725000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

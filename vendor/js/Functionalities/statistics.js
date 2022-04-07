@@ -156,6 +156,7 @@ function drawActiveUsersGraph(responseCurrentYear, responsePreviousYear)
 
 function drawMembershipsGraph(popularMemberships)
 {
+    alert(popularMemberships)
     let labels =JSON.parse(popularMemberships).map(({ Users_Memberships_Membership_Name }) => Users_Memberships_Membership_Name)
     let result = JSON.parse(popularMemberships).map(({ membershipsCount }) => membershipsCount)
     var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
@@ -182,7 +183,9 @@ function drawMembershipsGraph(popularMemberships)
 
 function drawAgeOfUsersGraph(ageOfUsers)
 {
-    let result1 = JSON.parse(ageOfUsers).map(({ data1 }) => data1)
+    alert(ageOfUsers)
+    fale uglate zagrade
+    let result1 = JSON.parse([ageOfUsers]).map(({ data1 }) => data1)
     let result2 = JSON.parse(ageOfUsers).map(({ data2 }) => data2)
     let result3 = JSON.parse(ageOfUsers).map(({ data3 }) => data3)
     let result4 = JSON.parse(ageOfUsers).map(({ data4 }) => data4)
@@ -190,7 +193,8 @@ function drawAgeOfUsersGraph(ageOfUsers)
     let result6 = JSON.parse(ageOfUsers).map(({ data6 }) => data6)
 
     var areaChartCanvas = $('#barChart').get(0).getContext('2d')
-
+    var results = [result1, result2, result3, result4, result5, result6]
+    alert(results)
     var areaChartData = {
         labels  : ['<20', '21-30', '31-40', '41-50', '51-60', '>60'],
         datasets: [
@@ -203,7 +207,7 @@ function drawAgeOfUsersGraph(ageOfUsers)
                 pointStrokeColor    : 'rgba(60,141,188,1)',
                 pointHighlightFill  : '#fff',
                 pointHighlightStroke: 'rgba(60,141,188,1)',
-                data                : result1, result2, result3, result4, result5, result6
+                data                : results
             },
         ]
     }
