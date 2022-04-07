@@ -184,8 +184,8 @@ function drawMembershipsGraph(popularMemberships)
 function drawAgeOfUsersGraph(ageOfUsers)
 {
     alert(ageOfUsers)
-    fale uglate zagrade
-    let result1 = JSON.parse([ageOfUsers]).map(({ data1 }) => data1)
+  //  fale uglate zagrade
+    let result1 = JSON.parse(ageOfUsers).map(({ data1 }) => data1)
     let result2 = JSON.parse(ageOfUsers).map(({ data2 }) => data2)
     let result3 = JSON.parse(ageOfUsers).map(({ data3 }) => data3)
     let result4 = JSON.parse(ageOfUsers).map(({ data4 }) => data4)

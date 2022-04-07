@@ -130,7 +130,10 @@ class Statistics
             }
 
         }
-        return $maindata;
+        $object = (object) $maindata;
+
+
+        return $object;
     }
 
     public static function usersGender()
