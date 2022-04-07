@@ -6,7 +6,6 @@ Stolni sportovi         +
 Nogomet                 +
 
 // za nogomet, treba validirati datume, ne smije prihvacat datum enda ranije od starta, takoder ovaj komentar dolje
-// Tu sam stao, CRUD radi ali treba iskoristiti inputSanitizers pa dodijeliti klase za unos kontakta/telefona/starta/enda, očistiti po završetku
 
 aktivni korisnici       / potrebno? - zakomentirano
 inaktivni korisnici     / potrebno? - zakomentirano
@@ -15,8 +14,15 @@ svi korisnici           / potrebno? - zakomentirano
 novi korisnik           +
 
 zaposlenici             +
-članarine
+članarine               +
 statistika
+    Broj aktivnih korisnika ova god vs prošla god (graf) col-12 +
+    Najpopularnije članarine (donut chart) col-6 +
+    Svi korisnici po godinama (graf) col-6 <20, 21-30, 31-40. 41-50, 51-60, 60+
+
+    Spol korisnika (pie chart) col-4
+    Status korisnika (pie chart) col-4
+    Referenca (pie chart) col-4
 financije
 napomene
 pića
@@ -25,9 +31,9 @@ postavke                +
 
 pregled korisnika temp:
     sve članarine           +
-    postojeća članarina
-    zamrzavanje članarina
-    uređivanje korisnika
+    postojeća članarina     +
+    zamrzavanje članarina   +
+    uređivanje korisnika    +
 
 
 build log planner:
@@ -48,6 +54,3 @@ build log planner:
     - Termin za razne sportove eksterni
     - Eksterna provjera statusa članarine
 1.3:
-
-// bug:
-kad se iz random ID-a mijenja, treba se promijeniti i u gym_users i u users_memberships

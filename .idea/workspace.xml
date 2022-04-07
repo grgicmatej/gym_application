@@ -23,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="temp_users_functionality" />
+        <entry key="$PROJECT_DIR$" value="statistics_reports" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,13 +38,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/staff.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/view/stranice" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/users.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/model/Membership.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/users.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/view/stranice" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/staff.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/controller/MembershipController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -465,7 +465,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="clanarine" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="Staff settings are ready" />
     <MESSAGE value="New search works" />
@@ -490,6 +489,7 @@
     <MESSAGE value="removing unnecessary code" />
     <MESSAGE value="password change bugfix" />
     <MESSAGE value="edit user works" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit user works" />
+    <MESSAGE value="stats report" />
+    <option name="LAST_COMMIT_MESSAGE" value="stats report" />
   </component>
 </project>
