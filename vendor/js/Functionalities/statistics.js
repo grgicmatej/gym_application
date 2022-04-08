@@ -156,7 +156,6 @@ function drawActiveUsersGraph(responseCurrentYear, responsePreviousYear)
 
 function drawMembershipsGraph(popularMemberships)
 {
-    alert(popularMemberships)
     let labels =JSON.parse(popularMemberships).map(({ Users_Memberships_Membership_Name }) => Users_Memberships_Membership_Name)
     let result = JSON.parse(popularMemberships).map(({ membershipsCount }) => membershipsCount)
     var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
@@ -183,18 +182,37 @@ function drawMembershipsGraph(popularMemberships)
 
 function drawAgeOfUsersGraph(ageOfUsers)
 {
-    alert(ageOfUsers)
-  //  fale uglate zagrade
-    let result1 = JSON.parse(ageOfUsers).map(({ data1 }) => data1)
-    let result2 = JSON.parse(ageOfUsers).map(({ data2 }) => data2)
-    let result3 = JSON.parse(ageOfUsers).map(({ data3 }) => data3)
-    let result4 = JSON.parse(ageOfUsers).map(({ data4 }) => data4)
-    let result5 = JSON.parse(ageOfUsers).map(({ data5 }) => data5)
-    let result6 = JSON.parse(ageOfUsers).map(({ data6 }) => data6)
+
+    let result1 = 0;
+    let result2 = 0;
+    let result3 = 0;
+    let result4 = 0;
+    let result5 = 0;
+    let result6 = 0;
+    JSON.parse(ageOfUsers, function (key, value) {
+        switch(key) {
+            case "data1":
+                result1 = value;
+                break;
+            case "data2":
+                result2 = value;
+                break;
+            case "data3":
+                result3 = value;
+                break;
+            case "data4":
+                result4 = value;
+                break;
+            case "data5":
+                result5 = value;
+                break;
+            case "data6":
+                result6 = value;
+                break;
+        }
+    });
 
     var areaChartCanvas = $('#barChart').get(0).getContext('2d')
-    var results = [result1, result2, result3, result4, result5, result6]
-    alert(results)
     var areaChartData = {
         labels  : ['<20', '21-30', '31-40', '41-50', '51-60', '>60'],
         datasets: [
@@ -207,7 +225,7 @@ function drawAgeOfUsersGraph(ageOfUsers)
                 pointStrokeColor    : 'rgba(60,141,188,1)',
                 pointHighlightFill  : '#fff',
                 pointHighlightStroke: 'rgba(60,141,188,1)',
-                data                : results
+                data                : [result1, result2, result3, result4, result5, result6]
             },
         ]
     }
