@@ -4,6 +4,46 @@ $('.finance').on('click', function () {
     $.ajax({
         method: "POST",
         data: {},
+        url: urlAddress + 'Finances/yearlyIncome/',
+        success: function (response) {
+            response = JSON.parse(response);
+            $("#yearlyIncome").text(response["Users_Memberships_Price_Year"]+' HRK');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Finances/monthlyIncome/',
+        success: function (response) {
+            response = JSON.parse(response);
+            $("#monthlyIncome").text(response["Users_Memberships_Price_Month"]+' HRK');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Finances/dailyIncome/',
+        success: function (response) {
+            alert(response)
+            response = JSON.parse(response);
+            $("#dailyIncome").text(response["Users_Memberships_Price_Day"]+' HRK');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+
+    $.ajax({
+        method: "POST",
+        data: {},
         url: urlAddress + 'Finances/yearlyStatsFinance/',
         success: function (responseCurrentYear) {
             $.ajax({

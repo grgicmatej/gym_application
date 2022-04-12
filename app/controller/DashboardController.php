@@ -19,7 +19,7 @@ class DashboardController extends SecurityController
                 'monthlyUserProportion' => User::monthlyUserProportion(),
                 'yearlyStats'           => Statistics::yearlyStats(),
                 'monthsInYear'          => Statistics::monthsInYear(),
-                'monthlyIncome'         => Statistics::monthlyIncome()->Users_Memberships_Price_Month,
+                'monthlyIncome'         => Finance::monthlyIncome()->Users_Memberships_Price_Month,
             ]);
 
     }
