@@ -1527,10 +1527,28 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: left">Pregled zaliha</h6>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaliha</h6></div>
+                                <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info newWarehouseStaff" id=""><i class="nav-icon fas fa-plus"></i> Novi proizvod</p></div>
+                            </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <!-- placeholder -->
+                                    <div class="card-body" id="dt6" style="max-width: available">
+                                        <table class="table" id="" width=100%" cellspacing="0">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: auto">Ime proizvoda</th>
+                                                <th style="width: auto">Cijena</th>
+                                                <th style="width: auto">Stanje na skladištu</th>
+                                                <th style="width: auto">Prodano</th>
+                                                <th style="width: auto; text-align: center">Trenutno stanje</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="dataTableBodyWarehouse"></tbody>
+                                        </table>
+                                    </div>
+                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                                 </div>
                             </div>
                         </div>
@@ -1541,3 +1559,56 @@
     </div>
 </div>
 <!-- warehouse modal end -->
+
+<!-- edit membership profile modal start -->
+<div class="modal fade" id="editWarehouseItemData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="editWarehouseForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Pregled proizvoda</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o proizvodu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Naziv proizvoda</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Warehouse_Item_Name" id="Edit_Warehouse_Item_Name" placeholder="Naziv proizvoda" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv proizvoda.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena proizvoda</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Warehouse_Item_Price" id="Edit_Warehouse_Item_Price" placeholder="Cijena proizvoda" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu proizvoda.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početno stanje proizvoda</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Warehouse_Item_Count" id="Edit_Warehouse_Item_Count" placeholder="Početno stanje proizvoda" oninvalid="this.setCustomValidity('Molimo odaberite ispravno stanje proizvoda.')" oninput="setCustomValidity('')" min="0" required >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6"></div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="editWarehouseForm" value="Spremanje podataka">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit membership profile modal end -->
