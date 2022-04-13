@@ -503,10 +503,15 @@ Edit_Memberships_Duration.addEventListener('blur', function() {
 Edit_Warehouse_Item_Name.addEventListener('blur', function() {
     checkForEmptyData(this);
 });
-// tu sam stao
-var Edit_Warehouse_Item_Name = document.getElementById('Edit_Warehouse_Item_Name');
-var Edit_Warehouse_Item_Price = document.getElementById('Edit_Warehouse_Item_Price');
-var Edit_Warehouse_Item_Count = document.getElementById('Edit_Warehouse_Item_Count');
+
+Edit_Warehouse_Item_Price.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Warehouse_Item_Count.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
 
 
 
