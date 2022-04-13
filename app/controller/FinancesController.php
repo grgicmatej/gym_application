@@ -22,6 +22,11 @@ class FinancesController extends SecurityController
         echo json_encode(Finance::monthlyIncome());
     }
 
+    public function yesterdayIncome()
+    {
+        echo json_encode(Finance::yesterdayIncome());
+    }
+
     public function dailyIncome()
     {
         echo json_encode(Finance::dailyIncome());
@@ -30,5 +35,15 @@ class FinancesController extends SecurityController
     public function yearlyIncomeMemberships()
     {
         echo json_encode(Finance::yearlyIncomeMemberships());
+    }
+
+    public function yearlyIncomeOther()
+    {
+        echo json_encode(Finance::yearlyIncomeOther());
+    }
+
+    public function incomeOnSpecificDate()
+    {
+        echo json_encode(Finance::incomeOnSpecificDate());
     }
 }

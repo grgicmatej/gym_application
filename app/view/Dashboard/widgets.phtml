@@ -1423,7 +1423,7 @@
                         <div class="card-block">
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Financije teretane</h6>
                             <div class="row">
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="small-box bg-blue1">
                                         <div class="inner">
                                             <h3 id="yearlyIncome"></h3>
@@ -1434,7 +1434,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
                                     <div class="small-box bg-blue2">
                                         <div class="inner">
                                             <h3 id="monthlyIncome"></h3>
@@ -1445,7 +1445,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-3">
+                                    <div class="small-box bg-blue3">
+                                        <div class="inner">
+                                            <h3 id="yesterdayIncome"></h3>
+                                            <p>Jučerašnji prihodi</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
                                     <div class="small-box bg-blue4">
                                         <div class="inner">
                                             <h3 id="dailyIncome"></h3>
@@ -1475,14 +1486,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <br><br>
                             <div class="row">
-                                <div class="col-12 col-md-6 text-center" id="">
+                                <div class="col-12 col-md-8 text-center" id="">
                                     <p>Ostali prihodi</p>
-                                    <!-- mjesto za graf -->
+                                    <div class="card-body">
+                                        <canvas id="pieChart4" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-md-6 text-center" id="">
-                                    <p>Forma za datum</p>
-                                    <!-- mjesto za graf -->
+                                <div class="col-12 col-md-4 text-center" id="">
+                                    <p>Odaberi datum za prikaz prihoda</p>
+                                    <form id="incomeDatesForm">
+                                        <br>
+                                        <input type="date" class=" form-control newUserInputForm" name="incomeDates" id="incomeDates" placeholder="Traženi datum" max="<?= date('Y-m-d', strtotime('-1 days')); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                        <input type="submit" class="m-b-10 btn btn-block btn-outline-info" value="Prikaz prihoda">
+                                    </form>
+                                    <br>
+                                    <div id="incomeOnSpecificDate">
+                                        <h4>Datum: <b><span id="specificDate"></span></b></h4>
+                                        <p>Prihod od članarina: <b><span id="incomeOnSpecificDateMembership"></span></b></p>
+                                        <p>Ostali prihod: <b><span id="incomeOnSpecificDateOther"></span></b></p>
+                                    </div>
+
                                 </div>
                             </div>
                             <br>
