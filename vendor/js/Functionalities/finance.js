@@ -32,7 +32,6 @@ $('.finance').on('click', function () {
         data: {},
         url: urlAddress + 'Finances/dailyIncome/',
         success: function (response) {
-            alert(response)
             response = JSON.parse(response);
             $("#dailyIncome").text(response["Users_Memberships_Price_Day"]+' HRK');
         },
@@ -57,6 +56,18 @@ $('.finance').on('click', function () {
                     warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
                 }
             });
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Finances/yearlyIncomeMemberships/',
+        success: function (response) {
+            drawYearlyIncomeMembershipsGrap(response)
         },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -123,6 +134,58 @@ function drawFinanceGraph(responseCurrentYear, responsePreviousYear)
     // This will get the first returned node in the jQuery collection.
     new Chart(areaChartCanvas, {
         type: 'line',
+        data: areaChartData,
+        options: areaChartOptions
+    })
+}
+
+function drawYearlyIncomeMembershipsGrap(response)
+{
+
+    let labels =JSON.parse(response).map(({ Sales_Item_Name }) => Sales_Item_Name)
+    let result = JSON.parse(response).map(({ salesSum }) => salesSum)
+
+    var areaChartCanvas = $('#barChart1').get(0).getContext('2d')
+    var areaChartData = {
+        labels  : labels,
+        datasets: [
+            {
+                label               : 'Ovogodišnji prihodi',
+                backgroundColor     : 'rgba(60,141,188,0.9)',
+                borderColor         : 'rgba(60,141,188,0.8)',
+                pointRadius          : false,
+                pointColor          : '#3b8bba',
+                pointStrokeColor    : 'rgba(60,141,188,1)',
+                pointHighlightFill  : '#fff',
+                pointHighlightStroke: 'rgba(60,141,188,1)',
+                data                : result
+            },
+        ]
+    }
+
+    var areaChartOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+        legend: {
+            display: false
+        },
+        scales: {
+            xAxes: [{
+                gridLines : {
+                    display : false,
+                }
+            }],
+            yAxes: [{
+                gridLines : {
+                    display : true,
+                }
+            }]
+        }
+    }
+
+    // This will get the first returned node in the jQuery collection.
+    new Chart(areaChartCanvas, {
+        type: 'bar',
         data: areaChartData,
         options: areaChartOptions
     })

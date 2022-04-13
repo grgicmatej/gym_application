@@ -90,4 +90,21 @@ class Finance
         $stmt->execute();
         return $stmt->fetch();
     }
+
+    public static function yearlyIncomeMemberships()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Sales_Item_Name, SUM(Sales_Price) AS salesSum
+                                    FROM Sales 
+                                    WHERE YEAR(Sales_Date)=:Sales_Date
+                                    AND Sales_Gym_Id=:Sales_Gym_Id
+                                    GROUP BY Sales_Item_Name
+                                    ORDER BY salesSum DESC 
+                                    LIMIT 15
+                                    ');
+        $stmt->bindValue('Sales_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
+        $stmt->bindValue('Sales_Date', date('Y'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

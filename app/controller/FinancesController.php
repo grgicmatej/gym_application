@@ -26,4 +26,9 @@ class FinancesController extends SecurityController
     {
         echo json_encode(Finance::dailyIncome());
     }
+
+    public function yearlyIncomeMemberships()
+    {
+        echo json_encode(Finance::yearlyIncomeMemberships());
+    }
 }
