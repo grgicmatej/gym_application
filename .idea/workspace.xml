@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vendor/js/Functionalities/finance.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/FinancesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/FinancesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Finance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Finance.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/scripts.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/finance.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/finance.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="statistics_reports" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -182,7 +180,8 @@
       <workItem from="1649354797878" duration="328000" />
       <workItem from="1649356662274" duration="373000" />
       <workItem from="1649769204658" duration="36000" />
-      <workItem from="1649769246236" duration="927000" />
+      <workItem from="1649769246236" duration="3991000" />
+      <workItem from="1649838217497" duration="5255000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

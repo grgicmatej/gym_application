@@ -3,21 +3,6 @@
 
 class Statistics
 {
-    public static function monthlyIncome()
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT SUM(Sales_Price) AS Users_Memberships_Price_Month FROM Sales 
-                                        WHERE MONTH(Sales_Date)=:Current_Month 
-                                        AND YEAR(Sales_Date)=:Current_Year
-                                        AND Sales_Gym_Id=:Sales_Gym_Id
-                                        ');
-        $stmt->bindValue('Current_Month', date('m'));
-        $stmt->bindValue('Current_Year', date('Y'));
-        $stmt->bindValue('Sales_Gym_Id',  $_SESSION["Gym_Id"] ?? 0);
-        $stmt->execute();
-        return $stmt->fetch();
-    }
-
     public static function monthsInYear()
     {
         for ($i=1; $i<=date('m'); $i++){
@@ -74,21 +59,6 @@ class Statistics
                                     LIMIT 10');
         $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->bindValue('Users_Memberships_Start_Date', date('Y'));
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-
-    public static function ageOfUserss()
-    {
-        $db=Db::getInstance();
-        $stmt=$db->prepare('SELECT SUM(CASE WHEN YEAR(Users_Birthday) < :under20 THEN 1 ELSE 0 END) AS data1,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 21 AND 30 THEN 1 ELSE 0 END) AS data2,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 31 AND 40 THEN 1 ELSE 0 END) AS data3,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 41 AND 50 THEN 1 ELSE 0 END) AS data4,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) BETWEEN 51 AND 60 THEN 1 ELSE 0 END) AS data5,
-                                    SUM(CASE WHEN YEAR(Users_Birthday) > 61 THEN 1 ELSE 0 END) AS data6
-                                    FROM Users');
-        $stmt->bindValue('under20', date('Y' ,strtotime("-20 year")));
         $stmt->execute();
         return $stmt->fetchAll();
     }
