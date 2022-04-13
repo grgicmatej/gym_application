@@ -16,18 +16,7 @@ novi korisnik           +
 zaposlenici             +
 članarine               +
 statistika              +
-financije
-    godišnji prihod (podatak)   col-3
-    mjesečni prihodi (podatak)  col-3
-    tjedni prihod (podatak)     col-3
-    dnevni prihod (podatak)     col-3
-    --
-    graf prihodi mjesečni naspram prošle god - graf sa linijama - col-12
-    -
-    graf prihoda po članarinama ove godine - graf sa stupcima - col 12
-    -
-    pie chart prihoda warehouse - pie chart - col 6
-    forma za odabir datuma za prihode - col 6
+financije               +
 napomene
 pića
 aktivnost               / za 1.1.
