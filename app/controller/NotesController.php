@@ -2,8 +2,8 @@
 
 class NotesController extends SecurityController
 {
-    public function allStaffNotes()
+    public function checkStaffNotes()
     {
-        echo json_encode(Notes::allStaffNotes());
+        echo json_encode(Notes::checkStaffNotes());
     }
 }

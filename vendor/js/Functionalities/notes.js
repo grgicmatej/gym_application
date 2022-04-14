@@ -1,13 +1,12 @@
 $('.notes').on('click', function () {
     fadeIn("#notesModal");
     $.ajax({
-        url: urlAddress + 'Notes/allStaffNotes/',
+        url: urlAddress + 'Notes/checkStaffNotes/',
         method: "POST",
         success: function (data) {
             data = JSON.parse(data);
             const searchData = document.getElementById('BodyNotesData');
 
-            // tu sam stao, ne valja dizajn
             searchData.innerHTML = data.reduce((options, {Notes_Id, Notes_Note, Notes_Date, Staff_Name, Staff_Surname}) =>
                     options += `
                                 <div class="row">
@@ -33,11 +32,15 @@ $('.notes').on('click', function () {
                                         </div>
                                     </div>
                                 </div>
-                
-                
-                            
                                 `,
                 ``);
         }
     });
 });
+
+$('.createNewNote').on('click', function () {
+    fadeOut("#notesModal");
+    fadeIn("#createNewNote")
+});
+
+createNewNote
