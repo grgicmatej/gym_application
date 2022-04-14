@@ -37,10 +37,33 @@ $('.notes').on('click', function () {
         }
     });
 });
-
+// new note modal start
 $('.createNewNote').on('click', function () {
     fadeOut("#notesModal");
-    fadeIn("#createNewNote")
+    fadeIn("#newStaffNote")
 });
 
-createNewNote
+$('.newNoteFormCancel').on('click', function () {
+    fadeOut("#newStaffNote");
+});
+
+// new note form start
+$('#newNoteForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Notes/newNote/',
+        data: $('#newNoteForm').serialize(),
+        success: function () {
+            fadeOut("#newStaffNote");
+            successNotification('Bilješka je uspješno spremljena.');
+            clearInput(1000, 'newNoteForm')
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#newStaffNote')
+        }
+    });
+});
+// warehouse item form end
+// new note modal cancel

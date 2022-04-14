@@ -32,4 +32,25 @@ class Notes
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public static function newNote()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('INSERT INTO Notes 
+                                (
+                                 Notes_Note,
+                                 Notes_Staff_Id,
+                                 Notes_Gym_Id
+                                ) 
+                                VALUES 
+                                (
+                                 :Notes_Note,
+                                 :Notes_Staff_Id,
+                                 :Notes_Gym_Id
+                                )');
+        $stmt->bindValue('Notes_Note', Request::post('Notes_Note'));
+        $stmt->bindValue('Notes_Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->bindValue('Notes_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
+        $stmt->execute();
+    }
 }
