@@ -158,3 +158,30 @@ $(document).ajaxComplete(function () {
     });
 });
 // warehouse item sell end
+
+// warehouse new item modal start
+$('.newWarehouseProduct').on('click', function () {
+    fadeOut("#warehouse")
+    fadeIn("#newWarehouseItemData")
+});
+// warehouse new item modal end
+
+// warehouse new item form start
+$('#newWarehouseForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Warehouse/newWarehouseItem/',
+        data: $('#newWarehouseForm').serialize(),
+        success: function () {
+            fadeOut("#newWarehouseItemData");
+            successNotification('Novi proizvod je uspješno spremljen.');
+            clearInput(1000, 'newWarehouseForm')
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#editWarehouseItemData')
+        }
+    });
+});
+// warehouse new item form end

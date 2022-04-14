@@ -7,9 +7,9 @@ class WarehouseController extends SecurityController
         echo json_encode(Warehouse::allWarehouseItems());
     }
 
-    public function viewWarehouseItem($id)
+    public function deleteWarehouseItem()
     {
-        echo json_encode(Warehouse::viewWarehouseItem($id));
+        Warehouse::deleteWarehouseItem();
     }
 
     public function editWarehouseItem($id)
@@ -17,9 +17,14 @@ class WarehouseController extends SecurityController
         Warehouse::editWarehouseItemData($id);
     }
 
-    public function deleteWarehouseItem()
+    public function newSellWarehouseItem()
     {
-        Warehouse::deleteWarehouseItem();
+        Warehouse::newSellWarehouseItem();
+    }
+
+    public function newWarehouseItem()
+    {
+        Warehouse::newWarehouseItem();
     }
 
     public function resetWarehouseItem()
@@ -27,8 +32,8 @@ class WarehouseController extends SecurityController
         Warehouse::resetWarehouseItem();
     }
 
-    public function newSellWarehouseItem()
+    public function viewWarehouseItem($id)
     {
-        Warehouse::newSellWarehouseItem();
+        echo json_encode(Warehouse::viewWarehouseItem($id));
     }
 }
