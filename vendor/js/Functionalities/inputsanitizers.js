@@ -71,6 +71,11 @@ var Edit_Memberships_Name = document.getElementById('Edit_Memberships_Name');
 var Edit_Memberships_Price = document.getElementById('Edit_Memberships_Price');
 var Edit_Memberships_Duration = document.getElementById('Edit_Memberships_Duration');
 
+var Edit_Warehouse_Item_Name = document.getElementById('Edit_Warehouse_Item_Name');
+var Edit_Warehouse_Item_Price = document.getElementById('Edit_Warehouse_Item_Price');
+var Edit_Warehouse_Item_Count = document.getElementById('Edit_Warehouse_Item_Count');
+
+
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -493,6 +498,24 @@ New_Memberships_Duration.addEventListener('blur', function() {
 Edit_Memberships_Duration.addEventListener('blur', function() {
     checkForEmptyData(this);
 });
+
+// warehouse sanitizers
+Edit_Warehouse_Item_Name.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Warehouse_Item_Price.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+Edit_Warehouse_Item_Count.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+
+
+
+
 
 function checkForEmptyData(dataId){
     if (dataId.value === '') {
