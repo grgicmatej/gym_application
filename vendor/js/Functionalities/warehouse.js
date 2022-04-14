@@ -87,3 +87,55 @@ $('.editWarehouseFormCancel').on('click', function () {
     fadeOut("#editWarehouseItemData");
 });
 // warehouse item form cancel end
+
+// warehouse item delete start
+$('.deleteWarehouseItembutton').on('click', function () {
+    fadeOut("#editWarehouseItemData")
+    fadeIn("#deleteWarehouseItem")
+});
+
+$('.cancelWarehouseDeleteButton').on('click', function () {
+    fadeOut("#deleteWarehouseItem")
+});
+
+$('.confirmWarehouseDeleteButton').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {warehouseId: globalVariableWarehouseItem},
+        url: urlAddress + 'warehouse/deleteWarehouseItem',
+        success: function () {
+            fadeOut("#deleteWarehouseItem")
+            successNotification('Proizvod je uspješno obrisan.');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// warehouse item delete end
+
+// warehouse item reset start
+$('.resetWarehouseCountbutton').on('click', function () {
+    fadeOut("#editWarehouseItemData")
+    fadeIn("#resetWarehouseItem")
+});
+
+$('.cancelWarehouseResetButton').on('click', function () {
+    fadeOut("#resetWarehouseItem")
+});
+
+$('.confirmWarehouseResetButton').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {warehouseId: globalVariableWarehouseItem},
+        url: urlAddress + 'warehouse/resetWarehouseItem',
+        success: function () {
+            fadeOut("#resetWarehouseItem")
+            successNotification('Broj prodaja je uspješno restartiran.');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// warehouse item reset end

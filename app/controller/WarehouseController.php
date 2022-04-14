@@ -16,4 +16,14 @@ class WarehouseController extends SecurityController
     {
         Warehouse::editWarehouseItemData($id);
     }
+
+    public function deleteWarehouseItem()
+    {
+        Warehouse::deleteWarehouseItem();
+    }
+
+    public function resetWarehouseItem()
+    {
+        Warehouse::resetWarehouseItem();
+    }
 }
