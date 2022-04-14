@@ -23,8 +23,8 @@ $('.notes').on('click', function () {
                                                     </div>
                                                     <div class="timeline-footer">
                                                         <div class="row">
-                                                            <div class="col-12 col-lg-3"><a class="m-b-10 f-w-600 btn btn-block btn-outline-info editStaffNote" id="${Notes_Id}">Uređivanje bilješke</a></div>
-                                                            <div class="col-12 col-lg-3"><a class="m-b-10 f-w-600 btn btn-block btn-outline-danger deleteStaffNote" id="${Notes_Id}">Brisanje bilješke</a></div>
+                                                            <div class="col-12 col-lg-3"><p class="m-b-10 f-w-600 btn btn-block btn-outline-info editStaffNote" id="i_${Notes_Id}">Uređivanje bilješke</p></div>
+                                                            <div class="col-12 col-lg-3"><p class="m-b-10 f-w-600 btn btn-block btn-outline-danger deleteStaffNote" id="i_${Notes_Id}">Brisanje bilješke</p></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,5 +65,33 @@ $('#newNoteForm').on('submit', function (e) {
         }
     });
 });
-// warehouse item form end
-// new note modal cancel
+// new note form end
+
+// notes item delete start
+$('.deleteStaffNote').on('click', function () {
+    alert('tu sam')
+    var id = $(this).attr('id');
+    globalVariableNoteId = id.split('_')[1]
+    fadeOut("#notesModal")
+    fadeIn("#deleteNotes")
+});
+
+$('.cancelNotesDeleteButton').on('click', function () {
+    fadeOut("#deleteNotes")
+});
+
+$('.confirmNotesDeleteButton').on('click', function () {
+    $.ajax({
+        method: "POST",
+        data: {notesId: globalVariableNoteId},
+        url: urlAddress + 'notes/deleteNote',
+        success: function () {
+            fadeOut("#deleteNotes")
+            successNotification('Bilješka je uspješno obrisana.');
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+});
+// notes item delete end

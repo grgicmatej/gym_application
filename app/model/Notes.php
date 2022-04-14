@@ -53,4 +53,13 @@ class Notes
         $stmt->bindValue('Notes_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
         $stmt->execute();
     }
+
+    public static function deleteNote()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('DELETE FROM Notes WHERE Notes_Id=:Notes_Id AND Notes_Gym_Id=:Notes_Gym_Id');
+        $stmt->bindValue('Notes_Id', Request::post('notesId'));
+        $stmt->bindValue('Notes_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
+        $stmt->execute();
+    }
 }

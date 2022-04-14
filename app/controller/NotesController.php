@@ -13,4 +13,10 @@ class NotesController extends SecurityController
         $this->employeeCheck();
         Notes::newNote();
     }
+
+    public function deleteNote()
+    {
+        $this->employeeCheck();
+        Notes::deleteNote();
+    }
 }
