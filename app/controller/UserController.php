@@ -51,7 +51,7 @@ class UserController extends SecurityController
     public function editMembershipUser($id)
     {
         $this->employeeCheck();
-        echo json_encode(User::editMembershipUser($id));
+        User::editMembershipUser($id);
     }
 
     public function pauseMembership()
