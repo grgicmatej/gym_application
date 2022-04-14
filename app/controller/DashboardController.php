@@ -33,4 +33,10 @@ class DashboardController extends SecurityController
             header( 'Location:'.App::config('url'));
         }
     }
+
+    public function changeGym($id)
+    {
+        Dashboard::changeGym($id);
+        header( 'Location:'.App::config('url').'Dashboard/Dashboard/');
+    }
 }

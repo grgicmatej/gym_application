@@ -249,3 +249,9 @@ h6 {
 .bg-blue4{
     background-color: #89A3CB;
 }
+
+.authorStyle{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
