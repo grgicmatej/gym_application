@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/NotesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Notes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/js/Functionalities/notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/scripts.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +183,7 @@
       <workItem from="1649769204658" duration="36000" />
       <workItem from="1649769246236" duration="3991000" />
       <workItem from="1649838217497" duration="11784000" />
-      <workItem from="1649919338058" duration="4442000" />
+      <workItem from="1649919338058" duration="4966000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

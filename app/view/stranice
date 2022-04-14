@@ -4,13 +4,6 @@ teretane
 
 Stolni sportovi         +
 Nogomet                 +
-
-// za nogomet, treba validirati datume, ne smije prihvacat datum enda ranije od starta, takoder ovaj komentar dolje
-
-aktivni korisnici       / potrebno? - zakomentirano
-inaktivni korisnici     / potrebno? - zakomentirano
-svi korisnici           / potrebno? - zakomentirano
-
 novi korisnik           +
 
 zaposlenici             +
@@ -18,8 +11,7 @@ zaposlenici             +
 statistika              +
 financije               +
 napomene
-pića
-aktivnost               / za 1.1.
+pića                    +
 postavke                +
 
 pregled korisnika temp:
@@ -39,7 +31,7 @@ build log planner:
     - Dodati više sportova u kalendar, trenutno postavljen samo nogomet
     - Notifikacije
     - Termin za razne sportove interni
-    - ugradnja log sustava
+    - ugradnja log (aktivnost) sustava
     - Engleska verzija
     - promjena lozinke svaka 3mj
     - pravi kalendar za nogomet
