@@ -81,3 +81,9 @@ $('#editWarehouseForm').on('submit', function (e) {
     });
 });
 // warehouse item form end
+
+// warehouse item form cancel start
+$('.editWarehouseFormCancel').on('click', function () {
+    fadeOut("#editWarehouseItemData");
+});
+// warehouse item form cancel end
