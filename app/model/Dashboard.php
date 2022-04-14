@@ -19,9 +19,30 @@ class Dashboard
         return $stmt->fetch();
     }
 
-    public static function changeGym()
+    public static function changeGym($id = null)
     {
-        $_SESSION['Gym_Id']=self::gymDataLimit1()->Gym_Id;
+        if ($id){
+            if (self::checkGymId($id)){
+                $_SESSION['Gym_Id']= $id;
+            }else{
+                $_SESSION['Gym_Id']= $id ?? self::gymDataLimit1()->Gym_Id;
+            }
+        }
+        $_SESSION['Gym_Id']= $id ?? self::gymDataLimit1()->Gym_Id;
+    }
+
+    public static function checkGymId($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT * FROM Staff_Gym WHERE Staff_Id=:Staff_Id AND Gym_Id=:Gym_Id');
+        $stmt->bindValue('Staff_Id', Session::getInstance()->getUser()->Staff_Id);
+        $stmt->bindValue('Gym_Id', $id);
+        if ($stmt->rowCount()>0) {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     Public static function gymData()

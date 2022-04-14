@@ -30,9 +30,9 @@
                     <ul class="nav nav-treeview">
                         <?php foreach ($gymData as $gd):?>
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a href="<?=App::config("url")?>Dashboard/changeGym/<?=$gd->Gym_Id?>" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p><?=$gd->Gym_Name?></p>
+                                    <p> <?=$gd->Gym_Name?></p>
                                 </a>
                             </li>
                         <? endforeach;?>
