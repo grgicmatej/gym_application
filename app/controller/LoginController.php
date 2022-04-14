@@ -5,7 +5,6 @@ class LoginController extends SecurityController
 {
     public function login()
     {
-
         if (Staff::loginCheck()){
             if (Staff::passwordCheck()){
                 Admin::logedUserStart();

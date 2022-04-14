@@ -75,6 +75,9 @@ var Edit_Warehouse_Item_Name = document.getElementById('Edit_Warehouse_Item_Name
 var Edit_Warehouse_Item_Price = document.getElementById('Edit_Warehouse_Item_Price');
 var Edit_Warehouse_Item_Count = document.getElementById('Edit_Warehouse_Item_Count');
 
+var New_Warehouse_Item_Name = document.getElementById('New_Warehouse_Item_Name');
+var New_Warehouse_Item_Price = document.getElementById('New_Warehouse_Item_Price');
+var New_Warehouse_Item_Count = document.getElementById('New_Warehouse_Item_Count');
 
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
@@ -513,7 +516,18 @@ Edit_Warehouse_Item_Count.addEventListener('blur', function() {
 });
 
 
+// warehouse sanitizers
+New_Warehouse_Item_Name.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
 
+New_Warehouse_Item_Price.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
+
+New_Warehouse_Item_Count.addEventListener('blur', function() {
+    checkForEmptyData(this);
+});
 
 
 

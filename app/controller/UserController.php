@@ -5,16 +5,19 @@ class UserController extends SecurityController
 {
     public function addUserArrival($id)
     {
+        $this->employeeCheck();
         User::newArrival($id);
     }
 
     public function addNewUserMembership($id)
     {
+        $this->employeeCheck();
         echo json_encode(User::addNewUserMembership($id));
     }
 
     public function addNewUser()
     {
+        $this->employeeCheck();
         Upload::uploadPhoto();
         User::newUser(Upload::getFileName(), Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
         User::addUserGymRegistration(Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
@@ -23,41 +26,49 @@ class UserController extends SecurityController
 
     public function checkUsersId()
     {
+        $this->employeeCheck();
         echo json_encode(User::checkUsersId());
     }
 
     public function checkUserMemberships()
     {
+        $this->employeeCheck();
         echo json_encode(User::checkUserMemberships());
     }
 
     public function checkPausedMembership()
     {
+        $this->employeeCheck();
         echo json_encode(User::checkPausedMembership());
     }
 
     public function editUser($id)
     {
+        $this->employeeCheck();
         echo json_encode(User::editUserPrepare($id));
     }
 
     public function editMembershipUser($id)
     {
+        $this->employeeCheck();
         echo json_encode(User::editMembershipUser($id));
     }
 
     public function pauseMembership()
     {
+        $this->employeeCheck();
         echo json_encode(User::pauseUser());
     }
 
     public function userDataSearch()
     {
+        $this->employeeCheck();
         echo json_encode(User::allUsersSearch());
     }
 
     public function viewUser($id)
     {
+        $this->employeeCheck();
         echo json_encode(User::essentialUserData($id));
     }
 
