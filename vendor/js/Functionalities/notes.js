@@ -22,10 +22,12 @@ $('.notes').on('click', function () {
                                                        ${Notes_Note}
                                                     </div>
                                                     <div class="timeline-footer">
+                                                    <!-- 
                                                         <div class="row">
                                                             <div class="col-12 col-lg-3"><p class="m-b-10 f-w-600 btn btn-block btn-outline-info editStaffNote" id="i_${Notes_Id}">Uređivanje bilješke</p></div>
                                                             <div class="col-12 col-lg-3"><p class="m-b-10 f-w-600 btn btn-block btn-outline-danger deleteStaffNote" id="i_${Notes_Id}">Brisanje bilješke</p></div>
                                                         </div>
+                                                         -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -45,6 +47,22 @@ $('.createNewNote').on('click', function () {
 
 $('.newNoteFormCancel').on('click', function () {
     fadeOut("#newStaffNote");
+});
+
+$('#5').on('click', function () {
+    alert(5);
+});
+
+$('#3').on('click', function () {
+    alert(3);
+});
+
+$('#4').on('click', function () {
+    alert(4);
+});
+
+$('#6').on('click', function () {
+    alert(6);
 });
 
 // new note form start
@@ -68,9 +86,9 @@ $('#newNoteForm').on('submit', function (e) {
 // new note form end
 
 // notes item delete start
-$('.deleteStaffNote').on('click', function () {
+$('#deleteStaffNote').on('click', function () {
     alert('tu sam')
-    var id = $(this).attr('id');
+    var id = $('.deleteStaffNote').attr('id');
     globalVariableNoteId = id.split('_')[1]
     fadeOut("#notesModal")
     fadeIn("#deleteNotes")
