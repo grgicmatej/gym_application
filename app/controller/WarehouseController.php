@@ -26,4 +26,9 @@ class WarehouseController extends SecurityController
     {
         Warehouse::resetWarehouseItem();
     }
+
+    public function newSellWarehouseItem()
+    {
+        Warehouse::newSellWarehouseItem();
+    }
 }

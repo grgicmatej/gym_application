@@ -26,7 +26,7 @@ $('.warehouse').on('click', function () {
     });
 });
 
-// warehouse item modal
+// warehouse item modal start
 $(document).ajaxComplete(function () {
 
     $('.warehouseItemEdit').on('click', function () {
@@ -36,8 +36,8 @@ $(document).ajaxComplete(function () {
             id = id.split('_')[1];
             $.ajax({
                 method: "POST",
-                data: {data: id},
-                url: urlAddress + 'Warehouse/viewWarehouseItem/' + id,
+                data: {warehouseId: id},
+                url: urlAddress + 'Warehouse/viewWarehouseItem/',
                 success: function (response) {
                     response = JSON.parse(response);
 
@@ -46,11 +46,6 @@ $(document).ajaxComplete(function () {
                     document.getElementById("Edit_Warehouse_Item_Price").value = response["Warehouse_Item_Price"];
                     document.getElementById("Edit_Warehouse_Item_Count").value = response["Warehouse_Item_Count"];
                     globalVariableWarehouseItem = response["Warehouse_Id"];
-                    /*
-                    treba dodati gumbove za restartiranje stanja i za brisanje
-                    $("#confirmArrival").html("<a><span class='btn btn-block btn-outline-info potvrdiDolazakBox' id='"+(response["Users_Id"])+"'>Potvrda dolaska</span></a>");
-                    globalVariable = response["Users_Id"];
-                    */
 
                 },
                 error: function (){
@@ -139,3 +134,27 @@ $('.confirmWarehouseResetButton').on('click', function () {
     });
 });
 // warehouse item reset end
+
+// warehouse item sell start
+$(document).ajaxComplete(function () {
+    $('.newWarehouseItemSell').on('click', function () {
+        var id = $(this).attr('id');
+        if (id) {
+            id = id.split('_')[1];
+            $.ajax({
+                method: "POST",
+                data: {warehouseId: id},
+                url: urlAddress + 'Warehouse/newSellWarehouseItem/',
+                success: function () {
+                    fadeOut('#warehouse')
+                    successNotification('Nova prodaja je uspješno zabilježena.');
+
+                },
+                error: function (){
+                    warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+                }
+            });
+        }
+    });
+});
+// warehouse item sell end
