@@ -4,7 +4,6 @@ $('.notes').on('click', function () {
         url: urlAddress + 'Notes/checkStaffNotes/',
         method: "POST",
         success: function (data) {
-            alert(data)
             data = JSON.parse(data);
             const searchData = document.getElementById('BodyNotesData');
 

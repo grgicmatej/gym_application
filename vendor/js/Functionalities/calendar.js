@@ -55,6 +55,7 @@ $('.eventCalendar').on('click', function () {
                                         fadeOut("#eventCalendarDetails")
                                         fadeOut("#eventCalendar")
                                         successNotification('Uspješno otkazan termin.')
+                                        loadEventsFunction()
                                         calendar.destroy();
                                     }
                                 });
@@ -72,6 +73,7 @@ $('.eventCalendar').on('click', function () {
                                         fadeOut("#eventCalendarDetails")
                                         fadeOut("#eventCalendar")
                                         successNotification('Uspješno potvrđen dolazak.')
+                                        loadEventsFunction()
                                         calendar.destroy();
                                     }
                                 });
@@ -102,6 +104,7 @@ $('.eventCalendar').on('click', function () {
                                             fadeOut('#eventCalendarDetails')
                                             fadeOut('#eventCalendar')
                                             successNotification('Uspješno izmijenjen termin.')
+                                            loadEventsFunction()
                                             clearInput(1000, 'updateEventForm');
                                             },
                                         error: function (){
@@ -156,6 +159,7 @@ $('#newEventForm').on('submit', function (e) {
             fadeOut("#newCalendarEvent")
             fadeOut("#eventCalendar")
             successNotification('Uspješno spremljen termin.');
+            loadEventsFunction()
             clearInput(1000, 'newEventForm');
         },
         error: function (){
@@ -173,15 +177,61 @@ $('#newEventCancel').on('click', function () {
 
 // load events start
 window.onload = function loadEvents(){
+    loadEventsFunction()
+}
+
+function loadEventsFunction(){
     $.ajax({
         method: "POST",
         data: {},
         url: urlAddress + 'Calendar/checkCalendarToday',
         success: function (response) {
-            alert(response)
+            if (response.length > 2){
+                response = JSON.parse(response);
+                const searchData = document.getElementById('EventsData');
+
+                searchData.innerHTML = response.reduce((options, {Event_Id, EventHourStart, EventHourEnd, Event_Contact_Name}) =>
+                        options += `
+                                <tr style="border-bottom: 1px dotted gray; padding-bottom: 10px">
+                                    <td class="text-right rowPadding" id=""><i class="fas fa-circle circleColor"></i></td>
+                                    <td class="text-left rowPadding" id="" style="padding-left: 10px">${Event_Contact_Name}</td>
+                                    <td class="text-center rowPadding" id="">Početak: ${EventHourStart}h</td>
+                                    <td class="text-center rowPadding" id="">Završetak: ${EventHourEnd}h</td>
+                                    <td class="text-right rowPadding successColor confirmEvent" id="i_${Event_Id}"><i class="fas fa-check"></i></td>
+                                </tr>
+                               
+                                `,
+                    ``);
+            }else {
+                $("#EventsData").html("<p class='text-center' style='font-size: 18px'>Nema rezerviranih termina.</p>");
+            }
+
         }
     });
 }
 // load events end
+
+
+// confirm event
+$(document).ajaxComplete(function () {
+    $('.confirmEvent').on('click', function () {
+        var id = $(this).attr('id');
+        id = id.split('_')[1];
+
+        $.ajax({
+            method: "POST",
+            data: {Event_Id: id},
+            url: urlAddress + 'Calendar/confirmEvent',
+            success: function () {
+                successNotification('Uspješno potvrđen dolazak.')
+                loadEventsFunction()
+            }
+        });
+    });
+});
+
+
+
+
 
 // tu sam stao, eventi se ispravno učitaju, treba složiti frontend

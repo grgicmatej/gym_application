@@ -255,3 +255,22 @@ h6 {
     font-weight: 500;
     color: black;
 }
+
+.eventsDataP{
+    padding-left: 30px;
+    font-size: 17px;
+}
+
+.eventsDataSpan{
+    padding-left: 20px;
+}
+
+.circleColor{
+    color: #17a2b8;
+    font-size: 14px;
+}
+
+.rowPadding{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
