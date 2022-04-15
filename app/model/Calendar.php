@@ -27,6 +27,31 @@ class Calendar
         return $stmt->fetchAll();
     }
 
+    public static function checkCalendarToday()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT
+                                        Event_Id, 
+                                        Event_Contact_Name,
+                                        Event_Contact_Phone,
+                                        YEAR(Event_Start_Time) AS EventYearStart, 
+                                        YEAR(Event_End_Time) AS EventYearEnd, 
+                                        MONTH(Event_Start_Time) AS EventMonthStart, 
+                                        MONTH(Event_End_Time) AS EventMonthEnd, 
+                                        DAY(Event_Start_Time) AS EventDayStart, 
+                                        DAY(Event_End_Time) AS EventDayEnd,
+                                        HOUR(Event_Start_Time) as EventHourStart,
+                                        HOUR(Event_End_Time) as EventHourEnd
+
+                                    FROM Events WHERE Event_Completed=:Event_Completed AND Event_Gym_Id=:Event_Gym_Id AND Event_Sport_Id=:Event_Sport_Id AND DAY(Event_Start_Time)=:Event_Start_Time');
+        $stmt->bindValue('Event_Completed', false);
+        $stmt->bindValue('Event_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
+        $stmt->bindValue('Event_Sport_Id', 4);
+        $stmt->bindValue('Event_Start_Time', date('d'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public static function checkCalendarDetails()
     {
         $db=Db::getInstance();

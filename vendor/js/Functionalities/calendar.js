@@ -173,14 +173,15 @@ $('#newEventCancel').on('click', function () {
 
 // load events start
 window.onload = function loadEvents(){
-    alert("tu sam")
     $.ajax({
         method: "POST",
         data: {},
-        url: urlAddress + 'Calendar/checkCalendar',
+        url: urlAddress + 'Calendar/checkCalendarToday',
         success: function (response) {
             alert(response)
         }
     });
 }
 // load events end
+
+// tu sam stao, eventi se ispravno učitaju, treba složiti frontend
