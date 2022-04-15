@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/footer.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/head_css.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/layout.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/navbar.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/scripts.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/sidebar.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/widgets.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/footer.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/head_css.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/head_css.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/navbar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/navbar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/js/Functionalities" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/view" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -73,13 +91,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/view" />
       <recent name="$PROJECT_DIR$/vendor/js/Functionalities" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/vendor/js" />
       <recent name="$PROJECT_DIR$/app/model" />
-      <recent name="$PROJECT_DIR$/vendor/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/view/Public" />
       <recent name="$PROJECT_DIR$/app/view/Dashboard" />
     </key>
   </component>
@@ -178,6 +197,7 @@
       <workItem from="1649838217497" duration="11784000" />
       <workItem from="1649919338058" duration="12898000" />
       <workItem from="1649942909543" duration="3029000" />
+      <workItem from="1650006988834" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

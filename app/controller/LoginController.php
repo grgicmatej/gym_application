@@ -13,11 +13,11 @@ class LoginController extends SecurityController
                 header( 'Location:'.App::config('url').'Dashboard/dashboardCheck');
             }else{
                 $view=New View();
-                $view->render('index',['message'=>'E-mail ili lozinka ne odgovaraju nijednom korisniku']);
+                $view->render('Public/index',['message'=>'E-mail ili lozinka ne odgovaraju nijednom korisniku']);
             }
         }else{
             $view=New View();
-            $view->render('index',['message'=>'E-mail ili lozinka ne odgovaraju nijednom korisniku']);
+            $view->render('Pndex',['message'=>'E-mail ili lozinka ne odgovaraju nijednom korisniku']);
         }
     }
 
@@ -26,6 +26,7 @@ class LoginController extends SecurityController
         Admin::endStaffActivity();
         Admin::staffLogOut();
         $view=New View();
-        $view->render('index');
+        header( 'Location:'.App::config('url'));
+
     }
 }

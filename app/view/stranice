@@ -33,3 +33,8 @@ build log planner:
     - Termin za razne sportove eksterni
     - Eksterna provjera statusa članarine
 1.3:
+
+// launch setup
+    - Activity_Staff prebaciti start i end time u DATETIME tip podatka
+    - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
+

@@ -1,0 +1,1800 @@
+<!-- profileData Modal -->
+<div class="modal fade" id="profileData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 bg-c-lite-green" id="modal-body">
+                        <div class="card-block text-center text-white" style="padding-top: 25%">
+                            <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                            <h5 class="f-w-600" id="usersName"></h5>
+                            <h6 id="id" class=""></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije</h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Email adresa</p>
+                                    <h6 class="text-muted f-w-400" id="email"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                    <h6 class="text-muted f-w-400" id="usersPhone"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Datum rođenja</p>
+                                    <h6 class="text-muted f-w-400" id="birthday"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Status</p>
+                                    <h6 class="text-muted f-w-400" id="status"></h6>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Članarina</h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Ime članarine</p>
+                                    <h6 class="text-muted f-w-400" id="membershipName"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Trajanje</p>
+                                    <h6 class="text-muted f-w-400" id="membershipDuration"></h6>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="m-b-10 f-w-600 " id="numberOfArrivals"></p>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <p class="m-b-10  potvrdidolazak" id="confirmArrival"></p>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-5">
+                                    <p class="m-b-10 membershipData btn btn-block btn-outline-secondary" id="" >Nova članarina</p>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-12 text-left">
+                                    <h6 class="text-muted f-w-400" id="additionalUserSettingsButton">Napredno upravljanje <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span></h6>
+                                </div>
+                            </div>
+                            <div id="additionalUserSettings" style="display: none;">
+                                <div class="row m-t-40">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsHistoryMembershipsButton">Povijest članarina</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsAddExistingMembershipsButton">Postojeća članarina</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalUserSettingsUserMembershipPauseButton"></p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalUserSettingsUserSettingsButton">Uređivanje korisnika</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- profileData Modal end -->
+
+<!-- staffProfileData Modal -->
+<div class="modal fade" id="staffProfileData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 bg-c-lite-green" id="modal-body">
+                        <div class="card-block text-center text-white" style="padding-top: 25%">
+                            <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                            <h5 class="f-w-600" id="staffUsersName"></h5>
+                            <h6 id="id" class=""></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o zaposleniku <i class="fas fa-circle staffActiveStatusIcon" id="staffActiveStatusIcon"></i></h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Ime</p>
+                                    <h6 class="text-muted f-w-400" id="staffName"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Prezime</p>
+                                    <h6 class="text-muted f-w-400" id="staffSurname"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Email adresa</p>
+                                    <h6 class="text-muted f-w-400" id="staffEmail"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                    <h6 class="text-muted f-w-400" id="staffPhone"></h6>
+                                </div>
+
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-12 text-left">
+                                    <h6 class="text-muted f-w-400" id="additionalStaffSettingsButton">Napredno upravljanje <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span></h6>
+                                </div>
+                            </div>
+                            <div id="additionalStaffSettings" style="display: none;">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalStaffSettingsHistoryMembershipsButton">Povijest članarina</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalStaffEditSettings">Uređivanje zaposlenika</p>
+                                    </div>
+                                </div>
+                                <div class="row m-t-40">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalStaffSettingsRestartPassword">Restartiranje lozinke</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalStaffSettingsDeactivateStaff"></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- staffProfileData Modal end -->
+
+<!-- membershipData Modal start-->
+<div class="modal fade" id="membershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
+                            <div class="row forma" id="forma">
+                                <form id="formforma">
+                                    <select id="memberships" class="" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
+                                </form>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                </div>
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formforma" value="Produži članarinu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- membershipData Modal end -->
+
+<!-- newUserRegistration Modal start -->
+<div class="modal fade" id="newUserRegistration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Registracija novog korisnika</h6>
+                    <form id="formformaNewUser">
+                        <div class="row forma" id="forma">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">ID broj kartice <span class="mandatoryField"> </span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Id" id="Users_Id" placeholder="ID broj kartice" oninvalid="this.setCustomValidity('Molimo unesite ispravan ID broj kartice.')" oninput="setCustomValidity('')"minlength="3" >
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Ime korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Name" id="Users_Name" placeholder="Ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Prezime korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Surname" id="Users_Surname" placeholder="Prezime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno prezime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12" id="probniTrening">
+                                <input type="checkbox" name="probniTrening" id="tempTrainingCheckbox" class="tempTrainingCheckbox"  value="1"> <span class="nav-item linkanimation f-w-100">Probni trening</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">E-mail adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class=" form-control newUserInputForm" name="Users_Email" id="Users_Email" placeholder="E-mail adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Phone" id="Users_Phone" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Address" id="Users_Address" placeholder="Adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu adresu korisnika.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Mjesto korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_City" id="Users_City" placeholder="Mjesto korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno mjesto korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Oib" id="Users_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB korisnika.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Datum rođenja korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="date" class=" form-control newUserInputForm" name="Users_Birthday" id="Users_Birthday" placeholder="Datum rođenja korisnika" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum rođenja.')" oninput="setCustomValidity('')" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Spol korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Gender" id="Users_Gender"  required>
+                                    <option value="Muško" class=" form-control newUserInputForm" selected>Muško</option>
+                                    <option value="Žensko">Žensko</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Status korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Status" id="Users_Status" required>
+                                    <option value="Zaposlen/a" selected>Zaposlen/a</option>
+                                    <option value="Student/ica">Student/ica</option>
+                                    <option value="Učenik/ca">Učenik/ca</option>
+                                    <option value="Umirovljenik/ica">Umirovljenik/ica</option>
+                                    <option value="Nezaposlen/a">Nezaposlen/a</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Referenca korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Reference" id="Users_Reference" required>
+                                    <option value="Preporuka druge osobe">Preporuka druge osobe</option>
+                                    <option value="Društvene mreže" selected>Društvene mreže</option>
+                                    <option value="Na radnom mjestu">Na radnom mjestu</option>
+                                    <option value="Drugo">Drugo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Firma / ustanova / fakultet korisnika</label><br>
+                                <input class="form-control newUserInputForm" name="Users_Company" id="Users_Company" type="text" placeholder="Unesi firmu/ustanovu/fakultet korisnika (neobavezno)">
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Slika korisnika</label><br>
+                                <input type="file" name="myfile" id="fileToUpload">
+                            </div>
+                        </div>
+                    </form>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaNewUser" value="Registracija korisnika">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- newUserRegistration Modal end -->
+
+<!-- editUserData Modal start -->
+<div class="modal fade" id="editUserData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Uređivanje postojećeg korisnika</h6>
+                    <form id="formformaEditUser">
+                        <div class="row forma" id="forma">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">ID broj kartice <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Id" id="Edit_Users_Id" placeholder="ID broj kartice" oninvalid="this.setCustomValidity('Molimo unesite ispravan ID broj kartice.')" oninput="setCustomValidity('')"minlength="3" required>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Ime korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Name" id="Edit_Users_Name" placeholder="Ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Prezime korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Surname" id="Edit_Users_Surname" placeholder="Prezime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno prezime korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">E-mail adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class=" form-control newUserInputForm" name="Users_Email" id="Edit_Users_Email" placeholder="E-mail adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Phone" id="Edit_Users_Phone" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Adresa korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Address" id="Edit_Users_Address" placeholder="Adresa korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu adresu korisnika.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Mjesto korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_City" id="Edit_Users_City" placeholder="Mjesto korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravno mjesto korisnika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Oib" id="Edit_Users_Oib" placeholder="OIB korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB korisnika.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Datum rođenja korisnika <span class="mandatoryField"> *</span></label><br>
+                                <input type="date" class=" form-control newUserInputForm" name="Users_Birthday" id="Edit_Users_Birthday" placeholder="Datum rođenja korisnika" max="<?= date('Y-m-d'); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum rođenja.')" oninput="setCustomValidity('')" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Spol korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Gender" id="Edit_Users_Gender"  required>
+                                    <option value="Muško" class=" form-control newUserInputForm" selected>Muško</option>
+                                    <option value="Žensko">Žensko</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Status korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Status" id="Edit_Users_Status" required>
+                                    <option value="Zaposlen/a" selected>Zaposlen/a</option>
+                                    <option value="Student/ica">Student/ica</option>
+                                    <option value="Učenik/ca">Učenik/ca</option>
+                                    <option value="Umirovljenik/ica">Umirovljenik/ica</option>
+                                    <option value="Nezaposlen/a">Nezaposlen/a</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Referenca korisnika <span class="mandatoryField"> *</span></label><br>
+                                <select class=" form-control newUserInputForm" name="Users_Reference" id="Edit_Users_Reference" required>
+                                    <option value="Preporuka druge osobe">Preporuka druge osobe</option>
+                                    <option value="Društvene mreže" selected>Društvene mreže</option>
+                                    <option value="Na radnom mjestu">Na radnom mjestu</option>
+                                    <option value="Drugo">Drugo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Firma / ustanova / fakultet korisnika</label><br>
+                                <input class="form-control newUserInputForm" name="Users_Company" id="Edit_Users_Company" type="text" placeholder="Unesi firmu/ustanovu/fakultet korisnika (neobavezno)">
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Slika korisnika</label><br>
+                                <input type="file" name="myfile" id="fileToUpload">
+                            </div>
+                        </div>
+                    </form>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaEditUser" value="Spremanje podataka">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- editUserData Modal end -->
+
+<!-- editUserExistingMembership Modal start -->
+<div class="modal fade" id="editUserMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Unos postojeće članarine</h6>
+                    <form id="formformaEditMembershipUser">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Naziv trenutne članarine <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class=" form-control newUserInputForm" name="Users_Memberships_Membership_Name" id="Edit_Users_Memberships_Membership_Name" placeholder="Naziv članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime članarine.')" oninput="setCustomValidity('')" minlength="5" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Cijena trenutne članarine <span class="mandatoryField"> *</span></label><br>
+                                    <input type="number" class=" form-control newUserInputForm" name="Users_Memberships_Price" id="Edit_Users_Memberships_Price" placeholder="Cijena članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu članarine.')" oninput="setCustomValidity('')" min="0" step=".01" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Početni datum članarine <span class="mandatoryField"> *</span></label><br>
+                                <input type="date" class=" form-control newUserInputForm" name="Users_Memberships_Start_Date" id="Edit_Users_Memberships_Start_Date" placeholder="" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum.')" oninput="setCustomValidity('')" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Završni datum članarine <span class="mandatoryField"> *</span></label><br>
+                                <input type="date" class=" form-control newUserInputForm" name="Users_Memberships_End_Date" id="Edit_Users_Memberships_End_Date" placeholder="" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum.')" oninput="setCustomValidity('')" required>
+                            </div>
+                        </div>
+                    </form>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-6">
+                            <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaEditMembershipUser" value="Spremanje podataka">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- editUserExistingMembership Modal end -->
+
+<!-- staffSettings Modal start -->
+<div class="modal fade" id="staffSettings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Korisničke postavke</h6>
+                    <br>
+                    <form id="formformaStaffSettingsPassword">
+                        <div class="row">
+                            <div class="col-12"><p>Postavljanje nove lozinke</p></div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Trenutna lozinka<span class="mandatoryField"> *</span></label><br>
+                                <input type="password" class="form-control newUserInputForm" name="Staff_Password" id="Staff_Password" placeholder="Trenutna lozinka" oninvalid="this.setCustomValidity('Ovo polje ne smije biti prazno.')" oninput="setCustomValidity('')" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Nova lozinka <span class="mandatoryField"> *</span></label><br>
+                                <input type="password" class="form-control newUserInputForm" name="Staff_New_Password" id="Staff_New_Password" placeholder="Nova lozinka" oninvalid="this.setCustomValidity('Ovo polje ne smije biti prazno i lozinka mora imati više od 6 znakova.')" oninput="setCustomValidity('')" minlength="6" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaStaffSettingsPassword" value="Spremanje lozinke">
+                            </div>
+                        </div>
+                    </form>
+
+                    <form id="formformaStaffSettingsData">
+                        <div class="dropdown-divider"></div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="Staff_Oib" placeholder="OIB zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="Staff_Phone" placeholder="Kontakt telefon zaposlenika"  oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt email <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="Staff_Email" placeholder="Kontakt e-mail adresa zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required >
+                            </div>
+                        </div>
+                        <br>
+                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaStaffSettingsData" value="Spremanje podataka">
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- staffSettings Modal end -->
+
+<!-- tableSports Modal start-->
+<div class="modal fade" id="tableSports" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Stolni sportovi</h6>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">Biljar
+                                    <p><span class="mandatoryField linkanimation">*  Cijena iznosi 0,50kn/min</span>
+                                    </p>
+                                    <p class="text-left" id="podatakStart_1" style="color: #74C687"></p>
+                                    <p id="podatakProtekloVrijeme_1"></p>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-1"></div>
+                                        <div class="col-sm-12 col-md-8">
+                                            <p class="m-b-10 btn btn-block btn-outline-info" id="formabutton_1"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-4">Stolni nogomet
+                                    <p><span class="mandatoryField linkanimation">*  Cijena iznosi 0,50kn/min</span>
+                                    </p>
+                                    <p class="text-left" id="podatakStart_2" style="color: #74C687"></p>
+                                    <p id="podatakProtekloVrijeme_2"></p>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-1"></div>
+                                        <div class="col-sm-12 col-md-8">
+                                            <p class="m-b-10 btn btn-block btn-outline-info" id="formabutton_2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-4">Stolni tenis
+                                    <p>
+                                        <span class="mandatoryField linkanimation">*  Cijena iznosi 0,50kn/min</span>
+                                    </p>
+                                    <p class="text-left" id="podatakStart_3" style="color: #74C687"></p>
+                                    <p id="podatakProtekloVrijeme_3"></p>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-1"></div>
+                                        <div class="col-sm-12 col-md-8">
+                                            <p class="m-b-10 btn btn-block btn-outline-info" id="formabutton_3"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- tableSports Modal end -->
+
+<!-- tableSports checkout Modal start -->
+<div class="modal fade" id="tableSportsCheckout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Završena štoperica</h6>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="text-center" style="font-size: 18px" id="sportsName"></p>
+                                    <p><span class="mandatoryField linkanimation">*  Cijena iznosi 0,50kn/min</span></p>
+                                    <br>
+                                    <p class="text-left" id="ProtekloVrijeme" style="color: #74C687"></p>
+                                    <h6 id="SportNaplata"></h6>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="m-b-10 btn btn-block btn-outline-info" id="sportsCheckout">Uspješna naplata</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- tableSports checkout Modal end -->
+
+<!-- calendar modal start -->
+<div class="modal fade" id="eventCalendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-primary">
+                            <div class="card-body p-0">
+                                <div id="calendar" style="min-height: 800px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-b-20">
+                    <div class="col-sm-12 col-lg-4"></div>
+                    <div class="col-sm-12 col-lg-4"></div>
+                    <div class="col-sm-12 col-lg-3">
+                        <p class="m-b-10 btn btn-block btn-outline-info newCalendarEvent" id=""><i class="nav-icon fas fa-plus"></i> Novi termin</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- calendar modal end -->
+
+<!-- calendar event details modal start -->
+<div class="modal fade" id="eventCalendarDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Rezerviran termin <span id="editEventCalendar"></span></h6>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-block">
+                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o korisniku</h6>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <p class="m-b-10 f-w-600">Kontakt osoba</p>
+                                                <h6 class="text-muted f-w-400" id="Event_Contact_Name"></h6>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                                <h6 class="text-muted f-w-400" id="Event_Contact_Phone"></h6>
+                                            </div>
+                                        </div>
+                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <p class="m-b-10 f-w-600">Početak termina</p>
+                                                <h6 class="text-muted f-w-400" id="Event_Start_Time"></h6>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <p class="m-b-10 f-w-600">Kraj termina</p>
+                                                <h6 class="text-muted f-w-400" id="Event_End_Time"></h6>
+                                            </div>
+                                        </div>
+                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5">
+                                                <p class="m-b-10 f-w-600 " id="eventCalendarCancel"></p>
+                                            </div>
+                                            <div class="col-sm-12 col-md-2"></div>
+                                            <div class="col-sm-12 col-md-5">
+                                                <p class="m-b-10 f-w-600" id="eventCalendarConfirm"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- calendar event details modal end -->
+
+<!-- New calendar event start -->
+<div class="modal fade" id="newCalendarEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="newEventForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Novi termin</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o korisniku</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt osoba</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Name" id="Event_Contact_Name_New" placeholder="Kontakt ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravne podatke.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Phone" id="Event_Contact_Phone_New" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početak termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_Start_Time" id="Event_Start_Time_New" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kraj termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_End_Time" id="Event_End_Time_New" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary" id="newEventCancel">Odustani</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-2"></div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newEventForm" value="Spremi termin">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- New calendar event end -->
+
+<!-- Update calendar event start -->
+<div class="modal fade" id="editCalendarEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="updateEventForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje termina</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o korisniku</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt osoba</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Name" id="Event_Contact_Name_Edit" placeholder="Kontakt ime korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravne podatke.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kontakt telefon</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Event_Contact_Phone" id="Event_Contact_Phone_Edit" placeholder="Kontakt telefon korisnika" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" minlength="8" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Informacije o terminu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početak termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_Start_Time" id="Event_Start_Time_Edit" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Kraj termina</p>
+                                                    <input type="datetime-local" class=" form-control newUserInputForm" name="Event_End_Time" id="Event_End_Time_Edit" placeholder="" oninvalid="this.setCustomValidity('Molimo odaberite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600 " id="updateEventCalendarCancel"></p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-2"></div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <p class="m-b-10 f-w-600" id="updateEventCalendarConfirm"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Update calendar event end -->
+
+<!-- all Staff check modal start -->
+<div class="modal fade" id="staffData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaposlenika</h6></div>
+                        <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info newStaff" id=""><i class="nav-icon fas fa-plus"></i> Novi zaposlenik</p></div>
+
+                    </div>
+                   <hr>
+                    <div class="col-12 text-right">
+                        <h6 class="text-muted f-w-400" id="displayInactiveStaff"></h6>
+                    </div>
+                    <div class="card-body" id="dt2" style="max-width: available">
+                        <table class="table" id="" width=100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th style="width: auto">Ime i prezime</th>
+                                <th style="width: auto">Korisničko ime</th>
+                                <th style="width: auto">Kontakt broj</th>
+                                <th style="width: auto">Kontakt email</th>
+                                <th style="width: auto">Aktivan</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody id="dataTableBodyStaff"></tbody>
+                        </table>
+                    </div>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- all Staff check modal end -->
+
+<!-- user history memberships modal start -->
+<div class="modal fade" id="membershipHistoryUserData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Pregled svih članarina</h6>
+
+                    <div class="card-body" id="dt3" style="max-width: available">
+                        <table class="table" id="" width=100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th style="width: auto">Naziv članarine</th>
+                                <th style="width: auto">Datum početka</th>
+                                <th style="width: auto">Datum kraja</th>
+                                <th style="width: auto">Zaposlenik</th>
+                            </tr>
+                            </thead>
+                            <tbody id="dataTableBodyUserHistoryMemberships"></tbody>
+                        </table>
+                    </div>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- user history memberships modal end -->
+
+<!-- new password Modal start -->
+<div class="modal fade" id="newPasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Generirana lozinka</h6>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="text-center" style="font-size: 18px">Nova generirana lozinka je:</p>
+                                    <p class="" id="newStaffPassword" style="color: black; text-align: center; font-size: 22px;"></p>
+                                    <h6 id="SportNaplata"></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new password Modal end -->
+
+<!-- Staff history memberships modal start -->
+<div class="modal fade" id="membershipHistoryStaffData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Pregled svih članarina zaposlenika</h6>
+
+                    <div class="card-body" id="dt4" style="max-width: available">
+                        <table class="table" id="" width=100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th style="width: auto">Korisnik</th>
+                                <th style="width: auto">Naziv članarine</th>
+                                <th style="width: auto">Datum</th>
+                                <th style="width: auto">Cijena</th>
+                            </tr>
+                            </thead>
+                            <tbody id="dataTableBodyStaffHistoryMemberships"></tbody>
+                        </table>
+                    </div>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Staff history memberships modal end -->
+
+<!-- staffEdit Modal start -->
+<div class="modal fade" id="staffEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Uređivanje zaposlenika</h6>
+                    <br>
+                    <form id="formformaEditStaff">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Ime zaposlenika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Name" id="Edit_Staff_Name" placeholder="Ime zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime zaposlenika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Prezime zaposlenika  <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Surname" id="Edit_Staff_Surname" placeholder="Prezime zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravno prezime zaposlenika.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Korisničko ime zaposlenika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Username" id="Edit_Staff_Username" placeholder="Korisničko ime zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravno korisničko ime.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="Edit_Staff_Oib" placeholder="OIB zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="Edit_Staff_Phone" placeholder="Kontakt telefon zaposlenika"  oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt email <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="Edit_Staff_Email" placeholder="Kontakt e-mail adresa zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required >
+                            </div>
+                        </div>
+                        <br>
+                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaEditStaff" value="Spremanje podataka">
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- staffEdit Modal end -->
+
+<!-- newStaff Modal start -->
+<div class="modal fade" id="newStaffRegistration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Registracija novog zaposlenika</h6>
+                    <form id="formformaNewStaff">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Ime zaposlenika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Name" id="New_Staff_Name" placeholder="Ime zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravno ime zaposlenika.')" oninput="setCustomValidity('')" minlength="3" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Prezime zaposlenika  <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Surname" id="New_Staff_Surname" placeholder="Prezime zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravno prezime zaposlenika.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Korisničko ime zaposlenika <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Username" id="New_Staff_Username" placeholder="Korisničko ime zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravno korisničko ime.')" oninput="setCustomValidity('')" minlength="3" required >
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Lozinka zaposlenika <span class="mandatoryField"> *</span></label><br>
+                                <input type="password" class="form-control newUserInputForm" name="Staff_Password" id="New_Staff_Password" placeholder="" oninvalid="this.setCustomValidity('Molimo unesite minimalno 6 znakova.')" oninput="setCustomValidity('')" minlength="6" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">OIB <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Oib" id="New_Staff_Oib" placeholder="OIB zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravan OIB.')" oninput="setCustomValidity('')" minlength="11" maxlength="11" required >
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt telefon <span class="mandatoryField"> *</span></label><br>
+                                <input type="text" class="form-control newUserInputForm" name="Staff_Phone" id="New_Staff_Phone" placeholder="Kontakt telefon zaposlenika"  oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon.')" oninput="setCustomValidity('')" minlength="8" required>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Kontakt email <span class="mandatoryField"> *</span></label><br>
+                                <input type="email" class="form-control newUserInputForm" name="Staff_Email" id="New_Staff_Email" placeholder="Kontakt e-mail adresa zaposlenika" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" minlength="5" required >
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <input type="submit" class="m-b-10 btn btn-block btn-outline-info" form="formformaNewStaff" value="Registracija zaposlenika">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- newStaff Modal end -->
+
+<!-- all memberships modal start -->
+<div class="modal fade" id="allMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="overflow-y: scroll; max-height: 850px; margin-top: 70px">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled članarina</h6></div>
+                        <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info createNewMembership" id=""><i class="nav-icon fas fa-plus"></i> Nova članarina</p></div>
+
+                    </div>
+                    <hr>
+                    <div class="col-12 text-right">
+                        <h6 class="text-muted f-w-400" id="displayInactiveMemberships"></h6>
+                    </div>
+                    <div class="card-body" id="dt5" style="max-width: available">
+                        <table class="table" id="" width=100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th style="width: auto">Naziv članarine</th>
+                                <th style="width: auto">Trajanje</th>
+                                <th style="width: auto">Cijena</th>
+                                <th style="width: auto">Aktivna članarina</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody id="dataTableBodyMembership"></tbody>
+                        </table>
+                    </div>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- all memberships modal end -->
+
+<!-- check membership Modal start-->
+<div class="modal fade" id="checkMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini <i class="fas fa-circle membershipActiveStatusIcon" id="membershipActiveStatusIcon"></i></h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Naziv članarine</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Name"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Trajanje članarine</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Duration"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Cijena članarine</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Price"></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="m-b-10 f-w-600">Status</p>
+                                    <h6 class="text-muted f-w-400" id="Memberships_Status"></h6>
+                                </div>
+                            </div>
+                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                            <div class="row">
+                                <div class="col-12 text-left">
+                                    <h6 class="text-muted f-w-400" id="additionalMembershipSettingsButton">Napredno upravljanje <span><i style="padding-left: 5px" class="fas fa-angle-right"></i></span></h6>
+                                </div>
+                            </div>
+                            <div id="additionalMembershipSettings" style="display: none;">
+                                <div class="row m-t-40">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalMembershipSettingsMembershipEditButton" id="additionalMembershipSettingsMembershipEditButton">Uređivanje članarine</p>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary" id="additionalMembershipSettingsMembershipStatusButton"></p>
+                                    </div>
+                                </div>
+                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5 col-lg-5" id="deletingMembershipCancel">
+
+                                    </div>
+                                    <div class="col-sm-12 col-md-2 col-lg-2"></div>
+                                    <div class="col-sm-12 col-md-5 col-lg-5" id="deletingMembershipConfirm">
+                                        <p class="m-b-10 btn btn-block btn-outline-secondary additionalMembershipSettingsMembershipDeleteFirstButton" id="additionalMembershipSettingsMembershipDeleteFirstButton">Brisanje članarine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- check membership Modal end -->
+
+<!-- edit membership profile modal start -->
+<div class="modal fade" id="editMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="updateMembershipForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Pregled članarine</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Naziv članarine</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Memberships_Name" id="Edit_Memberships_Name" placeholder="Naziv članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Price" id="Edit_Memberships_Price" placeholder="Cijena članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu članarine.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Trajanje članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="Edit_Memberships_Duration" placeholder="Trajanje članarine u danima" oninvalid="this.setCustomValidity('Molimo odaberite ispravno trajanje članarine.')" oninput="setCustomValidity('')" min="0" required >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6"></div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="updateMembershipForm" value="Spremanje podataka">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit membership profile modal end -->
+
+<!-- new membership profile modal start -->
+<div class="modal fade" id="newMembershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="newMembershipForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Nova članarina</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Naziv članarine</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Memberships_Name" id="New_Memberships_Name" placeholder="Naziv članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Price" id="New_Memberships_Price" placeholder="Cijena članarine" oninvalid="this.setCustomValidity('Molimo unesite ispravan kontakt telefon korisnika.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Trajanje članarine</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Memberships_Duration" id="New_Memberships_Duration" placeholder="Trajanje u danima" oninvalid="this.setCustomValidity('Molimo odaberite ispravno trajanje članarine.')" oninput="setCustomValidity('')" min="0" required >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6"></div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newMembershipForm" value="Spremanje podataka">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new membership profile modal end -->
+
+<!-- delete membership modal start -->
+<div class="modal fade" id="deleteMembership" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja članarine</h6>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-secondary cancelMembershipDeleteButton" id="cancelMembershipDeleteButton">Odustani</p>
+                                </div>
+                                <div class="col-sm-12 col-md-2"></div>
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-info confirmMembershipDeleteButton" id="confirmMembershipDeleteButton">Potvrdi brisanje</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete membership modal end -->
+
+
+<!-- statistics modal start -->
+<div class="modal fade" id="statistics" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Statistika teretane</h6>
+                            <div class="row">
+                                <div class="col-12" id="activeUsersStats">
+                                    <p>Broj aktivnih korisnika u usporedbi sa prošlom godinom</p>
+                                    <div class="card-body">
+                                        <canvas id="areaChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-12 col-md-6 text-center" id="popularMembershipsStats">
+                                    <p>Statistika članarina za <?=date('Y')?>. godinu</p>
+                                    <div class="card-body">
+                                        <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 text-center" id="ageOfUsersStats">
+                                    <p>Raspodjela korisnika po starosti</p>
+                                    <div class="card-body">
+                                        <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-12 col-md-4 text-center" id="usersGenderStats">
+                                    <p>Spol korisnika</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart1" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 text-center" id="usersStatusStats">
+                                    <p>Status korisnika</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 text-center" id="usersReferenceStats">
+                                    <p>Referenca korisnika</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart3" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- statistics modal end -->
+
+
+<!-- finances modal start -->
+<div class="modal fade" id="finance" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: left">Financije teretane</h6>
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <div class="small-box bg-blue1">
+                                        <div class="inner">
+                                            <h3 id="yearlyIncome"></h3>
+                                            <p>Godišnji prihodi</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="small-box bg-blue2">
+                                        <div class="inner">
+                                            <h3 id="monthlyIncome"></h3>
+                                            <p>Mjesečni prihodi</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="small-box bg-blue3">
+                                        <div class="inner">
+                                            <h3 id="yesterdayIncome"></h3>
+                                            <p>Jučerašnji prihodi</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="small-box bg-blue4">
+                                        <div class="inner">
+                                            <h3 id="dailyIncome"></h3>
+                                            <p>Dnevni prihodi</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-12" id="">
+                                    <p>Godišnji prihodi u usporedbi sa prošlom godinom</p>
+                                    <div class="card-body">
+                                        <canvas id="areaChart3" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-12" id="">
+                                    <p>Godišnji prihodi po članarinama (top 15 najpopularnijih)</p>
+                                    <div class="card-body">
+                                        <canvas id="barChart1" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-12 col-md-8 text-center" id="">
+                                    <p>Ostali prihodi</p>
+                                    <div class="card-body">
+                                        <canvas id="pieChart4" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 text-center" id="">
+                                    <p>Odaberi datum za prikaz prihoda</p>
+                                    <form id="incomeDatesForm">
+                                        <br>
+                                        <input type="date" class=" form-control newUserInputForm" name="incomeDates" id="incomeDates" placeholder="Traženi datum" max="<?= date('Y-m-d', strtotime('-1 days')); ?>" oninvalid="this.setCustomValidity('Molimo unesite ispravan datum.')" oninput="setCustomValidity('')" required >
+                                        <input type="submit" class="m-b-10 btn btn-block btn-outline-info" value="Prikaz prihoda">
+                                    </form>
+                                    <br>
+                                    <div id="incomeOnSpecificDate">
+                                        <h4>Datum: <b><span id="specificDate"></span></b></h4>
+                                        <p>Prihod od članarina: <b><span id="incomeOnSpecificDateMembership"></span></b></p>
+                                        <p>Ostali prihod: <b><span id="incomeOnSpecificDateOther"></span></b></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- finance modal end -->
+
+<!-- warehouse modal start -->
+<div class="modal fade" id="warehouse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaliha</h6></div>
+                                <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info newWarehouseProduct" id=""><i class="nav-icon fas fa-plus"></i> Novi proizvod</p></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-body" id="dt6" style="max-width: available">
+                                        <table class="table" id="" width=100%" cellspacing="0">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: auto">Ime proizvoda</th>
+                                                <th style="width: auto">Cijena</th>
+                                                <th style="width: auto">Stanje na skladištu</th>
+                                                <th style="width: auto">Prodano</th>
+                                                <th style="width: auto; text-align: center">Trenutno stanje</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="dataTableBodyWarehouse"></tbody>
+                                        </table>
+                                    </div>
+                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- warehouse modal end -->
+
+<!-- edit warehouse profile modal start -->
+<div class="modal fade" id="editWarehouseItemData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="editWarehouseForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Pregled proizvoda</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o proizvodu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Naziv proizvoda</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Warehouse_Item_Name" id="Edit_Warehouse_Item_Name" placeholder="Naziv proizvoda" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv proizvoda.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena proizvoda</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Warehouse_Item_Price" id="Edit_Warehouse_Item_Price" placeholder="Cijena proizvoda" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu proizvoda.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početno stanje proizvoda</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Warehouse_Item_Count" id="Edit_Warehouse_Item_Count" placeholder="Početno stanje proizvoda" oninvalid="this.setCustomValidity('Molimo odaberite ispravno stanje proizvoda.')" oninput="setCustomValidity('')" min="0" required >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary editWarehouseFormCancel">Odustani</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="editWarehouseForm" value="Spremanje podataka">
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Dodatno upravljanje</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary resetWarehouseCountbutton">Reset broja prodaja</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-danger deleteWarehouseItembutton">Brisanje proizvoda</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit warehouse profile modal end -->
+
+<!-- delete warehouse modal start -->
+<div class="modal fade" id="deleteWarehouseItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja proizvoda</h6>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-secondary cancelWarehouseDeleteButton" id="cancelWarehouseDeleteButton">Odustani</p>
+                                </div>
+                                <div class="col-sm-12 col-md-2"></div>
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-info confirmWarehouseDeleteButton" id="confirmMWarehouseDeleteButton">Potvrdi brisanje</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete warehouse modal end -->
+
+<!-- reset warehouse modal start -->
+<div class="modal fade" id="resetWarehouseItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda resetiranja broja prodanih proizvoda</h6>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-secondary cancelWarehouseResetButton" id="cancelWarehouseResetButton">Odustani</p>
+                                </div>
+                                <div class="col-sm-12 col-md-2"></div>
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-info confirmWarehouseResetButton" id="confirmMWarehouseResetButton">Potvrdi reset</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- reset warehouse modal end -->
+
+<!-- new warehouse profile modal start -->
+<div class="modal fade" id="newWarehouseItemData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="newWarehouseForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Novi proizvod</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o proizvodu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Naziv proizvoda</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Warehouse_Item_Name" id="New_Warehouse_Item_Name" placeholder="Naziv proizvoda" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv proizvoda.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena proizvoda</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Warehouse_Item_Price" id="New_Warehouse_Item_Price" placeholder="Cijena proizvoda" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu proizvoda.')" oninput="setCustomValidity('')" min="0" max="9999999.99" required >
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Početno stanje proizvoda</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Warehouse_Item_Count" id="New_Warehouse_Item_Count" placeholder="Početno stanje proizvoda" oninvalid="this.setCustomValidity('Molimo odaberite ispravno stanje proizvoda.')" oninput="setCustomValidity('')" min="0" required >
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary newWarehouseFormCancel">Odustani</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newWarehouseForm" value="Spremanje podataka">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new warehouse profile modal end -->
+
+<!-- notes main modal start -->
+<div class="modal fade" id="notesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled bilješki</h6></div>
+                        <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info createNewNote" id=""><i class="nav-icon fas fa-plus"></i> Nova bilješka</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 timeline" id="dt7">
+                            <div class="" id="BodyNotesData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- notes main modal end -->
+
+<!-- new note modal start -->
+<div class="modal fade" id="newStaffNote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="newNoteForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Nova bilješka</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o bilješki</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Bilješka</p>
+                                                    <textarea name="Notes_Note" id="New_Notes_Note" style="width: 100%" rows="5" placeholder="Unesite bilješku" required></textarea>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary newNoteFormCancel">Odustani</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="newNoteForm" value="Spremanje bilješke">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new note modal end -->
