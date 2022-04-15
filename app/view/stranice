@@ -39,6 +39,18 @@ build log planner:
        -- Start - NOW()
        -- END - NULL
     - Dodati Notes_Date (DATETIME current datestamp)
+
+    - Dodati tablicu Events:
+        -- Event_Id PK INT NOT NULL
+        -- Event_Start_Time DATETIME NOT NULL
+        -- Event_End_Time DATETIME NOT NULL
+        -- Event_Staff_Id INT NOT NULL
+        -- Event_Gym_Id INT NOT NULL
+        -- Event_Completed BOOLEAN DEFAULT 0 NOT NULL
+        -- Event_Contact_Name VARCHAR(255) NOT NULL
+        -- Event_Contact_Phone VARCHAR(30) NOT NULL
+        -- Event_Sport_Id INT NOT NULL
+
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
 
 bugs along the way:

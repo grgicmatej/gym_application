@@ -1,5 +1,5 @@
 // mainWatch start
-function showTime(){
+window.onload = function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
     var m = date.getMinutes(); // 0 - 59
@@ -15,5 +15,4 @@ function showTime(){
 
     setTimeout(showTime, 1000);
 }
-showTime();
 // mainWatch end

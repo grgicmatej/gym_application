@@ -170,3 +170,17 @@ $('#newEventCancel').on('click', function () {
     fadeOut("#newCalendarEvent")
 });
 // new event end
+
+// load events start
+window.onload = function loadEvents(){
+    alert("tu sam")
+    $.ajax({
+        method: "POST",
+        data: {},
+        url: urlAddress + 'Calendar/checkCalendar',
+        success: function (response) {
+            alert(response)
+        }
+    });
+}
+// load events end

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controller/StatisticsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/js/Functionalities/statistics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Statistics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/scripts.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/time.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +170,7 @@
       <workItem from="1649354797878" duration="328000" />
       <workItem from="1649356662274" duration="373000" />
       <workItem from="1650045566499" duration="538000" />
+      <workItem from="1650046436163" duration="992000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
