@@ -36,10 +36,12 @@ build log planner:
 
 // launch setup
     - Activity_Staff prebaciti start i end time u DATETIME tip podatka
+       -- Start - NOW()
+       -- END - NULL
+    - Dodati Notes_Date (DATETIME current datestamp)
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
 
-
 bugs along the way:
-- bilješke ne rade ako je staff adminstatus 3, unešeno je u bazu ali se ne prikazuje
+- popuniti settings edit sa postojećim oibom i kontaktom
 
 uredio sam sidebar, treba urediti index stranu

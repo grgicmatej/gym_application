@@ -32,15 +32,7 @@ class DashboardController extends SecurityController
         $view->render('Staff_Dashboard/index',
             [
                 'staffName'             => Session::getInstance()->getUser()->Staff_Username,
-                'gymData'               => Dashboard::gymData(),
-                'gymDataCount'          => Dashboard::gymDataCount(),
                 'gymName'               => Dashboard::gymName(),
-                'activeUsersCount'      => User::allActiveUsersCount()->activeUsersCount,
-                'newMonthlyUsers'       => User::currentMonthlyUsers()->newMonthlyUsers,
-                'monthlyUserProportion' => User::monthlyUserProportion(),
-                'yearlyStats'           => Statistics::yearlyStats(),
-                'monthsInYear'          => Statistics::monthsInYear(),
-                'monthlyIncome'         => Finance::monthlyIncome()->Users_Memberships_Price_Month,
             ]);
 
     }

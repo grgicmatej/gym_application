@@ -35,63 +35,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3><?=number_format($activeUsersCount, 0, '', '.')?></h3>
-                                <p>Aktivnih korisnika</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <!--
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                             -->
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-success">
-                            <div class="inner">
-                                <h3><?=$monthlyUserProportion?><sup style="font-size: 20px">%</sup></h3>
-                                <p>Korisnika u odnosu na prošli mjesec</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fad fa-chart-bar"></i>
-                            </div>
-                            <!--
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                             -->
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-warning">
-                            <div class="inner">
-                                <h3 style="color: #FFF"><?=number_format($newMonthlyUsers, 0, '', '.') ?></h3>
 
-                                <p style="color: #FFF">Novih korisnika ovaj mjesec</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fad fa-user-plus"></i>
-                            </div>
-                            <!--
-                            <a href="#" class="small-box-footer"><span style="color: #FFF;">More info</span> <i class="fas fa-arrow-circle-right" style="color: #FFF;"></i></a>
-                             -->
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-danger">
-                            <div class="inner">
-                                <h3><?=number_format($monthlyIncome, 2, ',', '.') ?> KN</h3>
-                                <p>Mjesečni prihodi</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <!--
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                             -->
-                        </div>
-                    </div>
                 </div>
                 <div>
                     <div class="row">
@@ -111,7 +55,7 @@
                                 <div class="card-body div_mainsearbox">
 
                                     <input type="text" name="search" id="search" placeholder="Pretraživanje korisnika po broju kartice, imenu ili prezimenu" class="form-control text-center mainsearchbox" onkeyup="searchfunction()" />
-                                    <div class="card-body" id="dt1" style="max-width: available">
+                                    <div class="card-body" id="dt1" style="max-width: available; ">
                                         <table class="table" id="" width=100%" cellspacing="0">
                                             <thead>
                                             <tr>
@@ -134,7 +78,7 @@
                         <section class="col-xl-4 d-lg-none d-xl-block connectedSortable">
                             <div class="card ">
                                 <div class="card-header">
-                                    <h3 class="card-title">Statistika novih korisnika</h3>
+                                    <h3 class="card-title">Rezervacija termina</h3>
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>

@@ -4,13 +4,12 @@
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Dashboard/navbar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/navbar.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Public/footer.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Public/navbar.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Staff_Dashboard/navbar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/navbar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Staff_Dashboard/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/scripts.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Staff_Dashboard/sidebar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/sidebar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/notes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="notes" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,12 +46,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/view/Dashboard/widgets.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/users.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/staff.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/memberships.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/view/Dashboard/sidebar.phtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/model/Membership.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/controller/MembershipController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/staff.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vendor/js/Functionalities/users.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/view/stranice" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
