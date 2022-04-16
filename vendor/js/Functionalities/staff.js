@@ -47,9 +47,9 @@ $('.staffSettings').on('click', function () {
         success: function (response) {
             response = JSON.parse(response)
             fadeIn("#staffSettings")
-            $("#Staff_Oib").val(response["Staff_Oib"]);
-            $("#Staff_Phone").val(response["Staff_Phone"]);
-            $("#Staff_Email").val(response["Staff_Email"]);
+            document.getElementById("Staff_Oib").value = response["Staff_Oib"];
+            document.getElementById("Staff_Phone").value = response["Staff_Phone"];
+            document.getElementById("Staff_Email").value = response["Staff_Email"];
         },
         error: function () {
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');

@@ -66,6 +66,6 @@ class StaffController extends SecurityController
     public function staffInfo($id = 0)
     {
         $this->employeeCheck();
-        echo json_encode(Staff::staffData($id));
+        echo json_encode(Staff::staffData($id == 0 ? 0 : $id));
     }
 }
