@@ -51,11 +51,28 @@ build log planner:
         -- Event_Contact_Phone VARCHAR(30) NOT NULL
         -- Event_Sport_Id INT NOT NULL
 
+    - Dodati podatke u tablicu sport settings:
+        - 1 Biljar 50lipa/min
+        - 2 Stolni nogomet 50lipa/min
+        - 3 Stolni tenis 50lipa/min
+        - 4 Nogomet - bez cijene
+
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
 
 BUGOVI za riješiti
     - Onemogučiti gumb "nova prodaja" ako je trenutno stanje 0
     - Dodati negdje unos početnog stanja blagajne
+    - Novi korisnik, zaposlenik bug, ne dodijeli se ID
+    - Fale sport settings podaci
+        - 1 Biljar 50lipa/min
+        - 2 Stolni nogomet 50lipa/min
+        - 3 Stolni tenis 50lipa/min
+    - Postavke u sidebaru promjeniti u postavke teretane (administrator) pa tamo dodati unos početnog stanja, dodati sportove i sl.
+        -- kod zaposlenika to sakriti
+
+    - Fale input sanitizeri kod novog pića
+    - Fale input sanitizeri kod korisničkih postavki
+
 
 Popis testova:
     ADMINISTRATOR
@@ -123,48 +140,47 @@ Popis testova:
 
 
     ZAPOSLENIK
-        - login
-        - logout
-        - Korisnici
-            -- Novi korisnik
-            -- Pregled korisnika
-            -- Potvrda dolaska
-            -- Nova članarina
-            -- Povijest članarina // sakriti ovu opciju
-            -- Postojeća članarina
-            -- Zamrzavanje članarine
-            -- Odmrzavanje članarine
-            -- Uređivanje korisnika
+        - login     +
+        - logout    +
+        - Korisnici +
+            -- Novi korisnik        BUG, napisano
+            -- Pregled korisnika    +
+            -- Potvrda dolaska      +
+            -- Nova članarina       +
+            -- Zamrzavanje članarine    +
+            -- Odmrzavanje članarine    +
+            -- Uređivanje korisnika     +
             -- Probni trening
             -- Promjena iz probnog u trajnog korisnika
-        - Stolni sportovi
+        - Stolni sportovi   BUG, napisano
             -- Pokretanje štoperice Sport 1
             -- Pokretanje štoperice sport 2
             -- Pokretanje štoperice sport 3
             -- kraj štoperice 2 pa 3 pa 1
         - Nogomet
-            -- Novi termin
-                --- Odustani
-                --- Spremi termin
-            -- Otkazivanje
-            -- Uređivanje
-            -- Potvrda dolaska
-        - Bilješke
-            -- Nova bilješka
-            -- Samo privatne bilješke
-            -- Brisanje bilješke
-            -- Uređivanje bilješke
-        - Proizvodi (pića)
-            -- Novi proizvod
-            -- Nova prodaja
-            -- Pregled proizvoda
-                --- Spremanje podataka
-                --- Reset broja prodaja
-                --- Brisanje proizvoda
+            -- Novi termin          +
+                --- Odustani        +
+                --- Spremi termin   +
+            -- Otkazivanje          +
+            -- Uređivanje           +
+            -- Potvrda dolaska      +
+            -- Potvrda dolaska inx  +
+        - Bilješke                  +
+            -- Nova bilješka        +
+            -- Samo privatne bilješke   +
+            -- Brisanje bilješke        +
+            -- Uređivanje bilješke      +
+        - Proizvodi (pića)              +
+            -- Novi proizvod            +
+            -- Nova prodaja             +
+            -- Pregled proizvoda        +
+                --- Spremanje podataka  +
+                --- Reset broja prodaja +
+                --- Brisanje proizvoda  +
         - Postavke
-            -- Pregled postavki
-                --- Promjena lozinke
-                --- Promjena ostalih podataka
+            -- Pregled postavki         +
+                --- Promjena lozinke    +
+                --- Promjena ostalih podataka   +
 
 
 
