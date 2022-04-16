@@ -8,6 +8,12 @@ class CalendarController extends SecurityController
         echo json_encode(Calendar::checkCalendar());
     }
 
+    public function checkCalendarToday()
+    {
+        $this->employeeCheck();
+        echo json_encode(Calendar::checkCalendarToday());
+    }
+
     public function checkCalendarDetails()
     {
         $this->employeeCheck();

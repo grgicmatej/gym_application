@@ -5,7 +5,7 @@ class DashboardController extends SecurityController
 {
     public function Dashboard()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         Membership::timeUpdate();
         $view=New View();
         $view->render('Dashboard/index',
@@ -20,6 +20,19 @@ class DashboardController extends SecurityController
                 'yearlyStats'           => Statistics::yearlyStats(),
                 'monthsInYear'          => Statistics::monthsInYear(),
                 'monthlyIncome'         => Finance::monthlyIncome()->Users_Memberships_Price_Month,
+            ]);
+
+    }
+
+    public function Staff_Dashboard()
+    {
+        $this->employeeCheck();
+        Membership::timeUpdate();
+        $view=New View();
+        $view->render('Staff_Dashboard/index',
+            [
+                'staffName'             => Session::getInstance()->getUser()->Staff_Username,
+                'gymName'               => Dashboard::gymName(),
             ]);
 
     }

@@ -22,12 +22,12 @@ $('.notes').on('click', function () {
                                                        ${Notes_Note}
                                                     </div>
                                                     <div class="timeline-footer">
-                                                    <!-- 
+                                                    
                                                         <div class="row">
                                                             <div class="col-12 col-lg-3"><p class="m-b-10 f-w-600 btn btn-block btn-outline-info editStaffNote" id="i_${Notes_Id}">Uređivanje bilješke</p></div>
                                                             <div class="col-12 col-lg-3"><p class="m-b-10 f-w-600 btn btn-block btn-outline-danger deleteStaffNote" id="i_${Notes_Id}">Brisanje bilješke</p></div>
                                                         </div>
-                                                         -->
+                                                         
                                                     </div>
                                                 </div>
                                             </div>
@@ -47,22 +47,6 @@ $('.createNewNote').on('click', function () {
 
 $('.newNoteFormCancel').on('click', function () {
     fadeOut("#newStaffNote");
-});
-
-$('#5').on('click', function () {
-    alert(5);
-});
-
-$('#3').on('click', function () {
-    alert(3);
-});
-
-$('#4').on('click', function () {
-    alert(4);
-});
-
-$('#6').on('click', function () {
-    alert(6);
 });
 
 // new note form start
@@ -86,16 +70,21 @@ $('#newNoteForm').on('submit', function (e) {
 // new note form end
 
 // notes item delete start
-$('#deleteStaffNote').on('click', function () {
-    alert('tu sam')
-    var id = $('.deleteStaffNote').attr('id');
-    globalVariableNoteId = id.split('_')[1]
-    fadeOut("#notesModal")
-    fadeIn("#deleteNotes")
+$(document).ajaxComplete(function () {
+    $('.deleteStaffNote').on('click', function () {
+        var id = $(this).attr('id');
+        globalVariableNoteId = id.split('_')[1]
+        fadeOut("#notesModal")
+        fadeIn("#deleteNotes")
+    });
 });
 
 $('.cancelNotesDeleteButton').on('click', function () {
     fadeOut("#deleteNotes")
+});
+
+$('.editNoteFormCancel').on('click', function () {
+    fadeOut("#editStaffNote")
 });
 
 $('.confirmNotesDeleteButton').on('click', function () {
@@ -113,3 +102,46 @@ $('.confirmNotesDeleteButton').on('click', function () {
     });
 });
 // notes item delete end
+
+// edit note form start
+$(document).ajaxComplete(function () {
+    $('.editStaffNote').on('click', function () {
+        var id = $(this).attr('id');
+        globalVariableNoteId = id.split('_')[1]
+
+        $.ajax({
+            method: "POST",
+            data: {Notes_Id: globalVariableNoteId},
+            url: urlAddress + 'notes/checkNote',
+            success: function (response) {
+                fadeOut("#notesModal")
+                fadeIn("#editStaffNote")
+                response = JSON.parse(response)
+                document.getElementById("Edit_Notes_Note").value = response["Notes_Note"];
+
+            },
+            error: function (){
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            }
+        });
+    });
+});
+
+$('#editNoteForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: urlAddress + 'Notes/editNote/' + globalVariableNoteId,
+        data: $('#editNoteForm').serialize(),
+        success: function () {
+            fadeOut("#editStaffNote");
+            successNotification('Bilješka je uspješno spremljena.');
+            clearInput(1000, 'editNoteForm')
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+            fadeOut('#editStaffNote')
+        }
+    });
+});
+// edit note form end

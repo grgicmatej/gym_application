@@ -8,6 +8,12 @@ class NotesController extends SecurityController
         echo json_encode(Notes::checkStaffNotes());
     }
 
+    public function checkNote()
+    {
+        $this->employeeCheck();
+        echo json_encode(Notes::checkNote());
+    }
+
     public function newNote()
     {
         $this->employeeCheck();
@@ -18,5 +24,11 @@ class NotesController extends SecurityController
     {
         $this->employeeCheck();
         Notes::deleteNote();
+    }
+
+    public function editNote($id)
+    {
+        $this->employeeCheck();
+        Notes::editNote($id);
     }
 }
