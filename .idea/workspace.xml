@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Staff_Dashboard/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/notes.js" afterDir="false" />
-    </list>
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +164,8 @@
       <workItem from="1649354797878" duration="328000" />
       <workItem from="1649356662274" duration="373000" />
       <workItem from="1650045566499" duration="538000" />
-      <workItem from="1650046436163" duration="4031000" />
+      <workItem from="1650046436163" duration="4186000" />
+      <workItem from="1650091000209" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
