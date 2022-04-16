@@ -11,6 +11,16 @@ class Notes
         }
     }
 
+    public static function checkNote()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Notes_Note FROM Notes WHERE Notes_Id=:Notes_Id AND Notes_Gym_Id=:Notes_Gym_Id');
+        $stmt->bindValue('Notes_Id', Request::post('Notes_Id'));
+        $stmt->bindValue('Notes_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public static function allStaffNotes()
     {
         $db=Db::getInstance();
@@ -60,6 +70,17 @@ class Notes
         $stmt=$db->prepare('DELETE FROM Notes WHERE Notes_Id=:Notes_Id AND Notes_Gym_Id=:Notes_Gym_Id');
         $stmt->bindValue('Notes_Id', Request::post('notesId'));
         $stmt->bindValue('Notes_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
+        $stmt->execute();
+    }
+
+    public static function editNote($id)
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Notes SET Notes_Note=:Notes_Note WHERE Notes_Id=:Notes_Id AND Notes_Gym_Id=:Notes_Gym_Id');
+        $stmt->bindValue('Notes_Note', Request::post('Notes_Note'));
+        $stmt->bindValue('Notes_Id', $id);
+        $stmt->bindValue('Notes_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
+
         $stmt->execute();
     }
 }

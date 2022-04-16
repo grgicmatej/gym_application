@@ -274,3 +274,11 @@ h6 {
     padding-top: 7px;
     padding-bottom: 7px;
 }
+
+.createNewNoteDiv{
+    padding-right: 35px;
+}
+
+.overviewNotesDiv{
+    padding-left: 60px;
+}

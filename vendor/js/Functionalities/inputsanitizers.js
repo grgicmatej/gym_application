@@ -79,8 +79,6 @@ var New_Warehouse_Item_Name = document.getElementById('New_Warehouse_Item_Name')
 var New_Warehouse_Item_Price = document.getElementById('New_Warehouse_Item_Price');
 var New_Warehouse_Item_Count = document.getElementById('New_Warehouse_Item_Count');
 
-var New_Notes_Note = document.getElementById('New_Notes_Note');
-
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -530,12 +528,6 @@ New_Warehouse_Item_Price.addEventListener('blur', function() {
 New_Warehouse_Item_Count.addEventListener('blur', function() {
     checkForEmptyData(this);
 });
-
-// notes sanitizers
-New_Notes_Note.addEventListener('blur', function() {
-    checkForEmptyData(this);
-});
-
 
 function checkForEmptyData(dataId){
     if (dataId.value === '') {

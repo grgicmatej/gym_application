@@ -55,7 +55,7 @@ $('.eventCalendar').on('click', function () {
                                         fadeOut("#eventCalendarDetails")
                                         fadeOut("#eventCalendar")
                                         successNotification('Uspješno otkazan termin.')
-                                        loadEventsFunction()
+                                        loadEvents()
                                         calendar.destroy();
                                     }
                                 });
@@ -73,7 +73,7 @@ $('.eventCalendar').on('click', function () {
                                         fadeOut("#eventCalendarDetails")
                                         fadeOut("#eventCalendar")
                                         successNotification('Uspješno potvrđen dolazak.')
-                                        loadEventsFunction()
+                                        loadEvents()
                                         calendar.destroy();
                                     }
                                 });
@@ -104,7 +104,7 @@ $('.eventCalendar').on('click', function () {
                                             fadeOut('#eventCalendarDetails')
                                             fadeOut('#eventCalendar')
                                             successNotification('Uspješno izmijenjen termin.')
-                                            loadEventsFunction()
+                                            loadEvents()
                                             clearInput(1000, 'updateEventForm');
                                             },
                                         error: function (){
@@ -159,7 +159,7 @@ $('#newEventForm').on('submit', function (e) {
             fadeOut("#newCalendarEvent")
             fadeOut("#eventCalendar")
             successNotification('Uspješno spremljen termin.');
-            loadEventsFunction()
+            loadEvents()
             clearInput(1000, 'newEventForm');
         },
         error: function (){
@@ -220,7 +220,10 @@ $(document).ajaxComplete(function () {
             url: urlAddress + 'Calendar/confirmEvent',
             success: function () {
                 successNotification('Uspješno potvrđen dolazak.')
-                loadEventsFunction()
+                loadEvents()
+            },
+            error: function () {
+                warningNotification('Došlo je do pogreške. Pokušajte ponovo.')
             }
         });
     });
