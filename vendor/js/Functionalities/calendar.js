@@ -176,11 +176,7 @@ $('#newEventCancel').on('click', function () {
 // new event end
 
 // load events start
-window.onload = function loadEvents(){
-    loadEventsFunction()
-}
-
-function loadEventsFunction(){
+function loadEvents(){
     $.ajax({
         method: "POST",
         data: {},
@@ -229,9 +225,3 @@ $(document).ajaxComplete(function () {
         });
     });
 });
-
-
-
-
-
-// tu sam stao, eventi se ispravno učitaju, treba složiti frontend

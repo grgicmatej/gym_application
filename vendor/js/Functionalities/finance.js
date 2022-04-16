@@ -107,10 +107,8 @@ $('#incomeDatesForm').on('submit', function (e) {
         url: urlAddress + 'Finances/incomeOnSpecificDate/',
         data: $('#incomeDatesForm').serialize(),
         success: function (response) {
-            alert(response)
 
             response = JSON.parse(response)
-            alert(response)
             document.getElementById('incomeOnSpecificDate').style.display = 'block';
             $("#incomeOnSpecificDateMembership").text((response["membershipsSale"] ?? 0.00) +' HRK');
             $("#incomeOnSpecificDateOther").text((response["otherSale"] ?? 0.00)+' HRK');

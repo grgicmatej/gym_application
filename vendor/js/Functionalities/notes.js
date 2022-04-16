@@ -49,22 +49,6 @@ $('.newNoteFormCancel').on('click', function () {
     fadeOut("#newStaffNote");
 });
 
-$('#5').on('click', function () {
-    alert(5);
-});
-
-$('#3').on('click', function () {
-    alert(3);
-});
-
-$('#4').on('click', function () {
-    alert(4);
-});
-
-$('#6').on('click', function () {
-    alert(6);
-});
-
 // new note form start
 $('#newNoteForm').on('submit', function (e) {
     e.preventDefault();
@@ -87,7 +71,6 @@ $('#newNoteForm').on('submit', function (e) {
 
 // notes item delete start
 $('#deleteStaffNote').on('click', function () {
-    alert('tu sam')
     var id = $('.deleteStaffNote').attr('id');
     globalVariableNoteId = id.split('_')[1]
     fadeOut("#notesModal")

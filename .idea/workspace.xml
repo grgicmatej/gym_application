@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,6 +170,7 @@
       <workItem from="1650045566499" duration="538000" />
       <workItem from="1650046436163" duration="4186000" />
       <workItem from="1650091000209" duration="12000" />
+      <workItem from="1650091016216" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

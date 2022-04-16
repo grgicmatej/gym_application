@@ -13,3 +13,7 @@ $.ajax({
 });
     ajax primjer kraj
 */
+
+window.onload = function loadData(){
+    loadEvents()
+}
