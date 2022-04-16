@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/staff.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/staff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/calendar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="statistics_reports" />
+        <entry key="$PROJECT_DIR$" value="staff_dashboard" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,7 +170,7 @@
       <workItem from="1650045566499" duration="538000" />
       <workItem from="1650046436163" duration="4186000" />
       <workItem from="1650091000209" duration="12000" />
-      <workItem from="1650091016216" duration="2699000" />
+      <workItem from="1650091016216" duration="3933000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

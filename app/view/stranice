@@ -17,11 +17,11 @@ postavke                +
 
 build log planner:
 1.0
-    - Osnovne značajke koje već postoje
-    - Bulk csv unos korisnika
+    - Osnovne značajke koje već postoje +
     - Mob verzija
     - Frontend landing page
 1.1:
+    - Bulk csv unos korisnika
     - Dodati više sportova u kalendar, trenutno postavljen samo nogomet
     - Notifikacije
     - Termin za razne sportove interni
@@ -52,5 +52,119 @@ build log planner:
         -- Event_Sport_Id INT NOT NULL
 
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
+
+BUGOVI za riješiti
+    - Onemogučiti gumb "nova prodaja" ako je trenutno stanje 0
+    - Dodati negdje unos početnog stanja blagajne
+
+Popis testova:
+    ADMINISTRATOR
+        - login
+        - logout
+        - promjena teretane
+        - Korisnici
+            -- Novi korisnik
+            -- Pregled korisnika
+            -- Potvrda dolaska
+            -- Nova članarina
+            -- Povijest članarina
+            -- Postojeća članarina
+            -- Zamrzavanje članarine
+            -- Odmrzavanje članarine
+            -- Uređivanje korisnika
+            -- Probni trening
+            -- Promjena iz probnog u trajnog korisnika
+        - Stolni sportovi
+            -- Pokretanje štoperice Sport 1
+            -- Pokretanje štoperice sport 2
+            -- Pokretanje štoperice sport 3
+            -- kraj štoperice 2 pa 3 pa 1
+        - Nogomet
+            -- Novi termin
+                --- Odustani
+                --- Spremi termin
+            -- Otkazivanje
+            -- Uređivanje
+            -- Potvrda dolaska
+        - Zaposlenici
+            -- Prikaži i sakrij inaktivne zaposlenike
+            -- Pregled zaposlenika
+                --- Povijest članarina
+                --- Uređivanje zaposlenika
+                --- Restartiranje lozinke
+                --- Deaktivacija zaposlenika
+            -- Novi zaposlenik
+        - Članarine
+            -- Prikaži i sakrij inaktivne članarine
+            -- Pregled članarina
+                --- Uređivanje članarine
+                --- Deaktiviranje članarine
+                --- Brisanje članarine
+            -- Nova članarina
+        - Statistika
+        - Financije
+            -- Odabir datuma za prihode
+        - Bilješke
+            -- Nova bilješka
+            -- Vide li se sve bilješke od zaposlenika
+            -- Brisanje bilješke
+            -- Uređivanje bilješke
+        - Proizvodi (pića)
+            -- Novi proizvod
+            -- Nova prodaja
+            -- Pregled proizvoda
+                --- Spremanje podataka
+                --- Reset broja prodaja
+                --- Brisanje proizvoda
+        - Postavke
+            -- Pregled postavki
+                --- Promjena lozinke
+                --- Promjena ostalih podataka
+
+
+    ZAPOSLENIK
+        - login
+        - logout
+        - Korisnici
+            -- Novi korisnik
+            -- Pregled korisnika
+            -- Potvrda dolaska
+            -- Nova članarina
+            -- Povijest članarina // sakriti ovu opciju
+            -- Postojeća članarina
+            -- Zamrzavanje članarine
+            -- Odmrzavanje članarine
+            -- Uređivanje korisnika
+            -- Probni trening
+            -- Promjena iz probnog u trajnog korisnika
+        - Stolni sportovi
+            -- Pokretanje štoperice Sport 1
+            -- Pokretanje štoperice sport 2
+            -- Pokretanje štoperice sport 3
+            -- kraj štoperice 2 pa 3 pa 1
+        - Nogomet
+            -- Novi termin
+                --- Odustani
+                --- Spremi termin
+            -- Otkazivanje
+            -- Uređivanje
+            -- Potvrda dolaska
+        - Bilješke
+            -- Nova bilješka
+            -- Samo privatne bilješke
+            -- Brisanje bilješke
+            -- Uređivanje bilješke
+        - Proizvodi (pića)
+            -- Novi proizvod
+            -- Nova prodaja
+            -- Pregled proizvoda
+                --- Spremanje podataka
+                --- Reset broja prodaja
+                --- Brisanje proizvoda
+        - Postavke
+            -- Pregled postavki
+                --- Promjena lozinke
+                --- Promjena ostalih podataka
+
 
 
