@@ -60,8 +60,10 @@ build log planner:
 
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
 
+    - Postaviti time zone (provjeriti preko štoperice)
+
+
 BUGOVI za riješiti
-    - Onemogučiti gumb "nova prodaja" ako je trenutno stanje 0
     - Dodati negdje unos početnog stanja blagajne
     - Novi korisnik, zaposlenik bug, ne dodijeli se ID
     - Postavke u sidebaru promjeniti u postavke teretane (administrator) pa tamo dodati unos početnog stanja, dodati sportove i sl.
