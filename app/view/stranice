@@ -68,7 +68,7 @@ BUGOVI za riješiti
         - 2 Stolni nogomet 50lipa/min
         - 3 Stolni tenis 50lipa/min
     - Postavke u sidebaru promjeniti u postavke teretane (administrator) pa tamo dodati unos početnog stanja, dodati sportove i sl.
-        -- kod zaposlenika to sakriti
+        -- kod zaposlenika to sakriti +
 
     - Fale input sanitizeri kod novog pića
     - Fale input sanitizeri kod korisničkih postavki
