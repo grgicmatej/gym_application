@@ -79,6 +79,10 @@ var New_Warehouse_Item_Name = document.getElementById('New_Warehouse_Item_Name')
 var New_Warehouse_Item_Price = document.getElementById('New_Warehouse_Item_Price');
 var New_Warehouse_Item_Count = document.getElementById('New_Warehouse_Item_Count');
 
+var Cash_Register_Amount = document.getElementById('Cash_Register_Amount');
+var Sport_Settings_Name_Edit = document.getElementById('Sport_Settings_Name_Edit');
+var Sport_Settings_Price_Edit = document.getElementById('Sport_Settings_Price_Edit');
+
 var numbers = /[1234567890]/;
 var letters = /[abcćčdđefghijklmnoprsštuvwzžxy]/;
 var specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -527,6 +531,18 @@ New_Warehouse_Item_Price.addEventListener('blur', function() {
 
 New_Warehouse_Item_Count.addEventListener('blur', function() {
     checkForEmptyData(this);
+});
+
+Cash_Register_Amount.addEventListener('blur', function (){
+    checkForEmptyData(this)
+});
+
+Sport_Settings_Name_Edit.addEventListener('blur', function (){
+    checkForEmptyData(this)
+});
+
+Sport_Settings_Price_Edit.addEventListener('blur', function (){
+    checkForEmptyData(this)
 });
 
 function checkForEmptyData(dataId){
