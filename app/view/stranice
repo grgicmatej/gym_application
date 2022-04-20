@@ -65,7 +65,6 @@ build log planner:
 
 BUGOVI za riješiti
     - Dodati negdje unos početnog stanja blagajne
-    - Novi korisnik, zaposlenik bug, ne dodijeli se ID
     - Postavke u sidebaru promjeniti u postavke teretane (administrator) pa tamo dodati unos početnog stanja, dodati sportove i sl.
 
 
@@ -138,15 +137,15 @@ Popis testova:
         - login     +
         - logout    +
         - Korisnici +
-            -- Novi korisnik        BUG, napisano
+            -- Novi korisnik        +
             -- Pregled korisnika    +
             -- Potvrda dolaska      +
             -- Nova članarina       +
             -- Zamrzavanje članarine    +
             -- Odmrzavanje članarine    +
             -- Uređivanje korisnika     +
-            -- Probni trening
-            -- Promjena iz probnog u trajnog korisnika
+            -- Probni trening           +
+            -- Promjena iz probnog u trajnog korisnika  +
         - Stolni sportovi   +
             -- Pokretanje štoperice Sport 1 +
             -- Pokretanje štoperice sport 2 +
@@ -172,7 +171,7 @@ Popis testova:
                 --- Spremanje podataka  +
                 --- Reset broja prodaja +
                 --- Brisanje proizvoda  +
-        - Postavke
+        - Postavke                      +
             -- Pregled postavki         +
                 --- Promjena lozinke    +
                 --- Promjena ostalih podataka   +

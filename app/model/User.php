@@ -151,7 +151,7 @@ class User extends Membership
                                 :Gym_Id
                                 )
                                 ');
-        $stmt->bindValue('Users_Id', (($_SESSION["Gym_Id"]) ?? 0) . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id', (($_SESSION["Gym_Id"]) ?? 0) . '-' . ($id === NULL ? Request::post('Users_Id') :  $id));
         $stmt->bindValue('Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
     }
@@ -356,7 +356,7 @@ class User extends Membership
                                     :Users_Photo
                                 )
                                 ");
-        $stmt->bindValue('Users_Id',  (($_SESSION["Gym_Id"]) ?? 0) . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Users_Id',  (($_SESSION["Gym_Id"]) ?? 0) . '-' . ($id === NULL ? Request::post('Users_Id') :  $id));
         $stmt->bindValue('Users_Name', Request::post('Users_Name'));
         $stmt->bindValue('Users_Surname', Request::post('Users_Surname'));
         $stmt->bindValue('Users_City', Request::post('Users_City'));
@@ -477,13 +477,13 @@ class User extends Membership
                                 :Users_Memberships_Gym_Id
                                 )
                             ");
-        $stmt->bindValue('Users_Memberships_Users_Id', (($_SESSION["Gym_Id"]) ?? 0) . '-' . $id ?? Request::post('Users_Id'));
+        $stmt->bindValue('Users_Memberships_Users_Id', (($_SESSION["Gym_Id"]) ?? 0) . '-' . ($id === NULL ? Request::post('Users_Id') :  $id));
         $stmt->bindValue('Users_Memberships_Membership_Name', '-');
         $stmt->bindValue('Users_Memberships_Start_Date', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('Users_Memberships_End_Date', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('Users_Memberships_Curent_Date', date_format(date_create(), 'Y.m.d'));
         $stmt->bindValue('Users_Memberships_Price', 0);
-        $stmt->bindValue('Users_Memberships_Membership_Active', 0);
+        $stmt->bindValue('Users_Memberships_Membership_Active', 1);
         $stmt->bindValue('Users_Memberships_Admin_Id', Session::getInstance()->getUser()->Staff_Id);
         $stmt->bindValue('Users_Memberships_Gym_Id', $_SESSION["Gym_Id"] ?? 0);
         $stmt->execute();
