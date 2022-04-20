@@ -68,9 +68,6 @@ BUGOVI za riješiti
     - Novi korisnik, zaposlenik bug, ne dodijeli se ID
     - Postavke u sidebaru promjeniti u postavke teretane (administrator) pa tamo dodati unos početnog stanja, dodati sportove i sl.
 
-    - Fale input sanitizeri kod novog pića
-    - Fale input sanitizeri kod korisničkih postavki
-
 
 Popis testova:
     ADMINISTRATOR
