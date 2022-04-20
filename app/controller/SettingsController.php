@@ -29,4 +29,9 @@ class SettingsController extends SecurityController
     {
         Settings::settingsSportEdit($id);
     }
+
+    public function SettingsSportActiveStatus()
+    {
+        Settings::SettingsSportActiveStatus();
+    }
 }

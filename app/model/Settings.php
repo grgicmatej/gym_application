@@ -51,4 +51,14 @@ class Settings
         $stmt->bindValue('Sport_Settings_Price', Request::post('Sport_Settings_Price'));
         $stmt->execute();
     }
+
+    public static function SettingsSportActiveStatus()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('UPDATE Sport_Settings SET Sport_Settings_Sport_Active=:Sport_Settings_Sport_Active WHERE Sport_Settings_Id=:Sport_Settings_Id AND Sport_Settings_Gym_Id=:Sport_Settings_Gym_Id');
+        $stmt->bindValue('Sport_Settings_Sport_Active', Request::post('sportActiveValue'));
+        $stmt->bindValue('Sport_Settings_Id', Request::post('sportId'));
+        $stmt->bindValue('Sport_Settings_Gym_Id', $_SESSION['Gym_Id'] ?? 0);
+        $stmt->execute();
+    }
 }

@@ -26,8 +26,8 @@ $('.gymSettings').on('click', function () {
                     options += `<tr class="warehouse_${Sport_Settings_Id}">
                                     <td class="text-left" id="${Sport_Settings_Id}_sportSettingsName">${Sport_Settings_Name}</td>
                                     <td class="text-left" id="${Sport_Settings_Id}_sportSettingsPrice">${Sport_Settings_Price}</td>
-                                    <td id="${Sport_Settings_Id}_sportSettingsSportActive" style="background-color: ${(Sport_Settings_Sport_Active == 1) ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
-                                        ${(Sport_Settings_Sport_Active) ? 'Da': 'Ne'}
+                                    <td id="${Sport_Settings_Id}_sportSettingsSportActive" style="background-color: ${(Sport_Settings_Sport_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
+                                        ${(Sport_Settings_Sport_Active === '1') ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-right settingsSportData" id="i_${Sport_Settings_Id}">
                                         <a class="submitlink linkanimation "> Uređivanje  <i class="fad fa-edit ml-10"></i></a>
@@ -96,8 +96,13 @@ $(document).ajaxComplete(function () {
                     fadeIn("#sportSettings")
                     document.getElementById("Sport_Settings_Name_Edit").value = response["Sport_Settings_Name"];
                     document.getElementById("Sport_Settings_Price_Edit").value = response["Sport_Settings_Price"];
+                    if (response["Sport_Settings_Sport_Active"] === '1'){
+                        $("#activateSportSettingsSport").html("<a><span class='btn btn-block btn-outline-info sportSettingsDeactivate' id='"+(response["Sport_Settings_Id"])+"'>Deaktivacija</span></a>");
+                    }else {
+                        $("#activateSportSettingsSport").html("<a><span class='btn btn-block btn-outline-info sportSettingsActivate' id='"+(response["Sport_Settings_Id"])+"'>Aktivicija</span></a>");
+                    }
 
-                    document.getElementById("staffActiveStatusIcon").style.color = response["Staff_Active"] === '1'? successColor : errorColor;
+                    document.getElementById("activateSportSettingsSport").style.color = response["Staff_Active"] === '1'? successColor : errorColor;
                 },
                 error: function (){
                     warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
@@ -107,3 +112,35 @@ $(document).ajaxComplete(function () {
     });
 });
 // edit sport settings modal end
+
+// activate - deactivate sport settings start
+$(document).ajaxComplete(function () {
+    $('.sportSettingsActivate').on('click', function () {
+        var id = $(this).attr('id');
+        activateDeactivateSettingsSport(id, 1)
+    });
+});
+
+$(document).ajaxComplete(function () {
+    $('.sportSettingsDeactivate').on('click', function () {
+        var id = $(this).attr('id');
+        activateDeactivateSettingsSport(id, 0)
+    });
+});
+
+function activateDeactivateSettingsSport(id, value)
+{
+    $.ajax({
+        method: "POST",
+        data: {sportId: id, sportActiveValue: value},
+        url: urlAddress + 'Settings/SettingsSportActiveStatus/',
+        success: function () {
+            successNotification('Podaci sporta su uspješno spremljeni.');
+            fadeOut("#sportSettings")
+        },
+        error: function (){
+            warningNotification('Došlo je do pogreške. Pokušajte ponovo.');
+        }
+    });
+}
+// activate - deactivate sport settings end
