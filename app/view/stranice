@@ -70,26 +70,26 @@ BUGOVI za riješiti
 
 Popis testova:
     ADMINISTRATOR
-        - login
-        - logout
-        - promjena teretane
-        - Korisnici
-            -- Novi korisnik
-            -- Pregled korisnika
-            -- Potvrda dolaska
-            -- Nova članarina
-            -- Povijest članarina
-            -- Postojeća članarina
-            -- Zamrzavanje članarine
-            -- Odmrzavanje članarine
-            -- Uređivanje korisnika
-            -- Probni trening
+        - login         +
+        - logout        +
+        - promjena teretane +
+        - Korisnici         +
+            -- Novi korisnik        +
+            -- Pregled korisnika    +
+            -- Potvrda dolaska      +
+            -- Nova članarina       +
+            -- Povijest članarina   +
+            -- Postojeća članarina  +
+            -- Zamrzavanje članarine    +
+            -- Odmrzavanje članarine    +
+            -- Uređivanje korisnika     +
+            -- Probni trening       bug - kaže da ID postoji, samo kod centra?!
             -- Promjena iz probnog u trajnog korisnika
         - Stolni sportovi
-            -- Pokretanje štoperice Sport 1
-            -- Pokretanje štoperice sport 2
-            -- Pokretanje štoperice sport 3
-            -- kraj štoperice 2 pa 3 pa 1
+            -- Pokretanje štoperice Sport 1 +
+            -- Pokretanje štoperice sport 2 +
+            -- Pokretanje štoperice sport 3 +
+            -- kraj štoperice 2 pa 3 pa 1   +
         - Nogomet
             -- Novi termin
                 --- Odustani
@@ -98,12 +98,12 @@ Popis testova:
             -- Uređivanje
             -- Potvrda dolaska
         - Zaposlenici
-            -- Prikaži i sakrij inaktivne zaposlenike
-            -- Pregled zaposlenika
-                --- Povijest članarina
-                --- Uređivanje zaposlenika
-                --- Restartiranje lozinke
-                --- Deaktivacija zaposlenika
+            -- Prikaži i sakrij inaktivne zaposlenike   +
+            -- Pregled zaposlenika                      +
+                --- Povijest članarina                  +
+                --- Uređivanje zaposlenika              +
+                --- Restartiranje lozinke               +
+                --- Deaktivacija zaposlenika            +
             -- Novi zaposlenik
         - Članarine
             -- Prikaži i sakrij inaktivne članarine
@@ -131,6 +131,11 @@ Popis testova:
             -- Pregled postavki
                 --- Promjena lozinke
                 --- Promjena ostalih podataka
+
+        - Postavke teretane
+            -- Provjera cijene
+            -- Provjera sporta
+
 
 
     ZAPOSLENIK
