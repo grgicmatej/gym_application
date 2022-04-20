@@ -83,6 +83,10 @@ $('#editWarehouseForm').on('submit', function (e) {
 $('.editWarehouseFormCancel').on('click', function () {
     fadeOut("#editWarehouseItemData");
 });
+
+$('.newWarehouseFormCancel').on('click', function () {
+    fadeOut("#newWarehouseItemData");
+});
 // warehouse item form cancel end
 
 // warehouse item delete start

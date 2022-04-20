@@ -15,7 +15,7 @@ class UserController extends SecurityController
         echo json_encode(User::addNewUserMembership($id));
     }
 
-    public function addNewUser() // provjeriti
+    public function addNewUser()
     {
         $this->employeeCheck();
         if (!User::checkUsersId()){

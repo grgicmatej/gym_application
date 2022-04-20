@@ -5,7 +5,7 @@ class StaffController extends SecurityController
 {
     public function allStaffInfo()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         echo json_encode(Staff::allStaffData());
     }
 
@@ -17,13 +17,13 @@ class StaffController extends SecurityController
 
     public function changeActiveStatusStaff()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         echo json_encode(Staff::changeActiveStatus());
     }
 
     public function checkStaffMemberships()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         echo json_encode(Staff::checkStaffMemberships());
     }
 
@@ -47,7 +47,7 @@ class StaffController extends SecurityController
 
     public function newStaff()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         echo json_encode(Staff::newStaff());
     }
 

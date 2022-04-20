@@ -10,7 +10,7 @@ class WarehouseController extends SecurityController
 
     public function deleteWarehouseItem()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         Warehouse::deleteWarehouseItem();
     }
 

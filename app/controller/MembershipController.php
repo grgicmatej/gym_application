@@ -22,25 +22,25 @@ class MembershipController extends SecurityController
 
     public function changeActiveStatusMembership()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         echo json_encode(Membership::changeActiveStatus());
     }
 
     public function deleteMembership()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         Membership::deleteMembership();
     }
 
     public function editMembership($id)
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         echo json_encode(Membership::editMembership($id));
     }
 
     public function newMembership()
     {
-        $this->employeeCheck();
+        $this->adminCheck();
         Membership::newMembeship();
     }
 }
