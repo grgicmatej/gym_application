@@ -18,7 +18,7 @@ class UserController extends SecurityController
     public function addNewUser()
     {
         $this->employeeCheck();
-        if (!User::checkUsersId()){
+        if (!User::checkUsersId() && Request::post('probniTrening') != 1){
             echo json_encode(false);
         }else{
             Upload::uploadPhoto();
