@@ -17,8 +17,8 @@
                     $(".main_menu_area").removeClass("navbar_fixed");
                 }
             });
-        };
-    };
+        }
+    }
     navbarFixed();
     
     

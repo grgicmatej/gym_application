@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/view/Public/index2.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend/._iphone4_ready.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend/iphone4_ready.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/slider-m-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/images/Frontend/slider-m-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/warehouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/warehouse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design21.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Frontend/design21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/inputsanitizers.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/inputsanitizers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/design12.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/design12.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="testing_and_cleaning" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,6 +68,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -173,7 +178,7 @@
       <workItem from="1650046436163" duration="4186000" />
       <workItem from="1650091000209" duration="12000" />
       <workItem from="1650091016216" duration="2699000" />
-      <workItem from="1650523995996" duration="4025000" />
+      <workItem from="1650523995996" duration="7419000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

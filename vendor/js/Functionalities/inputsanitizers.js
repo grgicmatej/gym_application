@@ -653,7 +653,7 @@ function clearInput(time, formId) {
         elementsId.forEach((element) => {
             RemoveClass(document.getElementById(element))
             if (element === 'Staff_Oib' || element === 'Staff_Phone' || element === 'Staff_Email' || element === 'Users_Gender' || element === 'Users_Status' || element === 'Users_Reference'){
-                return
+
             }else {
                 document.getElementById(element).value = '';
             }
