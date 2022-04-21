@@ -11,11 +11,12 @@ $('.warehouse').on('click', function () {
 
             searchData.innerHTML = response.reduce((options, {Warehouse_Id, Warehouse_Item_Name, Warehouse_Item_Price, Warehouse_Item_Count, Warehouse_Item_Sold_Count, remainingWarehouseCount}) =>
                     options += `<tr class="warehouse_${Warehouse_Id}">
+                                
                                     <td class="text-left" id="${Warehouse_Id}_warehouseItemName">${Warehouse_Item_Name}</td>
                                     <td class="text-left" id="${Warehouse_Id}_warehouseItemPrice">${Warehouse_Item_Price}</td>
                                     <td class="text-center" id="${Warehouse_Id}_warehouseItemQuantity">${Warehouse_Item_Count}</td>
                                     <td class="text-left" id="${Warehouse_Id}_warehouseItemQuantitySold">${Warehouse_Item_Sold_Count}
-                                     ${(remainingWarehouseCount > 0) ? '<span class="successColor newWarehouseItemSell" style="margin-left: 20px" id="i_'+${Warehouse_Id}'"><i class="fad fa-plus ml-10"></i> Nova prodaja</span>' : ''}  
+                                    <span class="successColor newWarehouseItemSell" style="margin-left: 20px; ${(remainingWarehouseCount > 0) ? '' : 'display: none'}" id="i_${Warehouse_Id}"><i class="fad fa-plus ml-10"></i> Nova prodaja</span>
                                      </td>
                                     <td class="text-center" id="${Warehouse_Id}_warehouseItemQuantity">${remainingWarehouseCount}</td>
                                     <td class="text-center warehouseItemEdit text-right" id="i_${Warehouse_Id}">

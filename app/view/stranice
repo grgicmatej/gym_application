@@ -119,7 +119,7 @@ Popis testova:
             -- Uređivanje bilješke                      +
         - Proizvodi (pića)                              +
             -- Novi proizvod                            +
-            -- Nova prodaja
+            -- Nova prodaja                             +
             -- Pregled proizvoda                        +
                 --- Spremanje podataka                  +
                 --- Reset broja prodaja
