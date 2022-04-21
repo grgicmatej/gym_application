@@ -86,7 +86,7 @@ $('.eventCalendar').on('click', function () {
                                 $("#Event_Start_Time_Edit").val(formatDateWithLine(response['Event_Start_Time'])+'T'+formatTime(response['Event_Start_Time']));
                                 $("#Event_End_Time_Edit").val(formatDateWithLine(response['Event_End_Time'])+'T'+formatTime(response['Event_End_Time']));
 
-                                $("#updateEventCalendarCancel").html("<a class='updateEventCancel'><span class='btn btn-block btn-outline-secondary'>Otkazivanje</span></a>");
+                                $("#updateEventCalendarCancel").html("<a class='updateEventCancel'><span class='btn btn-block btn-outline-secondary'>Odustani</span></a>");
                                 $("#updateEventCalendarConfirm").html("<input type='hidden' name='Event_Id' value='"+id+"' ><input type='submit' class='m-b-10 f-w-600 btn btn-block btn-outline-info' form='updateEventForm' value='Spremi termin'>");
 
                                 $('.updateEventCancel').on('click', function () {

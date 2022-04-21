@@ -122,8 +122,8 @@ $('.staff').on('click', function () {
                                     <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
                                     <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
                                     <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
-                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active == 1) ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
-                                        ${(Staff_Active) ? 'Da': 'Ne'}
+                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
+                                        ${(Staff_Active === '1') ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center staffProfileData" id="i_${Staff_Id}">
                                         <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>

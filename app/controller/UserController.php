@@ -18,10 +18,15 @@ class UserController extends SecurityController
     public function addNewUser()
     {
         $this->employeeCheck();
-        Upload::uploadPhoto();
-        User::newUser(Upload::getFileName(), Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
-        User::addUserGymRegistration(Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
-        User::newUserFirstMembershipExtension(Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
+        if (!User::checkUsersId() && Request::post('probniTrening') != 1){
+            echo json_encode(false);
+        }else{
+            Upload::uploadPhoto();
+            User::newUser(Upload::getFileName(), Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
+            User::addUserGymRegistration(Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
+            User::newUserFirstMembershipExtension(Request::post('probniTrening') == 1 ? ('probno-'.time()) : null);
+            echo json_encode(true);
+        }
     }
 
     public function checkUsersId()

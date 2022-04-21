@@ -57,6 +57,8 @@ $('.potvrdidolazak').on('click', function () {
 // Registration of new user
 $('.newUserRegistration').on('click', function () {
     fadeIn("#newUserRegistration")
+    document.getElementById('probniTrening').style.display = 'block';
+    Users_Id.disabled = false
 });
 
 $('#formformaNewUser').on('submit', function (e) {
@@ -65,10 +67,16 @@ $('#formformaNewUser').on('submit', function (e) {
         type: 'post',
         url: urlAddress + 'User/addNewUser/',
         data: $('#formformaNewUser').serialize(),
-        success: function () {
-            fadeOut("#newUserRegistration")
-            successNotification('Uspješno registriran korisnik.');
-            clearInput(1000, 'formformaNewUser');
+        success: function (response) {
+            response = JSON.parse(response)
+            if (response === true){
+                fadeOut("#newUserRegistration")
+                successNotification('Uspješno registriran korisnik.');
+                clearInput(1000, 'formformaNewUser');
+            }else {
+                warningNotification('ID broj kartice već postoji. Pokušajte ponovo.');
+            }
+
         },
         error: function (){
             warningNotification('Došlo je do pogreške. Pokušajte ponovo.');

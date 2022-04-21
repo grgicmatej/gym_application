@@ -1,6 +1,5 @@
 index                   +
-teretane
-
+teretane                +
 
 Stolni sportovi         +
 Nogomet                 +
@@ -17,18 +16,17 @@ postavke                +
 
 build log planner:
 1.0
-    - Osnovne značajke koje već postoje
-    - Bulk csv unos korisnika
+    - Osnovne značajke koje već postoje +
     - Mob verzija
     - Frontend landing page
 1.1:
+    - Bulk csv unos korisnika
     - Dodati više sportova u kalendar, trenutno postavljen samo nogomet
     - Notifikacije
     - Termin za razne sportove interni
     - ugradnja log (aktivnost) sustava
     - Engleska verzija
     - promjena lozinke svaka 3mj
-    - pravi kalendar za nogomet
 1.2:
     - Termin za razne sportove eksterni
     - Eksterna provjera statusa članarine
@@ -51,6 +49,133 @@ build log planner:
         -- Event_Contact_Phone VARCHAR(30) NOT NULL
         -- Event_Sport_Id INT NOT NULL
 
+    - Dodati podatke u tablicu sport settings:
+        - 1 Biljar 50lipa/min
+        - 2 Stolni nogomet 50lipa/min
+        - 3 Stolni tenis 50lipa/min
+
+    - Tablica Timers - Timers_Completed postaviti na Default 0 NOT NULL
+
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
+
+    - Postaviti time zone (provjeriti preko štoperice)
+
+
+BUGOVI za riješiti
+    - pića ID za prodaju ne radi
+
+
+Popis testova:
+    ADMINISTRATOR
+        - login                                         +
+        - logout                                        +
+        - promjena teretane                             +
+        - Korisnici                                     +
+            -- Novi korisnik                            +
+            -- Pregled korisnika                        +
+            -- Potvrda dolaska                          +
+            -- Nova članarina                           +
+            -- Povijest članarina                       +
+            -- Postojeća članarina                      +
+            -- Zamrzavanje članarine                    +
+            -- Odmrzavanje članarine                    +
+            -- Uređivanje korisnika                     +
+            -- Probni trening                           +
+            -- Promjena iz probnog u trajnog korisnika  +
+        - Stolni sportovi                               +
+            -- Pokretanje štoperice Sport 1             +
+            -- Pokretanje štoperice sport 2             +
+            -- Pokretanje štoperice sport 3             +
+            -- kraj štoperice 2 pa 3 pa 1               +
+        - Nogomet                                       +
+            -- Novi termin                              +
+                --- Odustani                            +
+                --- Spremi termin                       +
+            -- Otkazivanje                              +
+            -- Uređivanje                               +
+            -- Potvrda dolaska                          +
+        - Zaposlenici                                   +
+            -- Prikaži i sakrij inaktivne zaposlenike   +
+            -- Pregled zaposlenika                      +
+                --- Povijest članarina                  +
+                --- Uređivanje zaposlenika              +
+                --- Restartiranje lozinke               +
+                --- Deaktivacija zaposlenika            +
+            -- Novi zaposlenik                          +
+        - Članarine                                     +
+            -- Prikaži i sakrij inaktivne članarine     +
+            -- Pregled članarina                        +
+                --- Uređivanje članarine                +
+                --- Deaktiviranje članarine             +
+                --- Brisanje članarine                  +
+            -- Nova članarina                           +
+        - Statistika                                    +
+        - Financije                                     +
+            -- Odabir datuma za prihode                 +
+        - Bilješke                                      +
+            -- Nova bilješka                            +
+            -- Vide li se sve bilješke od zaposlenika   +
+            -- Brisanje bilješke                        +
+            -- Uređivanje bilješke                      +
+        - Proizvodi (pića)                              +
+            -- Novi proizvod                            +
+            -- Nova prodaja                             +
+            -- Pregled proizvoda                        +
+                --- Spremanje podataka                  +
+                --- Reset broja prodaja
+                --- Brisanje proizvoda                  +
+        - Postavke                                      +
+            -- Pregled postavki                         +
+                --- Promjena lozinke                    +
+                --- Promjena ostalih podataka           +
+        - Postavke teretane                             +
+            -- Provjera cijene                          +
+            -- Provjera sporta                          +
+
+
+
+    ZAPOSLENIK
+        - login                                         +
+        - logout                                        +
+        - Korisnici                                     +
+            -- Novi korisnik
+            -- Pregled korisnika                        +
+            -- Potvrda dolaska                          +
+            -- Nova članarina                           +
+            -- Zamrzavanje članarine                    +
+            -- Odmrzavanje članarine                    +
+            -- Uređivanje korisnika                     +
+            -- Probni trening
+            -- Promjena iz probnog u trajnog korisnika
+        - Stolni sportovi                               +
+            -- Pokretanje štoperice Sport 1             +
+            -- Pokretanje štoperice sport 2             +
+            -- Pokretanje štoperice sport 3             +
+            -- kraj štoperice 2 pa 3 pa 1               +
+        - Nogomet                                       +
+            -- Novi termin                              +
+                --- Odustani                            +
+                --- Spremi termin                       +
+            -- Otkazivanje                              +
+            -- Uređivanje                               +
+            -- Potvrda dolaska                          +
+            -- Potvrda dolaska inx                      +
+        - Bilješke                                      +
+            -- Nova bilješka                            +
+            -- Samo privatne bilješke                   +
+            -- Brisanje bilješke                        +
+            -- Uređivanje bilješke                      +
+        - Proizvodi (pića)                              +
+            -- Novi proizvod                            +
+            -- Nova prodaja                             +
+            -- Pregled proizvoda                        +
+                --- Spremanje podataka                  +
+                --- Reset broja prodaja                 +
+                --- Brisanje proizvoda                  +
+        - Postavke                                      +
+            -- Pregled postavki                         +
+                --- Promjena lozinke                    +
+                --- Promjena ostalih podataka           +
+
 
 

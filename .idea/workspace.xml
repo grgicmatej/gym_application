@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/staff.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/staff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/stranice" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/stranice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/slider-m-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/images/Frontend/slider-m-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/warehouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/warehouse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="statistics_reports" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/controller" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -67,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controller" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/vendor/js" />
       <recent name="$PROJECT_DIR$/app/model" />
       <recent name="$PROJECT_DIR$/vendor/css" />
-      <recent name="$PROJECT_DIR$/app/view/Dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/view/Dashboard" />
@@ -171,6 +173,7 @@
       <workItem from="1650046436163" duration="4186000" />
       <workItem from="1650091000209" duration="12000" />
       <workItem from="1650091016216" duration="2699000" />
+      <workItem from="1650523995996" duration="4025000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

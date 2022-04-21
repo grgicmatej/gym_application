@@ -1798,3 +1798,189 @@
     </div>
 </div>
 <!-- new note modal end -->
+
+<!-- staffSettings Modal start -->
+<div class="modal fade" id="gymSettings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Postavke teretane</h6>
+                    <br>
+                    <form id="formformaGymSettingsAmount">
+                        <div class="row">
+                            <div class="col-12"><p>Početno stanje blagajne</p></div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100">Stanje blagajne<span class="mandatoryField"> *</span></label><br>
+                                <input type="number" class="form-control newUserInputForm" name="Cash_Register_Amount" id="Cash_Register_Amount" placeholder="Trenutan iznos" oninvalid="this.setCustomValidity('Ovo polje ne smije biti prazno.')" oninput="setCustomValidity('')" required step="0.01">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label class="nav-item linkanimation f-w-100"><span class="mandatoryField"></span></label><br>
+                                <input type="submit" class="form-control newUserInputForm btn-outline-info" form="formformaGymSettingsAmount" value="Spremanje iznosa" style="margin-top: 8px;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="mandatoryField linkanimation">*  Obavezna polja</span>
+                            </div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="dropdown-divider"></div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card-body" id="dt7" style="max-width: available">
+                                <table class="table" id="" width=100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: auto">Ime sporta</th>
+                                        <th style="width: auto">Cijena/minuta</th>
+                                        <th style="width: auto; text-align: center">Aktivno</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="dataTableBodySettings"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- staffSettings Modal end -->
+
+<!-- Update sportSettings modal start -->
+<div class="modal fade" id="sportSettings" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="updateSportSettings">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje sporta</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o sportu</h6>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Naziv sporta</p>
+                                                    <input type="text" class=" form-control newUserInputForm" name="Sport_Settings_Name" id="Sport_Settings_Name_Edit" placeholder="Naziv sporta" oninvalid="this.setCustomValidity('Molimo unesite ispravan naziv.')" oninput="setCustomValidity('')" minlength="3" required>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cijena po minuti</p>
+                                                    <input type="number" class=" form-control newUserInputForm" name="Sport_Settings_Price" id="Sport_Settings_Price_Edit" placeholder="Cijena sporta" oninvalid="this.setCustomValidity('Molimo unesite ispravnu cijenu.')" oninput="setCustomValidity('')" min="0" step="0.01" required >
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6"></div>
+                                                <div class="col-sm-6">
+                                                    <input type="submit" class="form-control newUserInputForm btn-outline-info" value="Spremanje podataka" style="margin-top: 8px;">
+                                                </div>
+                                            </div>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Dodatne postavke</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 " id="activateSportSettingsSport"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Update sportSettings modal end -->
+
+
+
+<!-- delete notes modal start -->
+<div class="modal fade" id="deleteNotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja bilješke</h6>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-secondary cancelNotesDeleteButton" id="cancelNotesDeleteButton">Odustani</p>
+                                </div>
+                                <div class="col-sm-12 col-md-2"></div>
+                                <div class="col-sm-12 col-md-5">
+                                    <p class="m-b-10 btn btn-block btn-outline-info confirmNotesDeleteButton" id="confirmNotesDeleteButton">Potvrdi brisanje</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete notes modal end -->
+
+<!-- edit note modal start -->
+<div class="modal fade" id="editStaffNote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <form id="editNoteForm">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje bilješke</h6>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o bilješki</h6>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <p class="m-b-10 f-w-600">Bilješka</p>
+                                                    <textarea name="Notes_Note" id="Edit_Notes_Note" style="width: 100%" rows="5" placeholder="Unesite bilješku" required></textarea>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="m-b-10 f-w-600 btn btn-block btn-outline-secondary editNoteFormCancel">Odustani</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <input type="submit" class="m-b-10 f-w-600 btn btn-block btn-outline-info" form="editNoteForm" value="Spremanje bilješke">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit note modal end -->
