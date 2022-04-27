@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer"
+          media="print" onload="if(!window._isAppPrerendering)this.removeAttribute('media');">
+    <link href="https://fonts.googleapis.com/css2?&amp;display=swap" rel="preload" referrerpolicy="no-referrer"
+          as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&amp;display=swap" rel="stylesheet"
+          referrerpolicy="no-referrer" media="print"
+          onload="if(!window._isAppPrerendering)this.removeAttribute('media');">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&amp;display=swap" rel="preload"
+          referrerpolicy="no-referrer" as="style">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" referrerpolicy="no-referrer" crossorigin="true">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&amp;display=swap);
+        *, :after, :before {
+            box-sizing: border-box
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            color: inherit
+        }
+
+        :after, :before {
+            padding: 0;
+            margin: 0
+        }
+
+        body {
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        body, button {
+            font-family: Roboto, sans-serif
+        }
+
+        button {
+            background-color: #fff;
+            border: none;
+            outline: none;
+            box-shadow: none
+        }
+
+        label[for] {
+            cursor: pointer
+        }
+
+        iframe {
+            border-width: 0
+        }
+
+        .sentry[data-v-289856bb] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 920px;
+            height: 1px;
+            pointer-events: none
+        }
+
+        select[data-v-db5ff5a6] {
+            float: left;
+            width: 50px;
+            height: 38px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            line-height: 49px;
+            outline: 0
+        }
+
+
+        @keyframes expand-data-v-6ef35d4f {
+            0% {
+                display: none;
+                opacity: 0
+            }
+            1% {
+                display: block;
+                opacity: 0;
+                transform: translateY(-1em)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(1)
+            }
+        }
+
+        .block-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 13;
+            overflow: hidden;
+            background-color: var(--background-color);
+            transition: background-color .3s ease-in-out, height 1ms linear 999s
+        }
+
+        .block-background__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .blog-list-item-meta__subtitle span[data-v-15956daa]:nth-of-type(2):before {
+            content: "·"
+        }
+
+        .grid-button--primary[data-v-2f409ee5] {
+            display: inline-block;
+            max-width: 100%;
+            padding: var(--grid-button-primary-padding-y) var(--grid-button-primary-padding-x);
+            overflow: hidden;
+            font-family: var(--grid-button-primary-font-family);
+            font-size: var(--grid-button-primary-font-size);
+            font-style: var(--grid-button-primary-font-style);
+            font-weight: var(--grid-button-primary-font-weight);
+            line-height: var(--grid-button-primary-line-height);
+            color: var(--grid-button-primary-color);
+            text-align: center;
+            text-decoration: var(--grid-button-primary-text-decoration);
+            text-overflow: ellipsis;
+            text-transform: var(--grid-button-primary-text-transform);
+            letter-spacing: var(--grid-button-primary-letter-spacing);
+            white-space: nowrap;
+            cursor: pointer;
+            background-color: rgb(118, 52, 191);
+            border: var(--grid-button-primary-border-null, var(--grid-button-primary-border-width) solid var(--grid-button-primary-border-color));
+            border-radius: var(--grid-button-primary-border-radius);
+            box-shadow: var(--grid-button-primary-box-shadow-null, var(--grid-button-primary-box-shadow-x) var(--grid-button-primary-box-shadow-y) var(--grid-button-primary-box-shadow-blur) var(--grid-button-primary-box-shadow-spread) var(--grid-button-primary-box-shadow-color));
+            transition: all var(--grid-button-primary-transition-duration) var(--grid-button-primary-transition-timing-function)
+        }
+
+        .grid-button--primary[data-v-2f409ee5]:hover {
+            color: var(--grid-button-primary-color-hover);
+            background-color: rgb(112, 46, 185);
+            border: var(--grid-button-primary-border-null-hover, var(--grid-button-primary-border-width-hover) solid var(--grid-button-primary-border-color-hover));
+            box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(--grid-button-primary-box-shadow-x-hover) var(--grid-button-primary-box-shadow-y-hover) var(--grid-button-primary-box-shadow-blur-hover) var(--grid-button-primary-box-shadow-spread-hover) var(--grid-button-primary-box-shadow-color-hover))
+        }
+
+        .grid-button--primary[data-v-2f409ee5]:disabled {
+            opacity: .4;
+            cursor: unset
+        }
+
+        .grid-button--secondary[data-v-2f409ee5] {
+            display: inline-block;
+            max-width: 100%;
+            padding: var(--grid-button-secondary-padding-y) var(--grid-button-secondary-padding-x);
+            overflow: hidden;
+            font-family: var(--grid-button-secondary-font-family);
+            font-size: var(--grid-button-secondary-font-size);
+            font-style: var(--grid-button-secondary-font-style);
+            font-weight: var(--grid-button-secondary-font-weight);
+            line-height: var(--grid-button-secondary-line-height);
+            color: var(--grid-button-secondary-color);
+            text-align: center;
+            text-decoration: var(--grid-button-secondary-text-decoration);
+            text-overflow: ellipsis;
+            text-transform: var(--grid-button-secondary-text-transform);
+            letter-spacing: var(--grid-button-secondary-letter-spacing);
+            white-space: nowrap;
+            cursor: pointer;
+            background-color: rgb(225, 54, 133);
+            border: var(--grid-button-secondary-border-null, var(--grid-button-secondary-border-width) solid var(--grid-button-secondary-border-color));
+            border-radius: var(--grid-button-secondary-border-radius);
+            box-shadow: var(--grid-button-secondary-box-shadow-null, var(--grid-button-secondary-box-shadow-x) var(--grid-button-secondary-box-shadow-y) var(--grid-button-secondary-box-shadow-blur) var(--grid-button-secondary-box-shadow-spread) var(--grid-button-secondary-box-shadow-color));
+            transition: all var(--grid-button-secondary-transition-duration) var(--grid-button-secondary-transition-timing-function)
+        }
+
+        .grid-button--secondary[data-v-2f409ee5]:hover {
+            background-color: rgb(240, 69, 148);
+            color: var(--grid-button-secondary-color-hover);
+            border: var(--grid-button-secondary-border-null-hover, var(--grid-button-secondary-border-width-hover) solid var(--grid-button-secondary-border-color-hover));
+            box-shadow: var(--grid-button-secondary-box-shadow-null-hover, var(--grid-button-secondary-box-shadow-x-hover) var(--grid-button-secondary-box-shadow-y-hover) var(--grid-button-secondary-box-shadow-blur-hover) var(--grid-button-secondary-box-shadow-spread-hover) var(--grid-button-secondary-box-shadow-color-hover))
+        }
+
+        .grid-button--secondary[data-v-2f409ee5]:disabled {
+            opacity: .4;
+            cursor: unset
+        }
+
+        @media screen and (max-width: 920px) {
+            .grid-button--primary[data-v-2f409ee5] {
+                display: inline-block;
+                max-width: 100%;
+                overflow: hidden;
+                font-family: var(--grid-button-primary-font-family);
+                font-style: var(--grid-button-primary-font-style);
+                font-weight: var(--grid-button-primary-font-weight);
+                line-height: var(--grid-button-primary-line-height);
+                color: var(--grid-button-primary-color);
+                text-align: center;
+                text-decoration: var(--grid-button-primary-text-decoration);
+                text-overflow: ellipsis;
+                text-transform: var(--grid-button-primary-text-transform);
+                letter-spacing: var(--grid-button-primary-letter-spacing);
+                white-space: nowrap;
+                cursor: pointer;
+                border: var(--grid-button-primary-border-null, var(--grid-button-primary-border-width) solid var(--grid-button-primary-border-color));
+                box-shadow: var(--grid-button-primary-box-shadow-null, var(--grid-button-primary-box-shadow-x) var(--grid-button-primary-box-shadow-y) var(--grid-button-primary-box-shadow-blur) var(--grid-button-primary-box-shadow-spread) var(--grid-button-primary-box-shadow-color));
+                transition: all var(--grid-button-primary-transition-duration) var(--grid-button-primary-transition-timing-function);
+                padding: var(--grid-button-primary-m-padding-y, var(--grid-button-primary-padding-y)) var(--grid-button-primary-m-padding-x, var(--grid-button-primary-padding-x));
+                font-size: var(--grid-button-primary-m-font-size, var(--grid-button-primary-font-size));
+                border-radius: var(--grid-button-primary-m-border-radius, var(--grid-button-primary-border-radius))
+            }
+
+            .grid-button--primary[data-v-2f409ee5]:hover {
+                color: var(--grid-button-primary-color-hover);
+                border: var(--grid-button-primary-border-null-hover, var(--grid-button-primary-border-width-hover) solid var(--grid-button-primary-border-color-hover));
+                box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(--grid-button-primary-box-shadow-x-hover) var(--grid-button-primary-box-shadow-y-hover) var(--grid-button-primary-box-shadow-blur-hover) var(--grid-button-primary-box-shadow-spread-hover) var(--grid-button-primary-box-shadow-color-hover))
+            }
+
+            .grid-button--primary[data-v-2f409ee5]:disabled {
+                opacity: .4;
+                cursor: unset
+            }
+        }
+
+        @keyframes loading-data-v-2f409ee5 {
+            0% {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        @media screen and (max-width: 920px) {
+            .grid-button--secondary[data-v-2f409ee5] {
+                display: inline-block;
+                max-width: 100%;
+                overflow: hidden;
+                font-family: var(--grid-button-secondary-font-family);
+                font-style: var(--grid-button-secondary-font-style);
+                font-weight: var(--grid-button-secondary-font-weight);
+                line-height: var(--grid-button-secondary-line-height);
+                color: var(--grid-button-secondary-color);
+                text-align: center;
+                text-decoration: var(--grid-button-secondary-text-decoration);
+                text-overflow: ellipsis;
+                text-transform: var(--grid-button-secondary-text-transform);
+                letter-spacing: var(--grid-button-secondary-letter-spacing);
+                white-space: nowrap;
+                cursor: pointer;
+                border: var(--grid-button-secondary-border-null, var(--grid-button-secondary-border-width) solid var(--grid-button-secondary-border-color));
+                box-shadow: var(--grid-button-secondary-box-shadow-null, var(--grid-button-secondary-box-shadow-x) var(--grid-button-secondary-box-shadow-y) var(--grid-button-secondary-box-shadow-blur) var(--grid-button-secondary-box-shadow-spread) var(--grid-button-secondary-box-shadow-color));
+                transition: all var(--grid-button-secondary-transition-duration) var(--grid-button-secondary-transition-timing-function);
+                padding: var(--grid-button-secondary-m-padding-y, var(--grid-button-secondary-padding-y)) var(--grid-button-secondary-m-padding-x, var(--grid-button-secondary-padding-x));
+                font-size: var(--grid-button-secondary-m-font-size, var(--grid-button-secondary-font-size));
+            }
+
+            .grid-button--secondary[data-v-2f409ee5]:hover {
+                color: var(--grid-button-secondary-color-hover);
+                border: var(--grid-button-secondary-border-null-hover, var(--grid-button-secondary-border-width-hover) solid var(--grid-button-secondary-border-color-hover));
+                box-shadow: var(--grid-button-secondary-box-shadow-null-hover, var(--grid-button-secondary-box-shadow-x-hover) var(--grid-button-secondary-box-shadow-y-hover) var(--grid-button-secondary-box-shadow-blur-hover) var(--grid-button-secondary-box-shadow-spread-hover) var(--grid-button-secondary-box-shadow-color-hover))
+            }
+
+            .grid-button--secondary[data-v-2f409ee5]:disabled {
+                opacity: .4;
+                cursor: unset
+            }
+
+            @keyframes loading-data-v-2f409ee5 {
+                0% {
+                    transform: rotate(0deg)
+                }
+                to {
+                    transform: rotate(1turn)
+                }
+            }
+        }
+
+        .input[data-v-3a756488] ::placeholder {
+            font-size: 14px;
+            color: var(--colors-grey-600)
+        }
+
+        .input--dark[data-v-3a756488] ::placeholder {
+            font-size: 14px;
+            color: var(--colors-grey-800)
+        }
+
+        @keyframes spin-data-v-49175f0a {
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        .image[data-v-00c3b48d] {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%
+        }
+
+        .image__image[data-v-00c3b48d] {
+            position: absolute;
+            display: block;
+            object-fit: var(--object-fit, cover);
+            border-radius: var(--border-radius)
+        }
+
+        .image__image[data-v-00c3b48d] {
+            width: 100%;
+            height: 100%
+        }
+
+        @media screen and (max-width: 920px) {
+            .image__image--reset-m-position[data-v-00c3b48d] {
+                position: static;
+                height: auto
+            }
+        }
+
+        @keyframes blink-data-v-70ace480 {
+            0% {
+                background-position: 0 53%
+            }
+            50% {
+                background-position: 100% 48%
+            }
+            to {
+                background-position: 0 53%
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                background-position: 0 53%
+            }
+            50% {
+                background-position: 100% 48%
+            }
+            to {
+                background-position: 0 53%
+            }
+        }
+
+        @keyframes placeholderShimmer-data-v-7c859886 {
+            0% {
+                transform: translateZ(0)
+            }
+            to {
+                transform: translate3d(50%, 0, 0)
+            }
+        }
+
+        .text-box h1 {
+            font-family: var(--h1-font-family);
+            font-size: var(--h1-font-size);
+            font-style: var(--h1-font-style);
+            font-weight: var(--h1-font-weight);
+            line-height: var(--h1-line-height);
+            color: var(--h1-color);
+            text-decoration: var(--h1-text-decoration);
+            text-transform: var(--h1-text-transform);
+            letter-spacing: var(--h1-letter-spacing)
+        }
+
+        .text-box h2 {
+            font-family: var(--h2-font-family);
+            font-size: var(--h2-font-size);
+            font-style: var(--h2-font-style);
+            font-weight: var(--h2-font-weight);
+            line-height: var(--h2-line-height);
+            color: var(--h2-color);
+            text-decoration: var(--h2-text-decoration);
+            text-transform: var(--h2-text-transform);
+            letter-spacing: var(--h2-letter-spacing)
+        }
+
+        .text-box h3 {
+            font-family: var(--h3-font-family);
+            font-size: var(--h3-font-size);
+            font-style: var(--h3-font-style);
+            font-weight: var(--h3-font-weight);
+            line-height: var(--h3-line-height);
+            color: var(--h3-color);
+            text-decoration: var(--h3-text-decoration);
+            text-transform: var(--h3-text-transform);
+            letter-spacing: var(--h3-letter-spacing)
+        }
+
+
+
+        .text-box h4 {
+            font-family: var(--h4-font-family);
+            font-size: var(--h4-font-size);
+            font-style: var(--h4-font-style);
+            font-weight: var(--h4-font-weight);
+            line-height: var(--h4-line-height);
+            color: var(--h4-color);
+            text-decoration: var(--h4-text-decoration);
+            text-transform: var(--h4-text-transform);
+            letter-spacing: var(--h4-letter-spacing)
+        }
+
+        .text-box h5 {
+            font-family: var(--h5-font-family);
+            font-size: var(--h5-font-size);
+            font-style: var(--h5-font-style);
+            font-weight: var(--h5-font-weight);
+            line-height: var(--h5-line-height);
+            color: var(--h5-color);
+            text-decoration: var(--h5-text-decoration);
+            text-transform: var(--h5-text-transform);
+            letter-spacing: var(--h5-letter-spacing)
+        }
+
+        .text-box h6 {
+            font-family: var(--h6-font-family);
+            font-size: var(--h6-font-size);
+            font-style: var(--h6-font-style);
+            font-weight: var(--h6-font-weight);
+            line-height: var(--h6-line-height);
+            color: var(--h6-color);
+            text-decoration: var(--h6-text-decoration);
+            text-transform: var(--h6-text-transform);
+            letter-spacing: var(--h6-letter-spacing)
+        }
+
+        .text-box {
+            font-family: var(--body-large-font-family);
+            font-size: var(--body-large-font-size);
+            font-style: var(--body-large-font-style);
+            font-weight: var(--body-large-font-weight);
+            line-height: var(--body-large-line-height);
+            color: var(--body-large-color);
+            text-decoration: var(--body-large-text-decoration);
+            text-transform: var(--body-large-text-transform);
+            letter-spacing: var(--body-large-letter-spacing)
+        }
+
+        .text-box .body {
+            font-family: var(--body-font-family);
+            font-size: var(--body-font-size);
+            font-style: var(--body-font-style);
+            font-weight: var(--body-font-weight);
+            line-height: var(--body-line-height);
+            color: var(--body-color);
+            text-decoration: var(--body-text-decoration);
+            text-transform: var(--body-text-transform);
+            letter-spacing: var(--body-letter-spacing)
+        }
+
+        .text-box {
+            font-family: var(--body-small-font-family);
+            font-size: var(--body-small-font-size);
+            font-style: var(--body-small-font-style);
+            font-weight: var(--body-small-font-weight);
+            line-height: var(--body-small-line-height);
+            color: var(--body-small-color);
+            text-decoration: var(--body-small-text-decoration);
+            text-transform: var(--body-small-text-transform);
+            letter-spacing: var(--body-small-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .text-box {
+                font-family: var(--button-m-font-family, var(--button-font-family));
+                font-size: var(--button-m-font-size, var(--button-font-size));
+                font-style: var(--button-m-font-style, var(--button-font-style));
+                font-weight: var(--button-m-font-weight, var(--button-font-weight));
+                line-height: var(--button-m-line-height, var(--button-line-height));
+                color: var(--button-m-color, var(--button-color));
+                text-decoration: var(--button-m-text-decoration, var(--button-text-decoration));
+                text-transform: var(--button-m-text-transform, var(--button-text-transform));
+                letter-spacing: var(--button-m-letter-spacing, var(--button-letter-spacing))
+            }
+        }
+
+        .text-box {
+            font-family: var(--link-font-family);
+            font-size: var(--link-font-size);
+            font-style: var(--link-font-style);
+            font-weight: var(--link-font-weight);
+            line-height: var(--link-line-height);
+            color: var(--link-color);
+            text-decoration: var(--link-text-decoration);
+            text-transform: var(--link-text-transform);
+            letter-spacing: var(--link-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .text-box {
+                font-family: var(--link-m-font-family, var(--link-font-family));
+                font-size: var(--link-m-font-size, var(--link-font-size));
+                font-style: var(--link-m-font-style, var(--link-font-style));
+                font-weight: var(--link-m-font-weight, var(--link-font-weight));
+                line-height: var(--link-m-line-height, var(--link-line-height));
+                color: var(--link-m-color, var(--link-color));
+                text-decoration: var(--link-m-text-decoration, var(--link-text-decoration));
+                text-transform: var(--link-m-text-transform, var(--link-text-transform));
+                letter-spacing: var(--link-m-letter-spacing, var(--link-letter-spacing))
+            }
+        }
+
+        .text-box {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-wrap: break-word;
+            white-space: break-spaces;
+            outline: none
+        }
+
+        .text-box h1 {
+            margin-bottom: 48px
+        }
+
+        .text-box h1:last-child {
+            margin-bottom: 0
+        }
+
+        .text-box .body, .text-box, .text-box h2, .text-box h3, .text-box h4 {
+            margin-bottom: 32px
+        }
+
+        .text-box, .text-box .body:last-child, .text-box h2:last-child, .text-box h3:last-child, .text-box h4:last-child {
+            margin-bottom: 0
+        }
+
+        .text-box h5 {
+            margin-bottom: 16px
+        }
+
+        .text-box h5:last-child {
+            margin-bottom: 0
+        }
+
+        .text-box h6 {
+            margin-bottom: 8px
+        }
+
+        .text-box h6:last-child {
+            margin-bottom: 0
+        }
+
+        .text-box{
+            margin-bottom: 24px
+        }
+
+        .text-box {
+            margin-bottom: 0
+        }
+
+        .text-box ol, .text-box ul {
+            padding-left: 40px
+        }
+
+        .text-box > p:empty:after {
+            content: " "
+        }
+
+        @media screen and (max-width: 920px) {
+            .text-box h1 {
+                margin-bottom: 48px
+            }
+
+            .text-box h1:last-child {
+                margin-bottom: 0
+            }
+
+            .text-box .body, .text-box, .text-box h2, .text-box h3, .text-box h4 {
+                margin-bottom: 32px
+            }
+
+            .text-box, .text-box .body:last-child, .text-box h2:last-child, .text-box h3:last-child, .text-box h4:last-child {
+                margin-bottom: 0
+            }
+
+            .text-box h5 {
+                margin-bottom: 16px
+            }
+
+            .text-box h5:last-child {
+                margin-bottom: 0
+            }
+
+            .text-box h6 {
+                margin-bottom: 8px
+            }
+
+            .text-box h6:last-child {
+                margin-bottom: 0
+            }
+
+            .text-box  {
+                margin-bottom: 24px
+            }
+
+            .text-box {
+                margin-bottom: 0
+            }
+
+            .text-box h1:not() {
+                font-size: var(--fontSizeMobile, var(--h1-m-font-size))
+            }
+
+            .text-box h2:not() {
+                font-size: var(--fontSizeMobile, var(--h2-m-font-size))
+            }
+
+            .text-box h3:not() {
+                font-size: var(--fontSizeMobile, var(--h3-m-font-size))
+            }
+
+            .text-box h4:not() {
+                font-size: var(--fontSizeMobile, var(--h4-m-font-size))
+            }
+
+            .text-box h5:not() {
+                font-size: var(--fontSizeMobile, var(--h5-m-font-size))
+            }
+
+            .text-box h6:not() {
+                font-size: var(--fontSizeMobile, var(--h6-font-size))
+            }
+
+            .text-box .body:not() {
+                font-size: var(--fontSizeMobile, var(--body-m-font-size))
+            }
+
+        }
+
+        .block-grid-item[data-v-189c24f4] {
+            position: relative;
+            z-index: var(--element-z-index);
+            display: flex;
+            flex-direction: column;
+            grid-area: var(--position);
+            align-items: var(--align);
+            justify-content: var(--justify);
+            padding: var(--grid-item-padding);
+            text-align: var(--text)
+        }
+
+        @media screen and (max-width: 920px) {
+            .block-grid-item[data-v-189c24f4] {
+                grid-area: auto;
+                grid-column: 3/-3;
+                align-items: var(--m-align, var(--align));
+                align-self: var(--m-align-self);
+                justify-content: var(--m-justify, var(--justify));
+                max-width: 100%;
+                text-align: var(--m-text, var(--text))
+            }
+        }
+
+        .block-grid-item[data-v-189c24f4] {
+            pointer-events: none
+        }
+
+        .block-grid-item__component[data-v-189c24f4] {
+            pointer-events: all
+        }
+
+        @media screen and (max-width: 920px) {
+            .block-grid-item[data-v-189c24f4] {
+                width: var(--m-width, 100%)
+            }
+
+            .block-grid-item.use-m-margin[data-v-189c24f4] {
+                margin: var(--m-element-margin)
+            }
+
+            .block-grid-item.use-m-margin[data-v-189c24f4]:last-of-type {
+                margin-bottom: 0
+            }
+        }
+
+        .block-grid[data-v-1f24cc0f] {
+            position: relative;
+            z-index: 14;
+            display: grid;
+            grid-area: 1/1/-1/-1;
+            grid-template-rows:repeat(var(--rows), var(--row-size));
+            grid-template-columns:calc(var(--container-width) / 2 - var(--content-width) / 2) 1fr repeat(var(--column-count), minmax(0, var(--column-width))) 1fr calc(var(--container-width) / 2 - var(--content-width) / 2);
+            grid-auto-rows: var(--row-size);
+            row-gap: var(--row-gap);
+            column-gap: var(--column-gap);
+            width: 100%;
+            padding: var(--block-padding);
+            margin: 0 auto;
+            --column-gap-count: calc(var(--column-count) - 1);
+            --column-width: calc((var(--grid-width) - var(--column-gap-count) * var(--column-gap)) / var(--column-count));
+            --container-width: 100vw
+        }
+
+        @media screen and (max-width: 920px) {
+            .block-grid[data-v-1f24cc0f] {
+                display: flex;
+                flex-direction: column;
+                grid-gap: 0;
+                padding: var(--m-block-padding)
+            }
+
+        }
+
+        .block-grid[data-v-1f24cc0f] {
+            grid-template-rows:repeat(var(--rows), minmax(var(--row-size), auto))
+        }
+
+        .product-list-empty-state h6 {
+            font-family: var(--h6-font-family);
+            font-size: var(--h6-font-size);
+            font-style: var(--h6-font-style);
+            font-weight: var(--h6-font-weight);
+            line-height: var(--h6-line-height);
+            color: var(--h6-color);
+            text-decoration: var(--h6-text-decoration);
+            text-transform: var(--h6-text-transform);
+            letter-spacing: var(--h6-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .product-list-empty-state h6 {
+                font-family: var(--h6-m-font-family, var(--h6-font-family));
+                font-size: var(--h6-m-font-size, var(--h6-font-size));
+                font-style: var(--h6-m-font-style, var(--h6-font-style));
+                font-weight: var(--h6-m-font-weight, var(--h6-font-weight));
+                line-height: var(--h6-m-line-height, var(--h6-line-height));
+                color: var(--h6-m-color, var(--h6-color));
+                text-decoration: var(--h6-m-text-decoration, var(--h6-text-decoration));
+                text-transform: var(--h6-m-text-transform, var(--h6-text-transform));
+                letter-spacing: var(--h6-m-letter-spacing, var(--h6-letter-spacing))
+            }
+        }
+
+        .product-list-item h6[data-v-16bbed2b] {
+            font-family: var(--h6-font-family);
+            font-size: var(--h6-font-size);
+            font-style: var(--h6-font-style);
+            font-weight: var(--h6-font-weight);
+            line-height: var(--h6-line-height);
+            color: var(--h6-color);
+            text-decoration: var(--h6-text-decoration);
+            text-transform: var(--h6-text-transform);
+            letter-spacing: var(--h6-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .product-list-item h6[data-v-16bbed2b] {
+                font-family: var(--h6-m-font-family, var(--h6-font-family));
+                font-size: var(--h6-m-font-size, var(--h6-font-size));
+                font-style: var(--h6-m-font-style, var(--h6-font-style));
+                font-weight: var(--h6-m-font-weight, var(--h6-font-weight));
+                line-height: var(--h6-m-line-height, var(--h6-line-height));
+                color: var(--h6-m-color, var(--h6-color));
+                text-decoration: var(--h6-m-text-decoration, var(--h6-text-decoration));
+                text-transform: var(--h6-m-text-transform, var(--h6-text-transform));
+                letter-spacing: var(--h6-m-letter-spacing, var(--h6-letter-spacing))
+            }
+        }
+
+        .product-list-item p[data-v-16bbed2b] {
+            font-family: var(--body-font-family);
+            font-size: var(--body-font-size);
+            font-style: var(--body-font-style);
+            font-weight: var(--body-font-weight);
+            line-height: var(--body-line-height);
+            color: var(--body-color);
+            text-decoration: var(--body-text-decoration);
+            text-transform: var(--body-text-transform);
+            letter-spacing: var(--body-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .product-list-item p[data-v-16bbed2b] {
+                font-family: var(--body-m-font-family, var(--body-font-family));
+                font-size: var(--body-m-font-size, var(--body-font-size));
+                font-style: var(--body-m-font-style, var(--body-font-style));
+                font-weight: var(--body-m-font-weight, var(--body-font-weight));
+                line-height: var(--body-m-line-height, var(--body-line-height));
+                color: var(--body-m-color, var(--body-color));
+                text-decoration: var(--body-m-text-decoration, var(--body-text-decoration));
+                text-transform: var(--body-m-text-transform, var(--body-text-transform));
+                letter-spacing: var(--body-m-letter-spacing, var(--body-letter-spacing))
+            }
+        }
+
+        .block-product h3 {
+            font-family: var(--h3-font-family);
+            font-size: var(--h3-font-size);
+            font-style: var(--h3-font-style);
+            font-weight: var(--h3-font-weight);
+            line-height: var(--h3-line-height);
+            color: var(--h3-color);
+            text-decoration: var(--h3-text-decoration);
+            text-transform: var(--h3-text-transform);
+            letter-spacing: var(--h3-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .block-product h3 {
+                font-family: var(--h3-m-font-family, var(--h3-font-family));
+                font-size: var(--h3-m-font-size, var(--h3-font-size));
+                font-style: var(--h3-m-font-style, var(--h3-font-style));
+                font-weight: var(--h3-m-font-weight, var(--h3-font-weight));
+                line-height: var(--h3-m-line-height, var(--h3-line-height));
+                color: var(--h3-m-color, var(--h3-color));
+                text-decoration: var(--h3-m-text-decoration, var(--h3-text-decoration));
+                text-transform: var(--h3-m-text-transform, var(--h3-text-transform));
+                letter-spacing: var(--h3-m-letter-spacing, var(--h3-letter-spacing))
+            }
+        }
+
+        .block-product p {
+            font-family: var(--body-font-family);
+            font-size: var(--body-font-size);
+            font-style: var(--body-font-style);
+            font-weight: var(--body-font-weight);
+            line-height: var(--body-line-height);
+            color: var(--body-color);
+            text-decoration: var(--body-text-decoration);
+            text-transform: var(--body-text-transform);
+            letter-spacing: var(--body-letter-spacing)
+        }
+
+        @media screen and (max-width: 920px) {
+            .block-product p {
+                font-family: var(--body-m-font-family, var(--body-font-family));
+                font-size: var(--body-m-font-size, var(--body-font-size));
+                font-style: var(--body-m-font-style, var(--body-font-style));
+                font-weight: var(--body-m-font-weight, var(--body-font-weight));
+                line-height: var(--body-m-line-height, var(--body-line-height));
+                color: var(--body-m-color, var(--body-color));
+                text-decoration: var(--body-m-text-decoration, var(--body-text-decoration));
+                text-transform: var(--body-m-text-transform, var(--body-text-transform));
+                letter-spacing: var(--body-m-letter-spacing, var(--body-letter-spacing))
+            }
+        }
+
+
+
+        html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store a, html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store div, html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store span {
+            font-family: var(--font-secondary)
+        }
+
+        html#ecwid_html body{
+            font-family: var(--font-primary)
+        }
+
+        html#ecwid_html body{
+            padding: 0
+        }
+
+        html#ecwid_html.ec-has-filters-popup body {
+            overflow: auto
+        }
+
+        .zyro-ecwid__radio-section p {
+            order: 1
+        }
+
+        @media screen and (max-width: 920px) {
+            .nav-arrow-button svg[data-v-61184e3d] {
+                width: 8px;
+                height: 16px
+            }
+        }
+
+        .block[data-v-a3fd9bac] {
+            position: relative;
+            display: grid;
+            grid-template-rows:100%;
+            grid-template-columns:100%;
+            width: 100%;
+            min-width: 100%;
+            padding-top: var(--header-height, 0);
+            margin-top: calc(var(--header-height, 0) * -1)
+        }
+
+        @keyframes loading-data-v-10857038 {
+            0% {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        .navbarNav{
+            color: black;
+            font-family: Rubik, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            line-height: normal;
+        }
+
+        .navbarNavDesno{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    </style>
+    <title>Gymzone</title>
+    <link data-vue-meta="1" rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta data-vue-meta="1" data-vmid="description" name="description" content="">
+    <meta data-vue-meta="1" data-vmid="og:title" property="og:title" content="Home">
+    <meta data-vue-meta="1" data-vmid="og:description" property="og:description" content="">
+    <meta data-vue-meta="1" data-vmid="og:type" property="og:type" content="application">
+    <meta data-vue-meta="1" data-vmid="og:url" property="og:url" content="">
+    <meta data-vue-meta="1" data-vmid="og:site_name" property="og:site_name" content="">
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            </ul>
+            <span class="navbar-text">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link navbarNav" href="#">Features</a>
+                </li>
+                <li class="nav-item navbarNavDesno">
+                    <a class="nav-link navbarNav " href="#">Pricing</a>
+                </li>
+            </ul>
+      </span>
+        </div>
+    </div>
+</nav>
+
+<div id="app" data-server-rendered="true">
+    <main style="--h1-color:var(--colors-dark); --h1-font-size:100px; --h1-font-style:normal; --h1-font-family:var(--font-primary); --h1-font-weight:700; --h1-line-height:1.; --h1-m-font-size:64px; --h1-letter-spacing:normal; --h1-text-transform:none; --h1-text-decoration:none; --h2-color:var(--colors-dark); --h2-font-size:64px; --h2-font-style:normal; --h2-font-family:var(--font-primary); --h2-font-weight:700; --h2-line-height:1.2; --h2-m-font-size:36px; --h2-letter-spacing:normal; --h2-text-transform:none; --h2-text-decoration:none; --h3-color:var(--colors-dark); --h3-font-size:48px; --h3-font-style:normal; --h3-font-family:var(--font-primary); --h3-font-weight:700; --h3-line-height:1.2; --h3-m-font-size:32px; --h3-letter-spacing:normal; --h3-text-transform:none; --h3-text-decoration:none; --h4-color:var(--colors-dark); --h4-font-size:32px; --h4-font-style:normal; --h4-font-family:var(--font-primary); --h4-font-weight:700; --h4-line-height:1.2; --h4-m-font-size:28px; --h4-letter-spacing:normal; --h4-text-transform:none; --h4-text-decoration:none; --h5-color:var(--colors-dark); --h5-font-size:24px; --h5-font-style:normal; --h5-font-family:var(--font-primary); --h5-font-weight:700; --h5-line-height:1.2; --h5-m-font-size:24px; --h5-letter-spacing:normal; --h5-text-transform:none; --h5-text-decoration:none; --h6-color:var(--colors-dark); --h6-font-size:20px; --h6-font-style:normal; --h6-font-family:var(--font-primary); --h6-font-weight:400; --h6-line-height:1.2; --h6-m-font-size:20px; --h6-letter-spacing:normal; --h6-text-transform:none; --h6-text-decoration:none; --body-color:var(--colors-dark); --body-font-size:16px; --body-font-style:normal; --body-font-family:var(--font-primary); --body-font-weight:300; --body-line-height:1.6; --body-m-font-size:16px; --body-letter-spacing:normal; --body-text-transform:none; --body-text-decoration:none; --font-primary:&quot;Rubik&quot;, sans-serif; --font-secondary:&quot;Montserrat&quot;, sans-serif; --colors-dark:#000000; --colors-light:#fff; --colors-danger:#f86c6b; --colors-primary:#7634BF; --colors-success:#4dbd74; --colors-warning:#ffc107; --colors-accent-1:#DFE1E2; --colors-accent-2:#161616; --colors-grey-100:#F1F1F1; --colors-grey-200:#DDDDDD; --colors-grey-300:#C9C9C9; --colors-grey-400:#B5B5B5; --colors-grey-500:#A1A1A1; --colors-grey-600:#888888; --colors-grey-700:#747474; --colors-grey-800:#565656; --colors-grey-900:#383838; --colors-secondary:#E03584; --colors-primary-dark:#5d1ba6; --colors-accent-1-dark:#c6c8c9; --colors-accent-2-dark:#000000; --colors-primary-light:#8a48d3; --colors-accent-1-light:#f3f5f6; --colors-accent-2-light:#2a2a2a; --colors-primary-accent:#803ec9; --colors-secondary-dark:#c71c6b; --colors-accent-1-accent:#e9ebec; --colors-accent-2-accent:#202020; --colors-secondary-light:#f44998; --colors-secondary-accent:#ea3f8e; --nav-link-color:var(--colors-dark); --nav-link-font-size:16px; --nav-link-font-style:normal; --nav-link-font-family:var(--font-primary); --nav-link-font-weight:400; --nav-link-line-height:1.8; --nav-link-m-font-size:16px; --nav-link-letter-spacing:normal; --nav-link-text-transform:none; --nav-link-text-decoration:none; --body-large-color:var(--colors-dark); --body-large-font-size:18px; --body-large-font-style:normal; --body-large-font-family:var(--font-primary); --body-large-font-weight:400; --body-large-line-height:1.6; --body-large-m-font-size:18px; --body-large-letter-spacing:normal; --body-large-text-transform:none; --body-large-text-decoration:none; --body-small-color:var(--colors-dark); --body-small-font-size:14px; --body-small-font-style:normal; --body-small-font-family:var(--font-primary); --body-small-font-weight:300; --body-small-line-height:1.6; --body-small-m-font-size:14px; --body-small-letter-spacing:normal; --body-small-text-transform:none; --body-small-text-decoration:none; --grid-button-primary-color:var(--colors-light); --grid-button-primary-font-size:16px; --grid-button-primary-padding-x:40px; --grid-button-primary-padding-y:16px; --grid-button-primary-font-style:normal; --grid-button-primary-color-hover:var(--colors-light); --grid-button-primary-font-family:var(--font-primary); --grid-button-primary-font-weight:400; --grid-button-primary-line-height:normal; --grid-button-primary-m-font-size:14px; --grid-button-primary-m-padding-x:36px; --grid-button-primary-m-padding-y:14px; --grid-button-primary-border-color:transparent; --grid-button-primary-border-width:0; --grid-button-primary-box-shadow-x:0px; --grid-button-primary-box-shadow-y:0px; --grid-button-primary-border-radius:50px; --grid-button-primary-letter-spacing:normal; --grid-button-primary-text-transform:none; --grid-button-primary-box-shadow-blur:0px; --grid-button-primary-m-border-radius:50px; --grid-button-primary-text-decoration:none; --grid-button-primary-background-color:var(--colors-primary); --grid-button-primary-box-shadow-color:transparent; --grid-button-primary-box-shadow-spread:0px; --grid-button-primary-border-color-hover:transparent; --grid-button-primary-border-width-hover:0px; --grid-button-primary-box-shadow-x-hover:0px; --grid-button-primary-box-shadow-y-hover:0px; --grid-button-primary-transition-duration:0.2s; --grid-button-primary-box-shadow-blur-hover:0px; --grid-button-primary-background-color-hover:var(--colors-primary-dark); --grid-button-primary-box-shadow-color-hover:0px; --grid-button-primary-box-shadow-spread-hover:0px; --grid-button-primary-transition-timing-function:ease; --grid-button-secondary-color:var(--colors-light); --grid-button-secondary-font-size:16px; --grid-button-secondary-padding-x:40px; --grid-button-secondary-padding-y:16px; --grid-button-secondary-font-style:normal; --grid-button-secondary-color-hover:var(--colors-light); --grid-button-secondary-font-family:var(--font-primary); --grid-button-secondary-font-weight:400; --grid-button-secondary-line-height:normal; --grid-button-secondary-m-font-size:14px; --grid-button-secondary-m-padding-x:36px; --grid-button-secondary-m-padding-y:14px; --grid-button-secondary-border-color:transparent; --grid-button-secondary-border-width:0; --grid-button-secondary-box-shadow-x:0px; --grid-button-secondary-box-shadow-y:0px; --grid-button-secondary-border-radius:50px; --grid-button-secondary-letter-spacing:normal; --grid-button-secondary-text-transform:none; --grid-button-secondary-box-shadow-blur:0px; --grid-button-secondary-m-border-radius:50px; --grid-button-secondary-text-decoration:none; --grid-button-secondary-background-color:var(--colors-secondary); --grid-button-secondary-box-shadow-color:transparent; --grid-button-secondary-box-shadow-spread:0px; --grid-button-secondary-border-color-hover:transparent; --grid-button-secondary-border-width-hover:0px; --grid-button-secondary-box-shadow-x-hover:0px; --grid-button-secondary-box-shadow-y-hover:0px; --grid-button-secondary-transition-duration:0.2s; --grid-button-secondary-box-shadow-blur-hover:0px; --grid-button-secondary-box-shadow-null-hover:none; --grid-button-secondary-background-color-hover:var(--colors-secondary-light); --grid-button-secondary-box-shadow-color-hover:0px; --grid-button-secondary-box-shadow-spread-hover:0px; --grid-button-secondary-transition-timing-function:ease;">
+        <section data-v-a3fd9bac="" class="block block--grid" style="--content-width:1600px; --grid-width:1224px; --column-count:12; --content-padding:16px; --rows:16; --width:1224px; --row-gap:16px; --row-size:48px; --column-gap:24px; --block-padding-top:0px; --block-padding:0px 0px 0px 0px; --block-padding-right:0px; --block-padding-bottom:0px; --block-padding-left:0px; --m-block-padding:36px 0px 0px 0px; --oldContentWidth:1600px;">
+            <div data-v-a3fd9bac="" class="block-background" style="--background-color:transparent; --background-overlay-opacity:0;">
+                <img alt="" src="assets/pozadina.svg" srcset="" width="100vw" sizes="100vw" loading="eager" class="block-background__image">
+            </div>
+
+            <div data-v-1f24cc0f="" data-v-a3fd9bac="" class="block-grid" id="ztIhP7">
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:zpqu46"
+                     class="block-grid-item use-m-margin grid__item"
+                     style="--text:left; --align:flex-start; --justify:flex-start; --m-width:92.6121%; --position:4/3/10/9; --m-align-self:center; --m-element-margin:0 0 12px 0; --element-z-index:3;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="zpQU46"
+                         lcp="[object Object]" mobile-block-padding="36px 0px 0px 0px" element-width="600"
+                         element-height="368" style="height: 500px; line-height: 130px"><h1><span
+                                style="color: var(--colors-light); ">Kompletan nadzor vaše </span><span
+                                style="color: var(--colors-secondary); ">teretane</span>
+                        </h1></div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:zx2npe" class="block-grid-item use-m-margin grid__item" style="--text:left; --align:flex-start; --justify:flex-start; --m-width:90.2375%; --position:10/3/11/7; --m-align-self:center; --m-element-margin:0 0 33px 0; --element-z-index:6; padding-top: 100px;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="zx2Npe"><p class="body" style=""><span
+                                style="color: var(--colors-light);">Upravljajte svim dijelovima vašeg poslovanja s jednog mjesta.</span>
+                        </p></div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridbutton:zekq9y" class="block-grid-item use-m-margin grid__item" style="--align:flex-start; --m-width:90.7652%; --position:11/3/13/6; --m-align-self:center; --m-element-margin:0 0 35px 0; --element-z-index:5; margin-top: 0">
+                    <a data-v-2f409ee5=""  href="" target="_self" class="grid-button block-grid-item__component grid-button--primary" id="zekQ9y">Kontakt</a></div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:zerq3u" class="block-grid-item use-m-margin grid__item" style="--align:center; --justify:center; --m-width:86.5435%; --position:1/8/16/17; --object-fit:contain; --m-align-self:center; --m-element-margin:0 0 16px 0; --element-z-index:1;">
+                    <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image">
+                        <img src="images/homepage.png" alt="">
+                    </div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:zmqwfp" class="block-grid-item use-m-margin grid__item" style="--align:center; --justify:center; --position:11/1/17/17; --object-fit:cover; --m-element-margin:0 0 16px 0; --element-z-index:2;">
+                    <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image">
+                        <img data-v-00c3b48d="" data-qa="builder-gridelement-image" alt="" src="assets/wave1-YNqLX3MXWaFq2gXd.svg" sizes="(min-width: 920px) 1920px, calc(100vw - 0px)" height="368" width="1920" loading="lazy" class="image__image image__image--reset-m-position">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-v-a3fd9bac="" class="block block--grid" style="--content-width:1600px; --grid-width:1224px; --column-count:12; --content-padding:16px; --rows:9; --width:1224px; --row-gap:16px; --row-size:48px; --column-gap:24px; --block-padding-top:16px; --block-padding:16px 0px 16px 0px; --block-padding-right:0px; --block-padding-bottom:16px; --block-padding-left:0px; --m-block-padding:60px 16px 72px 16px; --oldContentWidth:1600px;">
+            <div data-v-1f24cc0f="" data-v-a3fd9bac="" class="block-grid" id="zORlYa">
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:zcjcem"
+                     class="block-grid-item use-m-margin grid__item"
+                     style="--text:left; --align:flex-start; --justify:flex-start; --m-width:76.9452%; --position:3/10/6/15; --m-element-margin:0 0 24px 0; --element-z-index:2;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="zcJcEm"
+                    ><h2 style="height: 100px"><span style="color: rgb(0, 0, 0); ">Svi članovi na </span><span style="color: var(--colors-primary);">jednom mjestu</span>
+                        </h2>
+                    </div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:zd7ajl"
+                     class="block-grid-item use-m-margin grid__item"
+                     style="--text:left; --align:flex-start; --justify:flex-start; --m-width:90.2017%; --position:6/10/8/15; --m-element-margin:0 0 60px 0; --element-z-index:3;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="zD7AJL"
+                    ><p class="body" style=""><span
+                                style="color: rgb(0, 0, 0); ">Pregled nad članovima, probnim treninzima, promjene i zamrzavanje članarina, upravljanje zaposlenicima i još mnogo toga. Bezbroj mogućnosti za najbolje teretane.</span>
+                        </p>
+                    </div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:zh7f5w" class="block-grid-item use-m-margin grid__item" style="--align:center; --justify:center; --position:1/3/9/9; --object-fit:cover; --border-radius:5%; --m-element-margin:0 0 16px 0; --element-z-index:1;">
+                    <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image">
+                        <img src="images/macbook.png" alt="" style="border-radius: 5%">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-v-a3fd9bac="" class="block block--grid" style="--content-width:1600px; --grid-width:1224px; --column-count:12; --content-padding:16px; --rows:10; --width:1224px; --row-gap:16px; --row-size:48px; --column-gap:24px; --block-padding-top:16px; --block-padding:16px 0px 16px 0px; --block-padding-right:0px; --block-padding-bottom:16px; --block-padding-left:0px; --m-block-padding:60px 16px 60px 16px; --oldContentWidth:1600px;">
+            <div data-v-1f24cc0f="" data-v-a3fd9bac="" class="block-grid" id="zS3xAE">
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:za1pq1" class="block-grid-item use-m-margin grid__item" style="--text:left; --align:flex-start; --justify:flex-start; --m-width:82.7089%; --position:4/3/7/8; --m-element-margin:0 0 24px 0; --element-z-index:2;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="za1PQ1"
+                    ><h2 style="height: 250px"><span style="color: rgb(0, 0, 0);">Detaljna statistika </span><span
+                                style="color: var(--colors-primary);">nadohvat ruke</span>
+                        </h2></div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:zqdupd"
+                     class="block-grid-item use-m-margin grid__item"
+                     style="--text:left; --align:flex-start; --justify:flex-start; --m-width:88.4726%; --position:7/3/9/8; --m-element-margin:0 0 60px 0; --element-z-index:3;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="zQDUPd"
+                    ><p class="body" style=""><span
+                                style="color: rgb(0, 0, 0);">Točni i detaljni podaci dostupni u svakom trenutku - za bilo koje razdoblje. Iskoristite potpunu snagu aplikacije i imajte uvid u statistiku poslovanja kao nikad do sad.</span>
+                        </p>
+                    </div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:zg47jk" class="block-grid-item use-m-margin grid__item" style="--align:center; --justify:center; --position:2/9/10/15; --object-fit:cover; --border-radius:5%; --m-element-margin:0 0 16px 0; --element-z-index:1;">
+                    <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image">
+                        <img src="images/stats.png" height="496" width="600" alt="" style="border-radius: 5%">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-v-a3fd9bac="" class="block block--grid"
+                 style="--content-width:1600px; --grid-width:1224px; --column-count:12; --content-padding:16px; --rows:4; --width:1224px; --row-gap:16px; --row-size:48px; --column-gap:24px; --block-padding-top:0px; --block-padding:0px 0px 0px 0px; --block-padding-right:0px; --block-padding-bottom:0px; --block-padding-left:0px; --m-block-padding:0px 0px 40px 0px; --oldContentWidth:1600px; margin-top: -50px">
+            <div data-v-a3fd9bac="" class="block-background"
+                 style="--background-color:var(--colors-dark); --background-overlay-opacity:0;"><!----><!----></div>
+            <div data-v-1f24cc0f="" data-v-a3fd9bac="" class="block-grid"  id="zqSGeg">
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:zpxu8a"
+                     class="block-grid-item use-m-margin grid__item"
+                     style="--align:center; --justify:center; --position:1/1/5/17; --object-fit:cover; --m-element-margin:0 0 16px 0; --element-z-index:1;">
+                    <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image"><img
+                            data-v-00c3b48d="" data-qa="builder-gridelement-image" alt=""
+                            src="assets/wave2-mjEDL1VgkGsr5nwz.png"
+                            srcset=""
+                            sizes="(min-width: 920px) 1920px, calc(100vw - 0px)" width="1920"
+                            loading="lazy" class="image__image image__image--reset-m-position"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section data-v-a3fd9bac="" class="block block--grid"
+                 style="--content-width:1600px; --grid-width:1224px; --column-count:12; --content-padding:16px; --rows:14; --width:1224px; --row-gap:16px; --row-size:48px; --column-gap:24px; --block-padding-top:0px; --block-padding:0px 0px 0px 0px; --block-padding-right:0px; --block-padding-bottom:0px; --block-padding-left:0px; --m-block-padding:88px 0px 0px 0px; --oldContentWidth:1600px;">
+            <div data-v-a3fd9bac="" class="block-background"
+                 style="--background-color:transparent; --background-overlay-opacity:0;"><img alt="" src="assets/pozadina2.svg" srcset="" width="100vw" sizes="100vw" loading="lazy" class="block-background__image">
+            </div>
+            <div data-v-1f24cc0f="" data-v-a3fd9bac="" class="block-grid" id="download" style="margin-top: -120px">
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridtextbox:zpocr1"
+                     class="block-grid-item use-m-margin grid__item"
+                     style="--text:left; --align:flex-start; --justify:flex-start; --m-width:90.7652%; --position:4/10/9/15; --m-align-self:center; --m-element-margin:0 0 40px 0; --element-z-index:2;">
+                    <div data-v-189c24f4="" class="text-box block-grid-item__component" id="zpoCr1"
+                    ><h2 style="margin-bottom: 0; height: 150px"><span
+                                style="color: var(--colors-light);"><strong>Cloud aplikacija</strong></span>
+                        </h2>
+                        <p class="body" style=""><span
+                                style="color: var(--colors-light);">Kvalitetni internet serveri osiguravaju neometan pristup najbitnijim podacima vaše teretane s bilo kojeg uređaja, bez obzira gdje se nalazili. </span>
+                        </p></div>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridbutton:zpxwoi" class="block-grid-item use-m-margin grid__item" style="--align:flex-start; --justify:center; --m-width:90.2375%; --position:9/10/11/12; --m-align-self:center; --m-element-margin:0 0 16px 0; --element-z-index:4;">
+                    <a data-v-2f409ee5="" data-v-189c24f4="" href="" target="" class="grid-button block-grid-item__component grid-button--primary" id="zpxWOi">
+                        Demo
+                    </a>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridbutton:znfjdb" class="block-grid-item use-m-margin grid__item" style="--align:flex-start; --justify:center; --m-width:89.7098%; --position:9/12/11/14; --m-align-self:center; --m-element-margin:0 0 16px 0; --element-z-index:5;">
+                    <a data-v-2f409ee5="" data-v-189c24f4="" href="https://www.apple.com/app-store/" target="_blank"
+                       class="grid-button block-grid-item__component grid-button--secondary" id="zNfJDB">Kontakt
+                    </a>
+                </div>
+                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:z169jn" class="block-grid-item use-m-margin grid__item" style="--align:center; --justify:center; --m-width:90.2017%; --position:1/3/14/9; --object-fit:contain; --m-align-self:center; --border-radius:5%; --m-element-margin:0 0 16px 0; --element-z-index:1;">
+                    <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image">
+                        <img data-v-00c3b48d="" data-qa="builder-gridelement-image" alt="" src="images/mob.png" sizes="(min-width: 920px) 600px, calc(100vw - 0px)" loading="lazy" class="image__image image__image--reset-m-position">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
