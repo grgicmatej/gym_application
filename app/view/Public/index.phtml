@@ -34,10 +34,11 @@
 <div class="container-fluid" style="background-color: black; padding-top: 20px">
     <div class="row">
         <div class="col-12 text-right" style="text-align: right">
-            <span><a class="navbarNav" href="">Demo</a>
-                    <a class="navbarNav navbarNavDesno" href="">Prijava</a>
-               </span>
+            <span>
+                <a class="navbarNav" href="">Demo</a>
 
+            </span>
+                <a class="navbarNav navbarNavDesno"  data-bs-toggle="modal" data-bs-target="#modalLoginForm">Prijava</a>
         </div>
     </div>
 </div>
@@ -184,5 +185,33 @@
             </div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog " role="document" style="max-width: 400px; margin-top: 2cm">
+            <div class="modal-content modallogin">
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <p class="navbarNav" style="color: black; margin-top: 20px">prijava</p>
+                    </div>
+                    <div class="d-flex flex-column text-center" style="margin-top: 30px; padding-left: 30px; padding-right: 30px">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="usersname" id="email1" placeholder="Korisničko ime">
+                            </div>
+                            <div class="form-group" style="margin-top: 10px">
+                                <input type="password" class="form-control" name="userspassword" id="password1" placeholder="Lozinka">
+                            </div>
+                            <button type="button" class="prijavaGumb" style="margin-top: 20px">Prijava</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,37 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Public/index2.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index2.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design6.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design11.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design12.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design13.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design14.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design15.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design17.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design18.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design19.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design20.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design21.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/design9.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +175,7 @@
       <workItem from="1650523995996" duration="8171000" />
       <workItem from="1650610574100" duration="1089000" />
       <workItem from="1650982713057" duration="74000" />
-      <workItem from="1651059689579" duration="2492000" />
+      <workItem from="1651059689579" duration="5991000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
