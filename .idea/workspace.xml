@@ -2,7 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._Screen Shot 2022-04-21 at 13.40.35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._Screen Shot 2022-04-21 at 13.54.15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._Screen Shot 2022-04-21 at 16.10.55-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._Screen Shot 2022-04-22 at 09.47.17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._Screen Shot 2022-04-25 at 18.52.07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._homepage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._macbook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._macbook_backup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._mob.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._mockup_1-AzGzyBl0Grt0gagr-2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._mockup_5-YrDBLMo533Cg2KkG copy.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._mockup_5-YrDBLMo533Cg2KkG-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._mockup_5-YrDBLMo533Cg2KkG.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._stats.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/._wave2-mjEDL1VgkGsr5nwz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/Screen Shot 2022-04-21 at 13.40.35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/Screen Shot 2022-04-21 at 13.54.15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/Screen Shot 2022-04-21 at 16.10.55-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/Screen Shot 2022-04-22 at 09.47.17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/Screen Shot 2022-04-25 at 18.52.07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/homepage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/macbook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/macbook_backup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/mob.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/mockup_1-AzGzyBl0Grt0gagr-2.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/mockup_5-YrDBLMo533Cg2KkG copy.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/mockup_5-YrDBLMo533Cg2KkG-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/mockup_5-YrDBLMo533Cg2KkG.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/pozadina.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/pozadina2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/stats.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/wave1-YNqLX3MXWaFq2gXd.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/wave2-mjEDL1VgkGsr5nwz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/images/Frontend2/wave2-mjEDL1VgkGsr5nwz.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/index2.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index2.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +209,7 @@
       <workItem from="1650523995996" duration="8171000" />
       <workItem from="1650610574100" duration="1089000" />
       <workItem from="1650982713057" duration="74000" />
+      <workItem from="1651059689579" duration="575000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
