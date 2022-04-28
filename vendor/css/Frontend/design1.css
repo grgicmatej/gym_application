@@ -1141,3 +1141,41 @@ html#ecwid_html.ec-has-filters-popup body {
     text-align: left;
 }
 
+/* CSS for mobile*/
+@media only screen and (max-width: 600px) {
+    .mobgrid1{
+        line-height: 80px !important;
+        padding-top: 60px;
+        height: 400px !important;
+    }
+
+    .mobgrid2{
+        padding-top: 0 !important;
+        height: 130px !important;
+    }
+
+    .mobgrid3{
+        height: 120px;
+    }
+
+    .mobgrid4{
+        height: 120px;
+    }
+
+    .mobgrid5{
+        height: 170px;
+    }
+
+    .mobgrid6{
+        height: 100px;
+    }
+
+    .mobgrid7{
+        height: 70px !important;
+    }
+
+    .mobgrid8{
+        --align: none !important;
+    }
+}
+
