@@ -27,10 +27,6 @@
 </head>
 <body>
 
-<?php if (isset($message)):?>
-    <?=$message?>
-<?php endif;?>
-
 <div class="container-fluid" style="background-color: black; padding-top: 20px">
     <div class="row">
         <div class="col-12 text-right" style="text-align: right">
@@ -186,7 +182,7 @@
         </section>
     </main>
 
-    <!-- Modal -->
+    <!-- Modal start -->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">
         <div class="modal-dialog " role="document" style="max-width: 400px; margin-top: 2cm">
@@ -196,14 +192,15 @@
                         <p class="navbarNav" style="color: black; margin-top: 20px">prijava</p>
                     </div>
                     <div class="d-flex flex-column text-center" style="margin-top: 30px; padding-left: 30px; padding-right: 30px">
-                        <form>
+                        <form id="loginform">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="usersname" id="email1" placeholder="Korisničko ime">
+                                <input type="text" class="form-control" name="Staff_Username" id="Staff_Username" placeholder="Korisničko ime" oninvalid="this.setCustomValidity('Molimo unesite ispravno korisničko ime.')" oninput="setCustomValidity('')" required>
                             </div>
                             <div class="form-group" style="margin-top: 10px">
-                                <input type="password" class="form-control" name="userspassword" id="password1" placeholder="Lozinka">
+                                <input type="password" class="form-control" name="Staff_Password" id="Staff_Password" placeholder="Lozinka" oninvalid="this.setCustomValidity('Molimo unesite ispravnu lozinku.')" oninput="setCustomValidity('')" required>
                             </div>
-                            <button type="button" class="prijavaGumb" style="margin-top: 20px">Prijava</button>
+                            <div><p class="invalidDataNotice" id="invalidDataNotice">Korisničko ime i/ili lozinka nisu ispravni</p></div>
+                            <input class="prijavaGumb" type="submit" value="Prijava" form="loginform" style="margin-top: 20px">
                         </form>
                     </div>
                 </div>
@@ -212,6 +209,7 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Modal ends -->
+    <?php require "scripts.phtml"?>
 </body>
 </html>

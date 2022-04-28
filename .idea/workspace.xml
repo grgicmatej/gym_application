@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vendor/js/Frontend/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/index2.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/scripts.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/scripts.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/scripts.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,6 +182,7 @@
       <workItem from="1650982713057" duration="74000" />
       <workItem from="1651059689579" duration="6065000" />
       <workItem from="1651128766549" duration="290000" />
+      <workItem from="1651133277957" duration="1725000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

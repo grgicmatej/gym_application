@@ -1115,4 +1115,15 @@ html#ecwid_html.ec-has-filters-popup body {
     font-weight: 400;
     font-family: "Rubik", SansSerif;
     margin-bottom: 20px;
+    border: 0;
+    margin-top: 20px;
 }
+
+.invalidDataNotice{
+    display: none;
+    float: left;
+    font-size: 14px;
+    padding-top: 10px;
+    color: #DF3584;
+}
+
