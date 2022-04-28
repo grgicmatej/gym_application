@@ -1,12 +1,12 @@
 <?php
 
 return [
-    "url"=>"http://localhost:8080/gym2/",
+    "url"=>"http://localhost:8080/gym2_demo/",
     "dev"=>true,
     "nazivApp" => "",
     "db"=> [
         "host"=>"localhost",
-        "name"=>"Gym",
+        "name"=>"Gym_demo",
         "user"=>"root",
         "password"=>""
     ]
@@ -28,12 +28,12 @@ return [
 
 /*
   return [
-    "url"=>"https://gym.com.hr/",
+    "url"=>"https://demo.gym.com.hr/",
     "dev"=>true,
     "nazivApp" => "Gym management",
     "db"=> [
         "host"=>"localhost",
-        "name"=>"matejcom_gym",
+        "name"=>"matejcom_gym_demo",
         "user"=>"matejcom_matej",
         "password"=>"Grgmaticej1"
     ]

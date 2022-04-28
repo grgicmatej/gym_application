@@ -47,4 +47,10 @@ final class App
         $config = include BP . 'app/config.php';
         return $config[$key];
     }
+
+    public static function democonfig($key)
+    {
+        $config = include BP . 'app/democonfig.php';
+        return $config[$key];
+    }
 }
