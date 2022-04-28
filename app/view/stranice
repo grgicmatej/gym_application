@@ -59,7 +59,7 @@ build log planner:
     - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
 
     - Postaviti time zone (provjeriti preko štoperice)
-
+    - Dropati "soccer_temp" tablicu
 
 BUGOVI za riješiti
     - pića ID za prodaju ne radi

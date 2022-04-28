@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/democonfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +175,8 @@
       <workItem from="1650982713057" duration="74000" />
       <workItem from="1651059689579" duration="6065000" />
       <workItem from="1651128766549" duration="290000" />
-      <workItem from="1651133277957" duration="6854000" />
+      <workItem from="1651133277957" duration="7237000" />
+      <workItem from="1651148125295" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
