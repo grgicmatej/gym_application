@@ -61,8 +61,7 @@
                                     style="color: var(--colors-light);">Upravljajte svim dijelovima vašeg poslovanja s jednog mjesta.</span>
                         </p></div>
                 </div>
-                <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridbutton:zekq9y" class="block-grid-item use-m-margin grid__item" style="--align:flex-start; --m-width:90.7652%; --position:11/3/13/6; --m-align-self:center; --m-element-margin:0 0 35px 0; --element-z-index:5; margin-top: 0">
-                    <a data-v-2f409ee5=""  href="" target="_self" class="grid-button block-grid-item__component grid-button--primary" id="zekQ9y">Kontakt</a></div>
+
                 <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridimage:zerq3u" class="block-grid-item use-m-margin grid__item" style="--align:center; --justify:center; --m-width:86.5435%; --position:1/8/16/17; --object-fit:contain; --m-align-self:center; --m-element-margin:0 0 16px 0; --element-z-index:1;">
                     <div data-v-00c3b48d="" data-v-189c24f4="" title="" class="block-grid-item__component image">
                         <img src="<?= App::config("url") ?>vendor/images/Frontend2/homepage.png" alt="" style="width: 100%">
@@ -163,7 +162,7 @@
                         </p></div>
                 </div>
                 <div data-v-189c24f4="" data-v-1f24cc0f="" data-qa="gridbutton:zpxwoi" class="block-grid-item use-m-margin grid__item" style="--align:flex-start; --justify:center; --m-width:90.2375%; --position:9/10/11/12; --m-align-self:center; --m-element-margin:0 0 16px 0; --element-z-index:4;">
-                    <a data-v-2f409ee5="" data-v-189c24f4="" href="" target="" class="grid-button block-grid-item__component grid-button--primary" id="zpxWOi">
+                    <a data-v-2f409ee5="" data-v-189c24f4="" data-bs-toggle="modal" data-bs-target="#modalContactForm" class="grid-button block-grid-item__component grid-button--primary" id="zpxWOi">
                         Kontakt
                     </a>
                 </div>
@@ -183,6 +182,7 @@
     </main>
 
     <!-- Modal start -->
+    <!-- login modal -->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">
         <div class="modal-dialog " role="document" style="max-width: 400px; margin-top: 2cm">
@@ -208,6 +208,35 @@
         </div>
     </div>
 
+    <!-- contact modal -->
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog " role="document" style="max-width: 500px; margin-top: 2cm">
+            <div class="modal-content modallogin">
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <p class="navbarNav" style="color: black; margin-top: 20px">Zatražite kontakt</p>
+                    </div>
+                    <div class="d-flex flex-column text-center" style="margin-top: 30px; padding-left: 30px; padding-right: 30px">
+                        <form id="contactform">
+                            <div><p class="contactData" id="contactData">Zainteresirani ste za aplikaciju? Unesite Vaše podatke i kontaktirati ćemo vas u najkraćem roku.</p></div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="Contact_Email" id="Contact_Email" placeholder="Vaša e-mail adresa" oninvalid="this.setCustomValidity('Molimo unesite ispravnu e-mail adresu.')" oninput="setCustomValidity('')" required>
+                            </div>
+                            <div class="form-group" style="margin-top: 10px">
+                                <textarea rows="3" style="width: 100%" placeholder="Vaša poruka" minlength="3" class="form-control" name="Contact_Message" oninvalid="this.setCustomValidity('Molimo unesite ispravnu poruku.')" oninput="setCustomValidity('')" required></textarea>
+                            </div>
+                            <div><p class="invalidDataNotice" id="invalidDataNotice">Zahvaljujemo na kontaktu. Odgovoriti ćemo u najkraćem roku.</p></div>
+                            <div><p class="invalidDataNotice" id="invalidDataNotice2">Molimo pokušajte ponovo.</p></div>
+
+                            <input class="prijavaGumb" type="submit" value="Slanje poruke" form="contactform" style="margin-top: 20px">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal ends -->
     <?php require "scripts.phtml"?>

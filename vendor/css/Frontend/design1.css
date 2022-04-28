@@ -1125,5 +1125,19 @@ html#ecwid_html.ec-has-filters-popup body {
     font-size: 14px;
     padding-top: 10px;
     color: #DF3584;
+    width: 100%;
+}
+
+.invalidDataNotice2{
+    display: none;
+    float: left;
+    font-size: 14px;
+    padding-top: 10px;
+    color: #DF3584;
+    width: 100%;
+}
+
+.contactData{
+    text-align: left;
 }
 
