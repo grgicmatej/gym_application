@@ -282,3 +282,57 @@ h6 {
 .overviewNotesDiv{
     padding-left: 60px;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .currency{
+        display: none;
+    }
+
+    .small-box{
+        height: 110px;
+    }
+
+    .hide_on_small{
+        display: none;
+    }
+
+    .card-body{
+        padding: 0 !important;
+        margin-bottom: 50px;
+    }
+
+    .donutSmall{
+        height: 500px;
+        width: auto;
+    }
+
+    .div_mainsearbox{
+        min-height: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .small_searchbox{
+        margin-top: 20px;
+    }
+
+    .show_on_small{
+        padding-top: 50px;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 601px) {
+
+    .donutSmall{
+        min-height: 250px;
+        height: 250px;
+        max-height: 250px;
+        max-width: 100%;
+    }
+
+    .show_on_small{
+        padding-top: 10px;
+        padding-left: 40px;
+    }
+}

@@ -17,12 +17,12 @@ function searchfunction() {
                             `<tr>
                                 <td class="text-center" id="${Users_Id_Main}_usersId">${Users_Id_Main.split('-').pop()}</td>
                                 <td class="text-left" id="${Users_Id_Main}_usersName">${Users_Name} ${Users_Surname}</td>
-                                <td class="text-left" id="${Users_Id_Main}_membershipsName">${Users_Memberships_Membership_Name}</td>
+                                <td class="text-left hide_on_small" id="${Users_Id_Main}_membershipsName">${Users_Memberships_Membership_Name}</td>
                                 <td id="${Users_Id_Main}_membershipsStatus" style="background-color: ${Memberships_Pause_Active ? membershipPauseColor : (Users_Memberships_Membership_Active === "1" ? successColor: errorColor)}; color: white; font-weight: bolder" class="text-center">
                                     ${Memberships_Pause_Active ? 'Zamrznuto' : (Users_Memberships_Membership_Active === "1" ? 'Da': 'Ne')}
                                 </td>
-                                <td class="text-center" id="${Users_Id_Main}_membershipsStartDate">${formatDate(Users_Memberships_Start_Date)}</td>
-                                <td class="text-center" id="${Users_Id_Main}_membershipsEndDate">${formatDate(Users_Memberships_End_Date)}</td>
+                                <td class="text-center hide_on_small" id="${Users_Id_Main}_membershipsStartDate">${formatDate(Users_Memberships_Start_Date)}</td>
+                                <td class="text-center hide_on_small" id="${Users_Id_Main}_membershipsEndDate">${formatDate(Users_Memberships_End_Date)}</td>
                                 <td class="text-center profileData" id="i_${Users_Id_Main}">
                                     <a class="submitlink linkanimation "> Pregled <i class="fad fa-user ml-10"></i></a>
                                 </td>

@@ -874,9 +874,9 @@
                             <tr>
                                 <th style="width: auto">Ime i prezime</th>
                                 <th style="width: auto">Korisničko ime</th>
-                                <th style="width: auto">Kontakt broj</th>
-                                <th style="width: auto">Kontakt email</th>
-                                <th style="width: auto">Aktivan</th>
+                                <th style="width: auto" class="hide_on_small">Kontakt broj</th>
+                                <th style="width: auto" class="hide_on_small">Kontakt email</th>
+                                <th style="width: auto" class="hide_on_small">Aktivan</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -1132,10 +1132,10 @@
                         <table class="table" id="" width=100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th style="width: auto">Naziv članarine</th>
-                                <th style="width: auto">Trajanje</th>
-                                <th style="width: auto">Cijena</th>
-                                <th style="width: auto">Aktivna članarina</th>
+                                <th style="width: auto; max-width: 50%">Naziv članarine</th>
+                                <th style="width: auto" class=" hide_on_small">Trajanje</th>
+                                <th style="width: auto" class=" hide_on_small">Cijena</th>
+                                <th style="width: auto" class=" hide_on_small">Aktivna članarina</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -1370,8 +1370,8 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 text-center" id="popularMembershipsStats">
                                     <p>Statistika članarina za <?=date('Y')?>. godinu</p>
-                                    <div class="card-body">
-                                        <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    <div class="card-body" style="">
+                                        <canvas id="donutChart" class="donutSmall" style=""></canvas>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 text-center" id="ageOfUsersStats">
@@ -1490,7 +1490,7 @@
                                 <div class="col-12 col-md-8 text-center" id="">
                                     <p>Ostali prihodi</p>
                                     <div class="card-body">
-                                        <canvas id="pieChart4" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                        <canvas id="pieChart4" class="donutSmall"></canvas>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 text-center" id="">
@@ -1539,9 +1539,9 @@
                                             <tr>
                                                 <th style="width: auto">Ime proizvoda</th>
                                                 <th style="width: auto">Cijena</th>
-                                                <th style="width: auto">Stanje na skladištu</th>
+                                                <th style="width: auto" class="hide_on_small">Stanje na skladištu</th>
                                                 <th style="width: auto">Prodano</th>
-                                                <th style="width: auto; text-align: center">Trenutno stanje</th>
+                                                <th style="width: auto; text-align: center" class="hide_on_small">Trenutno stanje</th>
                                                 <th></th>
                                             </tr>
                                             </thead>
@@ -1842,7 +1842,7 @@
                                     <thead>
                                     <tr>
                                         <th style="width: auto">Ime sporta</th>
-                                        <th style="width: auto">Cijena/minuta</th>
+                                        <th style="width: auto" class="hide_on_small">Cijena/minuta</th>
                                         <th style="width: auto; text-align: center">Aktivno</th>
                                         <th></th>
                                     </tr>
