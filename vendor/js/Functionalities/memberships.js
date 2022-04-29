@@ -53,10 +53,10 @@ $('.memberships').on('click', function () {
 
             searchData.innerHTML = response.reduce((options, {Memberships_Id, Memberships_Name, Memberships_Price, Memberships_Duration, Memberships_Active}) =>
                     options += `<tr class="membershipActive_${Memberships_Active}">
-                                    <td class="text-left" id="${Memberships_Id}_membershipName">${Memberships_Name}</td>
-                                    <td class="text-left" id="${Memberships_Id}_membershipDuration">${Memberships_Duration} dana</td>
-                                    <td class="text-left" id="${Memberships_Id}_membershipPrice">${Memberships_Price} kn</td>
-                                    <td id="${Memberships_Id}_membershipActive" style="background-color: ${(Memberships_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
+                                    <td class="text-left" id="${Memberships_Id}_membershipName" style="max-width: 230px">${Memberships_Name}</td>
+                                    <td class="text-left hide_on_small" id="${Memberships_Id}_membershipDuration">${Memberships_Duration} dana</td>
+                                    <td class="text-left hide_on_small" id="${Memberships_Id}_membershipPrice">${Memberships_Price} kn</td>
+                                    <td id="${Memberships_Id}_membershipActive" style="background-color: ${(Memberships_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center hide_on_small">
                                         ${(Memberships_Active === '1') ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center membershipProfileData" id="memid_${Memberships_Id}">

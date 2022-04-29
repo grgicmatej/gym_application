@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <div class="row">
-                        <section class="col-xl-8 col-lg-12 d-none d-lg-block d-xl-block connectedSortable">
+                        <section class="col-xl-8 col-12 connectedSortable">
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title">Pregled korisnika</h3>
@@ -53,17 +53,17 @@
                                 </div>
                                 <div class="card-body div_mainsearbox">
 
-                                    <input type="text" name="search" id="search" placeholder="Pretraživanje korisnika po broju kartice, imenu ili prezimenu" class="form-control text-center mainsearchbox" onkeyup="searchfunction()" />
+                                    <input type="text" name="search" id="search" placeholder="Pretraživanje" class="form-control text-center mainsearchbox small_searchbox" onkeyup="searchfunction()" />
                                     <div class="card-body" id="dt1" style="max-width: available; ">
                                         <table class="table" id="" width=100%" cellspacing="0">
                                             <thead>
                                             <tr>
                                                 <th style="width: auto">Šifra korisnika</th>
                                                 <th style="width: auto">Ime i prezime</th>
-                                                <th style="width: auto">Vrsta članarine</th>
+                                                <th style="width: auto" class="hide_on_small">Vrsta članarine</th>
                                                 <th style="width: auto">Aktivan</th>
-                                                <th style="width: auto">Datum početka</th>
-                                                <th style="width: auto">Datum isteka</th>
+                                                <th style="width: auto" class="hide_on_small">Datum početka</th>
+                                                <th style="width: auto" class="hide_on_small">Datum isteka</th>
                                                 <th></th>
                                             </tr>
                                             </thead>
@@ -71,6 +71,7 @@
                                             <tbody id="dataTableBody"></tbody>
                                         </table>
                                     </div>
+                                    <p class="show_on_small">Pretraživanje korisnika po broju kartice, imenu ili prezimenu</p>
                                 </div>
                             </div>
                         </section>

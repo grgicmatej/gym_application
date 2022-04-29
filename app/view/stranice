@@ -1,24 +1,24 @@
-index                   +
-teretane                +
+index                   + + +
+teretane                + + +
 
-Stolni sportovi         +
-Nogomet                 +
-novi korisnik           +
+Stolni sportovi         + + +
+Nogomet                 + + +
+novi korisnik           + + +
 
-zaposlenici             +
-članarine               +
-statistika              +
-financije               +
-napomene                +
-pića                    +
-postavke                +
+zaposlenici             + + /
+članarine               + + /
+statistika              + + /
+financije               + + /
+napomene                + + +
+pića                    + + +
+postavke                + + /
 
 
 build log planner:
 1.0
     - Osnovne značajke koje već postoje +
-    - Mob verzija
-    - Frontend landing page
+    - Mob verzija                       +
+    - Frontend landing page             +
 1.1:
     - Bulk csv unos korisnika
     - Dodati više sportova u kalendar, trenutno postavljen samo nogomet
@@ -60,10 +60,12 @@ build log planner:
 
     - Postaviti time zone (provjeriti preko štoperice)
 
+    - Dropati "soccer_temp" tablicu
+    - Dropati "timers_temp" tablicu
+    - u vendor/js/functionalities/constants.js promjeniti url
 
 BUGOVI za riješiti
-    - pića ID za prodaju ne radi
-
+    // Svi testovi OK
 
 Popis testova:
     ADMINISTRATOR
@@ -122,7 +124,7 @@ Popis testova:
             -- Nova prodaja                             +
             -- Pregled proizvoda                        +
                 --- Spremanje podataka                  +
-                --- Reset broja prodaja
+                --- Reset broja prodaja                 +
                 --- Brisanje proizvoda                  +
         - Postavke                                      +
             -- Pregled postavki                         +
@@ -138,15 +140,15 @@ Popis testova:
         - login                                         +
         - logout                                        +
         - Korisnici                                     +
-            -- Novi korisnik
+            -- Novi korisnik                            +
             -- Pregled korisnika                        +
             -- Potvrda dolaska                          +
             -- Nova članarina                           +
             -- Zamrzavanje članarine                    +
             -- Odmrzavanje članarine                    +
             -- Uređivanje korisnika                     +
-            -- Probni trening
-            -- Promjena iz probnog u trajnog korisnika
+            -- Probni trening                           +
+            -- Promjena iz probnog u trajnog korisnika  +
         - Stolni sportovi                               +
             -- Pokretanje štoperice Sport 1             +
             -- Pokretanje štoperice sport 2             +

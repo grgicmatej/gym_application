@@ -25,7 +25,7 @@ $('.gymSettings').on('click', function () {
             searchData.innerHTML = response.reduce((options, {Sport_Settings_Id, Sport_Settings_Name, Sport_Settings_Sport_Active, Sport_Settings_Price}) =>
                     options += `<tr class="warehouse_${Sport_Settings_Id}">
                                     <td class="text-left" id="${Sport_Settings_Id}_sportSettingsName">${Sport_Settings_Name}</td>
-                                    <td class="text-left" id="${Sport_Settings_Id}_sportSettingsPrice">${Sport_Settings_Price}</td>
+                                    <td class="text-left hide_on_small" id="${Sport_Settings_Id}_sportSettingsPrice">${Sport_Settings_Price}</td>
                                     <td id="${Sport_Settings_Id}_sportSettingsSportActive" style="background-color: ${(Sport_Settings_Sport_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
                                         ${(Sport_Settings_Sport_Active === '1') ? 'Da': 'Ne'}
                                     </td>

@@ -120,9 +120,9 @@ $('.staff').on('click', function () {
                     options += `<tr class="staffActive_${Staff_Active}">
                                     <td class="text-left" id="${Staff_Id}_staffName">${Staff_Name} ${Staff_Surname}</td>
                                     <td class="text-left" id="${Staff_Id}_staffUserName">${Staff_Username}</td>
-                                    <td class="text-left" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
-                                    <td class="text-left" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
-                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center">
+                                    <td class="text-left hide_on_small" id="${Staff_Id}_staffPhone">${Staff_Phone}</td>
+                                    <td class="text-left hide_on_small" id="${Staff_Id}_staffEmail">${Staff_Email}</td>
+                                    <td id="${Staff_Id}_staffActive" style="background-color: ${(Staff_Active === '1') ? successColor: errorColor}; color: white; font-weight: bolder" class="text-center hide_on_small">
                                         ${(Staff_Active === '1') ? 'Da': 'Ne'}
                                     </td>
                                     <td class="text-center staffProfileData" id="i_${Staff_Id}">
