@@ -1,0 +1,136 @@
+<?php
+
+
+class Statistics
+{
+    public static function monthsInYear()
+    {
+        for ($i=1; $i<=4; $i++){
+            $months[]=$i;
+        }
+        return $months;
+    }
+
+    public static function yearlyStats()
+    {
+        $userData=[];
+        $months=[1,2,3,4,5,6,7,8,9,10,11,12];
+        foreach ($months as $m){
+            $db=Db::getInstance();
+            $stmt=$db->prepare('SELECT COUNT(Users_Id) AS userData FROM Users WHERE 
+                                            MONTH(Users_Registration)=:monthData 
+                                            AND 
+                                            YEAR(Users_Registration)=:currentYear');
+            $stmt->bindValue('monthData', $m);
+            $stmt->bindValue('currentYear', date('2022'));
+            $stmt->execute();
+            $userData[]=$stmt->fetch();
+        }
+        return $userData;
+    }
+
+    public static function yearlyStatsPreviousYear()
+    {
+
+        $userDataPreviousYear=[];
+        $months=[1,2,3,4,5,6,7,8,9,10,11,12];
+        foreach ($months as $m){
+            $db=Db::getInstance();
+            $stmt=$db->prepare('SELECT COUNT(Users_Id) AS userData FROM Users WHERE 
+                                            MONTH(Users_Registration)=:monthData 
+                                            AND 
+                                            YEAR(Users_Registration)=:previousYear');
+            $stmt->bindValue('monthData', $m);
+            $stmt->bindValue('previousYear', date("2021"));
+            $stmt->execute();
+            $userDataPreviousYear[]=$stmt->fetch();
+        }
+        return $userDataPreviousYear;
+    }
+
+    public static function popularMemberships()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Memberships_Membership_Name, COUNT(Users_Memberships_Membership_Name) AS membershipsCount
+                                    FROM Users_Memberships_Archive 
+                                    WHERE YEAR(Users_Memberships_Start_Date)=:Users_Memberships_Start_Date
+                                    AND Users_Memberships_Gym_Id=:Users_Memberships_Gym_Id
+                                    GROUP BY Users_Memberships_Membership_Name
+                                    LIMIT 10');
+        $stmt->bindValue('Users_Memberships_Gym_Id', 1);
+        $stmt->bindValue('Users_Memberships_Start_Date', date('2021'));
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function ageOfUsers()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Birthday FROM Users LEFT JOIN Users_Gym ON Users.Users_Id = Users_Gym.Users_Id WHERE Users_Gym.Gym_Id=:gymId');
+        $stmt->bindValue('gymId', 1);
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        $maindata = ['data1' => 0, 'data2' => 0, 'data3' => 0, 'data4' => 0, 'data5' => 0, 'data6' => 0];
+        $datenow = date_create_from_format('Y-m-d', '2022-04-29');
+
+        foreach ($data as $d)
+        {
+            $date_birthday = date_create_from_format('Y-m-d', $d->Users_Birthday);
+            $diff = (array) date_diff($date_birthday, $datenow);
+            $i = ($diff['y']);
+            switch ($i){
+                case $i < 20:
+                    $maindata['data1'] += 1;
+                    break;
+                case ($i >= 20 && $i < 30):
+                    $maindata['data2'] += 1;
+                    break;
+                case ($i >= 30 && $i < 40):
+                    $maindata['data3'] += 1;
+                    break;
+                case ($i >= 40 && $i < 50):
+                    $maindata['data4'] += 1;
+                    break;
+                case ($i >= 50 && $i < 60):
+                    $maindata['data5'] += 1;
+                    break;
+                case ($i >= 60 && $i < 100):
+                    $maindata['data6'] += 1;
+                    break;
+            }
+
+        }
+        $object = (object) $maindata;
+
+
+        return $object;
+    }
+
+    public static function usersGender()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Gender, COUNT(Users_Gender) AS genderCount
+                                    FROM Users GROUP BY Users_Gender');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function usersStatus()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Status, COUNT(Users_Status) AS statusCount
+                                    FROM Users GROUP BY Users_Status');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public static function usersReference()
+    {
+        $db=Db::getInstance();
+        $stmt=$db->prepare('SELECT Users_Reference, COUNT(Users_Reference) AS referenceCount
+                                    FROM Users GROUP BY Users_Reference');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+}

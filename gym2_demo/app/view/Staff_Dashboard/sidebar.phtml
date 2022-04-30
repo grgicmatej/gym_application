@@ -1,0 +1,80 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4 bg-c-lite-green">
+    <a href="<?= App::config("url") ?>Dashboard/dashboardCheck" class="brand-link">
+        <span class="brand-text font-weight-light font_white">GYMZONE</span>
+    </a>
+
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <p class="d-block linkanimation font_white"><?=$gymName?></p>
+            </div>
+        </div>
+
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <li class="nav-item ">
+                    <a href="<?= App::config("url") ?>Dashboard/dashboardCheck" class="nav-link active"><i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Kontrolna ploča</p></a>
+                </li>
+
+
+                <li class="nav-header">--</li>
+
+                <li class="nav-item" id="">
+                    <a class="nav-link ">
+                        <i class="nav-icon fas fa-plus"></i>
+                        <p class="newUserRegistration">Novi korisnik</p>
+                    </a>
+                </li>
+
+                <li class="nav-header">Dodatne aktivnosti</li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <p class="tableSports"><i class="nav-icon fas fa-table-tennis"></i> Stolni sportovi</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <p class="eventCalendar"><i class="nav-icon fas fa-futbol"></i>
+                            Nogomet</p>
+                    </a>
+                </li>
+
+                <li class="nav-header">Nadzor</li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="nav-icon fas fa-sticky-note"></i>
+                        <p class="notes">
+                            Bilješke
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="nav-icon fas fa-coffee"></i>
+                        <p class="warehouse">
+                            Pića
+                        </p>
+                    </a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-history"></i>
+                        <p>
+                            Aktivnost
+                        </p>
+                    </a>
+                </li>
+                -->
+            </ul>
+        </nav>
+    </div>
+</aside>

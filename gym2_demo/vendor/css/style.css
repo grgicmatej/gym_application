@@ -1,0 +1,338 @@
+.successColor{
+    color: #74C687 !important;
+}
+
+.neutralColor{
+    color: #FFD75F !important;
+}
+
+.dangerColor{
+    color: #E87C87 !important;
+}
+
+.linkanimation{
+    color: darkgrey !important;
+    transition: 0.2s;
+}
+
+.linkanimation:hover{
+    color: gray !important;
+    transition: 0.2s;
+}
+
+.linkanimation_black{
+    color: black !important;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.linkanimation_black:hover{
+    color: gray !important;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+
+.nav-link{
+    color: #ffffff !important;
+}
+
+.nav-link-dark{
+    color: black !important;
+    transition: 0.2s;
+}
+
+.nav-link-dark:hover{
+    color: gray !important;
+    transition: 0.2s;
+}
+
+.sidebar_background{
+    background-color: #7699F5 !important;
+}
+
+.font_white{
+    color: #FFF !important;
+}
+/* profile widget */
+
+
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px
+}
+
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#7699F5), to(#98CCFE));
+    background: linear-gradient(to right, #7699F5, #98CCFE)
+}
+
+.user-profile {
+    padding: 20px 0
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+    color: #919aa3 !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+.ml-14{
+    margin-left: 14px !important;
+}
+
+.mr-14{
+    margin-right: 14px !important;
+}
+
+.newUserInputForm{
+    width: 100% !important;
+    display: block !important;
+    padding: 10px 20px 10px 20px !important;
+    border-radius: .25rem !important;
+    border: 1px solid darkgrey;
+    height: 46px;
+}
+
+.f-w-100{
+    font-weight: 100 !important;
+}
+
+.mainsearchbox{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+.div_mainsearbox{
+    padding: 3rem;
+    min-height: 292px;
+}
+
+.editEventButton{
+    font-size: 14px;
+    margin-left: 20px;
+    color: #16A2B8;
+}
+
+.staffActiveStatusIcon{
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.tempTrainingCheckbox{
+    width: 13px;
+    height: 13px;
+    margin-right: 7px;
+    margin-left: 3px
+}
+
+.bg-blue1{
+ background-color: #CBD5E5;
+}
+
+.bg-blue2{
+    background-color: #B9C6DD;
+}
+
+.bg-blue3{
+    background-color: #A3B5D4;
+}
+
+.bg-blue4{
+    background-color: #89A3CB;
+}
+
+.authorStyle{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.eventsDataP{
+    padding-left: 30px;
+    font-size: 17px;
+}
+
+.eventsDataSpan{
+    padding-left: 20px;
+}
+
+.circleColor{
+    color: #17a2b8;
+    font-size: 14px;
+}
+
+.rowPadding{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.createNewNoteDiv{
+    padding-right: 35px;
+}
+
+.overviewNotesDiv{
+    padding-left: 60px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .currency{
+        display: none;
+    }
+
+    .small-box{
+        height: 110px;
+    }
+
+    .hide_on_small{
+        display: none;
+    }
+
+    .card-body{
+        padding: 0 !important;
+        margin-bottom: 50px;
+    }
+
+    .donutSmall{
+        height: 500px;
+        width: auto;
+    }
+
+    .div_mainsearbox{
+        min-height: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .small_searchbox{
+        margin-top: 20px;
+    }
+
+    .show_on_small{
+        padding-top: 50px;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 601px) {
+
+    .donutSmall{
+        min-height: 250px;
+        height: 250px;
+        max-height: 250px;
+        max-width: 100%;
+    }
+
+    .show_on_small{
+        padding-top: 10px;
+        padding-left: 40px;
+    }
+}
