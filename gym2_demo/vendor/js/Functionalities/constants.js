@@ -1,4 +1,4 @@
-const urlAddress = 'http://localhost:8080/gym2_demo/';
+const urlAddress = 'https://demo.gym.com.hr/';
 const successColor = '#74C687';
 const warningColor = '#FFD75F';
 const errorColor = '#E87C87';

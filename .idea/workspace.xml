@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Baze podataka/._Gym_demo_radna_verzija.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baze podataka/Gym_demo_radna_verzija.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym2_demo/app/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/gym2_demo/app/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym2_demo/vendor/js/Functionalities/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/gym2_demo/vendor/js/Functionalities/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +188,7 @@
       <workItem from="1651218800719" duration="2872000" />
       <workItem from="1651222010649" duration="18000" />
       <workItem from="1651223204193" duration="194000" />
+      <workItem from="1651303975880" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
