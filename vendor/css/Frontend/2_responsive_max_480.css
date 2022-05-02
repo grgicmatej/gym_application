@@ -62,4 +62,12 @@
         margin-top: 10px !important;
         margin-bottom: 40px !important;
     }
+
+    .mobgrid7{
+        height: 70px !important;
+    }
+
+    .mobgrid8{
+        --align: none !important;
+    }
 }

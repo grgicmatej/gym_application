@@ -1,18 +1,24 @@
-@media only screen and (min-width: 0px) and (max-width: 320px) {
+@media only screen and (min-width: 481px) and (max-width: 620px) {
     .text1 {
-        font-size: 40px !important;
-        line-height: 0;
+        font-size: 70px !important;
+        line-height: 80px;
     }
 
     .text2{
-        font-size: 55px;
+        font-size: 85px;
         line-height: 80px;
     }
 
     .mobgrid1{
-        height: 240px !important;
+        height: 235px !important;
         line-height: 60px !important;
         text-align: center;
+        margin-top: 80px;
+    }
+
+    .mobgrid2{
+        padding-top: 0 !important;
+        height: 150px;
     }
 
     .divgrid1{
@@ -20,11 +26,11 @@
     }
 
     .mobgrid3{
-        height: 140px;
+        height: 120px;
     }
 
     .mobgrid4{
-        height: 175px;
+        height: 100px;
     }
 
     .divgrid2{
@@ -32,7 +38,7 @@
     }
 
     .mobgrid6{
-        height: 175px;
+        height: 100px;
         text-align: center;
     }
 
@@ -45,7 +51,8 @@
     }
 
     .mobgrid5{
-        height: 180px;
+        height: 100px;
+        margin-top: 20px;
     }
 
     .divgrid3{
