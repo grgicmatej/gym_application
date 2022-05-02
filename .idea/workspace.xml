@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Baze podataka/._Gym_demo_radna_verzija.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baze podataka/Gym_demo_radna_verzija.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym2_demo/app/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/gym2_demo/app/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym2_demo/vendor/js/Functionalities/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/gym2_demo/vendor/js/Functionalities/constants.js" afterDir="false" />
-    </list>
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="frontend" />
+        <entry key="$PROJECT_DIR$" value="testing_and_cleaning" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/controller" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -70,11 +64,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/controller" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/vendor/js" />
       <recent name="$PROJECT_DIR$/app/model" />
+      <recent name="$PROJECT_DIR$/vendor/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/view/Dashboard" />
@@ -178,17 +172,7 @@
       <workItem from="1650610574100" duration="1089000" />
       <workItem from="1650982713057" duration="74000" />
       <workItem from="1651059689579" duration="6065000" />
-      <workItem from="1651128766549" duration="290000" />
-      <workItem from="1651133277957" duration="7237000" />
-      <workItem from="1651148125295" duration="150000" />
-      <workItem from="1651149715565" duration="118000" />
-      <workItem from="1651152408202" duration="53000" />
-      <workItem from="1651152856557" duration="19000" />
-      <workItem from="1651155364955" duration="19000" />
-      <workItem from="1651218800719" duration="2872000" />
-      <workItem from="1651222010649" duration="18000" />
-      <workItem from="1651223204193" duration="194000" />
-      <workItem from="1651303975880" duration="441000" />
+      <workItem from="1651472114424" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
