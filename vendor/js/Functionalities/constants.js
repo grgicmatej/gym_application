@@ -1,5 +1,5 @@
-//const urlAddress = 'https://gym.com.hr/';
-const urlAddress = 'http://localhost:8080/gym2/';
+const urlAddress = 'https://gym.com.hr/';
+//const urlAddress = 'http://localhost:8080/gym2/';
 const successColor = '#74C687';
 const warningColor = '#FFD75F';
 const errorColor = '#E87C87';
