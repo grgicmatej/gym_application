@@ -18,6 +18,7 @@ $('#loginform').on('submit', function (e) {
     });
 });
 
+/*
 $('#contactform').on('submit', function (e) {
     e.preventDefault();
     $.ajax({
@@ -36,3 +37,4 @@ $('#contactform').on('submit', function (e) {
         }
     });
 });
+ */

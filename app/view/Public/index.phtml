@@ -228,7 +228,8 @@
                         <p class="navbarNav" style="color: black; margin-top: 20px">Zatražite kontakt</p>
                     </div>
                     <div class="d-flex flex-column text-center" style="margin-top: 30px; padding-left: 30px; padding-right: 30px">
-                        <form id="contactform">
+
+                        <form id="contactform" method="post" action="<?= App::config("url") ?>contact/contact">
                             <div><p class="contactData" id="contactData">Zainteresirani ste za aplikaciju? Unesite Vaše podatke i kontaktirati ćemo vas u najkraćem roku.</p></div>
 
                             <div class="form-group">
@@ -247,6 +248,54 @@
             </div>
         </div>
     </div>
+
+    <div class="modal hide fade" id="myModal">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Modal header</h3>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn">Close</a>
+            <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalContactConfirmForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog " role="document" style="max-width: 500px; margin-top: 2cm">
+            <div class="modal-content modallogin">
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <p class="navbarNav" style="color: black; margin-top: 20px">Kontakt</p>
+                    </div>
+                    <div class="d-flex flex-column text-center" style="margin-top: 30px; padding-left: 30px; padding-right: 30px">
+                        <div><p class="invalidDataNotice" id="invalidDataNotice">Zahvaljujemo na kontaktu. Odgovoriti ćemo u najkraćem roku.</p></div>
+                        <div><p class="invalidDataNotice" id="invalidDataNotice2">Molimo pokušajte ponovo.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php
+    if(isset($_GET['m']) && $_GET['m'] == 1) { ?>
+        <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#myModal').modal('show');
+            document.getElementById('invalidDataNotice').style.display = 'block';
+        });
+    </script>
+    <?php } elseif (isset($_GET['m']) && $_GET['m'] == 0){ ?>
+        <script type="text/javascript">
+            $('#myModal').modal('show');
+            document.getElementById('invalidDataNotice2').style.display = 'block';
+        </script>
+    <?php
+    }
+    ?>
 
     <!-- Modal ends -->
     <?php require "scripts.phtml"?>
