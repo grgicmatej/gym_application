@@ -13,6 +13,13 @@
         height: 260px !important;
         line-height: 60px !important;
         text-align: center;
+        margin-top: 100px;
+    }
+
+    .mobgrid2{
+        padding-top: 0 !important;
+        margin-top: -100px !important;
+        height: 160px !important;
     }
 
     .divgrid1{

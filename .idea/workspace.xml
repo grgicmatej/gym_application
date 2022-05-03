@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/1_responsive_max_320.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/1_responsive_max_320.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/2_responsive_max_480.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/2_responsive_max_480.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +180,7 @@
       <workItem from="1651474193542" duration="4180000" />
       <workItem from="1651488388172" duration="7621000" />
       <workItem from="1651565604282" duration="1112000" />
+      <workItem from="1651569685526" duration="246000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
