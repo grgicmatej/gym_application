@@ -24,9 +24,9 @@ return [
         "password"=>"Grgmaticej1"
     ]
 ];
-*/
 
 
+/**/
   return [
     "url"=>"https://gym.com.hr/",
     "dev"=>true,
@@ -38,4 +38,3 @@ return [
         "password"=>"Grgmaticej1"
     ]
 ];
-/**/

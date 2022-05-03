@@ -60,6 +60,7 @@ build log planner:
 
     - Postaviti time zone (provjeriti preko štoperice)
 
+    - Dropati "soccer" tablicu
     - Dropati "soccer_temp" tablicu
     - Dropati "timers_temp" tablicu
     - u vendor/js/functionalities/constants.js promjeniti url

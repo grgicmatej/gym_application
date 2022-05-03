@@ -1,0 +1,91 @@
+@media only screen and (min-width: 921px) and (max-width: 1150px) {
+    .text1 {
+        font-size: 74px !important;
+        line-height: 95px;
+    }
+
+    .text2{
+        font-size: 90px;
+        line-height: 95px;
+    }
+
+    .mobgrid1{
+        height: 200px !important;
+        line-height: 60px !important;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .mobgrid2{
+        padding-top: 50px !important;
+        height: 150px;
+        text-align: left !important;
+    }
+
+    .divgrid1{
+        text-align: center;
+    }
+
+    .mobgrid3{
+        height: 330px;
+    }
+
+    .mobgrid4{
+        height: 100px;
+    }
+
+    .divgrid2{
+        padding-top: 10px !important;
+    }
+
+    .mobgrid6{
+        height: 100px;
+        text-align: center;
+    }
+
+    .text3{
+        text-align: center !important;
+        margin-top: -160px;
+    }
+
+    .text4{
+        font-size: 34px !important;
+    }
+
+    .mobgrid5{
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .divgrid3{
+        margin-bottom: 25px !important;
+    }
+
+    .divgrid4{
+        margin-top: 20px !important;
+        text-align: center !important;
+        width: 80% !important;
+    }
+
+    .text5{
+        margin-top: 10px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .mobgrid7{
+        height: 70px !important;
+        font-size: 40px !important;
+    }
+
+    .mobgrid8{
+        --align: none !important;
+    }
+
+    .glavnaSlika{
+        margin-top: 150px;
+    }
+
+    .drugaSlika{
+        margin-top: 200px;
+    }
+}

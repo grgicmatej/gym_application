@@ -1,0 +1,27 @@
+@media only screen and (min-width: 1151px) and (max-width: 1670px) {
+    .text1{
+        font-size: 85px !important;
+        line-height: 10px;
+    }
+
+    .mobgrid3{
+        height: 250px;
+    }
+
+    .drugaSlika{
+        margin-top: 100px;
+    }
+
+    .mobgrid5{
+        height: 320px;
+    }
+
+    .divgrid5{
+        margin-bottom: -150px !important;
+    }
+
+
+    .trecaSlika{
+        margin-top: 100px;
+    }
+}

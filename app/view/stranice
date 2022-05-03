@@ -56,10 +56,11 @@ build log planner:
 
     - Tablica Timers - Timers_Completed postaviti na Default 0 NOT NULL
 
-    - Očistiti bazu preko user/ciscenjeBaze (OPREZNO)
+    - Očistiti bazu preko test/ciscenjeBaze (OPREZNO)
 
     - Postaviti time zone (provjeriti preko štoperice)
 
+    - Dropati "soccer" tablicu
     - Dropati "soccer_temp" tablicu
     - Dropati "timers_temp" tablicu
     - u vendor/js/functionalities/constants.js promjeniti url

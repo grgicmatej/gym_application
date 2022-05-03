@@ -14,7 +14,11 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije</h6>
+                            <div class="modal-header" style="height: 40px">
+                                <h6 class="m-b-20 p-b-5 f-w-600">Informacije</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
                             <div class="row">
                                 <div class="col-sm-6">
                                     <p class="m-b-10 f-w-600">Email adresa</p>
@@ -109,7 +113,10 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o zaposleniku <i class="fas fa-circle staffActiveStatusIcon" id="staffActiveStatusIcon"></i></h6>
+                            <div class="modal-header" style="height: 40px">
+                                <h6 class="m-b-20 p-b-5 f-w-600">Informacije o zaposleniku <i class="fas fa-circle staffActiveStatusIcon" id="staffActiveStatusIcon"></i></h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <p class="m-b-10 f-w-600">Ime</p>
@@ -167,11 +174,15 @@
 <div class="modal fade" id="membershipData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; padding-left: 10px">Nova članarina</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Nova članarina</h6>
+
                             <div class="row forma" id="forma">
                                 <form id="formforma">
                                     <select id="memberships" class="" name="usersMembershipsMembershipName" style="width: 100%; padding: 10px"></select>
@@ -202,7 +213,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Registracija novog korisnika</h6>
+                    <div class="modal-header">
+                        <h6 class="modal-title m-b-20 p-b-5 f-w-600" style="font-size: 18px">Registracija novog korisnika</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <form id="formformaNewUser">
                         <div class="row forma" id="forma">
                             <div class="col-lg-4 col-md-12">
@@ -324,7 +338,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Uređivanje postojećeg korisnika</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Uređivanje postojećeg korisnika</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <form id="formformaEditUser">
                         <div class="row forma" id="forma">
                             <div class="col-lg-4 col-md-12">
@@ -440,7 +457,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Unos postojeće članarine</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Unos postojeće članarine</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <form id="formformaEditMembershipUser">
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
@@ -489,7 +509,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Korisničke postavke</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Korisničke postavke</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <br>
                     <form id="formformaStaffSettingsPassword">
                         <div class="row">
@@ -564,7 +587,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Stolni sportovi</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Stolni sportovi</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-4">Biljar
                                     <p><span class="mandatoryField linkanimation">*  Cijena iznosi 0,50kn/min</span>
@@ -627,7 +653,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Završena štoperica</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Završena štoperica</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <p class="text-center" style="font-size: 18px" id="sportsName"></p>
@@ -656,6 +685,9 @@
 <div class="modal fade" id="eventCalendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
+            <div class="modal-header" style="height: 40px">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -688,7 +720,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Rezerviran termin <span id="editEventCalendar"></span></h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Rezerviran termin <span id="editEventCalendar"></span></h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card-block">
@@ -744,8 +779,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Novi termin</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="newEventForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Novi termin</h6>
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -802,8 +841,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Uređivanje termina</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="updateEventForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje termina</h6>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -859,8 +901,12 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaposlenika</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="row">
-                        <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaposlenika</h6></div>
+                        <div class="col-md-12 col-lg-9"></div>
                         <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info newStaff" id=""><i class="nav-icon fas fa-plus"></i> Novi zaposlenik</p></div>
 
                     </div>
@@ -900,7 +946,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Pregled svih članarina</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled svih članarina</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
                     <div class="card-body" id="dt3" style="max-width: available">
                         <table class="table" id="" width=100%" cellspacing="0">
@@ -933,7 +982,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Generirana lozinka</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Generirana lozinka</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <p class="text-center" style="font-size: 18px">Nova generirana lozinka je:</p>
@@ -957,8 +1009,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Pregled svih članarina zaposlenika</h6>
-
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled svih članarina zaposlenika</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="card-body" id="dt4" style="max-width: available">
                         <table class="table" id="" width=100%" cellspacing="0">
                             <thead>
@@ -986,7 +1040,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Uređivanje zaposlenika</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Uređivanje zaposlenika</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <br>
                     <form id="formformaEditStaff">
                         <div class="row">
@@ -1051,7 +1108,10 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Registracija novog zaposlenika</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Registracija novog zaposlenika</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <form id="formformaNewStaff">
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
@@ -1119,8 +1179,12 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled članarina</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="row">
-                        <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled članarina</h6></div>
+                        <div class="col-md-12 col-lg-9"></div>
                         <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info createNewMembership" id=""><i class="nav-icon fas fa-plus"></i> Nova članarina</p></div>
 
                     </div>
@@ -1161,7 +1225,10 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informacije o članarini <i class="fas fa-circle membershipActiveStatusIcon" id="membershipActiveStatusIcon"></i></h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600">Informacije o članarini <i class="fas fa-circle membershipActiveStatusIcon" id="membershipActiveStatusIcon"></i></h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <p class="m-b-10 f-w-600">Naziv članarine</p>
@@ -1223,8 +1290,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Pregled članarine</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="updateMembershipForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Pregled članarine</h6>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -1276,8 +1346,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Nova članarina</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="newMembershipForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Nova članarina</h6>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -1329,7 +1402,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja članarine</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja članarine</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-5">
                                     <p class="m-b-10 btn btn-block btn-outline-secondary cancelMembershipDeleteButton" id="cancelMembershipDeleteButton">Odustani</p>
@@ -1348,7 +1424,6 @@
 </div>
 <!-- delete membership modal end -->
 
-
 <!-- statistics modal start -->
 <div class="modal fade" id="statistics" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -1357,7 +1432,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Statistika teretane</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Statistika teretane</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-12" id="activeUsersStats">
                                     <p>Broj aktivnih korisnika u usporedbi sa prošlom godinom</p>
@@ -1411,7 +1489,6 @@
 </div>
 <!-- statistics modal end -->
 
-
 <!-- finances modal start -->
 <div class="modal fade" id="finance" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -1420,7 +1497,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: left">Financije teretane</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: left">Financije teretane</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-12 col-md-3">
                                     <div class="small-box bg-blue1">
@@ -1527,8 +1607,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaliha</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
-                                <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled zaliha</h6></div>
+                                <div class="col-md-12 col-lg-9"></div>
                                 <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info newWarehouseProduct" id=""><i class="nav-icon fas fa-plus"></i> Novi proizvod</p></div>
                             </div>
                             <div class="row">
@@ -1568,8 +1652,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Pregled proizvoda</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="editWarehouseForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Pregled proizvoda</h6>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -1633,7 +1720,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja proizvoda</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja proizvoda</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
                             <div class="row">
                                 <div class="col-sm-12 col-md-5">
                                     <p class="m-b-10 btn btn-block btn-outline-secondary cancelWarehouseDeleteButton" id="cancelWarehouseDeleteButton">Odustani</p>
@@ -1660,7 +1751,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda resetiranja broja prodanih proizvoda</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Potvrda resetiranja broja prodanih proizvoda</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="row">
                                 <div class="col-sm-12 col-md-5">
                                     <p class="m-b-10 btn btn-block btn-outline-secondary cancelWarehouseResetButton" id="cancelWarehouseResetButton">Odustani</p>
@@ -1687,8 +1781,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Novi proizvod</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="newWarehouseForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Novi proizvod</h6>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -1740,8 +1837,12 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled bilješki</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="row">
-                        <div class="col-md-12 col-lg-9"><h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Pregled bilješki</h6></div>
+                        <div class="col-md-12 col-lg-9"></div>
                         <div class="col-md-12 col-lg-3 text-right"><p class="m-b-10 btn btn-block btn-outline-info createNewNote" id=""><i class="nav-icon fas fa-plus"></i> Nova bilješka</p></div>
                     </div>
                     <div class="row">
@@ -1764,8 +1865,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Nova bilješka</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="newNoteForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Nova bilješka</h6>
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -1806,7 +1911,11 @@
         <div class="modal-content">
             <div class="container">
                 <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px">Postavke teretane</h6>
+                    <div class="modal-header">
+                        <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px">Postavke teretane</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
                     <br>
                     <form id="formformaGymSettingsAmount">
                         <div class="row">
@@ -1869,8 +1978,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Uređivanje sporta</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <form id="updateSportSettings">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje sporta</h6>
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">
@@ -1913,8 +2026,6 @@
 </div>
 <!-- Update sportSettings modal end -->
 
-
-
 <!-- delete notes modal start -->
 <div class="modal fade" id="deleteNotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
@@ -1923,7 +2034,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja bilješke</h6>
+                            <div class="modal-header">
+                                <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Potvrda brisanja bilješke</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
                             <div class="row">
                                 <div class="col-sm-12 col-md-5">
                                     <p class="m-b-10 btn btn-block btn-outline-secondary cancelNotesDeleteButton" id="cancelNotesDeleteButton">Odustani</p>
@@ -1951,7 +2066,11 @@
                     <div class="col-lg-12">
                         <div class="card-block">
                             <form id="editNoteForm">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="font-size: 18px; text-align: center">Uređivanje bilješke</h6>
+                                <div class="modal-header">
+                                    <h6 class="m-b-20 p-b-5 f-w-600" style="font-size: 18px; text-align: center">Uređivanje bilješke</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card-block">

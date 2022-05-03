@@ -283,7 +283,14 @@ h6 {
     padding-left: 60px;
 }
 
+.modal-header{
+    padding-left: 0 !important;
+    height: 70px;
+}
 
+.btn-close{
+    font-size: 12px;
+}
 
 @media only screen and (max-width: 600px) {
     .currency{

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="" />
+    <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="database backup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baze podataka/._matejcom_gym_final.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Baze podataka/._matejcom_gym_final.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baze podataka/matejcom_gym_final.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Baze podataka/matejcom_gym_final.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/js/Functionalities/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Functionalities/constants.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -53,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/css/Frontend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -64,11 +70,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/css/Frontend" />
       <recent name="$PROJECT_DIR$/app/controller" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/vendor/js" />
       <recent name="$PROJECT_DIR$/app/model" />
-      <recent name="$PROJECT_DIR$/vendor/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/view/Dashboard" />
@@ -173,6 +179,10 @@
       <workItem from="1650982713057" duration="74000" />
       <workItem from="1651059689579" duration="6065000" />
       <workItem from="1651472114424" duration="541000" />
+      <workItem from="1651474193542" duration="4180000" />
+      <workItem from="1651488388172" duration="7621000" />
+      <workItem from="1651565604282" duration="1112000" />
+      <workItem from="1651569685526" duration="2372000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
@@ -447,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646921763039</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="database backup">
+      <created>1651570008414</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1651570008414</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +484,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="Staff settings are ready" />
     <MESSAGE value="New search works" />
     <MESSAGE value="search radi" />
@@ -492,6 +508,7 @@
     <MESSAGE value="password change bugfix" />
     <MESSAGE value="edit user works" />
     <MESSAGE value="stats report" />
-    <option name="LAST_COMMIT_MESSAGE" value="stats report" />
+    <MESSAGE value="database backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="database backup" />
   </component>
 </project>
