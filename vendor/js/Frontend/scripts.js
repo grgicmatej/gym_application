@@ -35,6 +35,13 @@ if (m === '0'){
     });
 }
 
+function fadeIn(elementId)
+{
+    $(elementId).fadeIn(400, function () {
+        $(this).modal('show');
+    });
+}
+
 /*
 $('#contactform').on('submit', function (e) {
     e.preventDefault();
