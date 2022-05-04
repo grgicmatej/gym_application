@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="database backup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/js/Frontend/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/js/Frontend/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +181,7 @@
       <workItem from="1651569685526" duration="2570000" />
       <workItem from="1651580095770" duration="60000" />
       <workItem from="1651583453094" duration="1324000" />
-      <workItem from="1651584794812" duration="1894000" />
+      <workItem from="1651584794812" duration="2360000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
