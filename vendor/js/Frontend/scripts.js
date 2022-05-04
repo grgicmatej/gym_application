@@ -18,6 +18,23 @@ $('#loginform').on('submit', function (e) {
     });
 });
 
+var url_string = window.location.href;
+var url = new URL(url_string);
+var m = url.searchParams.get("m");
+if (m === '1'){
+    $(window).on('load', function() {
+        fadeIn("#myModal")
+        document.getElementById('invalidDataNotice0').style.display = 'block';
+    });
+}
+
+if (m === '0'){
+    $(window).on('load', function() {
+        fadeIn("#myModal")
+        document.getElementById('invalidDataNotice3').style.display = 'block';
+    });
+}
+
 /*
 $('#contactform').on('submit', function (e) {
     e.preventDefault();

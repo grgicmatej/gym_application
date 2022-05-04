@@ -1,5 +1,5 @@
 <?php
-/*
+
 return [
     "url"=>"http://localhost:8080/gym2/",
     "dev"=>true,
@@ -12,6 +12,8 @@ return [
     ]
 
 ];
+
+/*
 
   return [
     "url"=>"https://matej.com.hr/gym/",
@@ -26,7 +28,7 @@ return [
 ];
 
 
-/**/
+/*
   return [
     "url"=>"https://gym.com.hr/",
     "dev"=>true,
@@ -38,3 +40,5 @@ return [
         "password"=>"Grgmaticej1"
     ]
 ];
+
+*/
