@@ -3,42 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="database backup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym2_demo/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/gym2_demo/app/view/Public/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._Screen Shot 2022-04-21 at 13.40.35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._Screen Shot 2022-04-21 at 13.54.15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._Screen Shot 2022-04-21 at 16.10.55-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._Screen Shot 2022-04-22 at 09.47.17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._Screen Shot 2022-04-25 at 18.52.07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._homepage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._macbook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._macbook_backup.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._mob.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._mockup_1-AzGzyBl0Grt0gagr-2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._mockup_5-YrDBLMo533Cg2KkG copy.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._mockup_5-YrDBLMo533Cg2KkG-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._mockup_5-YrDBLMo533Cg2KkG.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._stats.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/._wave2-mjEDL1VgkGsr5nwz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/Screen Shot 2022-04-21 at 13.40.35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/Screen Shot 2022-04-21 at 13.54.15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/Screen Shot 2022-04-21 at 16.10.55-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/Screen Shot 2022-04-22 at 09.47.17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/Screen Shot 2022-04-25 at 18.52.07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/homepage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/macbook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/macbook_backup.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/mob.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/mockup_1-AzGzyBl0Grt0gagr-2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/mockup_5-YrDBLMo533Cg2KkG copy.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/mockup_5-YrDBLMo533Cg2KkG-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/mockup_5-YrDBLMo533Cg2KkG.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/pozadina.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/pozadina2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/stats.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/wave1-YNqLX3MXWaFq2gXd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/wave2-mjEDL1VgkGsr5nwz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/images/Frontend/wave2-mjEDL1VgkGsr5nwz.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +184,7 @@
       <workItem from="1651580095770" duration="60000" />
       <workItem from="1651583453094" duration="1324000" />
       <workItem from="1651584794812" duration="2360000" />
-      <workItem from="1651644711866" duration="7551000" />
+      <workItem from="1651644711866" duration="13487000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
