@@ -1,208 +1,3 @@
-main {
-    #000000: var(#000000);
-    --h1-font-size: 100px;
-    --h1-font-style: normal;
-    --h1-font-family: var(--font-primary);
-    --h1-font-weight: 700;
-    --h1-line-height: 1.6;
-    --h1-m-font-size: 64px;
-    --h1-letter-spacing: normal;
-    --h1-text-transform: none;
-    --h1-text-decoration: none;
-    #000000: var(#000000);
-    --h2-font-size: 64px;
-    --h2-font-style: normal;
-    --h2-font-family: var(--font-primary);
-    --h2-font-weight: 700;
-    --h2-line-height: 1.2;
-    --h2-m-font-size: 36px;
-    --h2-letter-spacing: normal;
-    --h2-text-transform: none;
-    --h2-text-decoration: none;
-    #000000: var(#000000);
-    --h3-font-size: 48px;
-    --h3-font-style: normal;
-    --h3-font-family: var(--font-primary);
-    --h3-font-weight: 700;
-    --h3-line-height: 1.2;
-    --h3-m-font-size: 32px;
-    --h3-letter-spacing: normal;
-    --h3-text-transform: none;
-    --h3-text-decoration: none;
-    #000000: var(#000000);
-    --h4-font-size: 32px;
-    --h4-font-style: normal;
-    --h4-font-family: var(--font-primary);
-    --h4-font-weight: 700;
-    --h4-line-height: 1.2;
-    --h4-m-font-size: 28px;
-    --h4-letter-spacing: normal;
-    --h4-text-transform: none;
-    --h4-text-decoration: none;
-    #000000: var(#000000);
-    --h5-font-size: 24px;
-    --h5-font-style: normal;
-    --h5-font-family: var(--font-primary);
-    --h5-font-weight: 700;
-    --h5-line-height: 1.2;
-    --h5-m-font-size: 24px;
-    --h5-letter-spacing: normal;
-    --h5-text-transform: none;
-    --h5-text-decoration: none;
-    #000000: var(#000000);
-    --h6-font-size: 20px;
-    --h6-font-style: normal;
-    --h6-font-family: var(--font-primary);
-    --h6-font-weight: 400;
-    --h6-line-height: 1.2;
-    --h6-m-font-size: 20px;
-    --h6-letter-spacing: normal;
-    --h6-text-transform: none;
-    --h6-text-decoration: none;
-    #000000: var(#000000);
-    --body-font-size: 16px;
-    --body-font-style: normal;
-    --body-font-family: var(--font-primary);
-    --body-font-weight: 300;
-    --body-line-height: 1.6;
-    --body-m-font-size: 16px;
-    --body-letter-spacing: normal;
-    --body-text-transform: none;
-    --body-text-decoration: none;
-    --font-primary: "Rubik", sans-serif;
-    --font-secondary: "Montserrat", sans-serif;
-    #000000: #000000;
-    --colors-light: #fff;
-    --colors-danger: #f86c6b;
-    --colors-primary: #7634BF;
-    --colors-success: #4dbd74;
-    --colors-warning: #ffc107;
-    --colors-accent-1: #DFE1E2;
-    --colors-accent-2: #161616;
-    --colors-grey-100: #F1F1F1;
-    --colors-grey-200: #DDDDDD;
-    --colors-grey-300: #C9C9C9;
-    --colors-grey-400: #B5B5B5;
-    --colors-grey-500: #A1A1A1;
-    --colors-grey-600: #888888;
-    --colors-grey-700: #747474;
-    --colors-grey-800: #565656;
-    --colors-grey-900: #383838;
-    --colors-secondary: #E03584;
-    --colors-primary-dark: #5d1ba6;
-    --colors-accent-1-dark: #c6c8c9;
-    --colors-accent-2-dark: #000000;
-    --colors-primary-light: #8a48d3;
-    --colors-accent-1-light: #f3f5f6;
-    --colors-accent-2-light: #2a2a2a;
-    --colors-primary-accent: #803ec9;
-    --colors-secondary-dark: #c71c6b;
-    --colors-accent-1-accent: #e9ebec;
-    --colors-accent-2-accent: #202020;
-    --colors-secondary-light: #f44998;
-    --colors-secondary-accent: #ea3f8e;
-    #000000: var(#000000);
-    --nav-link-font-size: 16px;
-    --nav-link-font-style: normal;
-    --nav-link-font-family: var(--font-primary);
-    --nav-link-font-weight: 400;
-    --nav-link-line-height: 1.8;
-    --nav-link-m-font-size: 16px;
-    --nav-link-letter-spacing: normal;
-    --nav-link-text-transform: none;
-    --nav-link-text-decoration: none;
-    #000000: var(#000000);
-    --body-large-font-size: 18px;
-    --body-large-font-style: normal;
-    --body-large-font-family: var(--font-primary);
-    --body-large-font-weight: 400;
-    --body-large-line-height: 1.6;
-    --body-large-m-font-size: 18px;
-    --body-large-letter-spacing: normal;
-    --body-large-text-transform: none;
-    --body-large-text-decoration: none;
-    #000000: var(#000000);
-    --body-small-font-size: 14px;
-    --body-small-font-style: normal;
-    --body-small-font-family: var(--font-primary);
-    --body-small-font-weight: 300;
-    --body-small-line-height: 1.6;
-    --body-small-m-font-size: 14px;
-    --body-small-letter-spacing: normal;
-    --body-small-text-transform: none;
-    --body-small-text-decoration: none;
-    --grid-button-primary-color: var(--colors-light);
-    --grid-button-primary-font-size: 16px;
-    --grid-button-primary-padding-x: 40px;
-    --grid-button-primary-padding-y: 16px;
-    --grid-button-primary-font-style: normal;
-    --grid-button-primary-color-hover: var(--colors-light);
-    --grid-button-primary-font-family: var(--font-primary);
-    --grid-button-primary-font-weight: 400;
-    --grid-button-primary-line-height: normal;
-    --grid-button-primary-m-font-size: 14px;
-    --grid-button-primary-m-padding-x: 36px;
-    --grid-button-primary-m-padding-y: 14px;
-    --grid-button-primary-border-color: transparent;
-    --grid-button-primary-border-width: 0;
-    --grid-button-primary-box-shadow-x: 0px;
-    --grid-button-primary-box-shadow-y: 0px;
-    --grid-button-primary-border-radius: 50px;
-    --grid-button-primary-letter-spacing: normal;
-    --grid-button-primary-text-transform: none;
-    --grid-button-primary-box-shadow-blur: 0px;
-    --grid-button-primary-m-border-radius: 50px;
-    --grid-button-primary-text-decoration: none;
-    --grid-button-primary-background-color: var(--colors-primary);
-    --grid-button-primary-box-shadow-color: transparent;
-    --grid-button-primary-box-shadow-spread: 0px;
-    --grid-button-primary-border-color-hover: transparent;
-    --grid-button-primary-border-width-hover: 0px;
-    --grid-button-primary-box-shadow-x-hover: 0px;
-    --grid-button-primary-box-shadow-y-hover: 0px;
-    --grid-button-primary-transition-duration: 0.2s;
-    --grid-button-primary-box-shadow-blur-hover: 0px;
-    --grid-button-primary-background-color-hover: var(--colors-primary-dark);
-    --grid-button-primary-box-shadow-color-hover: 0px;
-    --grid-button-primary-box-shadow-spread-hover: 0px;
-    --grid-button-primary-transition-timing-function: ease;
-    --grid-button-secondary-color: var(--colors-light);
-    --grid-button-secondary-font-size: 16px;
-    --grid-button-secondary-padding-x: 40px;
-    --grid-button-secondary-padding-y: 16px;
-    --grid-button-secondary-font-style: normal;
-    --grid-button-secondary-color-hover: var(--colors-light);
-    --grid-button-secondary-font-family: var(--font-primary);
-    --grid-button-secondary-font-weight: 400;
-    --grid-button-secondary-line-height: normal;
-    --grid-button-secondary-m-font-size: 14px;
-    --grid-button-secondary-m-padding-x: 36px;
-    --grid-button-secondary-m-padding-y: 14px;
-    --grid-button-secondary-border-color: transparent;
-    --grid-button-secondary-border-width: 0;
-    --grid-button-secondary-box-shadow-x: 0px;
-    --grid-button-secondary-box-shadow-y: 0px;
-    --grid-button-secondary-border-radius: 50px;
-    --grid-button-secondary-letter-spacing: normal;
-    --grid-button-secondary-text-transform: none;
-    --grid-button-secondary-box-shadow-blur: 0px;
-    --grid-button-secondary-m-border-radius: 50px;
-    --grid-button-secondary-text-decoration: none;
-    --grid-button-secondary-background-color: var(--colors-secondary);
-    --grid-button-secondary-box-shadow-color: transparent;
-    --grid-button-secondary-box-shadow-spread: 0px;
-    --grid-button-secondary-border-color-hover: transparent;
-    --grid-button-secondary-border-width-hover: 0px;
-    --grid-button-secondary-box-shadow-x-hover: 0px;
-    --grid-button-secondary-box-shadow-y-hover: 0px;
-    --grid-button-secondary-transition-duration: 0.2s;
-    --grid-button-secondary-box-shadow-blur-hover: 0px;
-    --grid-button-secondary-box-shadow-null-hover: none;
-    --grid-button-secondary-background-color-hover: var(--colors-secondary-light);
-    --grid-button-secondary-box-shadow-color-hover: 0px;
-    --grid-button-secondary-box-shadow-spread-hover: 0px;
-    --grid-button-secondary-transition-timing-function: ease;
-}
 
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans&amp;display=swap);
 
@@ -312,33 +107,33 @@ select[data-v-db5ff5a6] {
 .grid-button--primary[data-v-2f409ee5] {
     display: inline-block;
     max-width: 100%;
-    padding: var(--grid-button-primary-padding-y) var(--grid-button-primary-padding-x);
+    padding: var(16px) var(40px);
     overflow: hidden;
-    font-family: var(--grid-button-primary-font-family);
-    font-size: var(--grid-button-primary-font-size);
-    font-style: var(--grid-button-primary-font-style);
-    font-weight: var(--grid-button-primary-font-weight);
-    line-height: var(--grid-button-primary-line-height);
-    color: var(--grid-button-primary-color);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(16px);
+    font-style: var(normal);
+    font-weight: var(400);
+    line-height: var(normal);
+    color: var(#fff);
     text-align: center;
-    text-decoration: var(--grid-button-primary-text-decoration);
+    text-decoration: var(none);
     text-overflow: ellipsis;
-    text-transform: var(--grid-button-primary-text-transform);
-    letter-spacing: var(--grid-button-primary-letter-spacing);
+    text-transform: var(none);
+    letter-spacing: var(normal);
     white-space: nowrap;
     cursor: pointer;
-    background-color: var(var(--grid-button-primary-background-color));
-    border: var(--grid-button-primary-border-null, var(--grid-button-primary-border-width) solid var(--grid-button-primary-border-color));
-    border-radius: var(--grid-button-primary-border-radius);
-    box-shadow: var(--grid-button-primary-box-shadow-null, var(--grid-button-primary-box-shadow-x) var(--grid-button-primary-box-shadow-y) var(--grid-button-primary-box-shadow-blur) var(--grid-button-primary-box-shadow-spread) var(--grid-button-primary-box-shadow-color));
-    transition: all var(--grid-button-primary-transition-duration) var(--grid-button-primary-transition-timing-function)
+    background-color: var(var(#7634BF));
+    border: var(--grid-button-primary-border-null, var(0px) solid var(transparent));
+    border-radius: var(50px);
+    box-shadow: var(--grid-button-primary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
+    transition: all var(0.2s) var(ease)
 }
 
 .grid-button--primary[data-v-2f409ee5]:hover {
-    color: var(--grid-button-primary-color-hover);
-    background-color: var(var(--grid-button-primary-background-color-hover));
-    border: var(--grid-button-primary-border-null-hover, var(--grid-button-primary-border-width-hover) solid var(--grid-button-primary-border-color-hover));
-    box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(--grid-button-primary-box-shadow-x-hover) var(--grid-button-primary-box-shadow-y-hover) var(--grid-button-primary-box-shadow-blur-hover) var(--grid-button-primary-box-shadow-spread-hover) var(--grid-button-primary-box-shadow-color-hover))
+    color: var(#fff);
+    background-color: var(var(#5d1ba6));
+    border: var(--grid-button-primary-border-null-hover, var(0px) solid var(transparent));
+    box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(0px) var(0px) var(0px) var(0px) var(0px))
 }
 
 .grid-button--primary[data-v-2f409ee5]:disabled {
@@ -349,33 +144,33 @@ select[data-v-db5ff5a6] {
 .grid-button--secondary[data-v-2f409ee5] {
     display: inline-block;
     max-width: 100%;
-    padding: var(--grid-button-secondary-padding-y) var(--grid-button-secondary-padding-x);
+    padding: var(16px-y) var(16px-x);
     overflow: hidden;
-    font-family: var(--grid-button-secondary-font-family);
-    font-size: var(--grid-button-secondary-font-size);
-    font-style: var(--grid-button-secondary-font-style);
-    font-weight: var(--grid-button-secondary-font-weight);
-    line-height: var(--grid-button-secondary-line-height);
-    color: var(--grid-button-secondary-color);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(16px);
+    font-style: var(normal);
+    font-weight: var(400);
+    line-height: var(normal);
+    color: var(#fff);
     text-align: center;
-    text-decoration: var(--grid-button-secondary-text-decoration);
+    text-decoration: var(none);
     text-overflow: ellipsis;
-    text-transform: var(--grid-button-secondary-text-transform);
-    letter-spacing: var(--grid-button-secondary-letter-spacing);
+    text-transform: var(none);
+    letter-spacing: var(normal-spacing);
     white-space: nowrap;
     cursor: pointer;
-    background-color: var(var(--grid-button-secondary-background-color));
-    border: var(--grid-button-secondary-border-null, var(--grid-button-secondary-border-width) solid var(--grid-button-secondary-border-color));
-    border-radius: var(--grid-button-secondary-border-radius);
-    box-shadow: var(--grid-button-secondary-box-shadow-null, var(--grid-button-secondary-box-shadow-x) var(--grid-button-secondary-box-shadow-y) var(--grid-button-secondary-box-shadow-blur) var(--grid-button-secondary-box-shadow-spread) var(--grid-button-secondary-box-shadow-color));
-    transition: all var(--grid-button-secondary-transition-duration) var(--grid-button-secondary-transition-timing-function)
+    background-color: var(var(#E03584));
+    border: var(--grid-button-secondary-border-null, var(0px) solid var(transparent));
+    border-radius: var(50px);
+    box-shadow: var(--grid-button-secondary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
+    transition: all var(0.2s) var(ease)
 }
 
 .grid-button--secondary[data-v-2f409ee5]:hover {
-    color: var(--grid-button-secondary-color-hover);
-    background-color: var(var(--grid-button-secondary-background-color-hover));
-    border: var(--grid-button-secondary-border-null-hover, var(--grid-button-secondary-border-width-hover) solid var(--grid-button-secondary-border-color-hover));
-    box-shadow: var(--grid-button-secondary-box-shadow-null-hover, var(--grid-button-secondary-box-shadow-x-hover) var(--grid-button-secondary-box-shadow-y-hover) var(--grid-button-secondary-box-shadow-blur-hover) var(--grid-button-secondary-box-shadow-spread-hover) var(--grid-button-secondary-box-shadow-color-hover))
+    color: var(#fff);
+    background-color: var(var(#f44998));
+    border: var(--grid-button-secondary-border-null-hover, var(0px) solid var(transparent));
+    box-shadow: var(none, var(0px) var(0px) var(0px-hover) var(0px) var(0px))
 }
 
 .grid-button--secondary[data-v-2f409ee5]:disabled {
@@ -388,31 +183,31 @@ select[data-v-db5ff5a6] {
         display: inline-block;
         max-width: 100%;
         overflow: hidden;
-        font-family: var(--grid-button-primary-font-family);
-        font-style: var(--grid-button-primary-font-style);
-        font-weight: var(--grid-button-primary-font-weight);
-        line-height: var(--grid-button-primary-line-height);
-        color: var(--grid-button-primary-color);
+        font-family: var("Rubik", sans-serif);
+        font-style: var(normal);
+        font-weight: var(400);
+        line-height: var(normal);
+        color: var(#fff);
         text-align: center;
-        text-decoration: var(--grid-button-primary-text-decoration);
+        text-decoration: var(none);
         text-overflow: ellipsis;
-        text-transform: var(--grid-button-primary-text-transform);
-        letter-spacing: var(--grid-button-primary-letter-spacing);
+        text-transform: var(none);
+        letter-spacing: var(normal);
         white-space: nowrap;
         cursor: pointer;
-        background-color: var(var(--grid-button-primary-background-color));
-        border: var(--grid-button-primary-border-null, var(--grid-button-primary-border-width) solid var(--grid-button-primary-border-color));
-        box-shadow: var(--grid-button-primary-box-shadow-null, var(--grid-button-primary-box-shadow-x) var(--grid-button-primary-box-shadow-y) var(--grid-button-primary-box-shadow-blur) var(--grid-button-primary-box-shadow-spread) var(--grid-button-primary-box-shadow-color));
-        transition: all var(--grid-button-primary-transition-duration) var(--grid-button-primary-transition-timing-function);
-        padding: var(--grid-button-primary-m-padding-y, var(--grid-button-primary-padding-y)) var(--grid-button-primary-m-padding-x, var(--grid-button-primary-padding-x));
-        font-size: var(--grid-button-primary-m-font-size, var(--grid-button-primary-font-size));
+        background-color: var(var(#7634BF));
+        border: var(--grid-button-primary-border-null, var(0px) solid var(transparent));
+        box-shadow: var(--grid-button-primary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
+        transition: all var(0.2s) var(ease);
+        padding: var(14px, var(16px)) var(36px, var(40px));
+        font-size: var(14px, var(16px));
     }
 
     .grid-button--primary[data-v-2f409ee5]:hover {
-        color: var(--grid-button-primary-color-hover);
-        background-color: var(var(--grid-button-primary-background-color-hover));
-        border: var(--grid-button-primary-border-null-hover, var(--grid-button-primary-border-width-hover) solid var(--grid-button-primary-border-color-hover));
-        box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(--grid-button-primary-box-shadow-x-hover) var(--grid-button-primary-box-shadow-y-hover) var(--grid-button-primary-box-shadow-blur-hover) var(--grid-button-primary-box-shadow-spread-hover) var(--grid-button-primary-box-shadow-color-hover))
+        color: var(#fff);
+        background-color: var(var(#5d1ba6));
+        border: var(--grid-button-primary-border-null-hover, var(0px) solid var(transparent));
+        box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(0px) var(0px) var(0px) var(0px) var(0px))
     }
 
     .grid-button--primary[data-v-2f409ee5]:disabled {
@@ -435,30 +230,30 @@ select[data-v-db5ff5a6] {
         display: inline-block;
         max-width: 100%;
         overflow: hidden;
-        font-family: var(--grid-button-secondary-font-family);
-        font-style: var(--grid-button-secondary-font-style);
-        font-weight: var(--grid-button-secondary-font-weight);
-        line-height: var(--grid-button-secondary-line-height);
-        color: var(--grid-button-secondary-color);
+        font-family: var("Rubik", sans-serif);
+        font-style: var(normal);
+        font-weight: var(400);
+        line-height: var(normal);
+        color: var(#fff);
         text-align: center;
-        text-decoration: var(--grid-button-secondary-text-decoration);
+        text-decoration: var(none);
         text-overflow: ellipsis;
-        text-transform: var(--grid-button-secondary-text-transform);
-        letter-spacing: var(--grid-button-secondary-letter-spacing);
+        text-transform: var(none);
+        letter-spacing: var(normal-spacing);
         white-space: nowrap;
         cursor: pointer;
-        border: var(--grid-button-secondary-border-null, var(--grid-button-secondary-border-width) solid var(--grid-button-secondary-border-color));
-        box-shadow: var(--grid-button-secondary-box-shadow-null, var(--grid-button-secondary-box-shadow-x) var(--grid-button-secondary-box-shadow-y) var(--grid-button-secondary-box-shadow-blur) var(--grid-button-secondary-box-shadow-spread) var(--grid-button-secondary-box-shadow-color));
-        transition: all var(--grid-button-secondary-transition-duration) var(--grid-button-secondary-transition-timing-function);
-        padding: var(--grid-button-secondary-m-padding-y, var(--grid-button-secondary-padding-y)) var(--grid-button-secondary-m-padding-x, var(--grid-button-secondary-padding-x));
-        font-size: var(--grid-button-secondary-m-font-size, var(--grid-button-secondary-font-size));
+        border: var(--grid-button-secondary-border-null, var(0px) solid var(transparent));
+        box-shadow: var(--grid-button-secondary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
+        transition: all var(0.2s) var(ease);
+        padding: var(14px, var(16px-y)) var(36px, var(16px-x));
+        font-size: var(14px, var(16px));
     }
 
     .grid-button--secondary[data-v-2f409ee5]:hover {
-        color: var(--grid-button-secondary-color-hover);
-        background-color: var(var(--grid-button-secondary-background-color-hover));
-        border: var(--grid-button-secondary-border-null-hover, var(--grid-button-secondary-border-width-hover) solid var(--grid-button-secondary-border-color-hover));
-        box-shadow: var(--grid-button-secondary-box-shadow-null-hover, var(--grid-button-secondary-box-shadow-x-hover) var(--grid-button-secondary-box-shadow-y-hover) var(--grid-button-secondary-box-shadow-blur-hover) var(--grid-button-secondary-box-shadow-spread-hover) var(--grid-button-secondary-box-shadow-color-hover))
+        color: var(#fff);
+        background-color: var(var(#f44998));
+        border: var(--grid-button-secondary-border-null-hover, var(0px) solid var(transparent));
+        box-shadow: var(none, var(0px) var(0px) var(0px-hover) var(0px) var(0px))
     }
 
     .grid-button--secondary[data-v-2f409ee5]:disabled {
@@ -478,12 +273,12 @@ select[data-v-db5ff5a6] {
 
 .input[data-v-3a756488] ::placeholder {
     font-size: 14px;
-    color: var(--colors-grey-600)
+    color: var(#888888)
 }
 
 .input--dark[data-v-3a756488] ::placeholder {
     font-size: 14px;
-    color: var(--colors-grey-800)
+    color: var(#565656)
 }
 
 @keyframes spin-data-v-49175f0a {
@@ -552,223 +347,223 @@ select[data-v-db5ff5a6] {
 }
 
 .text-box h1 {
-    font-family: var(--h1-font-family);
-    font-size: var(--h1-font-size);
-    font-style: var(--h1-font-style);
-    font-weight: var(--h1-font-weight);
-    line-height: var(--h1-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(100px);
+    font-style: var(normal);
+    font-weight: var(700);
+    line-height: var(1.6);
     color: var(#000000);
-    text-decoration: var(--h1-text-decoration);
-    text-transform: var(--h1-text-transform);
-    letter-spacing: var(--h1-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box h1 {
-        font-family: var(var(--h1-font-family));
-        font-size: var(--h1-m-font-size, var(--h1-font-size));
-        font-style: var(var(--h1-font-style));
-        font-weight: var(var(--h1-font-weight));
-        line-height: var(var(--h1-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(64px, var(100px));
+        font-style: var(var(normal));
+        font-weight: var(var(700));
+        line-height: var(var(1.6));
         color: var(var(#000000));
-        text-decoration: var(var(--h1-text-decoration));
-        text-transform: var(var(--h1-text-transform));
-        letter-spacing: var(var(--h1-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box h2 {
-    font-family: var(--h2-font-family);
-    font-size: var(--h2-font-size);
-    font-style: var(--h2-font-style);
-    font-weight: var(--h2-font-weight);
-    line-height: var(--h2-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(64px);
+    font-style: var(normal);
+    font-weight: var(700);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h2-text-decoration);
-    text-transform: var(--h2-text-transform);
-    letter-spacing: var(--h2-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box h2 {
-        font-family: var(var(--h2-font-family));
-        font-size: var(--h2-m-font-size, var(--h2-font-size));
-        font-style: var(var(--h2-font-style));
-        font-weight: var(var(--h2-font-weight));
-        line-height: var(var(--h2-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(36px, var(64px));
+        font-style: var(var(normal));
+        font-weight: var(var(700));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h2-text-decoration));
-        text-transform: var(var(--h2-text-transform));
-        letter-spacing: var(var(--h2-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box h3 {
-    font-family: var(--h3-font-family);
-    font-size: var(--h3-font-size);
-    font-style: var(--h3-font-style);
-    font-weight: var(--h3-font-weight);
-    line-height: var(--h3-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(48px);
+    font-style: var(normal);
+    font-weight: var(700);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h3-text-decoration);
-    text-transform: var(--h3-text-transform);
-    letter-spacing: var(--h3-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box h3 {
-        font-family: var(var(--h3-font-family));
-        font-size: var(--h3-m-font-size, var(--h3-font-size));
-        font-style: var(var(--h3-font-style));
-        font-weight: var(var(--h3-font-weight));
-        line-height: var(var(--h3-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(32px, var(48px));
+        font-style: var(var(normal));
+        font-weight: var(var(700));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h3-text-decoration));
-        text-transform: var(var(--h3-text-transform));
-        letter-spacing: var(var(--h3-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box h4 {
-    font-family: var(--h4-font-family);
-    font-size: var(--h4-font-size);
-    font-style: var(--h4-font-style);
-    font-weight: var(--h4-font-weight);
-    line-height: var(--h4-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(32px);
+    font-style: var(normal);
+    font-weight: var(700);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h4-text-decoration);
-    text-transform: var(--h4-text-transform);
-    letter-spacing: var(--h4-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box h4 {
-        font-family: var(var(--h4-font-family));
-        font-size: var(--h4-m-font-size, var(--h4-font-size));
-        font-style: var(var(--h4-font-style));
-        font-weight: var(var(--h4-font-weight));
-        line-height: var(var(--h4-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(28px, var(32px));
+        font-style: var(var(normal));
+        font-weight: var(var(700));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h4-text-decoration));
-        text-transform: var(var(--h4-text-transform));
-        letter-spacing: var(var(--h4-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box h5 {
-    font-family: var(--h5-font-family);
-    font-size: var(--h5-font-size);
-    font-style: var(--h5-font-style);
-    font-weight: var(--h5-font-weight);
-    line-height: var(--h5-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(24px);
+    font-style: var(normal);
+    font-weight: var(700);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h5-text-decoration);
-    text-transform: var(--h5-text-transform);
-    letter-spacing: var(--h5-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box h5 {
-        font-family: var(var(--h5-font-family));
-        font-size: var(--h5-m-font-size, var(--h5-font-size));
-        font-style: var(var(--h5-font-style));
-        font-weight: var(var(--h5-font-weight));
-        line-height: var(var(--h5-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(24px, var(24px));
+        font-style: var(var(normal));
+        font-weight: var(var(700));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h5-text-decoration));
-        text-transform: var(var(--h5-text-transform));
-        letter-spacing: var(var(--h5-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box h6 {
-    font-family: var(--h6-font-family);
-    font-size: var(--h6-font-size);
-    font-style: var(--h6-font-style);
-    font-weight: var(--h6-font-weight);
-    line-height: var(--h6-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(20px);
+    font-style: var(normal);
+    font-weight: var(400);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h6-text-decoration);
-    text-transform: var(--h6-text-transform);
-    letter-spacing: var(--h6-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box h6 {
-        font-family: var(var(--h6-font-family));
-        font-size: var(--h6-m-font-size, var(--h6-font-size));
-        font-style: var(var(--h6-font-style));
-        font-weight: var(var(--h6-font-weight));
-        line-height: var( var(--h6-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(20px, var(20px));
+        font-style: var(var(normal));
+        font-weight: var(var(400));
+        line-height: var( var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h6-text-decoration));
-        text-transform: var(var(--h6-text-transform));
-        letter-spacing: var(var(--h6-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box {
-    font-family: var(--body-large-font-family);
-    font-size: var(--body-large-font-size);
-    font-style: var(--body-large-font-style);
-    font-weight: var(--body-large-font-weight);
-    line-height: var(--body-large-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(18px);
+    font-style: var(normal);
+    font-weight: var(400);
+    line-height: var(1.6);
     color: var(#000000);
-    text-decoration: var(--body-large-text-decoration);
-    text-transform: var(--body-large-text-transform);
-    letter-spacing: var(--body-large-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box {
-        font-family: var(var(--body-large-font-family));
-        font-size: var(--body-large-m-font-size, var(--body-large-font-size));
-        font-style: var(var(--body-large-font-style));
-        font-weight: var(var(--body-large-font-weight));
-        line-height: var(var(--body-large-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(18px, var(18px));
+        font-style: var(var(normal));
+        font-weight: var(var(400));
+        line-height: var(var(1.6));
         color: var(var(#000000));
-        text-decoration: var(var(--body-large-text-decoration));
-        text-transform: var(var(--body-large-text-transform));
-        letter-spacing: var(var(--body-large-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box .body {
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-size);
-    font-style: var(--body-font-style);
-    font-weight: var(--body-font-weight);
-    line-height: var(--body-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(16px);
+    font-style: var(normal);
+    font-weight: var(300);
+    line-height: var(1.6);
     color: var(#000000);
-    text-decoration: var(--body-text-decoration);
-    text-transform: var(--body-text-transform);
-    letter-spacing: var(--body-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .text-box .body {
-        font-family: var(var(--body-font-family));
-        font-size: var(--body-m-font-size, var(--body-font-size));
-        font-style: var(var(--body-font-style));
-        font-weight: var(var(--body-font-weight));
-        line-height: var(var(--body-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(16px, var(16px));
+        font-style: var(var(normal));
+        font-weight: var(var(300));
+        line-height: var(var(1.6));
         color: var(var(#000000));
-        text-decoration: var(var(--body-text-decoration));
-        text-transform: var(var(--body-text-transform));
-        letter-spacing: var(var(--body-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .text-box {
-    font-family: var(--body-small-font-family);
-    font-size: var(--body-small-font-size);
-    font-style: var(--body-small-font-style);
-    font-weight: var(--body-small-font-weight);
-    line-height: var(--body-small-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(14px);
+    font-style: var(normal);
+    font-weight: var(300);
+    line-height: var(1.6);
     color: var(#000000);
-    text-decoration: var(--body-small-text-decoration);
-    text-transform: var(--body-small-text-transform);
-    letter-spacing: var(--body-small-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 
@@ -950,143 +745,143 @@ select[data-v-db5ff5a6] {
 }
 
 .product-list-empty-state h6 {
-    font-family: var(--h6-font-family);
-    font-size: var(--h6-font-size);
-    font-style: var(--h6-font-style);
-    font-weight: var(--h6-font-weight);
-    line-height: var(--h6-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(20px);
+    font-style: var(normal);
+    font-weight: var(400);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h6-text-decoration);
-    text-transform: var(--h6-text-transform);
-    letter-spacing: var(--h6-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .product-list-empty-state h6 {
-        font-family: var(var(--h6-font-family));
-        font-size: var(--h6-m-font-size, var(--h6-font-size));
-        font-style: var(var(--h6-font-style));
-        font-weight: var(var(--h6-font-weight));
-        line-height: var(var(--h6-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(20px, var(20px));
+        font-style: var(var(normal));
+        font-weight: var(var(400));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h6-text-decoration));
-        text-transform: var(var(--h6-text-transform));
-        letter-spacing: var(var(--h6-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .product-list-item h6[data-v-16bbed2b] {
-    font-family: var(--h6-font-family);
-    font-size: var(--h6-font-size);
-    font-style: var(--h6-font-style);
-    font-weight: var(--h6-font-weight);
-    line-height: var(--h6-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(20px);
+    font-style: var(normal);
+    font-weight: var(400);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h6-text-decoration);
-    text-transform: var(--h6-text-transform);
-    letter-spacing: var(--h6-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .product-list-item h6[data-v-16bbed2b] {
-        font-family: var(var(--h6-font-family));
-        font-size: var(--h6-m-font-size, var(--h6-font-size));
-        font-style: var(var(--h6-font-style));
-        font-weight: var(var(--h6-font-weight));
-        line-height: var(var(--h6-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(20px, var(20px));
+        font-style: var(var(normal));
+        font-weight: var(var(400));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h6-text-decoration));
-        text-transform: var(var(--h6-text-transform));
-        letter-spacing: var(var(--h6-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .product-list-item p[data-v-16bbed2b] {
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-size);
-    font-style: var(--body-font-style);
-    font-weight: var(--body-font-weight);
-    line-height: var(--body-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(16px);
+    font-style: var(normal);
+    font-weight: var(300);
+    line-height: var(1.6);
     color: var(#000000);
-    text-decoration: var(--body-text-decoration);
-    text-transform: var(--body-text-transform);
-    letter-spacing: var(--body-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .product-list-item p[data-v-16bbed2b] {
-        font-family: var(var(--body-font-family));
-        font-size: var(--body-m-font-size, var(--body-font-size));
-        font-style: var(var(--body-font-style));
-        font-weight: var(var(--body-font-weight));
-        line-height: var(var(--body-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(16px, var(16px));
+        font-style: var(var(normal));
+        font-weight: var(var(300));
+        line-height: var(var(1.6));
         color: var(var(#000000));
-        text-decoration: var(var(--body-text-decoration));
-        text-transform: var(var(--body-text-transform));
-        letter-spacing: var(var(--body-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .block-product h3 {
-    font-family: var(--h3-font-family);
-    font-size: var(--h3-font-size);
-    font-style: var(--h3-font-style);
-    font-weight: var(--h3-font-weight);
-    line-height: var(--h3-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(48px);
+    font-style: var(normal);
+    font-weight: var(700);
+    line-height: var(1.2);
     color: var(#000000);
-    text-decoration: var(--h3-text-decoration);
-    text-transform: var(--h3-text-transform);
-    letter-spacing: var(--h3-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .block-product h3 {
-        font-family: var(var(--h3-font-family));
-        font-size: var(--h3-m-font-size, var(--h3-font-size));
-        font-style: var(var(--h3-font-style));
-        font-weight: var(var(--h3-font-weight));
-        line-height: var(var(--h3-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(32px, var(48px));
+        font-style: var(var(normal));
+        font-weight: var(var(700));
+        line-height: var(var(1.2));
         color: var(var(#000000));
-        text-decoration: var(var(--h3-text-decoration));
-        text-transform: var(var(--h3-text-transform));
-        letter-spacing: var(var(--h3-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var(var(normal))
     }
 }
 
 .block-product p {
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-size);
-    font-style: var(--body-font-style);
-    font-weight: var(--body-font-weight);
-    line-height: var(--body-line-height);
+    font-family: var("Rubik", sans-serif);
+    font-size: var(16px);
+    font-style: var(normal);
+    font-weight: var(300);
+    line-height: var(1.6);
     color: var(#000000);
-    text-decoration: var(--body-text-decoration);
-    text-transform: var(--body-text-transform);
-    letter-spacing: var(--body-letter-spacing)
+    text-decoration: var(none);
+    text-transform: var(none);
+    letter-spacing: var(normal)
 }
 
 @media screen and (max-width: 920px) {
     .block-product p {
-        font-family: var(var(--body-font-family));
-        font-size: var(--body-m-font-size, var(--body-font-size));
-        font-style: var(var(--body-font-style));
-        font-weight: var(var(--body-font-weight));
-        line-height: var(var(--body-line-height));
+        font-family: var(var("Rubik", sans-serif));
+        font-size: var(16px, var(16px));
+        font-style: var(var(normal));
+        font-weight: var(var(300));
+        line-height: var(var(1.6));
         color: var(var(#000000));
-        text-decoration: var(var(--body-text-decoration));
-        text-transform: var(var(--body-text-transform));
-        letter-spacing: var( var(--body-letter-spacing))
+        text-decoration: var(var(none));
+        text-transform: var(var(none));
+        letter-spacing: var( var(normal))
     }
 }
 
 
 
 html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store a, html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store div, html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store span {
-    font-family: var(--font-secondary);
+    font-family: var("Montserrat", sans-serif);
 }
 
 html#ecwid_html body{
-    font-family: var(--font-primary);
+    font-family: var("Rubik", sans-serif);
 }
 
 html#ecwid_html body{
