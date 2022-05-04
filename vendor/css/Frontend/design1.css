@@ -1141,3 +1141,11 @@ html#ecwid_html.ec-has-filters-popup body {
     text-align: left;
 }
 
+.grid-button--secondary{
+    background-color: #9B0048 !important;
+}
+
+.grid-button--secondary:hover{
+    background-color: #e03483 !important;
+}
+
