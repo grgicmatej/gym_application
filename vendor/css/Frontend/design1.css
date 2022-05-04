@@ -2,43 +2,43 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans&amp;display=swap);
 
 *, :after, :before {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 * {
     padding: 0;
     margin: 0;
-    color: inherit
+    color: inherit;
 }
 
 :after, :before {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body, button {
-    font-family: Roboto, sans-serif
+    font-family: Roboto, sans-serif;
 }
 
 button {
     background-color: #fff;
     border: none;
     outline: none;
-    box-shadow: none
+    box-shadow: none;
 }
 
 label[for] {
-    cursor: pointer
+    cursor: pointer;
 }
 
 iframe {
-    border-width: 0
+    border-width: 0;
 }
 
 .sentry[data-v-289856bb] {
@@ -48,7 +48,7 @@ iframe {
     z-index: -1;
     width: 920px;
     height: 1px;
-    pointer-events: none
+    pointer-events: none;
 }
 
 select[data-v-db5ff5a6] {
@@ -58,19 +58,19 @@ select[data-v-db5ff5a6] {
     margin-bottom: 15px;
     font-size: 22px;
     line-height: 49px;
-    outline: 0
+    outline: 0;
 }
 
 
 @keyframes expand-data-v-6ef35d4f {
     0% {
         display: none;
-        opacity: 0
+        opacity: 0;
     }
     1% {
         display: block;
         opacity: 0;
-        transform: translateY(-1em)
+        transform: translateY(-1em);
     }
     to {
         opacity: 1;
@@ -85,8 +85,8 @@ select[data-v-db5ff5a6] {
     left: 0;
     z-index: 13;
     overflow: hidden;
-    background-color: var(--background-color);
-    transition: background-color .3s ease-in-out, height 1ms linear 999s
+    background-color: transparent;
+    transition: background-color .3s ease-in-out, height 1ms linear 999s;
 }
 
 .block-background__image {
@@ -97,85 +97,77 @@ select[data-v-db5ff5a6] {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
 
 .blog-list-item-meta__subtitle span[data-v-15956daa]:nth-of-type(2):before {
-    content: "·"
+    content: "·";
 }
 
 .grid-button--primary[data-v-2f409ee5] {
     display: inline-block;
     max-width: 100%;
-    padding: var(16px) var(40px);
+    padding: 16px 40px;
     overflow: hidden;
-    font-family: var("Rubik", sans-serif);
-    font-size: var(16px);
-    font-style: var(normal);
-    font-weight: var(400);
-    line-height: var(normal);
-    color: var(#fff);
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
     text-align: center;
-    text-decoration: var(none);
+    text-decoration: none;
     text-overflow: ellipsis;
-    text-transform: var(none);
-    letter-spacing: var(normal);
+    text-transform: none;
+    letter-spacing: normal;
     white-space: nowrap;
     cursor: pointer;
-    background-color: var(var(#7634BF));
-    border: var(--grid-button-primary-border-null, var(0px) solid var(transparent));
-    border-radius: var(50px);
-    box-shadow: var(--grid-button-primary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
-    transition: all var(0.2s) var(ease)
+    background-color: #7634BF;
+    border-radius: 50px;
+    transition: all 0.2s ease;
 }
 
 .grid-button--primary[data-v-2f409ee5]:hover {
-    color: var(#fff);
-    background-color: var(var(#5d1ba6));
-    border: var(--grid-button-primary-border-null-hover, var(0px) solid var(transparent));
-    box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(0px) var(0px) var(0px) var(0px) var(0px))
+    color: #fff;
+    background-color: #5d1ba6;
 }
 
 .grid-button--primary[data-v-2f409ee5]:disabled {
     opacity: .4;
-    cursor: unset
+    cursor: unset;
 }
 
 .grid-button--secondary[data-v-2f409ee5] {
     display: inline-block;
     max-width: 100%;
-    padding: var(16px-y) var(16px-x);
+    padding: 16px 40px;
     overflow: hidden;
-    font-family: var("Rubik", sans-serif);
-    font-size: var(16px);
-    font-style: var(normal);
-    font-weight: var(400);
-    line-height: var(normal);
-    color: var(#fff);
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
     text-align: center;
-    text-decoration: var(none);
+    text-decoration: none;
     text-overflow: ellipsis;
-    text-transform: var(none);
-    letter-spacing: var(normal-spacing);
+    text-transform: none;
+    letter-spacing: inherit;
     white-space: nowrap;
     cursor: pointer;
-    background-color: var(var(#E03584));
-    border: var(--grid-button-secondary-border-null, var(0px) solid var(transparent));
-    border-radius: var(50px);
-    box-shadow: var(--grid-button-secondary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
-    transition: all var(0.2s) var(ease)
+    background-color: #E03584;
+    border-radius: 50px;
+    transition: all 0.2s ease;
 }
 
 .grid-button--secondary[data-v-2f409ee5]:hover {
-    color: var(#fff);
-    background-color: var(var(#f44998));
-    border: var(--grid-button-secondary-border-null-hover, var(0px) solid var(transparent));
-    box-shadow: var(none, var(0px) var(0px) var(0px-hover) var(0px) var(0px))
+    color: #fff;
+    background-color: #f44998;
 }
 
 .grid-button--secondary[data-v-2f409ee5]:disabled {
     opacity: .4;
-    cursor: unset
+    cursor: unset;
 }
 
 @media screen and (max-width: 920px) {
@@ -183,45 +175,41 @@ select[data-v-db5ff5a6] {
         display: inline-block;
         max-width: 100%;
         overflow: hidden;
-        font-family: var("Rubik", sans-serif);
-        font-style: var(normal);
-        font-weight: var(400);
-        line-height: var(normal);
-        color: var(#fff);
+        font-family: "Rubik", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #fff;
         text-align: center;
-        text-decoration: var(none);
+        text-decoration: none;
         text-overflow: ellipsis;
-        text-transform: var(none);
-        letter-spacing: var(normal);
+        text-transform: none;
+        letter-spacing: normal;
         white-space: nowrap;
         cursor: pointer;
-        background-color: var(var(#7634BF));
-        border: var(--grid-button-primary-border-null, var(0px) solid var(transparent));
-        box-shadow: var(--grid-button-primary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
-        transition: all var(0.2s) var(ease);
-        padding: var(14px, var(16px)) var(36px, var(40px));
-        font-size: var(14px, var(16px));
+        background-color: #7634BF;
+        transition: all 0.2s ease;
+        padding: 14px 16px 36px 40px;
+        font-size: 14px;
     }
 
     .grid-button--primary[data-v-2f409ee5]:hover {
-        color: var(#fff);
-        background-color: var(var(#5d1ba6));
-        border: var(--grid-button-primary-border-null-hover, var(0px) solid var(transparent));
-        box-shadow: var(--grid-button-primary-box-shadow-null-hover, var(0px) var(0px) var(0px) var(0px) var(0px))
+        color: #fff;
+        background-color: #5d1ba6;
     }
 
     .grid-button--primary[data-v-2f409ee5]:disabled {
         opacity: .4;
-        cursor: unset
+        cursor: unset;
     }
 }
 
 @keyframes loading-data-v-2f409ee5 {
     0% {
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
     to {
-        transform: rotate(1turn)
+        transform: rotate(1turn);
     }
 }
 
@@ -230,60 +218,55 @@ select[data-v-db5ff5a6] {
         display: inline-block;
         max-width: 100%;
         overflow: hidden;
-        font-family: var("Rubik", sans-serif);
-        font-style: var(normal);
-        font-weight: var(400);
-        line-height: var(normal);
-        color: var(#fff);
+        font-family: "Rubik", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #fff;
         text-align: center;
-        text-decoration: var(none);
+        text-decoration: none;
         text-overflow: ellipsis;
-        text-transform: var(none);
-        letter-spacing: var(normal-spacing);
+        text-transform: none;
         white-space: nowrap;
         cursor: pointer;
-        border: var(--grid-button-secondary-border-null, var(0px) solid var(transparent));
-        box-shadow: var(--grid-button-secondary-box-shadow-null, var(0px) var(0px) var(0px) var(0px) var(transparent));
-        transition: all var(0.2s) var(ease);
-        padding: var(14px, var(16px-y)) var(36px, var(16px-x));
-        font-size: var(14px, var(16px));
+        transition: all 0.2s ease;
+        padding: 14px 16px 36px 40px;
+        font-size: 14px;
     }
 
     .grid-button--secondary[data-v-2f409ee5]:hover {
-        color: var(#fff);
-        background-color: var(var(#f44998));
-        border: var(--grid-button-secondary-border-null-hover, var(0px) solid var(transparent));
-        box-shadow: var(none, var(0px) var(0px) var(0px-hover) var(0px) var(0px))
+        color: #fff;
+        background-color: #f44998;
     }
 
     .grid-button--secondary[data-v-2f409ee5]:disabled {
         opacity: .4;
-        cursor: unset
+        cursor: unset;
     }
 
     @keyframes loading-data-v-2f409ee5 {
         0% {
-            transform: rotate(0deg)
+            transform: rotate(0deg);
         }
         to {
-            transform: rotate(1turn)
+            transform: rotate(1turn);
         }
     }
 }
 
 .input[data-v-3a756488] ::placeholder {
     font-size: 14px;
-    color: var(#888888)
+    color: #888888;
 }
 
 .input--dark[data-v-3a756488] ::placeholder {
     font-size: 14px;
-    color: var(#565656)
+    color: #565656;
 }
 
 @keyframes spin-data-v-49175f0a {
     to {
-        transform: rotate(1turn)
+        transform: rotate(1turn);
     }
 }
 
@@ -291,279 +274,279 @@ select[data-v-db5ff5a6] {
     position: relative;
     display: block;
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 .image__image[data-v-00c3b48d] {
     position: absolute;
     display: block;
-    object-fit: var(--object-fit, cover);
-    border-radius: var(--border-radius)
+    object-fit: cover;
+    border-radius: 0;
 }
 
 .image__image[data-v-00c3b48d] {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 @media screen and (max-width: 920px) {
     .image__image--reset-m-position[data-v-00c3b48d] {
         position: static;
-        height: auto
+        height: auto;
     }
 }
 
 @keyframes blink-data-v-70ace480 {
     0% {
-        background-position: 0 53%
+        background-position: 0 53%;
     }
     50% {
-        background-position: 100% 48%
+        background-position: 100% 48%;
     }
     to {
-        background-position: 0 53%
+        background-position: 0 53%;
     }
 }
 
 @keyframes blink {
     0% {
-        background-position: 0 53%
+        background-position: 0 53%;
     }
     50% {
-        background-position: 100% 48%
+        background-position: 100% 48%;
     }
     to {
-        background-position: 0 53%
+        background-position: 0 53%;
     }
 }
 
 @keyframes placeholderShimmer-data-v-7c859886 {
     0% {
-        transform: translateZ(0)
+        transform: translateZ(0);
     }
     to {
-        transform: translate3d(50%, 0, 0)
+        transform: translate3d(50%, 0, 0);
     }
 }
 
 .text-box h1 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(100px);
-    font-style: var(normal);
-    font-weight: var(700);
-    line-height: var(1.6);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box h1 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(64px, var(100px));
-        font-style: var(var(normal));
-        font-weight: var(var(700));
-        line-height: var(var(1.6));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.6;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box h2 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(64px);
-    font-style: var(normal);
-    font-weight: var(700);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box h2 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(36px, var(64px));
-        font-style: var(var(normal));
-        font-weight: var(var(700));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box h3 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(48px);
-    font-style: var(normal);
-    font-weight: var(700);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box h3 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(32px, var(48px));
-        font-style: var(var(normal));
-        font-weight: var(var(700));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box h4 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(32px);
-    font-style: var(normal);
-    font-weight: var(700);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box h4 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(28px, var(32px));
-        font-style: var(var(normal));
-        font-weight: var(var(700));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box h5 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(24px);
-    font-style: var(normal);
-    font-weight: var(700);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box h5 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(24px, var(24px));
-        font-style: var(var(normal));
-        font-weight: var(var(700));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box h6 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(20px);
-    font-style: var(normal);
-    font-weight: var(400);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box h6 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(20px, var(20px));
-        font-style: var(var(normal));
-        font-weight: var(var(400));
-        line-height: var( var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(18px);
-    font-style: var(normal);
-    font-weight: var(400);
-    line-height: var(1.6);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(18px, var(18px));
-        font-style: var(var(normal));
-        font-weight: var(var(400));
-        line-height: var(var(1.6));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box .body {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(16px);
-    font-style: var(normal);
-    font-weight: var(300);
-    line-height: var(1.6);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .text-box .body {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(16px, var(16px));
-        font-style: var(var(normal));
-        font-weight: var(var(300));
-        line-height: var(var(1.6));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .text-box {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(14px);
-    font-style: var(normal);
-    font-weight: var(300);
-    line-height: var(1.6);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 
@@ -573,138 +556,138 @@ select[data-v-db5ff5a6] {
     margin: 0;
     overflow-wrap: break-word;
     white-space: break-spaces;
-    outline: none
+    outline: none;
 }
 
 .text-box h1 {
-    margin-bottom: 48px
+    margin-bottom: 48px;
 }
 
 .text-box h1:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .text-box .body, .text-box, .text-box h2, .text-box h3, .text-box h4 {
-    margin-bottom: 32px
+    margin-bottom: 32px;
 }
 
 .text-box, .text-box .body:last-child, .text-box h2:last-child, .text-box h3:last-child, .text-box h4:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .text-box h5 {
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 
 .text-box h5:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .text-box h6 {
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
 .text-box h6:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .text-box{
-    margin-bottom: 24px
+    margin-bottom: 24px;
 }
 
 .text-box {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .text-box ol, .text-box ul {
-    padding-left: 40px
+    padding-left: 40px;
 }
 
 .text-box > p:empty:after {
-    content: " "
+    content: " ";
 }
 
 @media screen and (max-width: 920px) {
     .text-box h1 {
-        margin-bottom: 48px
+        margin-bottom: 48px;
     }
 
     .text-box h1:last-child {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     .text-box .body, .text-box, .text-box h2, .text-box h3, .text-box h4 {
-        margin-bottom: 32px
+        margin-bottom: 32px;
     }
 
     .text-box, .text-box .body:last-child, .text-box h2:last-child, .text-box h3:last-child, .text-box h4:last-child {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     .text-box h5 {
-        margin-bottom: 16px
+        margin-bottom: 16px;
     }
 
     .text-box h5:last-child {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     .text-box h6 {
-        margin-bottom: 8px
+        margin-bottom: 8px;
     }
 
     .text-box h6:last-child {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     .text-box  {
-        margin-bottom: 24px
+        margin-bottom: 24px;
     }
 
     .text-box {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 }
 
 .block-grid-item[data-v-189c24f4] {
     position: relative;
-    z-index: var(--element-z-index);
+    z-index: 3;
     display: flex;
     flex-direction: column;
     grid-area: var(--position);
-    align-items: var(--align);
-    justify-content: var(--justify);
+    align-items: flex-start;
+    justify-content: flex-start;
     overflow: hidden;
-    text-align: var(--text)
+    text-align: left;
 }
 
 @media screen and (max-width: 920px) {
     .block-grid-item[data-v-189c24f4] {
         grid-area: auto;
         grid-column: 3/-3;
-        align-items: var( var(--align));
-        align-self: var(--m-align-self);
-        justify-content: var(var(--justify));
+        align-items: flex-start;
+        align-self: center;
+        justify-content: flex-start;
         max-width: 100%;
-        text-align: var(var(--text))
+        text-align: left;
     }
 }
 
 .block-grid-item[data-v-189c24f4] {
-    pointer-events: none
+    pointer-events: none;
 }
 
 .block-grid-item__component[data-v-189c24f4] {
-    pointer-events: all
+    pointer-events: all;
 }
 
 @media screen and (max-width: 920px) {
     .block-grid-item[data-v-189c24f4] {
-        width: var(--m-width, 100%)
+        width: 92.6121%;
     }
 
     .block-grid-item.use-m-margin[data-v-189c24f4] {
-        margin: var(--m-element-margin)
+        margin: 0 0 12px 0;
     }
 
     .block-grid-item.use-m-margin[data-v-189c24f4]:last-of-type {
@@ -745,143 +728,143 @@ select[data-v-db5ff5a6] {
 }
 
 .product-list-empty-state h6 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(20px);
-    font-style: var(normal);
-    font-weight: var(400);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .product-list-empty-state h6 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(20px, var(20px));
-        font-style: var(var(normal));
-        font-weight: var(var(400));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .product-list-item h6[data-v-16bbed2b] {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(20px);
-    font-style: var(normal);
-    font-weight: var(400);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .product-list-item h6[data-v-16bbed2b] {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(20px, var(20px));
-        font-style: var(var(normal));
-        font-weight: var(var(400));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .product-list-item p[data-v-16bbed2b] {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(16px);
-    font-style: var(normal);
-    font-weight: var(300);
-    line-height: var(1.6);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .product-list-item p[data-v-16bbed2b] {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(16px, var(16px));
-        font-style: var(var(normal));
-        font-weight: var(var(300));
-        line-height: var(var(1.6));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .block-product h3 {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(48px);
-    font-style: var(normal);
-    font-weight: var(700);
-    line-height: var(1.2);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .block-product h3 {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(32px, var(48px));
-        font-style: var(var(normal));
-        font-weight: var(var(700));
-        line-height: var(var(1.2));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var(var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 .block-product p {
-    font-family: var("Rubik", sans-serif);
-    font-size: var(16px);
-    font-style: var(normal);
-    font-weight: var(300);
-    line-height: var(1.6);
-    color: var(#000000);
-    text-decoration: var(none);
-    text-transform: var(none);
-    letter-spacing: var(normal)
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 @media screen and (max-width: 920px) {
     .block-product p {
-        font-family: var(var("Rubik", sans-serif));
-        font-size: var(16px, var(16px));
-        font-style: var(var(normal));
-        font-weight: var(var(300));
-        line-height: var(var(1.6));
-        color: var(var(#000000));
-        text-decoration: var(var(none));
-        text-transform: var(var(none));
-        letter-spacing: var( var(normal))
+        font-family: "Rubik", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #000000;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
     }
 }
 
 
 
 html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store a, html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store div, html#ecwid_html body#ecwid_body .block-ecwid-store .ec-size .ec-store span {
-    font-family: var("Montserrat", sans-serif);
+    font-family: "Montserrat", sans-serif;
 }
 
 html#ecwid_html body{
-    font-family: var("Rubik", sans-serif);
+    font-family: "Rubik", sans-serif;
 }
 
 html#ecwid_html body{
