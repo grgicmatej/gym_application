@@ -189,8 +189,7 @@ select[data-v-db5ff5a6] {
         cursor: pointer;
         background-color: #7634BF;
         transition: all 0.2s ease;
-        padding: 14px 16px 36px 40px;
-        font-size: 14px;
+        width: 100%;
     }
 
     .grid-button--primary[data-v-2f409ee5]:hover {
@@ -230,8 +229,7 @@ select[data-v-db5ff5a6] {
         white-space: nowrap;
         cursor: pointer;
         transition: all 0.2s ease;
-        padding: 14px 16px 36px 40px;
-        font-size: 14px;
+        width: 100%;
     }
 
     .grid-button--secondary[data-v-2f409ee5]:hover {
@@ -683,7 +681,7 @@ select[data-v-db5ff5a6] {
 
 @media screen and (max-width: 920px) {
     .block-grid-item[data-v-189c24f4] {
-        width: 92.6121%;
+        width: 100%;
     }
 
     .block-grid-item.use-m-margin[data-v-189c24f4] {

@@ -27,10 +27,12 @@
 
     .mobgrid3{
         height: 120px;
+        text-align: center;
     }
 
     .mobgrid4{
         height: 100px;
+        text-align: center;
     }
 
     .divgrid2{
@@ -72,9 +74,5 @@
 
     .mobgrid7{
         height: 70px !important;
-    }
-
-    .mobgrid8{
-        --align: none !important;
     }
 }
