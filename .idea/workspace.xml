@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="database backup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +182,9 @@
       <workItem from="1651580095770" duration="60000" />
       <workItem from="1651583453094" duration="1324000" />
       <workItem from="1651584794812" duration="2360000" />
-      <workItem from="1651644711866" duration="17097000" />
+      <workItem from="1651644711866" duration="17122000" />
+      <workItem from="1651841445210" duration="24000" />
+      <workItem from="1651842072360" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>
