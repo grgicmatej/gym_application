@@ -1,37 +1,37 @@
-@media only screen and (min-width: 921px) and (max-width: 1150px) {
+@media only screen and (min-width: 921px) and (max-width: 1169px) {
     .text1 {
         font-size: 74px !important;
-        line-height: 95px;
+        line-height: 95px !important;
     }
 
     .text2{
-        font-size: 90px;
-        line-height: 95px;
+        font-size: 90px !important;
+        line-height: 95px !important;
     }
 
     .mobgrid1{
         height: 200px !important;
         line-height: 60px !important;
-        text-align: center;
-        margin-top: 0;
+        text-align: center !important;
+        margin-top: 0 !important;
     }
 
     .mobgrid2{
         padding-top: 50px !important;
-        height: 150px;
+        height: 150px !important;
         text-align: left !important;
     }
 
     .divgrid1{
-        text-align: center;
+        text-align: center !important;
     }
 
     .mobgrid3{
-        height: 330px;
+        height: 330px !important;
     }
 
     .mobgrid4{
-        height: 100px;
+        height: 100px !important;
     }
 
     .divgrid2{
@@ -39,13 +39,13 @@
     }
 
     .mobgrid6{
-        height: 100px;
-        text-align: center;
+        height: 100px !important;
+        text-align: center !important;
     }
 
     .text3{
         text-align: center !important;
-        margin-top: -160px;
+        margin-top: -160px !important;
     }
 
     .text4{
@@ -53,8 +53,8 @@
     }
 
     .mobgrid5{
-        height: 100px;
-        margin-top: 20px;
+        height: 100px !important;
+        margin-top: 20px !important;
     }
 
     .divgrid3{
@@ -82,10 +82,18 @@
     }
 
     .glavnaSlika{
-        margin-top: 150px;
+        margin-top: 150px !important;
     }
 
     .drugaSlika{
-        margin-top: 200px;
+        margin-top: 200px !important;
+    }
+
+    .text-box h1{
+        line-height: 0 !important;
+    }
+
+    .mobgrid9{
+        margin-top: 0 !important;
     }
 }

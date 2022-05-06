@@ -10,7 +10,7 @@
     }
 
     .mobgrid1{
-        height: 260px !important;
+        height: 350px !important;
         line-height: 60px !important;
         text-align: center;
         margin-top: 100px;
@@ -31,7 +31,7 @@
     }
 
     .mobgrid4{
-        height: 100px;
+        height: 130px;
     }
 
     .divgrid2{
@@ -39,7 +39,7 @@
     }
 
     .mobgrid6{
-        height: 100px;
+        height: 130px;
         text-align: center;
     }
 
@@ -76,5 +76,9 @@
 
     .mobgrid8{
         --align: none !important;
+    }
+
+    .mobgrid9{
+        margin-top: -60px !important;
     }
 }
