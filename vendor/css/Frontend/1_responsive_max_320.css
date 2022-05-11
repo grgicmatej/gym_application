@@ -1,83 +1,83 @@
 @media only screen and (min-width: 0px) and (max-width: 320px) {
     .text1 {
         font-size: 40px !important;
-        line-height: 0 !important;
+        line-height: 0 !important
     }
 
-    .text2{
+    .text2 {
         font-size: 55px !important;
-        line-height: 80px !important;
+        line-height: 80px !important
     }
 
-    .mobgrid1{
+    .mobgrid1 {
         height: 400px !important;
         line-height: 60px !important;
         text-align: center !important;
-        margin-top: 50px !important;
+        margin-top: 50px !important
     }
 
-    .mobgrid2{
+    .mobgrid2 {
         padding-top: 0 !important;
         margin-top: -100px !important;
-        height: 160px !important;
+        height: 160px !important
     }
 
-    .divgrid1{
-        text-align: center !important;
+    .divgrid1 {
+        text-align: center !important
     }
 
-    .mobgrid3{
-        height: 140px !important;
+    .mobgrid3 {
+        height: 140px !important
     }
 
-    .mobgrid4{
+    .mobgrid4 {
+        height: 175px !important
+    }
+
+    .divgrid2 {
+        padding-top: 10px !important
+    }
+
+    .mobgrid6 {
         height: 175px !important;
+        text-align: center !important
     }
 
-    .divgrid2{
-        padding-top: 10px !important;
+    .text3 {
+        text-align: center !important
     }
 
-    .mobgrid6{
-        height: 175px !important;
-        text-align: center !important;
+    .text4 {
+        font-size: 34px !important
     }
 
-    .text3{
-        text-align: center !important;
+    .mobgrid5 {
+        height: 180px !important
     }
 
-    .text4{
-        font-size: 34px !important;
+    .divgrid3 {
+        margin-bottom: 25px !important
     }
 
-    .mobgrid5{
-        height: 180px !important;
-    }
-
-    .divgrid3{
-        margin-bottom: 25px !important;
-    }
-
-    .divgrid4{
+    .divgrid4 {
         margin-top: 20px !important;
-        text-align: center !important;
+        text-align: center !important
     }
 
-    .text5{
+    .text5 {
         margin-top: 10px !important;
-        margin-bottom: 40px !important;
+        margin-bottom: 40px !important
     }
 
-    .mobgrid7{
-        height: 70px !important;
+    .mobgrid7 {
+        height: 70px !important
     }
 
-    .mobgrid8{
-        --align: none !important;
+    .mobgrid8 {
+        --align: none !important
     }
 
-    .mobgrid9{
-        margin-top: -60px !important;
+    .mobgrid9 {
+        margin-top: -60px !important
     }
 }

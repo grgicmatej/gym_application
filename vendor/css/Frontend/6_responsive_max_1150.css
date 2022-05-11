@@ -1,99 +1,99 @@
 @media only screen and (min-width: 921px) and (max-width: 1169px) {
     .text1 {
         font-size: 74px !important;
-        line-height: 95px !important;
+        line-height: 95px !important
     }
 
-    .text2{
+    .text2 {
         font-size: 90px !important;
-        line-height: 95px !important;
+        line-height: 95px !important
     }
 
-    .mobgrid1{
+    .mobgrid1 {
         height: 200px !important;
         line-height: 60px !important;
         text-align: center !important;
-        margin-top: 0 !important;
+        margin-top: 0 !important
     }
 
-    .mobgrid2{
+    .mobgrid2 {
         padding-top: 50px !important;
         height: 150px !important;
-        text-align: left !important;
+        text-align: left !important
     }
 
-    .divgrid1{
-        text-align: center !important;
+    .divgrid1 {
+        text-align: center !important
     }
 
-    .mobgrid3{
-        height: 330px !important;
+    .mobgrid3 {
+        height: 330px !important
     }
 
-    .mobgrid4{
+    .mobgrid4 {
+        height: 100px !important
+    }
+
+    .divgrid2 {
+        padding-top: 10px !important
+    }
+
+    .mobgrid6 {
         height: 100px !important;
+        text-align: center !important
     }
 
-    .divgrid2{
-        padding-top: 10px !important;
-    }
-
-    .mobgrid6{
-        height: 100px !important;
+    .text3 {
         text-align: center !important;
+        margin-top: -160px !important
     }
 
-    .text3{
-        text-align: center !important;
-        margin-top: -160px !important;
+    .text4 {
+        font-size: 34px !important
     }
 
-    .text4{
-        font-size: 34px !important;
-    }
-
-    .mobgrid5{
+    .mobgrid5 {
         height: 100px !important;
+        margin-top: 20px !important
+    }
+
+    .divgrid3 {
+        margin-bottom: 25px !important
+    }
+
+    .divgrid4 {
         margin-top: 20px !important;
-    }
-
-    .divgrid3{
-        margin-bottom: 25px !important;
-    }
-
-    .divgrid4{
-        margin-top: 20px !important;
         text-align: center !important;
-        width: 80% !important;
+        width: 80% !important
     }
 
-    .text5{
+    .text5 {
         margin-top: 10px !important;
-        margin-bottom: 40px !important;
+        margin-bottom: 40px !important
     }
 
-    .mobgrid7{
+    .mobgrid7 {
         height: 70px !important;
-        font-size: 40px !important;
+        font-size: 40px !important
     }
 
-    .mobgrid8{
-        --align: none !important;
+    .mobgrid8 {
+        --align: none !important
     }
 
-    .glavnaSlika{
-        margin-top: 150px !important;
+    .glavnaSlika {
+        margin-top: 150px !important
     }
 
-    .drugaSlika{
-        margin-top: 200px !important;
+    .drugaSlika {
+        margin-top: 200px !important
     }
 
-    .text-box h1{
-        line-height: 0 !important;
+    .text-box h1 {
+        line-height: 0 !important
     }
 
-    .mobgrid9{
-        margin-top: 0 !important;
+    .mobgrid9 {
+        margin-top: 0 !important
     }
 }

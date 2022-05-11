@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8da070-2923-42cc-8ed7-5a3db9d3436d" name="Default Changelist" comment="database backup">
+      <change afterPath="$PROJECT_DIR$/vendor/Bootstrap/Frontend/._styles.pure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/Bootstrap/Frontend/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/Bootstrap/Frontend/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/Bootstrap/Frontend/styles.pure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/css/Frontend/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/css/Frontend/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/css/Frontend/fonts2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/head_css.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/head_css.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/Public/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/Public/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/1_responsive_max_320.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/1_responsive_max_320.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/2_responsive_max_480.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/2_responsive_max_480.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/3_responsive_max_620.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/3_responsive_max_620.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/4_responsive_max_760.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/4_responsive_max_760.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/5_responsive_max_920.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/5_responsive_max_920.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/6_responsive_max_1150.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/6_responsive_max_1150.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/7_responsive_max_1670.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/7_responsive_max_1670.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/css/Frontend/design1.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +72,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/css/Frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/Bootstrap/Frontend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -66,11 +83,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/Bootstrap/Frontend" />
       <recent name="$PROJECT_DIR$/vendor/css/Frontend" />
       <recent name="$PROJECT_DIR$/app/controller" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/vendor/js" />
-      <recent name="$PROJECT_DIR$/app/model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/view/Dashboard" />
@@ -188,6 +205,7 @@
       <workItem from="1651843762093" duration="2350000" />
       <workItem from="1651910604220" duration="84000" />
       <workItem from="1652190625920" duration="14000" />
+      <workItem from="1652274060457" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="Landing page">
       <created>1628692209106</created>

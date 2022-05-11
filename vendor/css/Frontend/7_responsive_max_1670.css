@@ -1,31 +1,30 @@
 @media only screen and (min-width: 1151px) {
-    .text1{
+    .text1 {
         font-size: 85px !important;
-        line-height: 10px;
+        line-height: 10px
     }
 
-    .mobgrid3{
-        height: 250px;
+    .mobgrid3 {
+        height: 250px
     }
 
-    .drugaSlika{
-        margin-top: 100px;
+    .drugaSlika {
+        margin-top: 100px
     }
 
-    .mobgrid5{
-        height: 320px;
+    .mobgrid5 {
+        height: 320px
     }
 
-    .divgrid5{
-        margin-bottom: -150px !important;
+    .divgrid5 {
+        margin-bottom: -150px !important
     }
 
-
-    .trecaSlika{
-        margin-top: 100px;
+    .trecaSlika {
+        margin-top: 100px
     }
 
-    .mobgrid9{
-        margin-top: 0 !important;
+    .mobgrid9 {
+        margin-top: 0 !important
     }
 }
